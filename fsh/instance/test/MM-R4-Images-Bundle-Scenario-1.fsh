@@ -1,5 +1,6 @@
-//DocumentReference voor beeld 1.1
-Instance: MM-R4-Images-DocumentReference-Blaak-Beeld-1-1
+//Bundle with FHIR test instances in FSH format for "Beeld in PGO" test scenario 1.1
+
+Instance: MM-R4-Images-DocumentReference-Blaak-Image-1-1
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Blaak) "P.J. Blaak"
@@ -20,8 +21,7 @@ Usage: #example
 * type.coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
 * type.coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 
-//DocumentReference voor verslag 1.1
-Instance: MM-R4-Images-DocumentReference-Blaak-Verslag-1-1
+Instance: MM-R4-Images-DocumentReference-Blaak-Report-1-1
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Blaak) "P.J. Blaak"

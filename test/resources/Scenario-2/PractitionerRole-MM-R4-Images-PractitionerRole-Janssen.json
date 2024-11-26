@@ -1,0 +1,28 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "MM-R4-Images-PractitionerRole-Janssen",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/MM-R4-Images-Practitioner-Janssen",
+    "display": "Janssen"
+  },
+  "organization": {
+    "reference": "Organization/MM-R4-Images-Organization-Erasmus-MC-Radiologie",
+    "display": "Erasmus MC, Radiologie"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "01.032",
+          "system": "http://fhir.nl/fhir/NamingSystem/uzi-rolcode",
+          "display": "Orthopedisch chirurg"
+        }
+      ]
+    }
+  ]
+}

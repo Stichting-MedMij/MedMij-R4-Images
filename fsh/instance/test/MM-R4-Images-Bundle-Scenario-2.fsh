@@ -1,5 +1,6 @@
-//DocumentReference voor beeld 2.1
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Beeld-2-1
+//Bundle with FHIR test instances in FSH format for "Beeld in PGO" test scenario 2
+
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Image-2-1
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -20,8 +21,7 @@ Usage: #example
 * type.coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
 * type.coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 
-//DocumentReference voor verslag 2.2
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Verslag-2-2
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Report-2-2
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -42,8 +42,7 @@ Usage: #example
 * type.coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
 * type.coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
 
-//DocumentReference voor beeld 2.3
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Beeld-2-3
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Image-2-3
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -64,8 +63,7 @@ Usage: #example
 * type.coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
 * type.coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 
-//DocumentReference voor verslag 2.3
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Verslag-2-3
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Report-2-3
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -86,8 +84,7 @@ Usage: #example
 * type.coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
 * type.coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
 
-//DocumentReference voor beeld 2.4
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Beeld-2-4
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Image-2-4
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -108,8 +105,7 @@ Usage: #example
 * type.coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
 * type.coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 
-//DocumentReference voor verslag 2.4
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Verslag-2-4
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Report-2-4
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-Klaassen-Groen) "José Klaassen-Groen"

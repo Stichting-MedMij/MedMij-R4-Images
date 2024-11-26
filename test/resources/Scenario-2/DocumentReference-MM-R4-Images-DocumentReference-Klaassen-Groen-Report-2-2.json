@@ -1,0 +1,67 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "MM-R4-Images-DocumentReference-Klaassen-Groen-Report-2-2",
+  "meta": {
+    "profile": [
+      "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/MM-R4-Images-Patient-Klaassen-Groen",
+    "display": "José Klaassen-Groen"
+  },
+  "author": [
+    {
+      "reference": "PractitionerRole/MM-R4-Images-PractitionerRole-Van-Der-Ham-1",
+      "display": "van der Ham, Orthopedisch chirurg, Erasmus MC, Radiologie"
+    },
+    {
+      "reference": "Organization/MM-R4-Images-Organization-Erasmus-MC-Radiologie",
+      "display": "Erasmus MC, Radiologie"
+    }
+  ],
+  "custodian": {
+    "reference": "Organization/MM-R4-Images-Organization-Erasmus-MC-Radiologie",
+    "display": "Erasmus MC, Radiologie"
+  },
+  "masterIdentifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:c4a902d3-1259-4881-9dd1-17376cef5ce5"
+  },
+  "status": "current",
+  "date": "1993-02-06T12:00:00Z",
+  "context": {
+    "period": {
+      "start": "1993-02-06"
+    }
+  },
+  "content": [
+    {
+      "format": {
+        "code": "urn.ihe.rad:PDF",
+        "system": "urn:oid:1.3.6.1.4.1.19376.1.2.7.1"
+      },
+      "attachment": {
+        "title": "Rontgen Falanx L",
+        "contentType": "application/pdf",
+        "creation": "1993-02-06T12:00:00Z",
+        "url": "http://example.org/report/c4a902d3-1259-4881-9dd1-17376cef5ce5",
+        "language": "nl"
+      }
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "code": "18726-0",
+        "system": "http://loinc.org",
+        "display": "Radiology studies (set)"
+      },
+      {
+        "code": "REPORTS",
+        "system": "urn:oid:1.3.6.1.4.1.19376.1.2.6.1",
+        "display": "Reports"
+      }
+    ]
+  }
+}

@@ -1,5 +1,6 @@
-//DocumentReference voor beeld 3.1
-Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Beeld-3-1
+//Bundle with FHIR test instances in FSH format for "Beeld in PGO" test scenario 3
+
+Instance: MM-R4-Images-DocumentReference-Klaassen-Groen-Image-3-1
 InstanceOf: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 Usage: #example
 * subject = Reference(MM-R4-Images-Patient-De-Graaff) "de Graaff"

@@ -1,0 +1,27 @@
+{
+  "resourceType": "Patient",
+  "id": "MM-R4-Images-Patient-Blaak",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+      "value": "19056436"
+    }
+  ],
+  "name": [
+    {
+      "text": "P.J. Blaak",
+      "family": "Blaak",
+      "given": [
+        "P.",
+        "J."
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1996-04-23"
+}
