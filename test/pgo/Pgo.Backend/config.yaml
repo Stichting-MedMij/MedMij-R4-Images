@@ -1,0 +1,45 @@
+Serilog:
+  Using:
+  - Serilog
+  - Serilog.Sinks.Console
+  - Serilog.Settings.Configuration
+  - Serilog.Enrichers.OpenTelemetry
+  NoJsonLogging: true
+  MinimumLevel:
+    Default: Debug
+    Override:
+      System: Warning
+      Microsoft: Warning
+      Microsoft.AspNetCore.Authentication: Information
+
+AllowedHosts: "*"
+
+OpenTelemetryConfig:
+  Enabled: false
+  OTLPEndpoint: http://grafana-agent:4317
+  ServiceName: pgo-beeldinpgo
+
+PgoConfig:
+  IsBehindProxy: false
+  BasePath: # default empty
+  FhirEndpoint: https://pgo-hapi/fhir
+  StelselNodeBaseUrl: https://stelselnode-beeldinpgo.5im.nl
+
+DvaConfig:
+  FhirEndpoint: https://dva-hapi/fhir
+  DicomTokenEndpoint: https://dva-auth/openid-connect/token
+  DicomTokenClientId: example-client
+  DicomTokenClientSecret: example-secret
+  DicomTokenClientScope:
+  DicomWadoRSEndpoint: https://dva-pacs/wado-rs
+
+OpenIdConnectConfig: 
+  Authority: https://pgo-identity/
+  ClientId: pgo-client
+  ClientSecret: pgo-secret
+  ResponseType: code
+  ResponseMode: query
+  Scopes: ["openid", "profile"]
+  SaveTokens: true
+  GetClaimsFromUserInfoEndpoint: true
+  RequireHttpsMetadata: false
