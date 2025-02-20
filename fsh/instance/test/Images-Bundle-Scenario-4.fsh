@@ -1,6 +1,6 @@
 //Bundle with FHIR test instances in FSH format for "Beeld in PGO" test scenario 4
 
-Instance: MM-R4-Images-Patient-Tjon-A-Kon
+Instance: Images-Patient-Tjon-A-Kon
 InstanceOf: Patient
 Usage: #example
 * meta.profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
