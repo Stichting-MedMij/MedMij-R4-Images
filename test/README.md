@@ -5,7 +5,7 @@ This directory contains test resources intended for testing MedMij R4 Images. Th
 ## Structure  
 - The `pgo` folder contains a prototype PGO (Personal Health Environment) implementation, made by MedMij.
 - The `resources` folder contains the FHIR test resources.
-- The Excel file contains the functional test data from which the FHIR resources are generated.
+- The [Excel file](https://github.com/Stichting-MedMij/MedMij-R4-Images/blob/1.0.0-alpha.2/test/250228_Testdata%20Beeld%20in%20PGO.xlsx) contains the functional test data from which the FHIR resources are generated.
 
 ## Important notes
 - Various identifiers, such as the Study Instance UID, Accession Number, and `DocumentReference.masterIdentifier`, are dummy/mocked values and may not reference any actual data. Adjust these as needed to fit your testing scenarios.
