@@ -1,0 +1,28 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Images-PractitionerRole-De-Pater",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/Images-Practitioner-De-Pater",
+    "display": "A.C.H. de Pater"
+  },
+  "organization": {
+    "reference": "Organization/Images-Organization-OLVG",
+    "display": "OLVG, Radiologie, Algemeen ziekenhuis"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "01.032",
+          "system": "http://fhir.nl/fhir/NamingSystem/uzi-rolcode",
+          "display": "Orthopedisch chirurg"
+        }
+      ]
+    }
+  ]
+}

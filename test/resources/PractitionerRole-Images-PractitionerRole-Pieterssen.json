@@ -1,0 +1,28 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Images-PractitionerRole-Pieterssen",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/Images-Practitioner-Pieterssen",
+    "display": "Pieterssen"
+  },
+  "organization": {
+    "reference": "Organization/Images-Organization-Spaarne",
+    "display": "Stichting Spaarne Gasthuis, Radiologie, Algemeen ziekenhuis"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "01.032",
+          "system": "http://fhir.nl/fhir/NamingSystem/uzi-rolcode",
+          "display": "Orthopedisch chirurg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "resourceType": "Patient",
+  "id": "Images-Patient-Klaassen-Groen",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+      "value": "557807323"
+    }
+  ],
+  "name": [
+    {
+      "text": "José Klaassen-Groen",
+      "family": "Klaassen-Groen",
+      "given": [
+        "José"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1924-01-10"
+}

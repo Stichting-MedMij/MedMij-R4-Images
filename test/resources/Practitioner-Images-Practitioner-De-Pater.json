@@ -1,0 +1,20 @@
+{
+  "resourceType": "Practitioner",
+  "id": "Images-Practitioner-De-Pater",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
+    ]
+  },
+  "name": [
+    {
+      "text": "A.C.H. de Pater",
+      "family": "de Pater",
+      "given": [
+        "A.",
+        "C.",
+        "H."
+      ]
+    }
+  ]
+}

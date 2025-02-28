@@ -1,0 +1,19 @@
+{
+  "resourceType": "Practitioner",
+  "id": "Images-Practitioner-Coenen",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
+    ]
+  },
+  "name": [
+    {
+      "text": "C.H. Coenen",
+      "family": "Coenen",
+      "given": [
+        "C.",
+        "H."
+      ]
+    }
+  ]
+}

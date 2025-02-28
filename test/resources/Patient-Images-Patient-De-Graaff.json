@@ -1,0 +1,23 @@
+{
+  "resourceType": "Patient",
+  "id": "Images-Patient-De-Graaff",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+      "value": "120871737"
+    }
+  ],
+  "name": [
+    {
+      "text": "de Graaff",
+      "family": "de Graaff"
+    }
+  ],
+  "gender": "unknown",
+  "birthDate": "2008-01-01"
+}

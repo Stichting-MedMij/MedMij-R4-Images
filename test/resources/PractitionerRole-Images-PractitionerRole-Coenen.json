@@ -1,0 +1,28 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "Images-PractitionerRole-Coenen",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/Images-Practitioner-Coenen",
+    "display": "C.H. Coenen"
+  },
+  "organization": {
+    "reference": "Organization/Images-Organization-Erasmus-MC-Mondzorg-Universitair",
+    "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "02.054",
+          "system": "http://fhir.nl/fhir/NamingSystem/uzi-rolcode",
+          "display": "Kaakchirurg"
+        }
+      ]
+    }
+  ]
+}
