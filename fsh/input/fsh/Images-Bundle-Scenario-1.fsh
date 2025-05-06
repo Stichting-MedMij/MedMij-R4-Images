@@ -50,7 +50,7 @@ Usage: #example
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:b042e5cc-442d-4abd-840d-57f3c9f86f73" // document uniqueId | dummy UUID
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = http://snomed.info/sct#3511000087103 "" // Onderzoek.Verrichting.VerrichtingType
+* type = http://snomed.info/sct#3511000087103 "röntgenfoto van rechter sleutelbeen" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
