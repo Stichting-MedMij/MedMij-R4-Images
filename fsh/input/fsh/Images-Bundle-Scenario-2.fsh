@@ -44,7 +44,7 @@ Usage: #example
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:c4a902d3-1259-4881-9dd1-17376cef5ce5" // document uniqueId | dummy UUID
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = http://snomed.info/sct#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType | code niet gecontroleerd want zit niet in functioneel testmateriaal
+* type = http://snomed.info/sct#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
@@ -129,7 +129,7 @@ Usage: #example
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:53338e45-a078-4886-8501-7cf1ec838afd" // document uniqueId | dummy UUID
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = http://snomed.info/sct#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType | code niet gecontroleerd want zit niet in functioneel testmateriaal
+* type = http://snomed.info/sct#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
@@ -221,7 +221,7 @@ Usage: #example
   * system = "urn:ietf:rfc:3986"
   * value = "urn:uuid:0a61a231-1b52-4ba5-b86c-9edac0bfa044" // document uniqueId | dummy UUID
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = http://snomed.info/sct#142771000146105 "röntgenfoto van linker kaakgewricht" // Onderzoek.Verrichting.VerrichtingType | code niet gecontroleerd want zit niet in functioneel testmateriaal
+* type = http://snomed.info/sct#142771000146105 "röntgenfoto van linker kaakgewricht" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
