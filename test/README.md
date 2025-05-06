@@ -12,7 +12,6 @@ This directory contains test resources intended for testing MedMij R4 Images. Th
 - The `content.attachment.url` in the DocumentReference resources for images points to an example URL. It is expected that this is replaced with a real URL (e.g., to a PACS) so that actual DICOM JSON metadata and images can be retrieved.  
 - Any referenced reports are example PDFs provided in Binary format. You may also reference PDFs or reports from your own source system as needed.
 - The FHIR IG now utilizes the Comprehensive Metadata option for DocumentReference profiles, which requires certain elements, such as author, authenticator, and sourcePatientInfo, to be contained within the resource. However, our current test materials include uncontained references for these elements, which is not compliant with the Comprehensive Metadata Option. We are currently deliberating whether to permit the use of the UnContained Reference Option, which allows these elements to be referenced externally rather than contained within the resource. As a result, the validation of our FHIR test instances currently fails on this point.
-
 A ticket has been submitted to Nictiz regarding this issue: [BBS-202](https://nictiz.atlassian.net/browse/BBS-202).
 
 ## Disclaimer
