@@ -6,19 +6,38 @@
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
     ]
   },
+  "name": [
+    {
+      "given": [
+        "Pieter"
+      ],
+      "_given": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "BR"
+            }
+          ]
+        }
+      ],
+      "use": "official",
+      "text": "Pieter Blaak",
+      "family": "Blaak",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Blaak"
+          }
+        ]
+      }
+    }
+  ],
   "identifier": [
     {
       "system": "http://fhir.nl/fhir/NamingSystem/bsn",
       "value": "19056436"
-    }
-  ],
-  "name": [
-    {
-      "text": "Pieter Blaak",
-      "family": "Blaak",
-      "given": [
-        "Pieter"
-      ]
     }
   ],
   "gender": "male",

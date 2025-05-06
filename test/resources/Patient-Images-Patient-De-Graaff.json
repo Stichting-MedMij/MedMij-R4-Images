@@ -6,16 +6,29 @@
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
     ]
   },
+  "name": [
+    {
+      "use": "official",
+      "text": "de Graaff",
+      "family": "de Graaff",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "de"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Graaff"
+          }
+        ]
+      }
+    }
+  ],
   "identifier": [
     {
       "system": "http://fhir.nl/fhir/NamingSystem/bsn",
       "value": "120871737"
-    }
-  ],
-  "name": [
-    {
-      "text": "de Graaff",
-      "family": "de Graaff"
     }
   ],
   "gender": "unknown",

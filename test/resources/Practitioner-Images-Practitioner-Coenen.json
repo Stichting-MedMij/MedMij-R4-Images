@@ -8,12 +8,39 @@
   },
   "name": [
     {
-      "text": "C.H. Coenen",
-      "family": "Coenen",
       "given": [
         "C.",
         "H."
-      ]
+      ],
+      "_given": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "IN"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "IN"
+            }
+          ]
+        }
+      ],
+      "use": "official",
+      "text": "C.H. Coenen",
+      "family": "Coenen",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Coenen"
+          }
+        ]
+      }
     }
   ]
 }
