@@ -279,7 +279,7 @@ Usage: #example
   * given = "José"
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #BR
 * gender = #female
-//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding[0] = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#F "Female"
+//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#F "Female"
 * birthDate = "1924-01-10"
 
 Instance: Images-PractitionerRole-Van-Der-Ham

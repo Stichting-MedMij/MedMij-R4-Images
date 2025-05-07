@@ -108,7 +108,7 @@ Usage: #example
   * given = "Pieter"
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #BR
 * gender = #male
-//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding[0] = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#M "Male"
+//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#M "Male"
 * birthDate = "1996-04-23"
 
 Instance: Images-PractitionerRole-De-Pater

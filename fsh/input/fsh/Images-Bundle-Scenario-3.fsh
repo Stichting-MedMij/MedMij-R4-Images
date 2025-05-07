@@ -52,7 +52,7 @@ Usage: #example
     * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString = "de"
     * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Graaff"
 * gender = #unknown
-//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding[0] = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
+//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 * birthDate = "2008-01-01"
 
 Instance: Images-PractitionerRole-Pieterssen
