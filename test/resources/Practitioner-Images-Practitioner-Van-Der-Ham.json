@@ -8,8 +8,21 @@
   },
   "name": [
     {
+      "use": "official",
       "text": "van der Ham",
-      "family": "van der Ham"
+      "family": "van der Ham",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+            "valueString": "van der"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Ham"
+          }
+        ]
+      }
     }
   ]
 }

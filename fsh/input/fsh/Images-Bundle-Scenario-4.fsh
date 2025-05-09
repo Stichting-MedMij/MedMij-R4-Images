@@ -1,12 +1,16 @@
-//Bundle with FHIR test instances in FSH format for "Beeld in PGO" testscenario 4
+//Bundle with FHIR test instances in FSH format for "Beeld in PGO" test scenario 4
 
-Instance: Images-Patient-Tjon-A-Kon
-InstanceOf: Patient
+Instance: Images-Patient-Tjong-A-Kon
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
-* meta.profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
-* identifier.system = "http://fhir.nl/fhir/NamingSystem/bsn"
-* identifier.value = "267384488" // gegenereerd "fake" BSN
-* name[0].text = "Xi Tjong A Kon"
-* name[0].family = "Tjong A Kon"
-* name[0].given = "Xi"
+* identifier
+  * system = "http://fhir.nl/fhir/NamingSystem/bsn"
+  * value = "267384488" // gegenereerd "fake" BSN
+* name
+  * use = #official
+  * text = "Xi Tjong A Kon"
+  * family = "Tjong A Kon"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Tjong A Kon"
+  * given = "Xi"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #BR
 * birthDate = "2000-09-09"

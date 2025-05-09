@@ -8,8 +8,17 @@
   },
   "name": [
     {
+      "use": "official",
       "text": "Pieterssen",
-      "family": "Pieterssen"
+      "family": "Pieterssen",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Pieterssen"
+          }
+        ]
+      }
     }
   ]
 }

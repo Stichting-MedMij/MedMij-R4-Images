@@ -8,8 +8,17 @@
   },
   "name": [
     {
+      "use": "official",
       "text": "Janssen",
-      "family": "Janssen"
+      "family": "Janssen",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Janssen"
+          }
+        ]
+      }
     }
   ]
 }
