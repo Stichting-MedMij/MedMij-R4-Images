@@ -1,10 +1,8 @@
 //Bundle with FHIR test instances in FSH format for "Beeld in PGO" test scenario 4
 
 Instance: Images-Patient-Tjong-A-Kon
-InstanceOf: Patient
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/bsn"
   * value = "267384488" // gegenereerd "fake" BSN

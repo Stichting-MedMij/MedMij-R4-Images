@@ -110,20 +110,16 @@ Usage: #example
 * birthDate = "1996-04-23"
 
 Instance: Images-PractitionerRole-De-Pater
-InstanceOf: PractitionerRole
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
 * practitioner = Reference(Images-Practitioner-De-Pater) "A.C.H. de Pater"
 * organization = Reference(Images-Organization-OLVG) "OLVG, Radiologie, Algemeen ziekenhuis"
 * specialty
   * coding = http://fhir.nl/fhir/NamingSystem/uzi-rolcode#01.032 "Orthopedisch chirurg"
 
 Instance: Images-Practitioner-De-Pater
-InstanceOf: Practitioner
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
 * name
   * use = #official
   * text = "A.C.H. de Pater"
@@ -138,10 +134,8 @@ Usage: #example
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
 
 Instance: Images-Organization-OLVG
-InstanceOf: Organization
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/agb-z"
   * value = "6010713"

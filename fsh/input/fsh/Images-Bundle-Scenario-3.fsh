@@ -38,10 +38,8 @@ Usage: #example
       * value = "RAD-20250212-47092" // Dummy Accession Number
 
 Instance: Images-Patient-De-Graaff
-InstanceOf: Patient
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/bsn"
   * value = "120871737" // gegenereerd "fake" BSN
@@ -52,24 +50,20 @@ Usage: #example
     * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString = "de"
     * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Graaff"
 * gender = #unknown
-//  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
+  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK "Unknown"
 * birthDate = "2008-01-01"
 
 Instance: Images-PractitionerRole-Pieterssen
-InstanceOf: PractitionerRole
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
 * practitioner = Reference(Images-Practitioner-Pieterssen) "Pieterssen"
 * organization = Reference(Images-Organization-Spaarne) "Stichting Spaarne Gasthuis, Radiologie, Algemeen ziekenhuis"
 * specialty
   * coding = http://fhir.nl/fhir/NamingSystem/uzi-rolcode#01.032 "Orthopedisch chirurg"
 
 Instance: Images-Practitioner-Pieterssen
-InstanceOf: Practitioner
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
 * name
   * use = #official
   * text = "Pieterssen"
@@ -77,10 +71,8 @@ Usage: #example
     * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Pieterssen"
 
 Instance: Images-Organization-Spaarne
-InstanceOf: Organization
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
-* meta
-  * profile = "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/agb-z"
   * value = "6010754"
