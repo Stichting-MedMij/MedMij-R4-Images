@@ -40,7 +40,7 @@
     "reference": "Patient/Images-Patient-Klaassen-Groen",
     "display": "José Klaassen-Groen"
   },
-  "date": "1993-02-06T12:00:00Z",
+  "date": "1993-02-06T12:00:00+01:00",
   "author": [
     {
       "reference": "PractitionerRole/Images-PractitionerRole-Janssen",
@@ -69,7 +69,7 @@
         "language": "nl",
         "url": "https://examplepacs.xis/wado/metadata",
         "title": "longfoto",
-        "creation": "1993-02-06T12:00:00Z"
+        "creation": "1993-02-06T12:00:00+01:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",

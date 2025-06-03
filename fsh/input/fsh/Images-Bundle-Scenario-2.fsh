@@ -12,7 +12,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 * subject = Reference(Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
-* date = "1990-02-10T12:00:00Z" // date | Onderzoek.Beeldinformatie.DatumTijd
+* date = "1990-02-10T12:00:00+01:00" // date | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Van-Der-Ham) "van der Ham, Orthopedisch chirurg, Erasmus MC, Radiologie"
 * author[1] = Reference(Images-Organization-Erasmus-MC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -22,7 +22,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "longfoto" // title | geen mapping naar dataset
-    * creation = "1990-02-10T12:00:00Z" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "1990-02-10T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = urn.oid:1.2.840.10008.2.6.1#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * period.start = "1990-02-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
@@ -49,7 +49,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
 * subject = Reference(Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
-* date = "1993-02-06T12:00:00Z" // date | Onderzoek.Verslaginformatie.DatumTijd
+* date = "1993-02-06T12:00:00+01:00" // date | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Van-Der-Ham) "van der Ham, Orthopedisch chirurg, Erasmus MC, Radiologie"
 * author[1] = Reference(Images-Organization-Erasmus-MC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -59,7 +59,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "Binary/Images-Binary-Report-2-2" //geen mapping naar dataset | verwijst naar een Binary
     * title = "longfoto" // title | geen mapping naar dataset
-    * creation = "1993-02-06T12:00:00Z" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
+    * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
   * format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
@@ -91,7 +91,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 * subject = Reference(Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
-* date = "1993-02-06T12:00:00Z" // date | Onderzoek.Beeldinformatie.DatumTijd
+* date = "1993-02-06T12:00:00+01:00" // date | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Janssen) "Janssen, Orthopedisch chirurg, Erasmus MC, Radiologie"
 * author[1] = Reference(Images-Organization-Erasmus-MC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -101,7 +101,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "longfoto" // title | geen mapping naar dataset
-    * creation = "1993-02-06T12:00:00Z" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = urn.oid:1.2.840.10008.2.6.1#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
@@ -134,7 +134,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
 * subject = Reference(Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
-* date = "1993-02-06T12:00:00Z" // date | Onderzoek.Verslaginformatie.DatumTijd
+* date = "1993-02-06T12:00:00+01:00" // date | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Janssen) "Janssen, Orthopedisch chirurg, Erasmus MC, Radiologie"
 * author[1] = Reference(Images-Organization-Erasmus-MC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -144,7 +144,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "Binary/Images-Binary-Report-2-3" //geen mapping naar dataset | verwijst naar een Binary
     * title = "longfoto" // title | geen mapping naar dataset
-    * creation = "1993-02-06T12:00:00Z" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
+    * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
   * format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
@@ -183,7 +183,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 * subject = Reference(Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
-* date = "2020-08-10T12:00:00Z" // date | Onderzoek.Beeldinformatie.DatumTijd
+* date = "2020-08-10T12:00:00+02:00" // date | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Coenen) "C.H. Coenen, Kaakchirurg, Erasmus MC, Mondzorg en kaakchirurgie"
 * author[1] = Reference(Images-Organization-Erasmus-MC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -193,7 +193,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "röntgenfoto van linker kaakgewricht" // title | geen mapping naar dataset
-    * creation = "2020-08-10T12:00:00Z" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = urn.oid:1.2.840.10008.2.6.1#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * period.start = "2020-08-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
@@ -226,7 +226,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
 * subject = Reference(Images-Patient-Klaassen-Groen) "José Klaassen-Groen"
-* date = "2020-08-10T12:00:00Z" // date | Onderzoek.Verslaginformatie.DatumTijd
+* date = "2020-08-10T12:00:00+02:00" // date | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Coenen) "C.H. Coenen, Kaakchirurg, Erasmus MC, Mondzorg en kaakchirurgie"
 * author[1] = Reference(Images-Organization-Erasmus-MC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -236,7 +236,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "Binary/Images-Binary-Report-2-4" //geen mapping naar dataset | verwijst naar een Binary
     * title = "röntgenfoto van linker kaakgewricht" // title | geen mapping naar dataset
-    * creation = "2020-08-10T12:00:00Z" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
+    * creation = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
   * format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "2020-08-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum

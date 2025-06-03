@@ -12,7 +12,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 * subject = Reference(Images-Patient-Blaak) "Pieter Blaak"
-* date = "2024-05-23T12:00:00Z" // date | Onderzoek.Beeldinformatie.DatumTijd
+* date = "2024-05-23T12:00:00+02:00" // date | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-De-Pater) "A.C.H. de Pater, Orthopedisch chirurg, OLVG, Radiologie"
 * author[1] = Reference(Images-Organization-OLVG) "OLVG, Radiologie, Algemeen ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -22,7 +22,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "röntgenfoto van rechter sleutelbeen" // title | geen mapping naar dataset
-    * creation = "2024-05-23T12:00:00Z" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2024-05-23T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = urn.oid:1.2.840.10008.2.6.1#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * period.start = "2024-05-23" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
@@ -55,7 +55,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#REPORTS "Reports" // Secundaire code
 * subject = Reference(Images-Patient-Blaak) "Pieter Blaak"
-* date = "2024-05-24T12:00:00Z" // date | Onderzoek.Verslaginformatie.DatumTijd
+* date = "2024-05-24T12:00:00+02:00" // date | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-De-Pater) "A.C.H. de Pater, Orthopedisch chirurg, OLVG, Radiologie"
 * author[1] = Reference(Images-Organization-OLVG) "OLVG, Radiologie, Algemeen ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -65,7 +65,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "Binary/Images-Binary-Report-1-1" //geen mapping naar dataset | verwijst naar een Binary
     * title = "Röntgen Clavicula rechts" // title | geen mapping naar dataset
-    * creation = "2024-05-24T12:00:00Z" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
+    * creation = "2024-05-24T12:00:00+02:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd 
   * format = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "2024-05-23" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
