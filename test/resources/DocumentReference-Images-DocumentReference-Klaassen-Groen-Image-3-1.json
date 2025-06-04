@@ -40,7 +40,7 @@
     "reference": "Patient/Images-Patient-De-Graaff",
     "display": "de Graaff"
   },
-  "date": "2020-03-03T12:00:00Z",
+  "date": "2020-03-03T12:00:00+01:00",
   "author": [
     {
       "reference": "PractitionerRole/Images-PractitionerRole-Pieterssen",
@@ -69,7 +69,7 @@
         "language": "nl",
         "url": "https://examplepacs.xis/wado/metadata",
         "title": "MRI van linker bovenbeen",
-        "creation": "2020-03-03T12:00:00Z"
+        "creation": "2020-03-03T12:00:00+01:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",

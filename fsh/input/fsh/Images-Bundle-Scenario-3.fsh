@@ -12,7 +12,7 @@ Usage: #example
   * coding[0] = http://loinc.org#18726-0 "Radiology studies (set)" // Primaire code
   * coding[1] = urn:oid:1.3.6.1.4.1.19376.1.2.6.1#IMAGES "Images" // Secundaire code
 * subject = Reference(Images-Patient-De-Graaff) "de Graaff"
-* date = "2020-03-03T12:00:00Z" // date | Onderzoek.Beeldinformatie.DatumTijd
+* date = "2020-03-03T12:00:00+01:00" // date | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(Images-PractitionerRole-Pieterssen) "Pieterssen, Orthopedisch chirurg, Stichting Spaarne Gasthuis, Radiologie"
 * author[1] = Reference(Images-Organization-Spaarne) "Stichting Spaarne Gasthuis, Radiologie, Algemeen ziekenhuis"
 * securityLabel = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
@@ -22,7 +22,7 @@ Usage: #example
     * language = #nl // languageCode | geen mapping naar dataset
     * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "MRI van linker bovenbeen" // title | geen mapping naar dataset
-    * creation = "2020-03-03T12:00:00Z" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2020-03-03T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = urn.oid:1.2.840.10008.2.6.1#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * period.start = "2020-03-03" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
