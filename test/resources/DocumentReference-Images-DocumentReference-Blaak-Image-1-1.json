@@ -40,7 +40,7 @@
     "reference": "Patient/Images-Patient-Blaak",
     "display": "Pieter Blaak"
   },
-  "date": "2024-05-23T12:00:00Z",
+  "date": "2024-05-23T12:00:00+02:00",
   "author": [
     {
       "reference": "PractitionerRole/Images-PractitionerRole-De-Pater",
@@ -69,7 +69,7 @@
         "language": "nl",
         "url": "https://examplepacs.xis/wado/metadata",
         "title": "röntgenfoto van rechter sleutelbeen",
-        "creation": "2024-05-23T12:00:00Z"
+        "creation": "2024-05-23T12:00:00+02:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",
