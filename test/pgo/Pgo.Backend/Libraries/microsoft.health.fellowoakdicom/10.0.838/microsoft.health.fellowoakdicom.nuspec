@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Health.FellowOakDicom</id>
+    <version>10.0.838</version>
+    <authors>Microsoft Health Team</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>A fork of Fellow Oak's Dicom library with changes included from the next release.</description>
+    <copyright>Copyright © Microsoft Corporation. All rights reserved.</copyright>
+    <repository type="git" url="https://github.com/microsoft/dicom-server" commit="5737301c0bda5b9f9aebd8b80398295343590eaf" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="fo-dicom" version="5.1.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="fo-dicom" version="5.1.2" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Memory" version="4.5.5" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="fo-dicom" version="5.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

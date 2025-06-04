@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Health.Dicom.Client</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Health.Dicom.Client.DicomClientResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.InvalidExportDestination">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; is not a supported export destination..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.InvalidExportSource">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; is not a supported export source..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.InvalidType">
+            <summary>
+              Looks up a localized string similar to Type &apos;{0}&apos; is not supported..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.JsonReadNotSupported">
+            <summary>
+              Looks up a localized string similar to Read is not supported for the type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.JsonWriteNotSupported">
+            <summary>
+              Looks up a localized string similar to Write is not supported for the type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomClientResource.UnexpectedValue">
+            <summary>
+              Looks up a localized string similar to Expected value &apos;{0}&apos; to be one of the following values: [{1}].
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.DicomWebClient.#ctor(System.Net.Http.HttpClient,System.String)">
+            <summary>
+            New instance of DicomWebClient to talk to the server
+            </summary>
+            <param name="httpClient">HttpClient</param>
+            <param name="apiVersion">Pin the DicomWebClient to a specific server API version.</param>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.DicomWebClient.GetMemoryStream">
+            <summary>
+            Func used to obtain a <see cref="T:System.IO.MemoryStream" />. The default value returns a new memory stream.
+            </summary>
+            <remarks>
+            This can be used in conjunction with a memory stream pool.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.AddExtendedQueryTagEntry">
+            <summary>
+            External representation of a extended query tag entry during add.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.AddExtendedQueryTagEntry.Path">
+            <summary>
+            Path of this tag. Normally it's composed of groupid and elementid.
+            E.g: 00100020 is path of patient id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.AddExtendedQueryTagEntry.VR">
+            <summary>
+            VR of this tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.AddExtendedQueryTagEntry.Level">
+            <summary>
+            Level of this tag. Could be Study, Series or Instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.AddExtendedQueryTagEntry.PrivateCreator">
+            <summary>
+            Identification code of private tag implementer.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ChangeFeedEntry">
+            <summary>
+            Represents each change feed entry of a change has retrieved from the store
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier">
+            <summary>
+            Represents an identifier for a DICOM study, series, or SOP instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.StudyInstanceUid">
+            <summary>
+            Gets the unique identifier for the study.
+            </summary>
+            <value>The value of the study instance UID attribute (0020,000D).</value>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.SeriesInstanceUid">
+            <summary>
+            Gets the unique identifier for the series.
+            </summary>
+            <remarks>
+            May be <see langword="null"/> for studies.
+            </remarks>
+            <value>The value of the series instance UID attribute (0020,000E).</value>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.SopInstanceUid">
+            <summary>
+            Gets the unique identifier for the SOP instance.
+            </summary>
+            <remarks>
+            May be <see langword="null"/> for studies or series.
+            </remarks>
+            <value>The value of the SOP instance UID attribute (0008,0018).</value>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure based on the given identifiers.
+            </summary>
+            <param name="studyInstanceUid">The unique identifier for the study.</param>
+            <param name="seriesInstanceUid">The optional unique identifier for the series.</param>
+            <param name="sopInstanceUid">The optional unique identifier for the SOP instance.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="studyInstanceUid"/> is empty or consists entirely of white space characters.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="studyInstanceUid"/> is <see langword="null"/> or white space</para>
+            <para>-or-</para>
+            <para>
+            <paramref name="seriesInstanceUid"/> is <see langword="null"/> or white space, but
+            <paramref name="sopInstanceUid"/> has a value.
+            </para>
+            </exception>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.Equals(System.Object)">
+            <summary>
+            Returns a value indicating whether this instance is equal to a specified object.
+            </summary>
+            <param name="obj">The object to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if <paramref name="obj"/> is an instance of <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> and
+            equals the value of this instance; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.Equals(Microsoft.Health.Dicom.Client.Models.DicomIdentifier)">
+            <summary>
+            Returns a value indicating whether the value of this instance is equal to the value of the
+            specified <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> instance.
+            </summary>
+            <param name="other">The object to compare to this instance.</param>
+            <returns>
+            <see langword="true"/> if the <paramref name="other"/> parameter equals the
+            value of this instance; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.ToString">
+            <summary>
+            Converts the value of the current <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure to its equivalent string representation.
+            </summary>
+            <returns>A string representation of the value of the current <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure.</returns>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.ForStudy(System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given study.
+            </summary>
+            <param name="uid">The unique identifier for the study.</param>
+            <returns>A <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given study.</returns>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="uid"/> is empty or consists entirely of white space characters.
+            </exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="uid"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.ForSeries(System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given series.
+            </summary>
+            <param name="studyInstanceUid">The unique identifier for the study.</param>
+            <param name="seriesInstanceUid">The unique identifier for the series.</param>
+            <returns>A <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given series.</returns>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="studyInstanceUid"/> or <paramref name="seriesInstanceUid"/>
+            is empty or consists entirely of white space characters.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="studyInstanceUid"/> or <paramref name="seriesInstanceUid"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.ForInstance(System.String,System.String,System.String)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given SOP instance.
+            </summary>
+            <param name="studyInstanceUid">The unique identifier for the study.</param>
+            <param name="seriesInstanceUid">The unique identifier for the series.</param>
+            <param name="sopInstanceUid">The unique identifier for the SOP instance.</param>
+            <returns>A <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given SOP instance.</returns>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="studyInstanceUid"/>, <paramref name="seriesInstanceUid"/>, or
+            <paramref name="sopInstanceUid"/> is empty or consists entirely of white space characters.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="studyInstanceUid"/>, <paramref name="seriesInstanceUid"/>, <paramref name="sopInstanceUid"/>
+            is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomIdentifier.ForInstance(FellowOakDicom.DicomDataset)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given <see cref="T:FellowOakDicom.DicomDataset"/> instance.
+            </summary>
+            <param name="dataset">A DICOM dataset.</param>
+            <returns>A <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomIdentifier"/> structure for the given dataset.</returns>
+            <exception cref="T:System.ArgumentException">
+            Either the study, series, or SOP instance UIDs are empty or consists entirely of white space characters.
+            </exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="dataset"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.DicomOperation">
+            <summary>
+            Specifies the category of a DICOM operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.DicomOperation.DataCleanup">
+            <summary>
+            Specifies an data cleanup operation that cleans up instance data.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.DicomOperation.ContentLengthBackFill">
+            <summary>
+            Specifies an content length backfill operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.DicomOperation.Export">
+            <summary>
+            Specifies an export operation that copies data out of the DICOM server and into an external data store.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.DicomOperation.Reindex">
+            <summary>
+            Specifies a reindexing operation that updates the indicies for previously added data based on new tags.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.DicomOperation.Unknown">
+            <summary>
+            Specifies an operation whose type is missing or unrecognized.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.DicomOperation.Update">
+            <summary>
+            Specifies an update operation that updates the Dicom attributes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.DicomOperationReference">
+            <summary>
+            Represents a reference to an existing DICOM long-running operation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.DicomOperationReference.#ctor(System.Guid,System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Health.Dicom.Client.Models.DicomOperationReference"/> class.
+            </summary>
+            <param name="id">The unique operation ID.</param>
+            <param name="href">The resource URL for the operation.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="href"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExportDataOptions`1">
+            <summary>
+            Represents options for either what data should be exported from the DICOM service,
+            or where that data should be copied.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.ExportDataOptions`1.#ctor(`0)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Health.Dicom.Client.Models.ExportDataOptions`1"/> class
+            with the given type.
+            </summary>
+            <param name="type">The type of options this new instance represents.</param>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExportDataOptions`1.Type">
+            <summary>
+            Gets the type of options this instance represents.
+            </summary>
+            <value>A type denoting the kind of options.</value>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExportDestination">
+            <summary>
+            A collection of <see langword="static"/> utilities for creating export destination options
+            that specify to where data should be copied from the DICOM server.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.ExportDestination.ForAzureBlobStorage(System.Uri,System.Boolean)">
+            <summary>
+            Creates export destination options for Azure Blob storage based on a URI.
+            </summary>
+            <remarks>
+            The <paramref name="blobContainerUri"/> may contain a SAS token for authentication.
+            </remarks>
+            <param name="blobContainerUri">A URI specifying the Azure Blob container.</param>
+            <param name="useManagedIdentity">Optionally connect to the storage account using the configured managed identity.</param>
+            <returns>The corresponding export destination options.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="blobContainerUri"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.ExportDestination.ForAzureBlobStorage(System.String,System.String)">
+            <summary>
+            Creates export destination options for Azure Blob storage based on a connection string and container name.
+            </summary>
+            <remarks>
+            The <paramref name="connectionString"/> may contain a SAS token for authentication.
+            </remarks>
+            <param name="connectionString">A connection string for the Azure Blob Storage account.</param>
+            <param name="blobContainerName">The name of the blob container.</param>
+            <returns>The corresponding export destination options.</returns>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="connectionString"/> or <paramref name="blobContainerName"/> is empty or
+            consists of white space characters.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="connectionString"/> or <paramref name="blobContainerName"/> is <see langword="null"/>.
+            </exception>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExportDestinationType">
+            <summary>
+            Specifies the kind of destination where data may be exported.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExportDestinationType.Unknown">
+            <summary>
+            Specifies an unknown destination.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExportDestinationType.AzureBlob">
+            <summary>
+            Specifies Azure Blob Storage.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExportResults">
+            <summary>
+            Represents the current state of the export operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExportResults.Exported">
+            <summary>
+            Gets or sets the number of DICOM files that were successfully exported.
+            </summary>
+            <value>The non-negative number of exported DICOM files.</value>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExportResults.Skipped">
+            <summary>
+            Gets or sets the number of DICOM files that were skipped because they failed to be exported.
+            </summary>
+            <value>The non-negative number of DICOM files that failed to be exported.</value>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExportResults.ErrorHref">
+            <summary>
+            Gets or sets the URI for containing the errors for this operation.
+            </summary>
+            <value>The <see cref="T:System.Uri"/> for the resource containg export errors.</value>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExportSource">
+            <summary>
+            A collection of <see langword="static"/> utilities for creating export source options
+            that specify what data should be copied.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.ExportSource.ForIdentifiers(Microsoft.Health.Dicom.Client.Models.DicomIdentifier[])">
+            <summary>
+            Creates export source options for a list of DICOM identifiers.
+            </summary>
+            <param name="identifiers">One or more identifiers.</param>
+            <returns>The corresponding export source options.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="identifiers"/> is empty.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="identifiers"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="M:Microsoft.Health.Dicom.Client.Models.ExportSource.ForIdentifiers(System.Collections.Generic.IReadOnlyCollection{Microsoft.Health.Dicom.Client.Models.DicomIdentifier})">
+            <summary>
+            Creates export source options for a list of DICOM identifiers.
+            </summary>
+            <param name="identifiers">One or more identifiers.</param>
+            <returns>The corresponding export source options.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="identifiers"/> is empty.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="identifiers"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExportSourceType">
+            <summary>
+            Specifies the kind of format used to describe the data set to be exported.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExportSourceType.Unknown">
+            <summary>
+            Specifies an unknown source format.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExportSourceType.Identifiers">
+            <summary>
+            Specifies a list of DICOM identifiers.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagError">
+            <summary>
+            Represents a problem that arose when re-indexing the given DICOM instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagError.StudyInstanceUid">
+            <summary>
+            Gets or sets the DICOM study instance UID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagError.SeriesInstanceUid">
+            <summary>
+            Gets or sets the DICOM series instance UID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagError.SopInstanceUid">
+            <summary>
+            Gets or sets the DICOM SOP instance UID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagError.CreatedTime">
+            <summary>
+            Gets or sets the date and time when the error was found.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagError.ErrorMessage">
+            <summary>
+            Gets or sets the localized error message.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagErrorReference">
+            <summary>
+            Represents a reference to a one or more extended query tag errors.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagErrorReference.Count">
+            <summary>
+            Gets or sets the number of errors.
+            </summary>
+            <value>The positive number of errors found at the <see cref="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagErrorReference.Href"/>.</value>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagErrorReference.Href">
+            <summary>
+            Gets or sets the resource reference for the errors.
+            </summary>
+            <value>The unique resource URL for the extended query tag errors.</value>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagStatus">
+            <summary>
+            Status of extended query tag.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagStatus.Adding">
+            <summary>
+            The query tag is being added.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagStatus.Ready">
+            <summary>
+            The query tag has been added to system.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.ExtendedQueryTagStatus.Deleting">
+            <summary>
+            The query tag is being deleting.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry">
+            <summary>
+            External representation of a extended query tag entry when retrieving.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.Path">
+            <summary>
+            Path of this tag. Normally it's composed of groupid and elementid.
+            E.g: 00100020 is path of patient id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.VR">
+            <summary>
+            VR of this tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.Level">
+            <summary>
+            Level of this tag. Could be Study, Series or Instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.Status">
+            <summary>
+            Status of this tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.QueryStatus">
+            <summary>
+            Query Status of this tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.PrivateCreator">
+            <summary>
+            Identification code of private tag implementer.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.Errors">
+            <summary>
+            Optional errors associated with the query tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.GetExtendedQueryTagEntry.Operation">
+            <summary>
+            Optional reference to the operation acted upon the act.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.IResourceReference`1">
+            <summary>
+            Represents a reference to a RESTful resource.
+            </summary>
+            <typeparam name="T">The type of resource.</typeparam>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.IResourceReference`1.Href">
+            <summary>
+            Gets the endpoint that returns resources of type <typeparamref name="T"/>.
+            </summary>
+            <value>The resource URL.</value>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.QueryStatus">
+            <summary>
+            Query status on an extended query tag.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.QueryStatus.Disabled">
+            <summary>
+            The tag is not allowed to be queried.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.QueryStatus.Enabled">
+            <summary>
+            The tag is allowed to be queried.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.QueryTagLevel">
+            <summary>
+            Level of a queryable tag.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.QueryTagLevel.Instance">
+            <summary>
+            The tag is queriable on instance level.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.QueryTagLevel.Series">
+            <summary>
+            The tag is queriable on series level.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Dicom.Client.Models.QueryTagLevel.Study">
+            <summary>
+            The tag is queriable on study level.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Dicom.Client.Models.UpdateExtendedQueryTagEntry">
+            <summary>
+            Encapsulate parameters for updating extended query tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Dicom.Client.Models.UpdateExtendedQueryTagEntry.QueryStatus">
+            <summary>
+            Gets or sets query status.
+            </summary>
+        </member>
+    </members>
+</doc>

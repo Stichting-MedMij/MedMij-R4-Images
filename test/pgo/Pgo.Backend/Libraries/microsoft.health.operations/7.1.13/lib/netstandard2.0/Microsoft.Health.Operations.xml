@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Health.Operations</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Health.Operations.IOperationCheckpoint">
+            <summary>
+            Represents the set of data that may be encoded in an operation's checkpoint.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationCheckpoint.CreatedTime">
+            <summary>
+            Gets the optional date and time the operation was started.
+            </summary>
+            <value>
+            The <see cref="T:System.DateTime"/> when the operation was started, or <see langword="null"/> if the date and
+            time may be found outside of the checkpoint.
+            </value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationCheckpoint.PercentComplete">
+            <summary>
+            Gets the optional percentage of work that has been completed by the operation.
+            </summary>
+            <value>An integer ranging from 0 to 100.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationCheckpoint.ResourceIds">
+            <summary>
+            Gets the optional collection of resources IDs that the operation is creating or manipulating.
+            </summary>
+            <remarks>
+            Not all operations target one or more resources.
+            </remarks>
+            <value>A collection of resource IDs, or <see langword="null"/> if there are no targeted resources.</value>
+        </member>
+        <member name="T:Microsoft.Health.Operations.IOperationState`1">
+            <summary>
+            Represents the state of a long-running operation.
+            </summary>
+            <typeparam name="T">The type used to denote the category of operation.</typeparam>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.OperationId">
+            <summary>
+            Gets the operation ID.
+            </summary>
+            <value>The unique ID that denotes a particular operation.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.Type">
+            <summary>
+            Gets the category of the operation.
+            </summary>
+            <value>The operation category of type <typeparamref name="T"/>.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.CreatedTime">
+            <summary>
+            Gets the date and time the operation was started.
+            </summary>
+            <value>The <see cref="T:System.DateTime"/> when the operation was started.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.LastUpdatedTime">
+            <summary>
+            Gets the last date and time the state was updated.
+            </summary>
+            <value>The last <see cref="T:System.DateTime"/> when the operation state was updated.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.Status">
+            <summary>
+            Gets the execution status of the operation.
+            </summary>
+            <value>The current <see cref="T:Microsoft.Health.Operations.OperationStatus"/>.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.PercentComplete">
+            <summary>
+            Gets the percentage of work that has been completed by the operation.
+            </summary>
+            <value>An optional integer ranging from 0 to 100 if supported.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.Resources">
+            <summary>
+            Gets the optional collection of resources locations that the operation is creating or manipulating.
+            </summary>
+            <remarks>
+            The set of resources may change until the <see cref="P:Microsoft.Health.Operations.IOperationState`1.Status"/> indicates completion.
+            </remarks>
+            <value>A collection of resource IDs, or <see langword="null"/> if there are no targeted resources.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.IOperationState`1.Results">
+            <summary>
+            Gets the optional results of the operation.
+            </summary>
+            <remarks>
+            The results may change over time as the operation continues execution.
+            </remarks>
+            <value>
+            An object whose type depends on the <see cref="P:Microsoft.Health.Operations.OperationState`1.Type"/> if specified;
+            otherwise <see langword="null"/>.
+            </value>
+        </member>
+        <member name="T:Microsoft.Health.Operations.OperationId">
+            <summary>
+            A <see langword="static"/> class for utilities related to operation IDs.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationId.FormatSpecifier">
+            <summary>
+            Gets the <see cref="T:System.Guid"/> format specifier for normalizing operation ID string values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Operations.OperationId.Generate">
+            <summary>
+            Creates a new pseudo-random operation ID.
+            </summary>
+            <returns>A new operation ID.</returns>
+        </member>
+        <member name="T:Microsoft.Health.Operations.OperationReference">
+            <summary>
+            Represents a reference to an existing long-running operation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationReference.Id">
+            <summary>
+            Gets the operation ID.
+            </summary>
+            <value>The unique ID that denotes a particular long-running operation.</value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationReference.Href">
+            <summary>
+            Gets the resource reference for the operation.
+            </summary>
+            <value>The unique resource URL for the operation.</value>
+        </member>
+        <member name="M:Microsoft.Health.Operations.OperationReference.#ctor(System.Guid,System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Health.Operations.OperationReference"/> class.
+            </summary>
+            <param name="id">The unique operation ID.</param>
+            <param name="href">The resource URL for the operation.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="href"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:Microsoft.Health.Operations.OperationState`1">
+            <summary>
+            Represents the state of a long-running operation.
+            </summary>
+            <typeparam name="T">The type used to denote the category of operation.</typeparam>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.OperationId">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.OperationId"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.Type">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Type"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.CreatedTime">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.CreatedTime"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.LastUpdatedTime">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.LastUpdatedTime"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.Status">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Status"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.PercentComplete">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.PercentComplete"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.Resources">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Resources"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`1.Microsoft#Health#Operations#IOperationState{T}#Results">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Results"/>
+        </member>
+        <member name="T:Microsoft.Health.Operations.OperationState`2">
+            <summary>
+            Represents the state and results of a long-running operation
+            </summary>
+            <typeparam name="TType">The type used to denote the category of operation.</typeparam>
+            <typeparam name="TResults">The type used to represent the results of the operation.</typeparam>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.OperationId">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.OperationId"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.Type">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Type"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.CreatedTime">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.CreatedTime"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.LastUpdatedTime">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.LastUpdatedTime"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.Status">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Status"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.PercentComplete">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.PercentComplete"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.Resources">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Resources"/>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.Results">
+            <summary>
+            Gets the results of the operation.
+            </summary>
+            <remarks>
+            The results may change over time as the operation continues execution.
+            </remarks>
+            <value>
+            An object whose type depends on the <see cref="P:Microsoft.Health.Operations.OperationState`1.Type"/> if specified;
+            otherwise <see langword="null"/>.
+            </value>
+        </member>
+        <member name="P:Microsoft.Health.Operations.OperationState`2.Microsoft#Health#Operations#IOperationState{TType}#Results">
+            <inheritdoc cref="P:Microsoft.Health.Operations.IOperationState`1.Results"/>
+        </member>
+        <member name="T:Microsoft.Health.Operations.OperationStatus">
+            <summary>
+            Specifies the status of a long-running operation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.Unknown">
+            <summary>
+            Specifies a status that is missing or unrecognized.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.NotStarted">
+            <summary>
+            Specifies a status where execution is pending.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.Running">
+            <summary>
+            Specifies a status where the operation is executing and has not yet finished.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.Completed">
+            <summary>
+            Specifies a status where the operation has finished successfully.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.Failed">
+            <summary>
+            Specifies a status where the operation has stopped prematurely after encountering one or more errors.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.Canceled">
+            <summary>
+            Specifies a status where the operation has stopped prematurely after being told to do so by the user.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Health.Operations.OperationStatus.Succeeded">
+            <summary>
+            Specifies a status where the operation has successfully completed execution.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Health.Operations.OperationStatusExtensions">
+            <summary>
+            Provides a set of <see langword="static"/> utility methods for <see cref="T:Microsoft.Health.Operations.OperationStatus"/> values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Health.Operations.OperationStatusExtensions.IsInProgress(Microsoft.Health.Operations.OperationStatus)">
+            <summary>
+            Determines whether the <see cref="T:Microsoft.Health.Operations.OperationStatus"/> indicates that the operation has not yet finished.
+            </summary>
+            <remarks><see cref="F:Microsoft.Health.Operations.OperationStatus.Unknown"/> is not considered in-progress.</remarks>
+            <param name="status">The operation's reported status.</param>
+            <returns>
+            <see langword="true"/> if the operation has not yet reached a terminal status; otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Health.Operations.OperationStatusExtensions.IsStopped(Microsoft.Health.Operations.OperationStatus)">
+            <summary>
+            Determines whether the <see cref="T:Microsoft.Health.Operations.OperationStatus"/> indicates that the operation has stopped execution.
+            </summary>
+            <remarks><see cref="F:Microsoft.Health.Operations.OperationStatus.Unknown"/> is not considered stopped.</remarks>
+            <param name="status">The operation's reported status.</param>
+            <returns>
+            <see langword="true"/> if the operation has reached a terminal status; otherwise <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="T:Microsoft.Health.Operations.Serialization.OperationIdJsonConverter">
+            <summary>
+            Represents a strict <see cref="T:System.Text.Json.Serialization.JsonConverter`1"/> for operation IDs.
+            </summary>
+            <remarks>
+            Unlike the typical <see cref="T:System.Guid"/> deserialization, the <see cref="T:Microsoft.Health.Operations.Serialization.OperationIdJsonConverter"/>
+            only accepts strings that can be parsed using the <see cref="F:Microsoft.Health.Operations.OperationId.FormatSpecifier"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Health.Operations.Serialization.OperationIdJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Reads and converts the operation ID JSON string to its <see cref="T:System.Guid"/> representation.
+            </summary>
+            <param name="reader">The <see cref="T:System.Text.Json.Utf8JsonReader"/> whose current token is of type <see cref="F:System.Text.Json.JsonTokenType.String"/>.</param>
+            <param name="typeToConvert">The type of convert. Unused by the <see cref="T:Microsoft.Health.Operations.Serialization.OperationIdJsonConverter"/>.</param>
+            <param name="options">A collection of options that specify how serialization should be performed.</param>
+            <returns>The operation ID represented by the JSON string.</returns>
+            <exception cref="T:System.Text.Json.JsonException">The current token cannot be read as an operation ID.</exception>
+        </member>
+        <member name="M:Microsoft.Health.Operations.Serialization.OperationIdJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.Guid,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Writes a specified operation ID as a JSON string.
+            </summary>
+            <param name="writer">The <see cref="T:System.Text.Json.Utf8JsonWriter"/> with which to write.</param>
+            <param name="value">The operation ID.</param>
+            <param name="options">A collection of options that specify how serialization should be performed.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="writer"/> is <see langword="null"/>.</exception>
+        </member>
+    </members>
+</doc>

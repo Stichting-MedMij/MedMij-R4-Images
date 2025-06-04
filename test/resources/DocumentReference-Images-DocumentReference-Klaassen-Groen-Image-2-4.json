@@ -1,0 +1,136 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "Images-DocumentReference-Klaassen-Groen-Image-2-4",
+  "meta": {
+    "profile": [
+      "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+    ]
+  },
+  "masterIdentifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:d7236f3e-5c10-4caf-9864-255baa23611b"
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "142771000146105",
+        "system": "http://snomed.info/sct",
+        "display": "röntgenfoto van linker kaakgewricht"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "18726-0",
+          "system": "http://loinc.org",
+          "display": "Radiology studies (set)"
+        },
+        {
+          "code": "IMAGES",
+          "system": "urn:oid:1.3.6.1.4.1.19376.1.2.6.1",
+          "display": "Images"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/Images-Patient-Klaassen-Groen",
+    "display": "José Klaassen-Groen"
+  },
+  "date": "2020-08-10T12:00:00Z",
+  "author": [
+    {
+      "reference": "PractitionerRole/Images-PractitionerRole-Coenen",
+      "display": "C.H. Coenen, Kaakchirurg, Erasmus MC, Mondzorg en kaakchirurgie"
+    },
+    {
+      "reference": "Organization/Images-Organization-Erasmus-MC-Mondzorg-Universitair",
+      "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+    }
+  ],
+  "securityLabel": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "display": "Normal"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/dicom+json",
+        "language": "nl",
+        "url": "https://examplepacs.xis/wado/metadata",
+        "title": "röntgenfoto van linker kaakgewricht",
+        "creation": "2020-08-10T12:00:00Z"
+      },
+      "format": {
+        "code": "1.2.840.10008.5.1.4.1.1.88.59",
+        "system": "urn.oid:1.2.840.10008.2.6.1"
+      }
+    }
+  ],
+  "context": {
+    "period": {
+      "start": "2020-08-10"
+    },
+    "facilityType": {
+      "coding": [
+        {
+          "code": "V5",
+          "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+          "display": "Universitair ziekenhuis"
+        }
+      ]
+    },
+    "practiceSetting": {
+      "coding": [
+        {
+          "code": "394734003",
+          "system": "http://snomed.info/sct",
+          "display": "Radiological specialties"
+        }
+      ]
+    },
+    "sourcePatientInfo": {
+      "reference": "Patient/Images-Patient-Klaassen-Groen",
+      "display": "José Klaassen-Groen"
+    },
+    "related": [
+      {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "code": "urn:ihe:iti:xds:2013:accession"
+              }
+            ]
+          },
+          "system": "urn:oid:2.16.528.1.1023.19.1.1",
+          "value": "RAD-20250212-74920"
+        }
+      },
+      {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:ietf:rfc:3986",
+                "code": "urn:ihe:iti:xds:2016:studyInstanceUID"
+              }
+            ]
+          },
+          "value": "2.16.528.1.1007.3.1.20250212.456342"
+        }
+      }
+    ]
+  }
+}

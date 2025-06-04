@@ -1,0 +1,44 @@
+{
+  "resourceType": "Patient",
+  "id": "Images-Patient-Tjong-A-Kon",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "Xi"
+      ],
+      "_given": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "BR"
+            }
+          ]
+        }
+      ],
+      "use": "official",
+      "text": "Xi Tjong A Kon",
+      "family": "Tjong A Kon",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Tjong A Kon"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/bsn",
+      "value": "267384488"
+    }
+  ],
+  "birthDate": "2000-09-09"
+}

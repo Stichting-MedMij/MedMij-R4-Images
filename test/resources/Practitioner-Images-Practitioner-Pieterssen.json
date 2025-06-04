@@ -1,0 +1,24 @@
+{
+  "resourceType": "Practitioner",
+  "id": "Images-Practitioner-Pieterssen",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "Pieterssen",
+      "family": "Pieterssen",
+      "_family": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+            "valueString": "Pieterssen"
+          }
+        ]
+      }
+    }
+  ]
+}
