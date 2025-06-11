@@ -1,0 +1,251 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2024-02-05T12:33:45Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.106.11.19"/>
+    </identifier>
+    <version value="2024-02-05T12:33:45"/>
+    <name value="AnatomicalRegion"/>
+    <title value="AnatomicalRegion(MCWG)"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="Korte waardelijst van AnatomicalRegion aangedragen door IHE MCWG voor het delen van medische beelden."/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="63337009"/>
+                <display value="Lower trunk"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="onderste gedeelte van romp"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="onderste gedeelte van romp"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="38266002"/>
+                <display value="Entire body as a whole (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="gehele lichaam in totaliteit"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="gehele lichaam in totaliteit"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="53120007"/>
+                <display value="Upper limb structure (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="arm"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="arm"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="61685007"/>
+                <display value="Lower limb structure (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="been"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="been"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="67734004"/>
+                <display value="Structure of thoracic segment of trunk (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="bovenste gedeelte van romp"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="bovenste gedeelte van romp"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="774007"/>
+                <display value="Structure of head and/or neck (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="hoofd-halsgebied"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="hoofd-halsgebied"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="113257007"/>
+                <display value="Structure of cardiovascular system (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="hart en bloedvaten"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="hart en bloedvaten"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="80891009"/>
+                <display value="Heart structure (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="hart"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="hart"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="76752008"/>
+                <display value="Breast structure (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="borst"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="borst"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="737561001"/>
+                <display value="Structure of vertebral column and/or spinal cord (body structure)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="wervelkolom en/of ruggenmerg"/>
+                </designation>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000003001"/>
+                        <display value="Fully specified name"/>
+                    </use>
+                    <value value="wervelkolom en/of ruggenmerg"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

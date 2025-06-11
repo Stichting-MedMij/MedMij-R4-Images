@@ -1,0 +1,383 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2024-02-05T13:30:06Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.106.11.22"/>
+    </identifier>
+    <version value="2024-02-05T13:30:06"/>
+    <name value="PracticeSettingCodeMCWG"/>
+    <title value="practiceSettingCode(MCWG)"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="Valueset proposed by the IHE MCWG.&#xA;&#xA;This list is based on the SNOMED CT values of children of Clinical Specialty 394658006, with added the children of Medical Specialty 394733009. After that, a few adjustments were done to prevent overlapping. The same list is used in the US national Sequoia project."/>
+    <immutable value="false"/>
+    <copyright value="This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org."/>
+    <compose>
+        <include>
+            <system value="http://snomed.info/sct"/>
+            <concept>
+                <code value="394658006"/>
+                <display value="Clinical specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="28351000087106"/>
+                <display value="Addiction specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="25931000087108"/>
+                <display value="Adolescent medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="715184008"/>
+                <display value="Aerospace medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394578005"/>
+                <display value="Audiological medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259939000"/>
+                <display value="Ayurveda medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394579002"/>
+                <display value="Cardiology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394804000"/>
+                <display value="Clinical cytogenetics and molecular genetics (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394580004"/>
+                <display value="Clinical genetics (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394803006"/>
+                <display value="Clinical hematology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="408480009"/>
+                <display value="Clinical immunology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394805004"/>
+                <display value="Clinical immunology/allergy (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394600006"/>
+                <display value="Clinical pharmacology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394601005"/>
+                <display value="Clinical physiology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394581000"/>
+                <display value="Community medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1268907002"/>
+                <display value="Community pharmacy (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="408478003"/>
+                <display value="Critical care medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722163006"/>
+                <display value="Dentistry (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394582007"/>
+                <display value="Dermatology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722164000"/>
+                <display value="Dietetics and nutrition (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="410005002"/>
+                <display value="Dive medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="773568002"/>
+                <display value="Emergency medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394583002"/>
+                <display value="Endocrinology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="419772000"/>
+                <display value="Family practice (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394584008"/>
+                <display value="Gastroenterology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394802001"/>
+                <display value="General medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394814009"/>
+                <display value="General practice (specialty) (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394808002"/>
+                <display value="Genito-urinary medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394811001"/>
+                <display value="Geriatric medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259938008"/>
+                <display value="Homeopathic medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1258957008"/>
+                <display value="Hospital pharmacy specialization (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="24111000087100"/>
+                <display value="Human immunodeficiency virus social work specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259944007"/>
+                <display value="Immunohemotherapy (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1255913008"/>
+                <display value="Industrial pharmacy (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394807007"/>
+                <display value="Infectious diseases (specialty) (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="419192003"/>
+                <display value="Internal medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722204007"/>
+                <display value="Legal medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251553005"/>
+                <display value="Medical acupuncture (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251554004"/>
+                <display value="Medical coding (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251543009"/>
+                <display value="Medical hydrology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394593009"/>
+                <display value="Medical oncology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394813003"/>
+                <display value="Medical ophthalmology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1255731004"/>
+                <display value="Medical physics (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259940003"/>
+                <display value="Yoga medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="410001006"/>
+                <display value="Military medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="28551000087103"/>
+                <display value="Musculoskeletal medicine specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="23931000087109"/>
+                <display value="Narcotic addiction medicine specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394589003"/>
+                <display value="Nephrology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394591006"/>
+                <display value="Neurology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394649004"/>
+                <display value="Nuclear medicine - specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722165004"/>
+                <display value="Nursing (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394585009"/>
+                <display value="Obstetrics and gynecology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394821009"/>
+                <display value="Occupational medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394594003"/>
+                <display value="Ophthalmology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259957004"/>
+                <display value="Oral medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="416304004"/>
+                <display value="Osteopathic manipulative medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="418960008"/>
+                <display value="Otolaryngology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251538002"/>
+                <display value="Pediatric orthopedic (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394537008"/>
+                <display value="Pediatric specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394882004"/>
+                <display value="Pain management (specialty) (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394806003"/>
+                <display value="Palliative medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394595002"/>
+                <display value="Pathology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="786454007"/>
+                <display value="Perioperative medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251544003"/>
+                <display value="Pharmaceutical medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722166003"/>
+                <display value="Podiatry (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="409968004"/>
+                <display value="Preventive medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394587001"/>
+                <display value="Psychiatry (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722162001"/>
+                <display value="Psychology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="721961006"/>
+                <display value="Psychosomatic medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="408440000"/>
+                <display value="Public health medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1258859005"/>
+                <display value="Public health nutrition (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="418112009"/>
+                <display value="Pulmonary medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394734003"/>
+                <display value="Radiological specialties (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="718359001"/>
+                <display value="Regenerative medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394602003"/>
+                <display value="Rehabilitation - specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251552000"/>
+                <display value="Reproductive medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="408447002"/>
+                <display value="Respite care - specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394810000"/>
+                <display value="Rheumatology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251546001"/>
+                <display value="Sexual medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259219009"/>
+                <display value="Siddha medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="408450004"/>
+                <display value="Sleep studies - specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251536003"/>
+                <display value="Sport medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394732004"/>
+                <display value="Surgical specialty (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="409967009"/>
+                <display value="Toxicology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1251545002"/>
+                <display value="Travel medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="1259218001"/>
+                <display value="Unani medicine (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="394612005"/>
+                <display value="Urology (qualifier value)"/>
+            </concept>
+            <concept>
+                <code value="722414000"/>
+                <display value="Vascular medicine (qualifier value)"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

@@ -1,0 +1,823 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "bbs-DocumentReference",
+  "url": "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference",
+  "name": "BbsDocumentReference",
+  "title": "bbs DocumentReference",
+  "status": "draft",
+  "publisher": "MedMij",
+  "description": "Imaging research including images and reports.",
+  "purpose": "This DocumentReference resource represents the Onderzoek building block for patient use cases in the context of the information standard [Beeldbeschikbaarheid](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). This profile is based on the [IHE.MHD.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "bbs-dataset-100-alpha2-20240208",
+      "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html",
+      "name": "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
+    },
+    {
+      "identity": "ihexds-dataset-2024-20220712",
+      "uri": "https://decor.nictiz.nl/pub/nihemds/ihexds-html-20220712T144728/ds-2.16.840.1.113883.2.4.3.11.60.106.1.1-2013-12-04T122419.html",
+      "name": "ART-DECOR Dataset Nationale IHE MetaData Set (2024)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "short": "ImagingResearch",
+        "definition": "Imaging research including images and reports.",
+        "alias": [
+          "Onderzoek"
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-66",
+            "comment": "ImagingResearch"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.masterIdentifier",
+        "path": "DocumentReference.masterIdentifier",
+        "short": "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID",
+        "definition": "* Globally unique ID for the report of the imaging research. In DICOM the study/series UID can be used.\n* Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The globally unique identifier assigned by the document creator to this document.",
+        "alias": [
+          "VerslaginformatieIdentificatienummer",
+          "BeeldinformatieIdentificatienummer"
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-100",
+            "comment": "ReportInformationIdentificationNumber"
+          },
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-784",
+            "comment": "ImageInformationIdentificationNumber"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-29",
+            "comment": "uniqueID"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "short": "AvailabilityStatus",
+        "definition": "The lifecycle status of the document.",
+        "patternCode": "current",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-3",
+            "comment": "availabilityStatus"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "short": "ProcedureType / TypeCode",
+        "definition": "* Description of the procedure and/or the performed imaging research (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).\n* The code specifying the precise kind of document (e.g. Pulmonary History and Physical, Discharge Summary, Ultrasound Report).",
+        "alias": [
+          "VerrichtingType"
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-176",
+            "comment": "ProcedureType"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-28",
+            "comment": "typeCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "short": "ClassCode",
+        "definition": "The code specifying the particular kind of document.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-9",
+            "comment": "classCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.category.coding",
+        "path": "DocumentReference.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 2,
+        "constraint": [
+          {
+            "key": "bbs-DocumentReference-1",
+            "severity": "error",
+            "human": "Either a category for an image or a report is present.",
+            "expression": "where(system = 'urn:oid:1.3.6.1.4.1.19376.1.2.6.1' and code = 'IMAGES').exists() xor where(system = 'urn:oid:1.3.6.1.4.1.19376.1.2.6.1' and code = 'REPORTS').exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.category.coding:radiologyStudies",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "radiologyStudies",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "18726-0",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "DocumentReference.category.coding:images",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "images",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "IMAGES",
+          "system": "urn:oid:1.3.6.1.4.1.19376.1.2.6.1"
+        },
+        "condition": [
+          "bbs-DocumentReference-1"
+        ]
+      },
+      {
+        "id": "DocumentReference.category.coding:reports",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "reports",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "code": "REPORTS",
+          "system": "urn:oid:1.3.6.1.4.1.19376.1.2.6.1"
+        },
+        "condition": [
+          "bbs-DocumentReference-1"
+        ]
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "short": "Patient / PatientId",
+        "alias": [
+          "Patient"
+        ],
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-132",
+            "comment": "Patient"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-19",
+            "comment": "patientId"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "short": "DateTime",
+        "definition": "* Date/time on which the report has been autorised and/or made available.\n* Date/time on which the radiological examination has been performed on the patient and/or the images have been made.",
+        "alias": [
+          "DatumTijd"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-101",
+            "comment": "DateTime"
+          },
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-69",
+            "comment": "DateTime"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "short": "Performer / Location / Author",
+        "definition": "* The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the health professional. In the context of image exchange, the Performing Physician should be conveyed here, and NOT the laboratory technician who makes the images (i.e. the Operator).\n* The healthcare center where the procedure was, is or will be carried out.",
+        "alias": [
+          "Uitvoerder",
+          "Locatie"
+        ],
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-187",
+            "comment": "Performer"
+          },
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-185",
+            "comment": "Location"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-2",
+            "comment": "author"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.authenticator",
+        "path": "DocumentReference.authenticator",
+        "short": "LegalAuthenticator",
+        "definition": "Represents a participant who has legally authenticated or attested the document within the author institution.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-17",
+            "comment": "legalAuthenticator"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.description",
+        "path": "DocumentReference.description",
+        "short": "Comments",
+        "definition": "Comments associated with the document.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-4",
+            "comment": "comments"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.securityLabel",
+        "path": "DocumentReference.securityLabel",
+        "short": "ConfidentialityCode",
+        "definition": "The code specifying the level of confidentiality of the document.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.6--20131212104106"
+        },
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-10",
+            "comment": "confidentialityCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "short": "MimeType",
+        "definition": "MIME type of the document.",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "MimeType"
+            },
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/additional-binding",
+              "extension": [
+                {
+                  "url": "purpose",
+                  "valueCode": "minimum"
+                },
+                {
+                  "url": "valueSet",
+                  "valueCanonical": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.8--20131212104106"
+                }
+              ]
+            }
+          ],
+          "strength": "required",
+          "description": "The mime type of an attachment. Any valid mime type is allowed.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1"
+        },
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-18",
+            "comment": "mimeType"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.language",
+        "path": "DocumentReference.content.attachment.language",
+        "short": "LanguageCode",
+        "definition": "Specifies the human language of character data in the document. Using codes from IETF RFC 3066.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.12--20131212104106"
+        },
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-16",
+            "comment": "languageCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "short": "URI",
+        "definition": "The URI for the document.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-30",
+            "comment": "URI"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.size",
+        "path": "DocumentReference.content.attachment.size",
+        "short": "Size",
+        "definition": "Size in bytes of the document.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-24",
+            "comment": "size"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.hash",
+        "path": "DocumentReference.content.attachment.hash",
+        "short": "Hash",
+        "definition": "Hash of the document itself.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-14",
+            "comment": "hash"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.title",
+        "path": "DocumentReference.content.attachment.title",
+        "short": "Title",
+        "definition": "The title of the document.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-27",
+            "comment": "title"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.attachment.creation",
+        "path": "DocumentReference.content.attachment.creation",
+        "short": "DateTime / CreationTime",
+        "definition": "* Date/time on which the report has been autorised and/or made available.\n* Date/time on which the radiological examination has been performed on the patient and/or the images have been made.\n* The time the author created the document. Shall have a single value.",
+        "alias": [
+          "DatumTijd"
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-101",
+            "comment": "DateTime"
+          },
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-69",
+            "comment": "DateTime"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-11",
+            "comment": "creationTime"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.format",
+        "path": "DocumentReference.content.format",
+        "short": "FormatCode",
+        "definition": "Code globally uniquely specifying the format of the document.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.7--20131212104106"
+        },
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-13",
+            "comment": "formatCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.encounter",
+        "path": "DocumentReference.context.encounter",
+        "short": "ReferenceIdList",
+        "definition": "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc.",
+        "comment": "Only Encounters on the ReferenceIdList are conveyed here, while other identifiers on that list are conveyed via `.context.related`.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Encounter",
+              "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-117",
+            "comment": "referenceIdList"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.event",
+        "path": "DocumentReference.context.event",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "EventCodeList",
+        "definition": "This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-12",
+            "comment": "eventCodeList"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.event:procedureAnatomicalLocation",
+        "path": "DocumentReference.context.event",
+        "sliceName": "procedureAnatomicalLocation",
+        "short": "ProcedureAnatomicalLocation / Location",
+        "definition": "Anatomical location which is the focus of the procedure.\n\nThe value set is proposed by IHE MCWG and also suggested for the EU (Xt-EHR). The used value set is a subset of the value set defined in zib2020.",
+        "alias": [
+          "VerrichtingAnatomischeLocatie",
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept",
+            "profile": [
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation"
+            ]
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-178",
+            "comment": "ProcedureAnatomicalLocation"
+          },
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-179",
+            "comment": "Location"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.event:procedureAnatomicalLocation.extension:laterality",
+        "path": "DocumentReference.context.event.extension",
+        "sliceName": "laterality"
+      },
+      {
+        "id": "DocumentReference.context.event:procedureAnatomicalLocation.extension:laterality.extension",
+        "path": "DocumentReference.context.event.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.context.event:procedureAnatomicalLocation.extension:laterality.value[x]",
+        "path": "DocumentReference.context.event.extension.value[x]",
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-180",
+            "comment": "Laterality"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.period",
+        "path": "DocumentReference.context.period",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.period.start",
+        "path": "DocumentReference.context.period.start",
+        "short": "ProcedureStartDate / ServiceStartTime",
+        "definition": "* Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken.\n* The start time the service being documented took place.",
+        "alias": [
+          "VerrichtingStartDatum"
+        ],
+        "min": 1,
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-174",
+            "comment": "ProcedureStartDate"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-22",
+            "comment": "serviceStartTime"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.period.end",
+        "path": "DocumentReference.context.period.end",
+        "short": "ProcedureEndDate / ServiceStopTime",
+        "definition": "* The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted. \n* The stop time the service being documented took place.",
+        "alias": [
+          "VerrichtingEindDatum"
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-175",
+            "comment": "ProcedureEndDate"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-23",
+            "comment": "serviceStopTime"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.facilityType",
+        "path": "DocumentReference.context.facilityType",
+        "short": "OrganizationType / HealthcareFacilityTypeCode",
+        "definition": "* The type of healthcare provider, such as general hospital, or nursing home. If this field is filled in and an AGB code is used for the HealthcareProviderIdentificationNumber, the type must match the type implicitly contained in the AGB code.\n* This code represents the type of organizational setting of the clinical encounter during which the documented act occurred.",
+        "alias": [
+          "OrganisatieType"
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-546",
+            "comment": "OrganizationType"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-31",
+            "comment": "healthcareFacilityTypeCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.practiceSetting",
+        "path": "DocumentReference.context.practiceSetting",
+        "short": "DepartmentSpecialty / PracticeSettingCode ",
+        "definition": "* The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.\nThe bound value set is the value set that has been proposed by IHE MCWG to the EU (Xt-EHR) for national and international exchange.\n* The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology). ",
+        "alias": [
+          "AfdelingSpecialisme"
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-524",
+            "comment": "DepartmentSpecialty"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-20",
+            "comment": "practiceSettingCode"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.sourcePatientInfo",
+        "path": "DocumentReference.context.sourcePatientInfo",
+        "short": "SourcePatientId / SourcePatientInfo",
+        "definition": "* The sourcePatientId represents the subject of care medical record Identifier (e.g. Patient Id) in the local patient Identifier Domain of the Document Source.\n* The sourcePatientInfo contains demographic information of the patient to whose medical record this document belongs.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+            ],
+            "aggregation": [
+              "contained"
+            ]
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-25",
+            "comment": "sourcePatientId"
+          },
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-26",
+            "comment": "sourcePatientInfo"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.related",
+        "path": "DocumentReference.context.related",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "identifier.type"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "ReferenceIdList",
+        "definition": "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc. \n\nFor Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.",
+        "comment": "Encounters on the ReferenceIdList are conveyed via `.context.encounter`.",
+        "mapping": [
+          {
+            "identity": "ihexds-dataset-2024-20220712",
+            "map": "ihexds-dataelement-117",
+            "comment": "referenceIdList"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.related:accessionNumber",
+        "path": "DocumentReference.context.related",
+        "sliceName": "accessionNumber",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "DocumentReference.context.related:accessionNumber.identifier",
+        "path": "DocumentReference.context.related.identifier",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.related:accessionNumber.identifier.type",
+        "path": "DocumentReference.context.related.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "urn:ihe:iti:xds:2013:accession",
+              "system": "urn:ietf:rfc:3986"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DocumentReference.context.related:accessionNumber.identifier.value",
+        "path": "DocumentReference.context.related.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.related:accessionNumber.identifier.assigner",
+        "path": "DocumentReference.context.related.identifier.assigner",
+        "definition": "Issuer of Accession Number.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.context.related:studyInstanceUID",
+        "path": "DocumentReference.context.related",
+        "sliceName": "studyInstanceUID",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "DocumentReference.context.related:studyInstanceUID.identifier",
+        "path": "DocumentReference.context.related.identifier",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.context.related:studyInstanceUID.identifier.type",
+        "path": "DocumentReference.context.related.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "urn:ihe:iti:xds:2016:studyInstanceUID",
+              "system": "urn:ietf:rfc:3986"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DocumentReference.context.related:studyInstanceUID.identifier.value",
+        "path": "DocumentReference.context.related.identifier.value",
+        "min": 1
+      }
+    ]
+  }
+}

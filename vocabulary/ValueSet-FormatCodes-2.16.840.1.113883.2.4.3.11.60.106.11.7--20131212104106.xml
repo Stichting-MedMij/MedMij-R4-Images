@@ -1,0 +1,117 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.106.11.7--20131212104106"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2013-12-12T10:41:06Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.7--20131212104106"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.106.11.7"/>
+    </identifier>
+    <version value="2013-12-12T10:41:06"/>
+    <name value="FormatCodes"/>
+    <title value="IHE XDS format codes"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="IHE XDS Format Code"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"/>
+            <concept>
+                <code value="urn:ihe:iti:xds:2017:mimeTypeSufficient"/>
+                <display value="may be used when mimeType is sufficient"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:rad:PDF/TEXT"/>
+                <display value="Text Report (XDS-I.b)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:xds-ms:2007"/>
+                <display value="Medical Summary (XDS-MS)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:xphr:2007"/>
+                <display value="Exchange of Personal Health Records (XPHR)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:edr:2007"/>
+                <display value="Emergency Department Referral (EDR)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:aps:2007"/>
+                <display value="Antepartum Summary (APS)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:edes:2007"/>
+                <display value="Emergency Department Encounter (EDES)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:apr:handp:2008"/>
+                <display value="Antepartum Record - History and Physical (APR)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:apr:lab:2008"/>
+                <display value="Antepartum Record – Laboratory (APR)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:apr:edu:2008"/>
+                <display value="Antepartum Record – Education (APR)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:irc:2008"/>
+                <display value="Immunization Registry Content (IC)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:crc:2008"/>
+                <display value="Cancer Registry Content (CRC)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:pcc:cm:2008"/>
+                <display value="Care Management (CM)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:iti:xds-sd:pdf:2008"/>
+                <display value="XDS-SD scanned PDF"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:iti:xds-sd:text:2008"/>
+                <display value="XDS-SD scanned plain text"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:iti:bppc:2007"/>
+                <display value="Basic Patient Privacy Consent"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:iti:bppc-sd:2007"/>
+                <display value="Basic Patient Privacy Consent scanned part"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:lab:xd-lab:2008"/>
+                <display value="Laboratory Report (CDA)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:rad:TEXT"/>
+                <display value="Text Report (XDS-I.b)"/>
+            </concept>
+            <concept>
+                <code value="urn:ihe:rad:PDF"/>
+                <display value="PDF Report (XDS-I.b)"/>
+            </concept>
+        </include>
+        <include>
+            <system value="urn:dicom:uid"/>
+            <concept>
+                <code value="1.2.840.10008.5.1.4.1.1.88.59"/>
+                <display value="KOS"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
