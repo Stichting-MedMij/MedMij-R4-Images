@@ -1,6 +1,6 @@
 FSHOnly: true
 fhirVersion: 4.0.1
-canonical: http://medmij.nl/fhir/medmij-r4-images-ig
+canonical: http://medmij.nl/fhir
 dependencies:
   ihe.iti.mhd: 4.2.2
   nictiz.fhir.nl.r4.nl-core: 0.11.0-beta.1
