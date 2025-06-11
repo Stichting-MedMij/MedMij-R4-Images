@@ -1,0 +1,42 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.106.11.8--20131212104106"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2013-12-12T10:41:06Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.8--20131212104106"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.2.4.3.11.60.106.11.8"/>
+    </identifier>
+    <version value="2013-12-12T10:41:06"/>
+    <name value="MimetypeXDS"/>
+    <title value="Mimetype XDS"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="mimetype XDS"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.5.79"/>
+            <concept>
+                <code value="application/dicom"/>
+                <display value="application/dicom"/>
+            </concept>
+            <concept>
+                <code value="text/xml"/>
+                <display value="text/xml"/>
+            </concept>
+            <concept>
+                <code value="application/pdf"/>
+                <display value="application/pdf"/>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
