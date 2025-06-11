@@ -57,6 +57,11 @@
         "mapping": [
           {
             "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-100",
+            "comment": "ReportInformationIdentificationNumber"
+          },
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-784",
             "comment": "ImageInformationIdentificationNumber"
           },
@@ -90,8 +95,8 @@
           "VerrichtingType"
         ],
         "binding": {
-          "strength": "extensible",
-          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.1.2--20200901000000"
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539"
         },
         "mapping": [
           {
@@ -218,6 +223,7 @@
         "alias": [
           "DatumTijd"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "bbs-dataset-100-alpha2-20240208",
@@ -235,10 +241,12 @@
         "id": "DocumentReference.author",
         "path": "DocumentReference.author",
         "short": "Performer / Location / Author",
+        "definition": "* The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the health professional. In the context of image exchange, the Performing Physician should be conveyed here, and NOT the laboratory technician who makes the images (i.e. the Operator).\n* The healthcare center where the procedure was, is or will be carried out.",
         "alias": [
           "Uitvoerder",
           "Locatie"
         ],
+        "min": 1,
         "type": [
           {
             "code": "Reference",
@@ -374,6 +382,10 @@
         "path": "DocumentReference.content.attachment.language",
         "short": "LanguageCode",
         "definition": "Specifies the human language of character data in the document. Using codes from IETF RFC 3066.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.12--20131212104106"
+        },
         "mapping": [
           {
             "identity": "ihexds-dataset-2024-20220712",
@@ -582,6 +594,11 @@
         ]
       },
       {
+        "id": "DocumentReference.context.period",
+        "path": "DocumentReference.context.period",
+        "min": 1
+      },
+      {
         "id": "DocumentReference.context.period.start",
         "path": "DocumentReference.context.period.start",
         "short": "ProcedureStartDate / ServiceStartTime",
@@ -589,6 +606,7 @@
         "alias": [
           "VerrichtingStartDatum"
         ],
+        "min": 1,
         "mapping": [
           {
             "identity": "bbs-dataset-100-alpha2-20240208",
@@ -657,7 +675,7 @@
           "AfdelingSpecialisme"
         ],
         "binding": {
-          "strength": "extensible",
+          "strength": "required",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"
         },
         "mapping": [
@@ -716,7 +734,8 @@
           "rules": "open"
         },
         "short": "ReferenceIdList",
-        "definition": "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc.",
+        "definition": "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc. \n\nFor Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.",
+        "comment": "Encounters on the ReferenceIdList are conveyed via `.context.encounter`.",
         "mapping": [
           {
             "identity": "ihexds-dataset-2024-20220712",

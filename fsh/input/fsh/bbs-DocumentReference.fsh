@@ -34,9 +34,9 @@ Description: "Imaging research including images and reports."
   * ^mapping[0].identity = "bbs-dataset-100-alpha2-20240208"
   * ^mapping[0].map = "bbs-dataelement-100"
   * ^mapping[0].comment = "ReportInformationIdentificationNumber"
-  * ^mapping[0].identity = "bbs-dataset-100-alpha2-20240208"
-  * ^mapping[0].map = "bbs-dataelement-784"
-  * ^mapping[0].comment = "ImageInformationIdentificationNumber"
+  * ^mapping[1].identity = "bbs-dataset-100-alpha2-20240208"
+  * ^mapping[1].map = "bbs-dataelement-784"
+  * ^mapping[1].comment = "ImageInformationIdentificationNumber"
   * ^mapping[2].identity = "ihexds-dataset-2024-20220712"
   * ^mapping[2].map = "ihexds-dataelement-29"
   * ^mapping[2].comment = "uniqueID"
@@ -47,7 +47,7 @@ Description: "Imaging research including images and reports."
   * ^mapping.identity = "ihexds-dataset-2024-20220712"
   * ^mapping.map = "ihexds-dataelement-3"
   * ^mapping.comment = "availabilityStatus"
-* type from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.1.2--20200901000000 (extensible)
+* type from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539 (required)
   * ^short = "ProcedureType / TypeCode"
   * ^definition = """
       * Description of the procedure and/or the performed imaging research (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).
@@ -91,7 +91,7 @@ Description: "Imaging research including images and reports."
   * ^mapping[1].identity = "ihexds-dataset-2024-20220712"
   * ^mapping[1].map = "ihexds-dataelement-19"
   * ^mapping[1].comment = "patientId"
-* date
+* date 1..1
   * ^short = "DateTime"
   * ^definition = """
         * Date/time on which the report has been autorised and/or made available.
@@ -104,8 +104,13 @@ Description: "Imaging research including images and reports."
   * ^mapping[1].identity = "bbs-dataset-100-alpha2-20240208"
   * ^mapping[1].map = "bbs-dataelement-69"
   * ^mapping[1].comment = "DateTime"
+* author 1..*
 * author only Reference(Practitioner or PractitionerRole or Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
   * ^short = "Performer / Location / Author"
+  * ^definition = """
+      * The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the health professional. In the context of image exchange, the Performing Physician should be conveyed here, and NOT the laboratory technician who makes the images (i.e. the Operator).
+      * The healthcare center where the procedure was, is or will be carried out.
+    """
   * ^alias[0] = "Uitvoerder"
   * ^alias[1] = "Locatie"
   * ^mapping[0].identity = "bbs-dataset-100-alpha2-20240208"
@@ -145,7 +150,7 @@ Description: "Imaging research including images and reports."
       * ^mapping.identity = "ihexds-dataset-2024-20220712"
       * ^mapping.map = "ihexds-dataelement-18"
       * ^mapping.comment = "mimeType"
-    * language
+    * language from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.12--20131212104106 (extensible)
       * ^short = "LanguageCode"
       * ^definition = "Specifies the human language of character data in the document. Using codes from IETF RFC 3066."
       * ^mapping.identity = "ihexds-dataset-2024-20220712"
@@ -236,8 +241,8 @@ Description: "Imaging research including images and reports."
       * ^mapping.identity = "bbs-dataset-100-alpha2-20240208"
       * ^mapping.map = "bbs-dataelement-180"
       * ^mapping.comment = "Laterality"
-  * period
-    * start
+  * period 1..1
+    * start 1..1
       * ^short = "ProcedureStartDate / ServiceStartTime"
       * ^definition = """
         * Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken.
@@ -277,7 +282,7 @@ Description: "Imaging research including images and reports."
     * ^mapping[1].identity = "ihexds-dataset-2024-20220712"
     * ^mapping[1].map = "ihexds-dataelement-31"
     * ^mapping[1].comment = "healthcareFacilityTypeCode"
-  * practiceSetting from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006 (extensible)
+  * practiceSetting from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006 (required)
     * ^short = "DepartmentSpecialty / PracticeSettingCode "
     * ^definition = """
       * The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.
@@ -308,7 +313,12 @@ Description: "Imaging research including images and reports."
     * ^slicing.discriminator.path = "identifier.type"
     * ^slicing.rules = #open
     * ^short = "ReferenceIdList"
-    * ^definition = "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc."
+    * ^definition = """
+      A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc. 
+      
+      For Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.
+      """
+    * ^comment = "Encounters on the ReferenceIdList are conveyed via `.context.encounter`."
     * ^mapping.identity = "ihexds-dataset-2024-20220712"
     * ^mapping.map = "ihexds-dataelement-117"
     * ^mapping.comment = "referenceIdList"
