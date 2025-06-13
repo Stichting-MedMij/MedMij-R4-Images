@@ -149,7 +149,8 @@ Description: "Imaging research including images and reports."
     * contentType
       * ^short = "MimeType"
       * ^definition = "MIME type of the document."
-      * ^binding.extension[http://hl7.org/fhir/tools/StructureDefinition/additional-binding].extension[purpose].valueCode = #minimum
+      * ^binding.extension[http://hl7.org/fhir/tools/StructureDefinition/additional-binding].extension[key].valueId = "bbs-DocumentReference-binding-contentType-1"
+      * ^binding.extension[http://hl7.org/fhir/tools/StructureDefinition/additional-binding].extension[purpose].valueCode = #extensible
       * ^binding.extension[http://hl7.org/fhir/tools/StructureDefinition/additional-binding].extension[valueSet].valueCanonical = "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.8--20131212104106"
       * ^mapping.identity = "ihexds-dataset-2024-20220712"
       * ^mapping.map = "ihexds-dataelement-18"
