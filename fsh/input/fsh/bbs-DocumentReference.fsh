@@ -7,6 +7,10 @@ Title: "bbs DocumentReference"
 Description: "Imaging research including images and reports."
 * ^status = #draft
 * ^publisher = "MedMij"
+* ^contact.name = "MedMij"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "info@medmij.nl"
+* ^contact.telecom.use = #work
 * ^purpose = "This DocumentReference resource represents the Onderzoek building block for patient use cases in the context of the information standard [Beeldbeschikbaarheid](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). This profile is based on the [IHE.MHD.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference)."
 * ^copyright = "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."
 * ^mapping[0].identity = "bbs-dataset-100-alpha2-20240208"
