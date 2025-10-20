@@ -197,8 +197,6 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 | SOP Class Name | SOP Class UID | Description | Corresponding modality |
 | --- | --- | --- | --- |
 | Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | CR |
-| Digital X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.1 | Modern digital X-ray images, successor of Computed Radiography (CR) Image Storage. | DX |
-| Digital Mammography X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.2 | Specialized X-ray images for digital mammography. | MG |
 | Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Standard CT images. | CT |
 | Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Enhanced CT images with multi-frame structure, recommended to be future-proof. | CT |
 | Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Dynamic ultrasound images (cine-loops). | US |
@@ -209,7 +207,8 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 | X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Angiographic images. | XA |
 | X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Dynamic X-ray images, such as swallow study videos. | RF |
 | Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Images of gamma cameras used in nuclear medicine (not in radiology), important for functional imaging (e.g. thyroid, skeleton). | NM |
-| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Endoscopic images. | ES |
+| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Single-frame VL (Visible Light) endoscopic images. | ES |
+| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Multi-frame video endoscopic images. | ES |
 | Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | Used to store PDF documents as DICOM objects, e.g. reports and attachments. | OT |
 | Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET scan images used in nuclear medicine. | PT |
 | Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Enhanced PET scan images used in nuclear medicine. | PT |
