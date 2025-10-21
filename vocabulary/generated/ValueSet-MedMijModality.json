@@ -45,16 +45,8 @@
             "display": "Computed Tomography"
           },
           {
-            "code": "DX",
-            "display": "Digital Radiography"
-          },
-          {
             "code": "ES",
             "display": "Endoscopy"
-          },
-          {
-            "code": "MG",
-            "display": "Mammography"
           },
           {
             "code": "MR",

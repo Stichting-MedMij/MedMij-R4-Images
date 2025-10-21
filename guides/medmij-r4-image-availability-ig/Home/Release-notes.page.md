@@ -1,5 +1,12 @@
 # {{page-title}}
 
+## 1.0.0-rc.2
+
+| Component             | Description  | Ticket    |
+| --------------------- | ------------ | --------- |
+| Technical design      | The minimal set of SOP classes that need to be supported has been updated (i.e. *VL Endoscopic Image Storage* has been added, while *Digital X-Ray Image Storage - For Presentation* and *Digital Mammography X-Ray Image Storage - For Presentation* have been removed). | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
+| FHIR artifacts        | The codes *DX* and *MG* have been removed from ValueSet MedMijModality. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
+
 ## 1.0.0-rc.1
 
 | Component             | Description  | Ticket    |
