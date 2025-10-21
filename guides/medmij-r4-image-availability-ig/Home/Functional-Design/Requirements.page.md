@@ -147,3 +147,12 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Bij elk beeld of verslag wordt de beschikbaar gestelde naam en/of het specialisme van de uitvoerende zorgverlener (bbs-dataelement-187) getoond. |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 12 | Zorggebruiker | Geattendeerd worden op het risico van mogelijke onjuiste interpretatie van de beelden en verslagen | Een zo juist mogelijke interpretatie van de beelden en verslagen heb | M |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Er wordt in de tijdlijn met beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/>
+*Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
