@@ -154,5 +154,4 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Er wordt in de tijdlijn met beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/>
-*Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
+| 1. | Er wordt in de tijdlijn met beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/> *Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
