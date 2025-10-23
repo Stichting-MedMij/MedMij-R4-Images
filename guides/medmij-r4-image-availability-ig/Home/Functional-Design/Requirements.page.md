@@ -155,3 +155,12 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Er wordt in de tijdlijn met beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/> *Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 13 | Zorggebruiker | Geattendeerd worden wanneer een beeldenreeks niet volledig wordt getoond | Begrijp dat er een beeld ontbreekt en door de onvolledigheid van de beschikbare informatie er een risico is op onjuiste interpretatie | S |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Er wordt een visueel duidelijke foutmelding getoond bij het niet volledig tonen van een beeldenreeks in zowel de webviewer als DICOM-download. |
+| 2. | In de foutmelding wordt opgenomen met wie de gebruiker contact kan opnemen. |
