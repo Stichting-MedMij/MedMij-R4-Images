@@ -76,7 +76,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | 3. | De sortering blijft behouden bij filteracties door de gebruiker. |
 | 4. | Datum van uitvoering wordt zichtbaar getoond bij ieder verslag/beeld. |
 | 5. | Indien twee items dezelfde datum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
-| 6. | De sortering blijft behouden bij herladen van de pagina of terugkeer naar het overzicht. | 
+| 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
