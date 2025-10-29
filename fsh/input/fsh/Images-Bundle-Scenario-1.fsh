@@ -19,7 +19,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.123456/series/2.25.298440724747098310794747640134633075284/instances/2.25.30908951586507656182973713777298371979" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "röntgenfoto van rechter sleutelbeen" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2024-05-23T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset

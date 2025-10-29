@@ -43,7 +43,7 @@
     },
     {
       "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair",
-      "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+      "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum"
     }
   ],
   "securityLabel": [
@@ -62,7 +62,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.xis/wado/metadata",
+        "url": "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456342/series/2.25.285651067871713283196753380709199456206/instances/2.25.16334082318769461496963509104742703811",
         "title": "röntgenfoto van linker kaakgewricht",
         "creation": "2020-08-10T12:00:00+02:00"
       },
@@ -92,7 +92,7 @@
         {
           "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
-          "display": "Universitair ziekenhuis"
+          "display": "Universitair Medisch Centrum"
         }
       ]
     },
@@ -124,7 +124,7 @@
           "value": "RAD-20250212-74920",
           "assigner": {
             "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair",
-            "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+            "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum"
           }
         }
       },

@@ -43,7 +43,7 @@
     },
     {
       "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair",
-      "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+      "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum"
     }
   ],
   "securityLabel": [
@@ -81,7 +81,7 @@
         {
           "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
-          "display": "Universitair ziekenhuis"
+          "display": "Universitair Medisch Centrum"
         }
       ]
     },
@@ -113,7 +113,7 @@
           "value": "RAD-20250212-74920",
           "assigner": {
             "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair",
-            "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+            "display": "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum"
           }
         }
       },

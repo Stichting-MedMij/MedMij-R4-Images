@@ -62,7 +62,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.xis/wado/studies/1.2.752.24.7.3059655634.36522/metadata",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.274063247206700392104463021119046041322/instances/2.25.14847566227272909846770863478608943689",
         "title": "CR CWK MedMij",
         "creation": "2025-02-25T13:53:00+01:00"
       },

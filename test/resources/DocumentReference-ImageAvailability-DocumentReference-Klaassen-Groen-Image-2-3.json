@@ -43,7 +43,7 @@
     },
     {
       "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair",
-      "display": "Erasmus MC, Radiologie, Universitair ziekenhuis"
+      "display": "Erasmus MC, Radiologie, Universitair Medisch Centrum"
     }
   ],
   "securityLabel": [
@@ -62,7 +62,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.xis/wado/metadata",
+        "url": "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456789/series/2.25.99377514515580500840839615593451061523/instances/2.25.258000159807854729618851821502203021554",
         "title": "longfoto",
         "creation": "1993-02-06T12:00:00+01:00"
       },
@@ -92,7 +92,7 @@
         {
           "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
-          "display": "Universitair ziekenhuis"
+          "display": "Universitair Medisch Centrum"
         }
       ]
     },
@@ -124,7 +124,7 @@
           "value": "RAD-20250212-50637",
           "assigner": {
             "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair",
-            "display": "Erasmus MC, Radiologie, Universitair ziekenhuis"
+            "display": "Erasmus MC, Radiologie, Universitair Medisch Centrum"
           }
         }
       },

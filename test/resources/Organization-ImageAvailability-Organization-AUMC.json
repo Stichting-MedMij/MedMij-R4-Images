@@ -1,6 +1,6 @@
 {
   "resourceType": "Organization",
-  "id": "ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair",
+  "id": "ImageAvailability-Organization-AUMC",
   "meta": {
     "profile": [
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
@@ -9,17 +9,12 @@
   "identifier": [
     {
       "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
-      "value": "6020806"
+      "value": "06020701"
     }
   ],
   "type": [
     {
       "coding": [
-        {
-          "code": "0362",
-          "system": "urn:oid:2.16.840.1.113883.2.4.6.7",
-          "display": "Radiologie"
-        },
         {
           "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
@@ -28,5 +23,5 @@
       ]
     }
   ],
-  "name": "Erasmus MC"
+  "name": "Amsterdam UMC"
 }

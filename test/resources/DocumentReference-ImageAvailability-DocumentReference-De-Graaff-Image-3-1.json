@@ -62,7 +62,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.xis/wado/metadata",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.90783674708684117220863480423356599801/series/2.25.293465249639799179250315041314515880819/instances/2.25.225370106192817013781822914585593250010",
         "title": "MRI van linker bovenbeen",
         "creation": "2020-03-03T12:00:00+01:00"
       },

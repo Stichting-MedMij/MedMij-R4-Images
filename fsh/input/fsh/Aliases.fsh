@@ -12,6 +12,7 @@ Alias: $MedMijModalityValueSetOID = urn:oid:2.16.528.1.1023.11.2.3.11.11
 Alias: $MedMijModalityValueSetURL = http://medmij.nl/fhir/ValueSet/Modality
 Alias: $ModalityCombinedValueSetOID = urn:oid:2.16.528.1.1023.11.2.3.11.12
 Alias: $ModalityCombinedValueSetURL = http://medmij.nl/fhir/ValueSet/ModalityCombined
+Alias: $OIDAUMC = urn:oid:2.16.840.1.113883.2.4.3.114
 Alias: $OIDCZE = urn:oid:2.16.840.1.113883.2.4.3.104
 Alias: $OIDErasmusMC = urn:oid:2.16.840.1.113883.2.4.3.6
 Alias: $OIDOLVG = urn:oid:2.16.528.1.1007.3.3.14332

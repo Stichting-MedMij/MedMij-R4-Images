@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "ImageAvailability-DocumentReference-Blaak-Image-1-1",
+  "id": "ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-4",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"
@@ -20,30 +20,30 @@
   ],
   "masterIdentifier": {
     "system": "urn:ietf:rfc:3986",
-    "value": "urn:uuid:7ce26098-1b2f-4ad8-bd45-d1e931e94ca0"
+    "value": "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
   },
   "type": {
     "coding": [
       {
-        "code": "3511000087103",
+        "code": "44491008",
         "system": "http://snomed.info/sct",
-        "display": "röntgenfoto van rechter sleutelbeen"
+        "display": "röntgendoorlichting"
       }
     ]
   },
   "subject": {
-    "reference": "Patient/ImageAvailability-Patient-Blaak",
-    "display": "Pieter Blaak"
+    "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
+    "display": "B. XXX-Aansluittest-B"
   },
-  "date": "2024-05-23T12:00:00+02:00",
+  "date": "2025-10-16T16:11:00+02:00",
   "author": [
     {
-      "reference": "PractitionerRole/ImageAvailability-PractitionerRole-De-Pater",
-      "display": "A.C.H. de Pater, Orthopedisch chirurg"
+      "reference": "PractitionerRole/ImageAvailability-PractitionerRole-Huisarts",
+      "display": "Huisarts"
     },
     {
-      "reference": "Organization/ImageAvailability-Organization-OLVG",
-      "display": "OLVG, Radiologie, Algemeen ziekenhuis"
+      "reference": "Organization/ImageAvailability-Organization-AUMC",
+      "display": "Amsterdam UMC, Universitair Medisch Centrum"
     }
   ],
   "securityLabel": [
@@ -62,9 +62,9 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.123456/series/2.25.298440724747098310794747640134633075284/instances/2.25.30908951586507656182973713777298371979",
-        "title": "röntgenfoto van rechter sleutelbeen",
-        "creation": "2024-05-23T12:00:00+02:00"
+        "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.92864427782257641375402563416912250814/instances/2.25.143915543518206872168207688572280834499",
+        "title": "CR Thorax",
+        "creation": "2025-10-16T16:11:00+02:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",
@@ -77,22 +77,22 @@
       {
         "coding": [
           {
-            "code": "OT",
+            "code": "DX",
             "system": "http://dicom.nema.org/resources/ontology/DCM",
-            "display": "Other"
+            "display": "Digital Radiography"
           }
         ]
       }
     ],
     "period": {
-      "start": "2024-05-23"
+      "start": "2025-10-16"
     },
     "facilityType": {
       "coding": [
         {
-          "code": "V6",
+          "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
-          "display": "Algemeen ziekenhuis"
+          "display": "Universitair Medisch Centrum"
         }
       ]
     },
@@ -106,8 +106,8 @@
       ]
     },
     "sourcePatientInfo": {
-      "reference": "Patient/ImageAvailability-Patient-Blaak",
-      "display": "Pieter Blaak"
+      "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
+      "display": "B. XXX-Aansluittest-B"
     },
     "related": [
       {
@@ -120,11 +120,11 @@
               }
             ]
           },
-          "system": "urn:oid:2.16.528.1.1007.3.3.14332",
-          "value": "RAD-20250212-83472",
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.114",
+          "value": "AGFA00000173699",
           "assigner": {
-            "reference": "Organization/ImageAvailability-Organization-OLVG",
-            "display": "OLVG, Radiologie, Algemeen ziekenhuis"
+            "reference": "Organization/ImageAvailability-Organization-AUMC",
+            "display": "Amsterdam UMC, Universitair Medisch Centrum"
           }
         }
       },
@@ -139,7 +139,7 @@
             ]
           },
           "system": "urn:dicom:uid",
-          "value": "urn:oid:2.16.528.1.1007.3.1.20250212.123456"
+          "value": "urn:oid:1.2.40.0.13.1.309496748046569320805636965993460666632"
         }
       }
     ]

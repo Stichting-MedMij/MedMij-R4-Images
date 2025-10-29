@@ -13,20 +13,20 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
 * date = "1990-02-10T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-PractitionerRole-Van-Der-Ham) "van der Ham, Orthopedisch chirurg"
-* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
+* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.77615907425522706317163091876421984542/series/2.25.214382059335083939558620318712574547160/instances/2.25.11642993451842870396897140495770614031" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "longfoto" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "1990-02-10T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "1990-02-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
-  * facilityType = $OrganizationType#V5 "Universitair ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
   * related[0]
@@ -34,7 +34,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDErasmusMC
       * value = "RAD-20250212-19285" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -54,7 +54,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
 * date = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-PractitionerRole-Van-Der-Ham) "van der Ham, Orthopedisch chirurg"
-* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
+* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -66,7 +66,7 @@ Usage: #example
   * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
-  * facilityType = $OrganizationType#V5 "Universitair ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
   * related
@@ -94,20 +94,20 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
 * date = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-PractitionerRole-Janssen) "Janssen, Orthopedisch chirurg"
-* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
+* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456789/series/2.25.99377514515580500840839615593451061523/instances/2.25.258000159807854729618851821502203021554" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "longfoto" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
-  * facilityType = $OrganizationType#V5 "Universitair ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
   * related[0]
@@ -115,7 +115,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDErasmusMC
       * value = "RAD-20250212-50637" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -135,7 +135,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
 * date = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-PractitionerRole-Janssen) "Janssen, Orthopedisch chirurg"
-* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis"
+* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -147,7 +147,7 @@ Usage: #example
   * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
-  * facilityType = $OrganizationType#V5 "Universitair ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
   * related[0]
@@ -155,7 +155,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDErasmusMC
       * value = "RAD-20250212-50637" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair) "Erasmus MC, Radiologie, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -181,20 +181,20 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
 * date = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-PractitionerRole-Coenen) "C.H. Coenen, Kaakchirurg"
-* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.xis/wado/metadata" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456342/series/2.25.285651067871713283196753380709199456206/instances/2.25.16334082318769461496963509104742703811" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "röntgenfoto van linker kaakgewricht" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "2020-08-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
-  * facilityType = $OrganizationType#V5 "Universitair ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
   * related[0]
@@ -202,7 +202,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDErasmusMC
       * value = "RAD-20250212-74920" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -222,7 +222,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
 * date = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-PractitionerRole-Coenen) "C.H. Coenen, Kaakchirurg"
-* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis"
+* author[1] = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -234,7 +234,7 @@ Usage: #example
   * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "2020-08-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
-  * facilityType = $OrganizationType#V5 "Universitair ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
   * related[0]
@@ -242,7 +242,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDErasmusMC
       * value = "RAD-20250212-74920" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair) "Erasmus MC, Mondzorg en kaakchirurgie, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -333,7 +333,7 @@ Usage: #example
   * value = "6020806"
 * type
   * coding[0] = $VektisAGB#0362 "Radiologie"
-  * coding[1] = $OrganizationType#V5 "Universitair ziekenhuis"
+  * coding[1] = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Erasmus MC"
 
 Instance: ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair
@@ -344,5 +344,5 @@ Usage: #example
   * value = "6020806"
 * type
   * coding[0] = $VektisAGB#1101 "Mondzorg en kaakchirurgie, implantoloog"
-  * coding[1] = $OrganizationType#V5 "Universitair ziekenhuis"
+  * coding[1] = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Erasmus MC"

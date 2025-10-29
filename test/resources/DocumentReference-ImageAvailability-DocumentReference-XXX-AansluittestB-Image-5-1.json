@@ -62,7 +62,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.xis/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/metadata",
+        "url": "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/series/1.3.6.1.4.1.40371.1.2.5339.4775.58000.21082.26972.30098.27044/instances/1.3.6.1.4.1.40371.1.2.62771.65477.14037.18246.59242.13152.33179",
         "title": "MedMij PGO test CT",
         "creation": "2024-08-22T16:45:00+02:00"
       },

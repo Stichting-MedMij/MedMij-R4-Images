@@ -43,7 +43,7 @@
     },
     {
       "reference": "Organization/ImageAvailability-Organization-ErasmusMC-Radiologie-Universitair",
-      "display": "Erasmus MC, Radiologie, Universitair ziekenhuis"
+      "display": "Erasmus MC, Radiologie, Universitair Medisch Centrum"
     }
   ],
   "securityLabel": [
@@ -81,7 +81,7 @@
         {
           "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
-          "display": "Universitair ziekenhuis"
+          "display": "Universitair Medisch Centrum"
         }
       ]
     },
