@@ -8,6 +8,7 @@
 | Functional design     | A requirement related to incomplete image series has been added. Moreover, corresponding guidance has been added to the display guideline. | [DOSINZAGE2-736](https://medmij.atlassian.net/browse/DOSINZAGE2-736) |
 | Functional design     | The requirements have been updated. | [DOSINZAGE2-801](https://medmij.atlassian.net/browse/DOSINZAGE2-801) |
 | Technical design      | The minimal set of SOP classes that need to be supported has been updated (i.e. *VL Endoscopic Image Storage* has been added, while *Digital X-Ray Image Storage - For Presentation* and *Digital Mammography X-Ray Image Storage - For Presentation* have been removed). | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
+| Technical design      | Added guidance on required attributes within the DICOM KOS document. | [DOSINZAGE2-752](https://medmij.atlassian.net/browse/DOSINZAGE2-752) |
 | FHIR artifacts        | The codes *DX* and *MG* have been removed from ValueSet MedMijModality. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
 
 ## 1.0.0-rc.1
