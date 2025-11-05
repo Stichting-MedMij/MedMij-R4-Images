@@ -159,7 +159,9 @@ The PHR MAY supply a MIME type in the Accept header other than those indicated b
 See [ITI-68 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#236841-retrieve-document-request-message) for further details.
 
 ##### XIS: response message (MHD ITI-68)
-The XIS returns an HTTP Status code appropriate to the processing. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. The imaging study manifest SHOULD contain references to the relevant images following the [WADO-RS format](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/).
+The XIS returns an HTTP Status code appropriate to the processing. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. 
+
+The imaging study manifest SHOULD contain references to the relevant images following the [WADO-RS format](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/). Moreover, the attributes listed in [Table 4.68.4.1.2.1.1-1 of IHE RAD TF-2](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) SHALL be supported by the XIS. This means that all attributes indicated with either *R* or *R+* SHALL be included in the DICOM KOS document, as well as the Retrieve URL attribute (see Note 1 below the linked table).
 
 If the XIS is unable to format the imaging study manifest in a content type listed in the Accept header, it SHALL respond with HTTP Status Code 406.
 
