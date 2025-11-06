@@ -194,8 +194,6 @@ for each series. To create the WADO-RS request with which the image (i.e. SOP in
 
 This approach allows the PHR to iterate over all items in the KOS document in the Referenced Series Sequence `(0008,1115)`.
 
-Note however, that this approach is only possible if the Retrieve URL `(0008,1190)` is present in the KOS document, which might not be the case as it is optional. If it is not present, the PHR instead has to construct the WADO-RS request for each SOP instance from scratch by searching the relevant DICOM identifiers values in the KOS document, as mentioned before.
-
 **Retrieve multi-frame image**
 Some DICOM instances contain multiple frames within a single SOP Instance. If the retrieval approach described in the previous section would be used for a multi-frame image, only the first frame would be returned by the XIS. To retrieve all frames, the iterative procedure described below SHALL be followed for such images instead. Table 9 indicates which SOP classes (of the ones that need to be supported) may contain multi-frame images, and thus for which this approach applies.
 
@@ -212,7 +210,6 @@ where `[FrameIndex]` attains the values 1, 2, 3, ..., successively. Since the to
 If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the previous section.
 
 **Supported SOP classes and WADO-RS requests**
-
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
 
 | SOP Class Name | SOP Class UID | Description | Corresponding modality | May contain multi-frame images |
