@@ -164,3 +164,11 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | --- | --- |
 | 1. | Er wordt een visueel duidelijke foutmelding getoond bij het niet volledig tonen van een beeldenreeks in zowel de webviewer als DICOM-download. |
 | 2. | In de foutmelding wordt opgenomen met wie de gebruiker contact kan opnemen. |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 14 | Zorggebruiker | Dat beelden die bestaan uit meerdere frames op de juiste volgorde worden getoond | Een dergelijk beeld correct kan interpreteren | S |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Alle opgehaalde frames van een beeld worden op numerieke volgorde van de bijbehorende framenummers getoond of afgespeeld. |
