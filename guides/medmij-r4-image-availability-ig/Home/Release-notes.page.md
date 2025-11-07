@@ -11,6 +11,7 @@
 | Technical design      | The minimal set of SOP classes that need to be supported has been updated (i.e. *VL Endoscopic Image Storage* has been added, while *Digital X-Ray Image Storage - For Presentation* and *Digital Mammography X-Ray Image Storage - For Presentation* have been removed). | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
 | Technical design      | Added guidance on required attributes within the DICOM KOS document. | [DOSINZAGE2-752](https://medmij.atlassian.net/browse/DOSINZAGE2-752) |
 | Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
+| Technical design      | Added link to the FHIR identifier registry to support the DICOM UID requirements. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
 | FHIR artifacts        | The codes *DX* and *MG* have been removed from ValueSet MedMijModality. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
 
 ## 1.0.0-rc.1
