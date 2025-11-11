@@ -1,6 +1,7 @@
 // All LogicalModels used in Image Availability
 
 Logical: ImagingResearch
+Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: bbs-lm-ImagingResearch
 Title: "Imaging Research"
 Description: "Imaging research including images and reports."
