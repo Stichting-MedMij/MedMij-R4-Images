@@ -97,7 +97,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | 2. | Het filter werkt op VerrichtingStartDatum (bbs-dataelement-174). |
 | 3. | Er is standaard geen filter actief; alle items worden getoond tot de gebruiker zelf filtert. |
 | 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. | 
-| 5. | Het filter blijft actief bij navigatie binnen de sessie (totdat gebruiker reset of de sessie verlaat). | 
+| 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. | 
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
