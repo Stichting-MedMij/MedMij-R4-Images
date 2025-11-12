@@ -170,12 +170,14 @@ See [ITI-68 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#23684
 ##### PHR: request message (WADO-RS RAD-107)
 The WADO-RS Retrieve request (RAD-107) is used to retrieve individual (image) instances. For each (image) instance the PHR wants to retrieve, it executes an HTTP GET against the WADO-RS endpoint of the XIS using the following URL:
 
-`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/rendered}`
+`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}{/rendered}`
 
 Note the following:
 - The required `[StudyInstanceUID]`, `[SeriesInstanceUID]` and `[SOPInstanceUID]` unique identifier values can be found in the DICOM KOS document, which is obtained via the ITI-68 Retrieve Document transaction. In Table 2, the corresponding DICOM tags are listed. Note however, that the SOP Instance UID of an individual instance which is referenced by the KOS document can be found in DICOM tag `(0008,1155)` (Referenced SOP Instance UID) within the KOS document.
 - By default, the request returns binary DICOM instances, while adding `/rendered` to the request results in rendered instances, e.g. in JPEG format (also see Table 10).
+- The part `/frames/[FrameIndex]` only needs to be added to the request when the SOP instance may contain multi-frame images, which is indicated in Table 9 below. Since the approaches of retrieving a single-frame or multi-frame image differ slightly, these are described separately below.
 
+**Retrieve single-frame image** <br/>
 Instead of constructing the above URL from scratch by searching all these identifier values from various locations within the KOS document, DICOM tag `(0008,1115)` (Referenced Series Sequence) provides a structured way to access this information. This sequence contains one or more referenced image series. Each item in the sequence corresponds to a specific series and contains:
 - Retrieve URL `(0008,1190)`
 - A sequence of referenced instances (Referenced SOP Sequence `(0008,1199)`), each containing:
@@ -188,30 +190,46 @@ To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,119
 
 for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows: 
 
-`[RetrieveURL]/instances/[SOPInstanceUID]`
+`GET [RetrieveURL]/instances/[SOPInstanceUID]`
 
 This approach allows the PHR to iterate over all items in the KOS document in the Referenced Series Sequence `(0008,1115)`.
 
+**Retrieve multi-frame image** <br/>
+Some DICOM instances contain multiple frames within a single SOP Instance. If the retrieval approach described above would be used for a multi-frame image, only the first frame would be returned by the XIS. To retrieve all frames, the iterative procedure described below SHALL be followed for such images instead. Table 9 indicates which SOP classes (of the ones that need to be supported) may contain multi-frame images, and thus for which this approach applies.
+
+To retrieve all frames of a multi-frame image, the PHR iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS using URLs of the form:
+
+`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+
+or, equivalently:
+
+`GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+
+where `[FrameIndex]` attains the values 1, 2, 3, ..., consecutively. Since the total number of frames cannot be derived from the KOS document (as a KOS document does not include DICOM tag `(0028,0008)`, i.e. the Number of Frames), the PHR SHALL attempt consecutive requests with increasing frame index until an HTTP error code is returned, indicating that no additional frames exist. Examples of such error codes are HTTP 404 (Not Found) and 416 (Range Not Satisfiable). If the error is returned on the request with `[FrameIndex]` equal to *n*, the PHR SHALL assume that the frame with index *n-1* is the final valid frame for that instance.
+ 
+If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the previous subsection.
+
+**Supported SOP classes and WADO-RS requests** <br/>
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
 
-| SOP Class Name | SOP Class UID | Description | Corresponding modality |
-| --- | --- | --- | --- |
-| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | CR |
-| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Standard CT images. | CT |
-| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Enhanced CT images with multi-frame structure, recommended to be future-proof. | CT |
-| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Dynamic ultrasound images (cine-loops). | US |
-| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | Standard MRI images, supported by all systems. | MR|
-| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | Multi-frame MRI images with extensive metadata, used by modern MRI scanners. | MR |
-| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Static 2D ultrasound images, often used in almost all ultrasound examinations. | US |
-| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Digital photos or screenshots, e.g. from non-DICOM devices. | SC |
-| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Angiographic images. | XA |
-| X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Dynamic X-ray images, such as swallow study videos. | RF |
-| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Images of gamma cameras used in nuclear medicine (not in radiology), important for functional imaging (e.g. thyroid, skeleton). | NM |
-| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Single-frame VL (Visible Light) endoscopic images. | ES |
-| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Multi-frame video endoscopic images. | ES |
-| Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | Used to store PDF documents as DICOM objects, e.g. reports and attachments. | OT |
-| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET scan images used in nuclear medicine. | PT |
-| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Enhanced PET scan images used in nuclear medicine. | PT |
+| SOP Class Name | SOP Class UID | Description | Corresponding modality | May contain multi-frame images |
+| --- | --- | --- | --- | --- |
+| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | CR | |
+| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Standard CT images. | CT | |
+| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Enhanced CT images with multi-frame structure, recommended to be future-proof. | CT | Yes |
+| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Dynamic ultrasound images (cine-loops). | US | Yes |
+| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | Standard MRI images, supported by all systems. | MR | |
+| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | Multi-frame MRI images with extensive metadata, used by modern MRI scanners. | MR | Yes |
+| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Static 2D ultrasound images, often used in almost all ultrasound examinations. | US | |
+| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Digital photos or screenshots, e.g. from non-DICOM devices. | SC | |
+| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Angiographic images. | XA | Yes |
+| X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Dynamic X-ray images, such as swallow study videos. | RF | Yes |
+| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Images of gamma cameras used in nuclear medicine (not in radiology), important for functional imaging (e.g. thyroid, skeleton). | NM | |
+| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Single-frame VL (Visible Light) endoscopic images. | ES | |
+| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Multi-frame video endoscopic images. | ES | Yes |
+| Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | Used to store PDF documents as DICOM objects, e.g. reports and attachments. | OT | |
+| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET scan images used in nuclear medicine. | PT | |
+| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Enhanced PET scan images used in nuclear medicine. | PT | Yes |
 
 **Table 9: Supported SOP classes**
 
@@ -219,8 +237,8 @@ The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type,
 
 | WADO-RS request | Accept header |
 | --- | --- |
-| `GET [RetrieveURL]/instances/[SOPInstanceUID]` <br/> `GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]` | *application/dicom* |
-| `GET [RetrieveURL]/instances/[SOPInstanceUID]/rendered` <br/> `GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/rendered` | *image/jpeg* |
+| `GET [RetrieveURL]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}` <br/> `GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}` | *application/dicom* |
+| `GET [RetrieveURL]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}/rendered` <br/> `GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}/rendered` | *image/jpeg* |
 
 **Table 10: Supported WADO-RS requests**
 
