@@ -8,6 +8,7 @@ Description: "Imaging research including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
+* ^purpose = "This LogicalModel represents the ImagingResearch building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
 * .
   * ^alias = "Onderzoek"
@@ -74,6 +75,8 @@ Description: "Imaging research including images and reports."
     * ^alias = "BeeldDatumTijd"
   * ImageTitle 0..1 string "The title of the image."
     * ^alias = "BeeldTitel"
+  * Images 0..* Attachment "The images themselves. In DICOM the images are structured in series."
+    * ^alias = "Beelden"
   * Modality 0..* CodeableConcept "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
   * Modality from $ModalityCombinedValueSetURL (required)
     * ^alias = "Modaliteit"
@@ -85,6 +88,8 @@ Description: "Imaging research including images and reports."
     * ^alias = "VerslagDatumTijd"
   * ReportTitle 0..1 string "The title of the report."
     * ^alias = "VerslagTitel"
+  * Report 0..1 Attachment "The report itself."
+    * ^alias = "Verslag"
 * AccessionNumberInformation 0..1 BackboneElement "Information on the Accession Number"
   * ^alias = "AccessionNumberInformatie"
   * AccessionNumber 0..1 Identifier "Locally unique ID (in the RIS) that has been assigned to the imaging research."
@@ -97,7 +102,7 @@ Description: "Imaging research including images and reports."
         * ^alias = "ZorgaanbiederIdentificatienummer"
       * OrganizationName 0..1 string "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number."
         * ^alias = "OrganisatieNaam"
-      * DepartmentSpecialty 0..1 CodeableConcept "The specialty of the healthcare provider's department where the procedure has been performed."
+      * DepartmentSpecialty 0..1 CodeableConcept "The specialty of the healthcare provider's department."
       * DepartmentSpecialty from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006 (required)
         * ^alias = "AfdelingSpecialisme"
       * OrganizationType 0..1 CodeableConcept "The type of healthcare provider."
@@ -105,6 +110,86 @@ Description: "Imaging research including images and reports."
         * ^alias = "OrganisatieType"
 * StudyInstanceUID 0..1 Identifier "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
   * ^alias = "StudyInstanceUID"
+
+Logical: ImagingResearchServeTimeline
+Parent: bbs-lm-ImagingResearch
+Id: bbs-lm-ImagingResearch-serve-timeline
+Title: "Imaging Research (Serve image and report timeline)"
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* insert Copyright
+* .
+* Procedure 1..1
+  * ProcedureStartDate 1..1
+  * ProcedureEndDate
+  * ProcedureType 1..1
+  * ProcedureAnatomicalLocation
+    * Location 1..1
+    * Laterality
+  * Location 1..1
+    * HealthcareProvider 1..1
+      * HealthcareProviderIdentificationNumber 1..1
+      * OrganizationName 1..1
+      * DepartmentSpecialty
+      * OrganizationType
+  * Performer
+    * HealthProfessional 1..1
+      * HealthProfessionalIdentificationNumber 1..1
+      * NameInformation 1..1
+        * FirstNames
+        * Initials
+        * LastName 1..1
+          * Prefix
+          * LastName 1..1
+      * Specialty 1..1
+      * HealthProfessionalRole
+* ImageInformation
+  * ImageInformationIdentificationNumber 1..1
+  * ImageDateTime 1..1
+  * ImageTitle
+  * Modality 1..*
+* ReportInformation
+  * ReportInformationIdentificationNumber 1..1
+  * ReportDateTime 1..1
+  * ReportTitle
+* AccessionNumberInformation
+  * AccessionNumber 1..1
+  * AssigningAuthority 1..1
+    * HealthcareProvider 1..1
+      * HealthcareProviderIdentificationNumber 1..1
+      * OrganizationName
+      * DepartmentSpecialty
+      * OrganizationType
+* StudyInstanceUID
+
+Logical: ImagingResearchServeImageReport
+Parent: bbs-lm-ImagingResearch
+Id: bbs-lm-ImagingResearch-serve-image-report
+Title: "Imaging Research (Serve image and report)"
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* insert Copyright
+* .
+* ImageInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
+  * ImageInformationIdentificationNumber 1..1
+  * ImageDateTime 1..1
+  * ImageTitle
+  * Images 1..*
+  * Modality 1..*
+* ReportInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
+  * ReportInformationIdentificationNumber 1..1
+  * ReportDateTime 1..1
+  * ReportTitle
+  * Report 1..1
+
+Invariant: bbs-lm-ImagingResearch-serve-image-report-1
+Description: "At least one of ImageInformation or ReportInformation is present."
+Severity: #error
+Expression: "ImageInformation.exists() or ReportInformation.exists()"
 
 /*
 Logical: ImageInformation

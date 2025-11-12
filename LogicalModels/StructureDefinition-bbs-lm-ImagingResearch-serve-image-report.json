@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "bbs-lm-ImagingResearch-serve-image-report",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-image-report",
+  "name": "ImagingResearchServeImageReport",
+  "title": "Imaging Research (Serve image and report)",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "purpose": "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-image-report",
+  "baseDefinition": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report",
+        "path": "bbs-lm-ImagingResearch-serve-image-report",
+        "short": "Imaging Research (Serve image and report)",
+        "definition": "Imaging Research (Serve image and report)"
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation",
+        "constraint": [
+          {
+            "key": "bbs-lm-ImagingResearch-serve-image-report-1",
+            "severity": "error",
+            "human": "At least one of ImageInformation or ReportInformation is present.",
+            "expression": "ImageInformation.exists() or ReportInformation.exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-image-report"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.ImageInformationIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.ImageInformationIdentificationNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.ImageDateTime",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.ImageDateTime",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.Images",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.Images",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.Modality",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ImageInformation.Modality",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation",
+        "constraint": [
+          {
+            "key": "bbs-lm-ImagingResearch-serve-image-report-1",
+            "severity": "error",
+            "human": "At least one of ImageInformation or ReportInformation is present.",
+            "expression": "ImageInformation.exists() or ReportInformation.exists()",
+            "source": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-image-report"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation.ReportInformationIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation.ReportInformationIdentificationNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation.ReportDateTime",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation.ReportDateTime",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation.Report",
+        "path": "bbs-lm-ImagingResearch-serve-image-report.ReportInformation.Report",
+        "min": 1
+      }
+    ]
+  }
+}

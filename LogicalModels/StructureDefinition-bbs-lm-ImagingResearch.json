@@ -23,6 +23,7 @@
     }
   ],
   "description": "Imaging research including images and reports.",
+  "purpose": "This LogicalModel represents the ImagingResearch building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "kind": "logical",
@@ -518,6 +519,22 @@
         ]
       },
       {
+        "id": "bbs-lm-ImagingResearch.ImageInformation.Images",
+        "path": "bbs-lm-ImagingResearch.ImageInformation.Images",
+        "short": "The images themselves. In DICOM the images are structured in series.",
+        "definition": "The images themselves. In DICOM the images are structured in series.",
+        "alias": [
+          "Beelden"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ]
+      },
+      {
         "id": "bbs-lm-ImagingResearch.ImageInformation.Modality",
         "path": "bbs-lm-ImagingResearch.ImageInformation.Modality",
         "short": "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine.",
@@ -598,6 +615,22 @@
         "type": [
           {
             "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-ImagingResearch.ReportInformation.Report",
+        "path": "bbs-lm-ImagingResearch.ReportInformation.Report",
+        "short": "The report itself.",
+        "definition": "The report itself.",
+        "alias": [
+          "Verslag"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
           }
         ]
       },
@@ -700,8 +733,8 @@
       {
         "id": "bbs-lm-ImagingResearch.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
         "path": "bbs-lm-ImagingResearch.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
-        "short": "The specialty of the healthcare provider's department where the procedure has been performed.",
-        "definition": "The specialty of the healthcare provider's department where the procedure has been performed.",
+        "short": "The specialty of the healthcare provider's department.",
+        "definition": "The specialty of the healthcare provider's department.",
         "alias": [
           "AfdelingSpecialisme"
         ],

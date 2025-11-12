@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "bbs-lm-ImagingResearch-serve-timeline",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-timeline",
+  "name": "ImagingResearchServeTimeline",
+  "title": "Imaging Research (Serve image and report timeline)",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "purpose": "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-timeline",
+  "baseDefinition": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline",
+        "path": "bbs-lm-ImagingResearch-serve-timeline",
+        "short": "Imaging Research (Serve image and report timeline)",
+        "definition": "Imaging Research (Serve image and report timeline)"
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.ProcedureStartDate",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.ProcedureStartDate",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.ProcedureType",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.ProcedureType",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.ProcedureAnatomicalLocation.Location",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.ProcedureAnatomicalLocation.Location",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location.HealthcareProvider",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location.HealthcareProvider",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location.HealthcareProvider.OrganizationName",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Location.HealthcareProvider.OrganizationName",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.Specialty",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.Procedure.Performer.HealthProfessional.Specialty",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.ImageInformation.ImageInformationIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.ImageInformation.ImageInformationIdentificationNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.ImageInformation.ImageDateTime",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.ImageInformation.ImageDateTime",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.ImageInformation.Modality",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.ImageInformation.Modality",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.ReportInformation.ReportInformationIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.ReportInformation.ReportInformationIdentificationNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.ReportInformation.ReportDateTime",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.ReportInformation.ReportDateTime",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AccessionNumber",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AccessionNumber",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AssigningAuthority",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AssigningAuthority",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
+        "min": 1
+      },
+      {
+        "id": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "path": "bbs-lm-ImagingResearch-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "min": 1
+      }
+    ]
+  }
+}
