@@ -113,7 +113,7 @@ Figuur 5 bevat een visuele weergave van hoe deze waarschuwing eruit zou kunnen k
 **Figuur 6: Voorbeeld van inhoudelijke tekst waarschuwing**
 
 #### Niet volledig tonen van beeldenreeks
-Bij het niet volledig tonen van een beeldenreeks is het advies om de gebruiker hierop te attenderen. Figuur 7 bevat een visuele weergave van hoe deze waarschuwing er per niet getoond beeld van een beeldenreeks eruit zou kunnen zien.
+Bij het niet volledig tonen van een beeldenreeks is het advies om de gebruiker hierop te attenderen. Figuur 7 bevat een visuele weergave van hoe deze waarschuwing er per niet getoond beeld van een beeldenreeks uit zou kunnen zien. De vermelde SOP-klasse in deze waarschuwing kan door terugkoppeling van de eindgebruiker naar de PGO-leverancier of zorgaanbieder gebruikt worden voor verder onderzoek naar weergavemogelijkheden van het betreffende beeld.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Weergaverichtlijn waarschuwing onvolledige beeldenreeks.png}}
 
