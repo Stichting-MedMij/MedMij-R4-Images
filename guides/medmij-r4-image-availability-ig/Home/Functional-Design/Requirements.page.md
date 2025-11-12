@@ -23,7 +23,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 ## Eisen voor DVA
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 1 | PGO-leverancier | Inzicht in de manier waarop rate limiting door de DVA is geconfigureerd | Een stabielere aansluiting op de DVA heb. | M |
+| 1 | PGO-leverancier | Inzicht in de manier waarop rate limiting door de DVA is geconfigureerd | Een stabielere aansluiting op de DVA heb | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -48,11 +48,11 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 2 | Zorggebruiker | Medische verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
+| 2 | Zorggebruiker | Verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Medische verslagen zijn in de PGO te openen zonder externe PDF-viewer of door ze eerst te downloaden. |
+| 1. | Verslagen zijn in de PGO te openen zonder externe PDF-viewer of door ze eerst te downloaden. |
 | 2. | Verslagen zijn leesbaar op alle schermformaten (desktop, tablet, mobiel). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -76,7 +76,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | 3. | De sortering blijft behouden bij filteracties door de gebruiker. |
 | 4. | Datum van uitvoering wordt zichtbaar getoond bij ieder verslag/beeld. |
 | 5. | Indien twee items dezelfde datum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
-| 6. | De sortering blijft behouden bij herladen van de pagina of terugkeer naar het overzicht. | 
+| 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | 2. | Het filter werkt op VerrichtingStartDatum (bbs-dataelement-174). |
 | 3. | Er is standaard geen filter actief; alle items worden getoond tot de gebruiker zelf filtert. |
 | 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. | 
-| 5. | Het filter blijft actief bij navigatie binnen de sessie (totdat gebruiker reset of de sessie verlaat). | 
+| 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. | 
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -112,21 +112,21 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 8 | Zorggebruiker | Medische beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn medische gegevens en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie. | S |
+| 8 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | De gebruiker ziet bij elk beschikbaar beeld of onderzoek een duidelijke downloadknop. |
-| 2. | De gebruiker kan kiezen om dit op te slaan in: <br/> <ul> <li> [DICOM-formaat](https://dicom.nema.org/medical/dicom/2018d/output/html/part10.html) (standaard voor medische beelden); <li> JPEG-formaat (voor persoonlijk gebruik of eenvoudige weergave). |
+| 2. | De gebruiker kan kiezen om dit op te slaan in: <br/> <ul> <li> [DICOM-formaat](https://dicom.nema.org/medical/dicom/2018d/output/html/part10.html) (standaard voor beelden); <li> JPEG-formaat (voor persoonlijk gebruik of eenvoudige weergave). |
 | 3. | Wanneer de gebruiker kiest voor het originele formaat (DICOM), wordt een melding getoond met: <br/> <ul> <li> de aanduiding dat het om een DICOM-bestand gaat; <li> een korte uitleg dat voor het openen van dit bestand een geschikte viewer nodig is; <li> een waarschuwing dat het bestand persoonlijke data bevat; <li> de verwachte bestandsgrootte (MB/GB). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 9 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn medische gegevens | S |
+| 9 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn verslagen | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Bij elk beschikbaar beeldverslag is een duidelijke knop zichtbaar met het label 'Download verslag'. |
+| 1. | Bij elk beschikbaar verslag is een duidelijke knop zichtbaar met het label 'Download verslag'. |
 | 2. | Verslagen zijn te downloaden als PDF-bestand. |
 | 3. | Na het klikken op de downloadknop ontvangt de gebruiker visuele feedback, bijvoorbeeld een melding 'Download gestart' of 'Verslag opgeslagen'. | 
 
@@ -137,7 +137,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | De gebruiker ziet een filter waarin de beschikbare zorgaanbieders worden weergegeven. |
-| 2. | Na selectie van een zorgaanbieder worden alleen de bijbehorende beelden en verslagen getoond in het overzicht.|
+| 2. | Na selectie van een zorgaanbieder worden alleen de bijbehorende beelden en verslagen getoond in het overzicht. |
 | 3. | In de lijst van beelden en verslagen is duidelijk aangegeven welke zorgaanbieder het item heeft aangeleverd. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -154,7 +154,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Er wordt in de tijdlijn met beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/> *Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
+| 1. | Er wordt in het overzicht van beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/> *Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
