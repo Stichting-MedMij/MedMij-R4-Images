@@ -115,6 +115,7 @@ Logical: ImagingResearchServeTimeline
 Parent: bbs-lm-ImagingResearch
 Id: bbs-lm-ImagingResearch-serve-timeline
 Title: "Imaging Research (Serve image and report timeline)"
+Description: "Imaging research including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -168,6 +169,7 @@ Logical: ImagingResearchServeImageReport
 Parent: bbs-lm-ImagingResearch
 Id: bbs-lm-ImagingResearch-serve-image-report
 Title: "Imaging Research (Serve image and report)"
+Description: "Imaging research including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
