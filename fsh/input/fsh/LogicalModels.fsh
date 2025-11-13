@@ -25,10 +25,10 @@ Description: "Imaging research including images and reports."
   * ProcedureAnatomicalLocation 0..1 BackboneElement "Anatomical location which is the focus of the procedure."
     * ^alias = "VerrichtingAnatomischeLocatie"
     * Location 0..1 CodeableConcept "Localisation on/in the body."
-    * Location from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345
+    * Location from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345 (required)
       * ^alias = "Locatie"
     * Laterality 0..1 CodeableConcept "Laterality adds information about body site to the anatomical location, e.g. left."
-    * Laterality from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000
+    * Laterality from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000 (required)
       * ^alias = "Lateraliteit"
   * Location 0..1 BackboneElement "The healthcare center where the procedure was, is or will be carried out."
     * ^alias = "Locatie"
