@@ -26,6 +26,17 @@
   "purpose": "This LogicalModel represents the ImagingResearch building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "bbs-dataset-100-alpha2-20240208",
+      "name": "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208",
+      "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
+    },
+    {
+      "identity": "bbs-medmij-dataset-100-rc1-20250919",
+      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+    }
+  ],
   "kind": "logical",
   "abstract": false,
   "type": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch",
@@ -40,6 +51,13 @@
         "definition": "Imaging research including images and reports.",
         "alias": [
           "Onderzoek"
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-66",
+            "comment": "ImagingResearch"
+          }
         ]
       },
       {
@@ -55,6 +73,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-173",
+            "comment": "Procedure"
           }
         ]
       },
@@ -72,6 +97,13 @@
           {
             "code": "dateTime"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-174",
+            "comment": "ProcedureStartDate"
+          }
         ]
       },
       {
@@ -87,6 +119,13 @@
         "type": [
           {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-175",
+            "comment": "ProcedureEndDate"
           }
         ]
       },
@@ -108,7 +147,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-176",
+            "comment": "ProcedureType"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.Procedure.ProcedureAnatomicalLocation",
@@ -123,6 +169,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-178",
+            "comment": "ProcedureAnatomicalLocation"
           }
         ]
       },
@@ -144,7 +197,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-179",
+            "comment": "Location"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.Procedure.ProcedureAnatomicalLocation.Laterality",
@@ -164,7 +224,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-180",
+            "comment": "Laterality"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.Procedure.Location",
@@ -179,6 +246,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-185",
+            "comment": "Location"
           }
         ]
       },
@@ -196,6 +270,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-521",
+            "comment": "HealthcareProvider"
+          }
         ]
       },
       {
@@ -212,6 +293,13 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-522",
+            "comment": "HealthcareProviderIdentificationNumber"
+          }
         ]
       },
       {
@@ -227,6 +315,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-523",
+            "comment": "OrganizationName"
           }
         ]
       },
@@ -248,7 +343,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-524",
+            "comment": "DepartmentSpecialty"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.Procedure.Location.HealthcareProvider.OrganizationType",
@@ -268,7 +370,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-546",
+            "comment": "OrganizationType"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.Procedure.Performer",
@@ -283,6 +392,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-187",
+            "comment": "Performer"
           }
         ]
       },
@@ -300,6 +416,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-383",
+            "comment": "HealthProfessional"
+          }
         ]
       },
       {
@@ -315,6 +438,13 @@
         "type": [
           {
             "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-384",
+            "comment": "HealthProfessionalIdentificationNumber"
           }
         ]
       },
@@ -332,6 +462,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-385",
+            "comment": "NameInformation"
+          }
         ]
       },
       {
@@ -347,6 +484,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-386",
+            "comment": "FirstNames"
           }
         ]
       },
@@ -364,6 +508,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-387",
+            "comment": "Initials"
+          }
         ]
       },
       {
@@ -379,6 +530,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-390",
+            "comment": "LastName"
           }
         ]
       },
@@ -396,6 +554,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-391",
+            "comment": "Prefix"
+          }
         ]
       },
       {
@@ -411,6 +576,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-392",
+            "comment": "LastName"
           }
         ]
       },
@@ -432,7 +604,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-397",
+            "comment": "Specialty"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
@@ -452,7 +631,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20200901000000"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-422",
+            "comment": "HealthProfessionalRole"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.ImageInformation",
@@ -467,6 +653,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-67",
+            "comment": "ImageInformation"
           }
         ]
       },
@@ -484,6 +677,13 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-784",
+            "comment": "ImageInformationIdentificationNumber"
+          }
         ]
       },
       {
@@ -499,6 +699,13 @@
         "type": [
           {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-69",
+            "comment": "DateTime"
           }
         ]
       },
@@ -516,6 +723,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-1",
+            "comment": "ImageTitle"
+          }
         ]
       },
       {
@@ -531,6 +745,13 @@
         "type": [
           {
             "code": "Attachment"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-689",
+            "comment": "Images"
           }
         ]
       },
@@ -552,7 +773,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://medmij.nl/fhir/ValueSet/ModalityCombined"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-5",
+            "comment": "Modality"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.ReportInformation",
@@ -567,6 +795,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-99",
+            "comment": "ReportInformation"
           }
         ]
       },
@@ -584,6 +819,13 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-100",
+            "comment": "ReportInformationIdentificationNumber"
+          }
         ]
       },
       {
@@ -599,6 +841,13 @@
         "type": [
           {
             "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-101",
+            "comment": "DateTime"
           }
         ]
       },
@@ -616,6 +865,13 @@
           {
             "code": "string"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-2",
+            "comment": "ReportTitle"
+          }
         ]
       },
       {
@@ -631,6 +887,13 @@
         "type": [
           {
             "code": "Attachment"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-690",
+            "comment": "Report"
           }
         ]
       },
@@ -648,6 +911,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-6",
+            "comment": "AccessionNumberInformation"
+          }
         ]
       },
       {
@@ -663,6 +933,13 @@
         "type": [
           {
             "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-3",
+            "comment": "AccessionNumber"
           }
         ]
       },
@@ -680,6 +957,13 @@
           {
             "code": "BackboneElement"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-7",
+            "comment": "AssigningAuthority"
+          }
         ]
       },
       {
@@ -695,6 +979,13 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-8",
+            "comment": "HealthcareProvider"
           }
         ]
       },
@@ -712,6 +1003,13 @@
           {
             "code": "Identifier"
           }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-9",
+            "comment": "HealthcareProviderIdentificationNumber"
+          }
         ]
       },
       {
@@ -727,6 +1025,13 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-10",
+            "comment": "OrganizationName"
           }
         ]
       },
@@ -748,7 +1053,14 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-11",
+            "comment": "DepartmentSpecialty"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
@@ -768,7 +1080,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-12",
+            "comment": "OrganizationType"
+          }
+        ]
       },
       {
         "id": "bbs-lm-ImagingResearch.StudyInstanceUID",
@@ -783,6 +1102,13 @@
         "type": [
           {
             "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-4",
+            "comment": "StudyInstanceUID"
           }
         ]
       }

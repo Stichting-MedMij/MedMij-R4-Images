@@ -193,6 +193,64 @@ Description: "At least one of ImageInformation or ReportInformation is present."
 Severity: #error
 Expression: "ImageInformation.exists() or ReportInformation.exists()"
 
+Mapping: LmBeeldbeschikbaarheidNictiz
+Source: ImagingResearch
+Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
+Id: bbs-dataset-100-alpha2-20240208
+Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
+* -> "bbs-dataelement-66" "ImagingResearch"
+* Procedure -> "bbs-dataelement-173" "Procedure"
+  * ProcedureStartDate -> "bbs-dataelement-174" "ProcedureStartDate"
+  * ProcedureEndDate -> "bbs-dataelement-175" "ProcedureEndDate"
+  * ProcedureType -> "bbs-dataelement-176" "ProcedureType"
+  * ProcedureAnatomicalLocation -> "bbs-dataelement-178" "ProcedureAnatomicalLocation"
+    * Location -> "bbs-dataelement-179" "Location"
+    * Laterality -> "bbs-dataelement-180" "Laterality"
+  * Location -> "bbs-dataelement-185" "Location"
+    * HealthcareProvider -> "bbs-dataelement-521" "HealthcareProvider"
+      * HealthcareProviderIdentificationNumber -> "bbs-dataelement-522" "HealthcareProviderIdentificationNumber"
+      * OrganizationName -> "bbs-dataelement-523" "OrganizationName"
+      * DepartmentSpecialty -> "bbs-dataelement-524" "DepartmentSpecialty"
+      * OrganizationType -> "bbs-dataelement-546" "OrganizationType"
+  * Performer -> "bbs-dataelement-187" "Performer"
+    * HealthProfessional -> "bbs-dataelement-383" "HealthProfessional"
+      * HealthProfessionalIdentificationNumber -> "bbs-dataelement-384" "HealthProfessionalIdentificationNumber"
+      * NameInformation -> "bbs-dataelement-385" "NameInformation"
+        * FirstNames -> "bbs-dataelement-386" "FirstNames"
+        * Initials -> "bbs-dataelement-387" "Initials"
+        * LastName -> "bbs-dataelement-390" "LastName"
+          * Prefix -> "bbs-dataelement-391" "Prefix"
+          * LastName -> "bbs-dataelement-392" "LastName"
+      * Specialty -> "bbs-dataelement-397" "Specialty"
+      * HealthProfessionalRole -> "bbs-dataelement-422" "HealthProfessionalRole"
+* ImageInformation -> "bbs-dataelement-67" "ImageInformation"
+  * ImageInformationIdentificationNumber -> "bbs-dataelement-784" "ImageInformationIdentificationNumber"
+  * ImageDateTime -> "bbs-dataelement-69" "DateTime"
+  * Images -> "bbs-dataelement-689" "Images"
+* ReportInformation -> "bbs-dataelement-99" "ReportInformation"
+  * ReportInformationIdentificationNumber -> "bbs-dataelement-100" "ReportInformationIdentificationNumber"
+  * ReportDateTime -> "bbs-dataelement-101" "DateTime"
+  * Report -> "bbs-dataelement-690" "Report"
+
+Mapping: LmMedMij-100-rc1
+Source: ImagingResearch
+Id: bbs-medmij-dataset-100-rc1-20250919
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+* ImageInformation
+  * ImageTitle -> "bbs-medmij-dataelement-1" "ImageTitle"
+  * Modality -> "bbs-medmij-dataelement-5" "Modality"
+* ReportInformation
+  * ReportTitle -> "bbs-medmij-dataelement-2" "ReportTitle"
+* AccessionNumberInformation -> "bbs-medmij-dataelement-6" "AccessionNumberInformation"
+  * AccessionNumber -> "bbs-medmij-dataelement-3" "AccessionNumber"
+  * AssigningAuthority -> "bbs-medmij-dataelement-7" "AssigningAuthority"
+    * HealthcareProvider -> "bbs-medmij-dataelement-8" "HealthcareProvider"
+      * HealthcareProviderIdentificationNumber -> "bbs-medmij-dataelement-9" "HealthcareProviderIdentificationNumber"
+      * OrganizationName -> "bbs-medmij-dataelement-10" "OrganizationName"
+      * DepartmentSpecialty -> "bbs-medmij-dataelement-11" "DepartmentSpecialty"
+      * OrganizationType -> "bbs-medmij-dataelement-12" "OrganizationType"
+* StudyInstanceUID -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
+
 /*
 Logical: ImageInformation
 Id: bbs-lm-ImageInformation
