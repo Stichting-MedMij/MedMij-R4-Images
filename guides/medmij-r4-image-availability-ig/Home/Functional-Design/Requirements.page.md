@@ -67,15 +67,15 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 4 | Zorggebruiker | Beelden en verslagen op chronologische volgorde van uitvoerdatum zien | Ik niet hoef te sorteren om het juiste beeld te vinden | M |
+| 4 | Zorggebruiker | Beelden en verslagen op chronologische volgorde van onderzoeksdatum zien | Ik niet hoef te sorteren om het juiste beeld te vinden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Beelden en verslagen worden automatisch gesorteerd op uitvoerdatum, van meest recent naar minst recent. |
+| 1. | Beelden en verslagen worden automatisch gesorteerd op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174), van meest recent naar minst recent. |
 | 2. | De sortering kan handmatig worden gewijzigd. |
 | 3. | De sortering blijft behouden bij filteracties door de gebruiker. |
-| 4. | Datum van uitvoering wordt zichtbaar getoond bij ieder verslag/beeld. |
-| 5. | Indien twee items dezelfde datum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
+| 4. | De onderzoeksdatum wordt zichtbaar getoond bij ieder verslag/beeld. |
+| 5. | Indien twee items dezelfde onderzoeksdatum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
 | 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -89,12 +89,12 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 6 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van datum | Snel de juiste onderzoeken kan zien | S |
+| 6 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van onderzoeksdatum | Snel de juiste onderzoeken kan zien | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | De gebruiker kan een datumfilter instellen in het overzicht van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
-| 2. | Het filter werkt op VerrichtingStartDatum (bbs-dataelement-174). |
+| 2. | Het filter werkt op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174). |
 | 3. | Er is standaard geen filter actief; alle items worden getoond tot de gebruiker zelf filtert. |
 | 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. | 
 | 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. | 
