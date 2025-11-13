@@ -10,6 +10,7 @@ Description: "Imaging research including images and reports."
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the ImagingResearch building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
+* ^abstract = true
 * .
   * ^alias = "Onderzoek"
 * Procedure 0..1 BackboneElement "Root concept of the Procedure building block. This root concept contains all data elements of the Procedure building block."
@@ -121,6 +122,7 @@ Description: "Imaging research including images and reports."
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
+* ^abstract = false
 * .
 * Procedure 1..1
   * ProcedureStartDate 1..1
@@ -175,6 +177,7 @@ Description: "Imaging research including images and reports."
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
+* ^abstract = false
 * .
 * ImageInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
   * ImageInformationIdentificationNumber 1..1
@@ -250,42 +253,3 @@ Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
       * DepartmentSpecialty -> "bbs-medmij-dataelement-11" "DepartmentSpecialty"
       * OrganizationType -> "bbs-medmij-dataelement-12" "OrganizationType"
 * StudyInstanceUID -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
-
-/*
-Logical: ImageInformation
-Id: bbs-lm-ImageInformation
-Title: "Image Information"
-Description: "Imaging research for images and reports: subset image information"
-* insert DefaultNarrative
-* ^status = #active
-* insert PublisherAndContact
-* insert Copyright
-* .
-  * ^alias = "Beeldinformatie"
-* ImageInformationIdentificationNumber 0..1 Identifier "Globally unique ID that describes the set of images. In DICOM the study/series UID can be used."
-  * ^alias = "BeeldinformatieIdentificatienummer"
-* ImageDateTime 0..1 dateTime "Date/time on which the radiological examination has been performed on the patient and/or the images have been made."
-  * ^alias = "BeeldDatumTijd"
-* ImageTitle 0..1 string "The title of the image."
-  * ^alias = "BeeldTitel"
-* Modality 0..* CodeableConcept "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
-* Modality from $ModalityCombinedValueSetURL (required)
-  * ^alias = "Modaliteit"
-
-Logical: ReportInformation
-Id: bbs-lm-ReportInformation
-Title: "Report Information"
-Description: "Imaging research for images and reports: subset report information"
-* insert DefaultNarrative
-* ^status = #active
-* insert PublisherAndContact
-* insert Copyright
-* .
-  * ^alias = "Verslaginformatie"
-* ReportInformationIdentificationNumber 0..1 Identifier "Globally unique ID for the report of the imaging research. In DICOM the study/series UID can be used."
-  * ^alias = "VerslaginformatieIdentificatienummer"
-* ReportDateTime 0..1 dateTime "Date/time on which the report has been autorised and/or made available."
-  * ^alias = "VerslagDatumTijd"
-* ReportTitle 0..1 string "The title of the report."
-  * ^alias = "VerslagTitel"
-*/

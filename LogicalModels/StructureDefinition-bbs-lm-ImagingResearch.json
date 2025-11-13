@@ -38,7 +38,7 @@
     }
   ],
   "kind": "logical",
-  "abstract": false,
+  "abstract": true,
   "type": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
