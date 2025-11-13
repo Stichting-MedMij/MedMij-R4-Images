@@ -5,7 +5,7 @@
 - name: FHIR IG
   filename: FHIR-IG.page.md
 - name: Artifact index
-  filename: Artifact-index.page.md
+  filename: Artifact-Index
 - name: Dependencies
   filename: Dependencies.page.md
 - name: Test material
