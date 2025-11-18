@@ -1,4 +1,4 @@
-// CapabilityStatement based on ITI MHD to be used in Image Availability
+// CapabilityStatements based on ITI MHD to be used in Image Availability
 
 Instance: bbs-Retrieve
 InstanceOf: CapabilityStatement
