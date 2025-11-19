@@ -33,7 +33,15 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 ## Eisen voor PGO
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 1 | Zorggebruiker | Beelden in de webviewer bekijken | Geen DICOM-viewer op mijn apparaat hoef te downloaden | M |
+| 1 | Zorggebruiker | Inzage hebben in mijn beschikbare beelden en verslagen | Altijd een actueel overzicht van de beelden en verslagen van mijn zorgaanbieder(s) heb | M |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 2 | Zorggebruiker | Beelden in de webviewer bekijken | Geen DICOM-viewer op mijn apparaat hoef te downloaden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -48,7 +56,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 2 | Zorggebruiker | Verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
+| 3 | Zorggebruiker | Verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -57,7 +65,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 3 | Zorggebruiker | Beelden en verslagen die bij hetzelfde onderzoek horen, gekoppeld zien | Mijn uitslag (beeld en verslag samen) kan interpreteren om goed voorbereid te zijn op een vervolgconsult | M |
+| 4 | Zorggebruiker | Beelden en verslagen die bij hetzelfde onderzoek horen, gekoppeld zien | Mijn uitslag (beeld en verslag samen) kan interpreteren om goed voorbereid te zijn op een vervolgconsult | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -67,7 +75,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 4 | Zorggebruiker | Beelden en verslagen op chronologische volgorde van onderzoeksdatum zien | Ik niet hoef te sorteren om het juiste beeld te vinden | M |
+| 5 | Zorggebruiker | Beelden en verslagen op chronologische volgorde van onderzoeksdatum zien | Ik niet hoef te sorteren om het juiste beeld te vinden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -80,7 +88,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 5 | Zorggebruiker | Beelden en verslagen van meerdere zorgaanbieders in één overzicht kunnen bekijken | Ik in één oogopslag kan zien bij welke zorgaanbieders ik ben geweest en welke beelden en verslagen daar zijn opgevraagd | M |
+| 6 | Zorggebruiker | Beelden en verslagen van meerdere zorgaanbieders in één overzicht kunnen bekijken | Ik in één oogopslag kan zien bij welke zorgaanbieders ik ben geweest en welke beelden en verslagen daar zijn opgevraagd | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -89,7 +97,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 6 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van onderzoeksdatum | Snel de juiste onderzoeken kan zien | S |
+| 7 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van onderzoeksdatum | Snel de juiste onderzoeken kan zien | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -102,7 +110,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 7 | Zorggebruiker | Beelden en verslagen kunnen doorzoeken | Snel de juiste te onderzoeken kan zien | S |
+| 8 | Zorggebruiker | Beelden en verslagen kunnen doorzoeken | Snel de juiste te onderzoeken kan zien | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -112,7 +120,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 8 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
+| 9 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -122,7 +130,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 9 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn verslagen | S |
+| 10 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn verslagen | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -132,7 +140,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 10 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van zorgaanbieder | Ik snel gegevens van een specifieke zorgverlener kan bekijken | S |
+| 11 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van zorgaanbieder | Ik snel gegevens van een specifieke zorgverlener kan bekijken | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -142,7 +150,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 11 | Zorggebruiker | Bij het beeld en verslag de betrokken zorgverlener(s) zien indien beschikbaar gesteld door de zorgaanbieder | Weet welke zorgverlener verantwoordelijk is voor de informatie | C |
+| 12 | Zorggebruiker | Bij het beeld en verslag de betrokken zorgverlener(s) zien indien beschikbaar gesteld door de zorgaanbieder | Weet welke zorgverlener verantwoordelijk is voor de informatie | C |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -150,7 +158,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 12 | Zorggebruiker | Geattendeerd worden op het risico van mogelijke onjuiste interpretatie van de beelden en verslagen | Een zo juist mogelijke interpretatie van de beelden en verslagen heb | M |
+| 13 | Zorggebruiker | Geattendeerd worden op het risico van mogelijke onjuiste interpretatie van de beelden en verslagen | Een zo juist mogelijke interpretatie van de beelden en verslagen heb | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -158,7 +166,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 13 | Zorggebruiker | Geattendeerd worden wanneer een beeldenreeks niet volledig wordt getoond | Begrijp dat er een beeld ontbreekt en door de onvolledigheid van de beschikbare informatie er een risico is op onjuiste interpretatie | S |
+| 14 | Zorggebruiker | Geattendeerd worden wanneer een beeldenreeks niet volledig wordt getoond | Begrijp dat er een beeld ontbreekt en door de onvolledigheid van de beschikbare informatie er een risico is op onjuiste interpretatie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -167,7 +175,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 14 | Zorggebruiker | Dat frames die onderdeel uitmaken van hetzelfde beeld op de juiste volgorde worden getoond | Een dergelijk beeld correct kan interpreteren | S |
+| 15 | Zorggebruiker | Dat frames die onderdeel uitmaken van hetzelfde beeld op de juiste volgorde worden getoond | Een dergelijk beeld correct kan interpreteren | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
