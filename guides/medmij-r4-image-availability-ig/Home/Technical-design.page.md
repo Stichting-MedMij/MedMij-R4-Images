@@ -2,7 +2,7 @@
 topic: TO
 ---
 
-# FHIR IG
+# Technical design
 
 ## Introduction
 This IG describes a patient use case in the context of the [information standard "Image Availability" (Dutch: Beeldbeschikbaarheid or BBS), version 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). The information standard Image Availability as published by Nictiz does not yet include a patient use case, this may change in the future. Up until then, the patient use case will be published by MedMij.
