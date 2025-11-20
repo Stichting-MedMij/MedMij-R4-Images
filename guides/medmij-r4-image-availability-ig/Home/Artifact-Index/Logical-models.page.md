@@ -1,5 +1,5 @@
 ---
-topic: Logical Models
+topic: LM
 ---
 
 # Logical Models

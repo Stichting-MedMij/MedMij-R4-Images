@@ -99,9 +99,7 @@ Hieronder zijn de systemen en systeemrollen schematisch weergegeven.
 **Figuur 2: Componentendiagram**
 
 ### Transacties en transactiegroepen
-Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt in ART-DECOR de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties en implementation guide, zie het {{pagelink:TO, text: technisch ontwerp}}.
-
-**Noot:** De specificaties voor de transacties in dit ontwerp staan op dit moment in de dataset maar nog niet in ART-DECOR. Bij een toekomstige samenvoeging met de informatiestandaard van Nictiz zullen deze worden opgenomen.
+Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt met behulp van {{pagelink:LM, text: Logical Models}} de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties, zie het {{pagelink:TO, text: technisch ontwerp}}.
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
@@ -118,4 +116,4 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 **Figuur 3: Usecasediagram**
 
 ### Dataset
-De dataset kan gevonden worden op [GitHub](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/blob/main/dataset/Dataset_MedMij_Beeldbeschikbaarheid_1.0.0-rc.1.xlsx).
+De dataset is uitgewerkt aan de hand van {{pagelink:LM, text: Logical Models}}.
