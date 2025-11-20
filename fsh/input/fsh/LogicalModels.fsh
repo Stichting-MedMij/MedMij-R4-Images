@@ -1,6 +1,103 @@
 // All LogicalModels used in Image Availability
 
-Logical: ImagingResearch
+Logical: LmPatient
+Parent: http://hl7.org/fhir/StructureDefinition/Element
+Id: bbs-lm-Patient
+Title: "Patient"
+Description: "The person undergoing imaging research."
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* insert Copyright
+* ^abstract = true
+* .
+  * ^alias = "Patient"
+* NameInformation 0..1 BackboneElement "Patient's full name."
+  * ^alias = "Naamgegevens"
+  * FirstNames 0..1 string "The first names of the patient."
+    * ^alias = "Voornamen"
+  * Initials 0..1 string "The initials of the patient."
+    * ^alias = "Initialen"
+  * LastName 0..1 BackboneElement "Container of the LastName concept. This container contains all data elements of the LastName concept."
+    * ^alias = "Geslachtsnaam"
+    * Prefix 0..1 string "Prefix to the last name of the patient."
+      * ^alias = "Voorvoegsels"
+    * LastName 0..1 string "The last name of the patient."
+      * ^alias = "Achternaam"
+* PatientIdentificationNumber 0..1 Identifier "The patient's identification number."
+  * ^alias = "Identificatienummer"
+* DateOfBirth 0..1 dateTime "Patient's date of birth."
+  * ^alias = "Geboortedatum"
+* Gender 0..1 CodeableConcept "Patient's administrative gender."
+* Gender from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000 (required)
+  * ^alias = "Geslacht"
+
+Logical: LmPatientServeTimeline
+Parent: bbs-lm-Patient
+Id: bbs-lm-Patient-serve-timeline
+Title: "Patient (Serve image and report timeline)"
+Description: "The person undergoing imaging research."
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents (the functional requirements of) the Patient building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* insert Copyright
+* ^abstract = false
+* .
+  * ^mustSupport = true
+* NameInformation 1..1
+  * ^mustSupport = true
+  * FirstNames
+    * ^mustSupport = true
+  * Initials
+    * ^mustSupport = true
+  * LastName 1..1
+    * ^mustSupport = true
+    * Prefix
+      * ^mustSupport = true
+    * LastName 1..1
+      * ^mustSupport = true
+* PatientIdentificationNumber 1..1
+  * ^mustSupport = true
+* DateOfBirth 1..1
+  * ^mustSupport = true
+* Gender
+  * ^mustSupport = true
+
+Logical: LmPatientServeImageReport
+Parent: bbs-lm-Patient
+Id: bbs-lm-Patient-serve-image-report
+Title: "Patient (Serve image and report)"
+Description: "The person undergoing imaging research."
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContact
+* ^purpose = "This LogicalModel represents (the functional requirements of) the Patient building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* insert Copyright
+* ^abstract = false
+* .
+  * ^mustSupport = true
+* NameInformation 1..1
+  * ^mustSupport = true
+  * FirstNames
+    * ^mustSupport = true
+  * Initials
+    * ^mustSupport = true
+  * LastName 1..1
+    * ^mustSupport = true
+    * Prefix
+      * ^mustSupport = true
+    * LastName 1..1
+      * ^mustSupport = true
+* PatientIdentificationNumber 1..1
+  * ^mustSupport = true
+* DateOfBirth 1..1
+  * ^mustSupport = true
+* Gender
+  * ^mustSupport = true
+
+Logical: LmImagingResearch
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: bbs-lm-ImagingResearch
 Title: "Imaging Research"
@@ -112,7 +209,7 @@ Description: "Imaging research including images and reports."
 * StudyInstanceUID 0..1 Identifier "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
   * ^alias = "StudyInstanceUID"
 
-Logical: ImagingResearchServeTimeline
+Logical: LmImagingResearchServeTimeline
 Parent: bbs-lm-ImagingResearch
 Id: bbs-lm-ImagingResearch-serve-timeline
 Title: "Imaging Research (Serve image and report timeline)"
@@ -125,49 +222,91 @@ Description: "Imaging research including images and reports."
 * ^abstract = false
 * .
 * Procedure 1..1
+  * ^mustSupport = true
   * ProcedureStartDate 1..1
+    * ^mustSupport = true
   * ProcedureEndDate
+    * ^mustSupport = true
   * ProcedureType 1..1
+    * ^mustSupport = true
   * ProcedureAnatomicalLocation
+    * ^mustSupport = true
     * Location 1..1
+      * ^mustSupport = true
     * Laterality
+      * ^mustSupport = true
   * Location 1..1
+    * ^mustSupport = true
     * HealthcareProvider 1..1
+      * ^mustSupport = true
       * HealthcareProviderIdentificationNumber 1..1
+        * ^mustSupport = true
       * OrganizationName 1..1
+        * ^mustSupport = true
       * DepartmentSpecialty
+        * ^mustSupport = true
       * OrganizationType
+        * ^mustSupport = true
   * Performer
+    * ^mustSupport = true
     * HealthProfessional 1..1
+      * ^mustSupport = true
       * HealthProfessionalIdentificationNumber 1..1
+        * ^mustSupport = true
       * NameInformation 1..1
+        * ^mustSupport = true
         * FirstNames
+          * ^mustSupport = true
         * Initials
+          * ^mustSupport = true
         * LastName 1..1
+          * ^mustSupport = true
           * Prefix
+            * ^mustSupport = true
           * LastName 1..1
+            * ^mustSupport = true
       * Specialty 1..1
+        * ^mustSupport = true
       * HealthProfessionalRole
+        * ^mustSupport = true
 * ImageInformation
+  * ^mustSupport = true
   * ImageInformationIdentificationNumber 1..1
+    * ^mustSupport = true
   * ImageDateTime 1..1
+    * ^mustSupport = true
   * ImageTitle
+    * ^mustSupport = true
   * Modality 1..*
+    * ^mustSupport = true
 * ReportInformation
+  * ^mustSupport = true
   * ReportInformationIdentificationNumber 1..1
+    * ^mustSupport = true
   * ReportDateTime 1..1
+    * ^mustSupport = true
   * ReportTitle
+    * ^mustSupport = true
 * AccessionNumberInformation
+  * ^mustSupport = true
   * AccessionNumber 1..1
+    * ^mustSupport = true
   * AssigningAuthority 1..1
+    * ^mustSupport = true
     * HealthcareProvider 1..1
+      * ^mustSupport = true
       * HealthcareProviderIdentificationNumber 1..1
+        * ^mustSupport = true
       * OrganizationName
+        * ^mustSupport = true
       * DepartmentSpecialty
+        * ^mustSupport = true
       * OrganizationType
+        * ^mustSupport = true
 * StudyInstanceUID
+  * ^mustSupport = true
 
-Logical: ImagingResearchServeImageReport
+Logical: LmImagingResearchServeImageReport
 Parent: bbs-lm-ImagingResearch
 Id: bbs-lm-ImagingResearch-serve-image-report
 Title: "Imaging Research (Serve image and report)"
@@ -180,24 +319,51 @@ Description: "Imaging research including images and reports."
 * ^abstract = false
 * .
 * ImageInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
+  * ^mustSupport = true
   * ImageInformationIdentificationNumber 1..1
+    * ^mustSupport = true
   * ImageDateTime 1..1
+    * ^mustSupport = true
   * ImageTitle
+    * ^mustSupport = true
   * Images 1..*
+    * ^mustSupport = true
   * Modality 1..*
+    * ^mustSupport = true
 * ReportInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
+  * ^mustSupport = true
   * ReportInformationIdentificationNumber 1..1
+    * ^mustSupport = true
   * ReportDateTime 1..1
+    * ^mustSupport = true
   * ReportTitle
+    * ^mustSupport = true
   * Report 1..1
+    * ^mustSupport = true
 
 Invariant: bbs-lm-ImagingResearch-serve-image-report-1
 Description: "At least one of ImageInformation or ReportInformation is present."
 Severity: #error
 Expression: "ImageInformation.exists() or ReportInformation.exists()"
 
-Mapping: LmBeeldbeschikbaarheidNictiz
-Source: ImagingResearch
+Mapping: LmPatientBeeldbeschikbaarheidNictiz
+Source: LmPatient
+Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
+Id: bbs-dataset-100-alpha2-20240208
+Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
+* -> "bbs-dataelement-132" "Patient"
+* NameInformation -> "bbs-dataelement-133" "NameInformation"
+  * FirstNames -> "bbs-dataelement-134" "FirstNames"
+  * Initials -> "bbs-dataelement-135" "Initials"
+  * LastName -> "bbs-dataelement-138" "LastName"
+    * Prefix -> "bbs-dataelement-139" "Prefix"
+    * LastName -> "bbs-dataelement-140" "LastName"
+* PatientIdentificationNumber -> "bbs-dataelement-166" "PatientIdentificationNumber"
+* DateOfBirth -> "bbs-dataelement-167" "DateOfBirth"
+* Gender -> "bbs-dataelement-168" "Gender"
+
+Mapping: LmImagingResearchBeeldbeschikbaarheidNictiz
+Source: LmImagingResearch
 Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
 Id: bbs-dataset-100-alpha2-20240208
 Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
@@ -235,8 +401,8 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * ReportDateTime -> "bbs-dataelement-101" "DateTime"
   * Report -> "bbs-dataelement-690" "Report"
 
-Mapping: LmMedMij-100-rc1
-Source: ImagingResearch
+Mapping: LmImagingResearchMedMij-100-rc1
+Source: LmImagingResearch
 Id: bbs-medmij-dataset-100-rc1-20250919
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
 * ImageInformation
