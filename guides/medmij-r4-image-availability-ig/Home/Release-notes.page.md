@@ -4,7 +4,7 @@
 
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
-| Dataset               | Logical Models corresponding with the functional dataset and underlying use cases have been added. | [DOSINZAGE2-827](https://medmij.atlassian.net/browse/DOSINZAGE2-827) |
+| Dataset               | Logical Models corresponding with the functional dataset and underlying use cases have been added, while the dataset in Excel format has been removed. | [DOSINZAGE2-827](https://medmij.atlassian.net/browse/DOSINZAGE2-827) |
 | Functional design     | A requirement which mandates a disclaimer in the PHR regarding the interpretation of images and reports has been added. | [DOSINZAGE2-715](https://medmij.atlassian.net/browse/DOSINZAGE2-715) |
 | Functional design     | A requirement related to incomplete image series has been added. Moreover, corresponding guidance has been added to the display guideline. | [DOSINZAGE2-736](https://medmij.atlassian.net/browse/DOSINZAGE2-736) |
 | Functional design     | A requirement with respect to displaying multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
