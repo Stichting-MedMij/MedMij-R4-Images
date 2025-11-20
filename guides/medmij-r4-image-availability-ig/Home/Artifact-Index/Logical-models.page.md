@@ -1,8 +1,8 @@
 ---
-topic: Logical models
+topic: Logical Models
 ---
 
-# Logical models
+# Logical Models
 
 The functional dataset and the underlying use cases are represented by FHIR Logical Models.
 - The Logical Models corresponding to the dataset, which we will refer to as *base Logical Models*, contain all functional concepts, including datatype, terminology binding (if applicable) and id (i.e. mapping to the [Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html) or, for newly introduced concepts, an id assigned by MedMij). Moreover, it is indicated whether each concept is repeating (i.e. whether its maximum cardinality is `1` or `*`).
@@ -18,10 +18,10 @@ The functional dataset and the underlying use cases are represented by FHIR Logi
 ## Use case: Serve image and report timeline
 Table 1 depicts the relevant building blocks in this use case.
 
-| Building block | Cardinality |
-| --- | --- |
-| Patient | `1..1` |
-| Study | `1..*` |
+| Building block | Logical Model | Cardinality |
+| --- | --- | --- |
+| Patient | LmPatientServeTimeline | `1..1` |
+| Study | LmStudyServeTimeline | `1..*` |
 
 **Table 1: Building blocks in the 'Serve image and report timeline' use case**
 
@@ -34,10 +34,10 @@ Table 1 depicts the relevant building blocks in this use case.
 ## Use case: Serve image and report
 Table 2 depicts the relevant building blocks in this use case.
 
-| Building block | Cardinality |
-| --- | --- |
-| Patient | `1..1` |
-| Study | `1..*` |
+| Building block | Logical Model | Cardinality |
+| --- | --- | --- |
+| Patient | LmPatientServeImageReport | `1..1` |
+| Study | LmStudyServeTimeline | `1..*` |
 
 **Table 2: Building blocks in the 'Serve image and report' use case**
 
