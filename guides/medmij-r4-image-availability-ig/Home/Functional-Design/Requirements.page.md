@@ -23,7 +23,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 ## Eisen voor DVA
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 1 | PGO-leverancier | Inzicht in de manier waarop rate limiting door de DVA is geconfigureerd | Een stabielere aansluiting op de DVA heb. | M |
+| 1 | PGO-leverancier | Inzicht in de manier waarop rate limiting door de DVA is geconfigureerd | Een stabielere aansluiting op de DVA heb | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -33,7 +33,15 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 ## Eisen voor PGO
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 1 | Zorggebruiker | Beelden in de webviewer bekijken | Geen DICOM-viewer op mijn apparaat hoef te downloaden | M |
+| 1 | Zorggebruiker | Inzage hebben in mijn beschikbare beelden en verslagen | Altijd een actueel overzicht van de beelden en verslagen van mijn zorgaanbieder(s) heb | M |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 2 | Zorggebruiker | Beelden in de webviewer bekijken | Geen DICOM-viewer op mijn apparaat hoef te downloaden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -48,16 +56,16 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 2 | Zorggebruiker | Medische verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
+| 3 | Zorggebruiker | Verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Medische verslagen zijn in de PGO te openen zonder externe PDF-viewer of door ze eerst te downloaden. |
+| 1. | Verslagen zijn in de PGO te openen zonder externe PDF-viewer of door ze eerst te downloaden. |
 | 2. | Verslagen zijn leesbaar op alle schermformaten (desktop, tablet, mobiel). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 3 | Zorggebruiker | Beelden en verslagen die bij hetzelfde onderzoek horen, gekoppeld zien | Mijn uitslag (beeld en verslag samen) kan interpreteren om goed voorbereid te zijn op een vervolgconsult | M |
+| 4 | Zorggebruiker | Beelden en verslagen die bij hetzelfde onderzoek horen, gekoppeld zien | Mijn uitslag (beeld en verslag samen) kan interpreteren om goed voorbereid te zijn op een vervolgconsult | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -67,20 +75,20 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 4 | Zorggebruiker | Beelden en verslagen op chronologische volgorde van uitvoerdatum zien | Ik niet hoef te sorteren om het juiste beeld te vinden | M |
+| 5 | Zorggebruiker | Beelden en verslagen op chronologische volgorde van onderzoeksdatum zien | Ik niet hoef te sorteren om het juiste beeld te vinden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Beelden en verslagen worden automatisch gesorteerd op uitvoerdatum, van meest recent naar minst recent. |
+| 1. | Beelden en verslagen worden automatisch gesorteerd op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174), van meest recent naar minst recent. |
 | 2. | De sortering kan handmatig worden gewijzigd. |
 | 3. | De sortering blijft behouden bij filteracties door de gebruiker. |
-| 4. | Datum van uitvoering wordt zichtbaar getoond bij ieder verslag/beeld. |
-| 5. | Indien twee items dezelfde datum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
+| 4. | De onderzoeksdatum wordt zichtbaar getoond bij ieder verslag/beeld. |
+| 5. | Indien twee items dezelfde onderzoeksdatum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
 | 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 5 | Zorggebruiker | Beelden en verslagen van meerdere zorgaanbieders in één overzicht kunnen bekijken | Ik in één oogopslag kan zien bij welke zorgaanbieders ik ben geweest en welke beelden en verslagen daar zijn opgevraagd | M |
+| 6 | Zorggebruiker | Beelden en verslagen van meerdere zorgaanbieders in één overzicht kunnen bekijken | Ik in één oogopslag kan zien bij welke zorgaanbieders ik ben geweest en welke beelden en verslagen daar zijn opgevraagd | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -89,20 +97,20 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 6 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van datum | Snel de juiste onderzoeken kan zien | S |
+| 7 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van onderzoeksdatum | Snel de juiste onderzoeken kan zien | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | De gebruiker kan een datumfilter instellen in het overzicht van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
-| 2. | Het filter werkt op VerrichtingStartDatum (bbs-dataelement-174). |
+| 2. | Het filter werkt op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174). |
 | 3. | Er is standaard geen filter actief; alle items worden getoond tot de gebruiker zelf filtert. |
 | 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. | 
-| 5. | Het filter blijft actief bij navigatie binnen de sessie (totdat gebruiker reset of de sessie verlaat). | 
+| 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. | 
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 7 | Zorggebruiker | Beelden en verslagen kunnen doorzoeken | Snel de juiste te onderzoeken kan zien | S |
+| 8 | Zorggebruiker | Beelden en verslagen kunnen doorzoeken | Snel de juiste te onderzoeken kan zien | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -112,27 +120,27 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 8 | Zorggebruiker | Medische beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn medische gegevens en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie. | S |
+| 9 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | De gebruiker ziet bij elk beschikbaar beeld of onderzoek een duidelijke downloadknop. |
-| 2. | De gebruiker kan kiezen om dit op te slaan in: <br/> <ul> <li> [DICOM-formaat](https://dicom.nema.org/medical/dicom/2018d/output/html/part10.html) (standaard voor medische beelden); <li> JPEG-formaat (voor persoonlijk gebruik of eenvoudige weergave). |
+| 2. | De gebruiker kan kiezen om dit op te slaan in: <br/> <ul> <li> [DICOM-formaat](https://dicom.nema.org/medical/dicom/2018d/output/html/part10.html) (standaard voor beelden); <li> JPEG-formaat (voor persoonlijk gebruik of eenvoudige weergave). |
 | 3. | Wanneer de gebruiker kiest voor het originele formaat (DICOM), wordt een melding getoond met: <br/> <ul> <li> de aanduiding dat het om een DICOM-bestand gaat; <li> een korte uitleg dat voor het openen van dit bestand een geschikte viewer nodig is; <li> een waarschuwing dat het bestand persoonlijke data bevat; <li> de verwachte bestandsgrootte (MB/GB). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 9 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn medische gegevens | S |
+| 10 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn verslagen | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Bij elk beschikbaar beeldverslag is een duidelijke knop zichtbaar met het label 'Download verslag'. |
+| 1. | Bij elk beschikbaar verslag is een duidelijke knop zichtbaar met het label 'Download verslag'. |
 | 2. | Verslagen zijn te downloaden als PDF-bestand. |
 | 3. | Na het klikken op de downloadknop ontvangt de gebruiker visuele feedback, bijvoorbeeld een melding 'Download gestart' of 'Verslag opgeslagen'. | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 10 | Zorggebruiker | Wil ik beelden en verslagen kunnen filteren op basis van zorgaanbieder | Ik snel gegevens van een specifieke zorgverlener kan bekijken | S |
+| 11 | Zorggebruiker | Beelden en verslagen kunnen filteren op basis van zorgaanbieder | Ik snel gegevens van een specifieke zorgverlener kan bekijken | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -142,7 +150,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 11 | Zorggebruiker | Bij het beeld en verslag de betrokken zorgverlener(s) zien indien beschikbaar gesteld door zorgaanbieder | Weet welke zorgverlener verantwoordelijk is voor de informatie | C |
+| 12 | Zorggebruiker | Bij het beeld en verslag de betrokken zorgverlener(s) zien indien beschikbaar gesteld door de zorgaanbieder | Weet welke zorgverlener verantwoordelijk is voor de informatie | C |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -150,7 +158,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 12 | Zorggebruiker | Geattendeerd worden op het risico van mogelijke onjuiste interpretatie van de beelden en verslagen | Een zo juist mogelijke interpretatie van de beelden en verslagen heb | M |
+| 13 | Zorggebruiker | Geattendeerd worden op het risico van mogelijke onjuiste interpretatie van de beelden en verslagen | Een zo juist mogelijke interpretatie van de beelden en verslagen heb | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -158,9 +166,17 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 13 | Zorggebruiker | Geattendeerd worden wanneer een beeldenreeks niet volledig wordt getoond | Begrijp dat er een beeld ontbreekt en door de onvolledigheid van de beschikbare informatie er een risico is op onjuiste interpretatie | S |
+| 14 | Zorggebruiker | Geattendeerd worden wanneer een beeldenreeks niet volledig wordt getoond | Begrijp dat er een beeld ontbreekt en door de onvolledigheid van de beschikbare informatie er een risico is op onjuiste interpretatie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Er wordt een visueel duidelijke foutmelding getoond bij het niet volledig tonen van een beeldenreeks in zowel de webviewer als DICOM-download. |
 | 2. | In de foutmelding wordt opgenomen met wie de gebruiker contact kan opnemen. |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 15 | Zorggebruiker | Dat frames die onderdeel uitmaken van hetzelfde beeld op de juiste volgorde worden getoond | Een dergelijk beeld correct kan interpreteren | S |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Alle opgehaalde frames van een beeld worden op numerieke volgorde van de bijbehorende framenummers getoond of afgespeeld. |

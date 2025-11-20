@@ -2,8 +2,8 @@
   filename: Index.page.md
 - name: Functional design
   filename: Functional-Design
-- name: FHIR IG
-  filename: FHIR-IG.page.md
+- name: Technical design
+  filename: Technical-design.page.md
 - name: Artifact index
   filename: Artifact-Index
 - name: Dependencies
