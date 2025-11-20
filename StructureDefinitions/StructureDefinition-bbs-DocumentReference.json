@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "Imaging research including images and reports.",
+  "description": "Imaging study including images and reports.",
   "purpose": "This DocumentReference resource represents the Onderzoek building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). This profile is based on the [IHE.MHD.UnContained.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
@@ -56,8 +56,8 @@
       {
         "id": "DocumentReference",
         "path": "DocumentReference",
-        "short": "ImagingResearch",
-        "definition": "Imaging research including images and reports.",
+        "short": "Study",
+        "definition": "Imaging study including images and reports.",
         "alias": [
           "Onderzoek"
         ],
@@ -81,7 +81,7 @@
           {
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-66",
-            "comment": "ImagingResearch"
+            "comment": "Study"
           }
         ]
       },
@@ -89,7 +89,7 @@
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
         "short": "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID",
-        "definition": "* Globally unique ID for the report of the imaging research. In DICOM the study/series UID can be used.\n* Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The globally unique identifier assigned by the document creator to this document.",
+        "definition": "* Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.\n* Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The globally unique identifier assigned by the document creator to this document.",
         "alias": [
           "VerslaginformatieIdentificatienummer",
           "BeeldinformatieIdentificatienummer"
@@ -130,7 +130,7 @@
         "id": "DocumentReference.type",
         "path": "DocumentReference.type",
         "short": "ProcedureType / TypeCode",
-        "definition": "* Description of the procedure and/or the performed imaging research (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).\n* The code specifying the precise kind of document (e.g. Pulmonary History and Physical, Discharge Summary, Ultrasound Report).",
+        "definition": "* Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).\n* The code specifying the precise kind of document (e.g. Pulmonary History and Physical, Discharge Summary, Ultrasound Report).",
         "comment": "The value set bound to this element is a thesaurus managed, owned and distributed by DHD (namely the Verrichtingenthesaurus (VT)). Every concept in the VT is linked to a unique SNOMED concept, but it is no SNOMED reference set, and in particular it is not published on the SNOMED browsers. In order to retrieve the contents of the VT, authorized access is required.\n\nThe XDS metadata element typeCode, which normally contains the precise type of document, is mapped on `.type` in [core FHIR](https://hl7.org/fhir/R4/documentreference-mappings.html#xds). In XDS-I, and consequently, the Nictiz IG, the typeCode element is used to indicate the procedure type instead. Even though `.context.event` is better suited to convey the procedure type from a FHIR perspective, the core FHIR mapping between typeCode and `.type` is retained.",
         "alias": [
           "VerrichtingType"

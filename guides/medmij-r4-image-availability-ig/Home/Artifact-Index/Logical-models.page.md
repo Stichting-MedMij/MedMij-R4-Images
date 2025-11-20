@@ -12,8 +12,8 @@ The functional dataset and the underlying use cases are represented by FHIR Logi
 ### Patient
 {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient, buttons}}
 
-### ImagingResearch
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch, buttons}}
+### Study
+{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study, buttons}}
 
 ## Use case: Serve image and report timeline
 Table 1 depicts the relevant building blocks in this use case.
@@ -21,15 +21,15 @@ Table 1 depicts the relevant building blocks in this use case.
 | Building block | Cardinality |
 | --- | --- |
 | Patient | `1..1` |
-| ImagingResearch | `1..*` |
+| Study | `1..*` |
 
 **Table 1: Building blocks in the 'Serve image and report timeline' use case**
 
 ### Patient
 {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-timeline, buttons}}
 
-### ImagingResearch
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-timeline, buttons}}
+### Study
+{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline, buttons}}
 
 ## Use case: Serve image and report
 Table 2 depicts the relevant building blocks in this use case.
@@ -37,12 +37,12 @@ Table 2 depicts the relevant building blocks in this use case.
 | Building block | Cardinality |
 | --- | --- |
 | Patient | `1..1` |
-| ImagingResearch | `1..*` |
+| Study | `1..*` |
 
 **Table 2: Building blocks in the 'Serve image and report' use case**
 
 ### Patient
 {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-image-report, buttons}}
 
-### ImagingResearch
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-ImagingResearch-serve-image-report, buttons}}
+### Study
+{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report, buttons}}

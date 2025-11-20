@@ -4,20 +4,20 @@ Profile: BbsDocumentReference
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference
 Id: bbs-DocumentReference
 Title: "bbs DocumentReference"
-Description: "Imaging research including images and reports."
+Description: "Imaging study including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
 * ^purpose = "This DocumentReference resource represents the Onderzoek building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). This profile is based on the [IHE.MHD.UnContained.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference)."
 * insert Copyright
 * . obeys bbs-DocumentReference-1 and bbs-DocumentReference-2
-  * ^short = "ImagingResearch"
-  * ^definition = "Imaging research including images and reports."
+  * ^short = "Study"
+  * ^definition = "Imaging study including images and reports."
   * ^alias = "Onderzoek"
 * masterIdentifier
   * ^short = "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID"
   * ^definition = """
-      * Globally unique ID for the report of the imaging research. In DICOM the study/series UID can be used.
+      * Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.
       * Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.
       * The globally unique identifier assigned by the document creator to this document.
     """
@@ -30,7 +30,7 @@ Description: "Imaging research including images and reports."
 * type from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539 (extensible)
   * ^short = "ProcedureType / TypeCode"
   * ^definition = """
-      * Description of the procedure and/or the performed imaging research (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).
+      * Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).
       * The code specifying the precise kind of document (e.g. Pulmonary History and Physical, Discharge Summary, Ultrasound Report).
     """
   * ^comment = """
@@ -274,7 +274,7 @@ Source: BbsDocumentReference
 Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
 Id: bbs-dataset-100-alpha2-20240208
 Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
-* -> "bbs-dataelement-66" "ImagingResearch"
+* -> "bbs-dataelement-66" "Study"
 * masterIdentifier -> "bbs-dataelement-100" "ReportInformationIdentificationNumber"
 * masterIdentifier -> "bbs-dataelement-784" "ImageInformationIdentificationNumber"
 * type -> "bbs-dataelement-176" "ProcedureType"

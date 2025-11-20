@@ -4,7 +4,7 @@ Logical: LmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: bbs-lm-Patient
 Title: "Patient"
-Description: "The person undergoing imaging research."
+Description: "The person on which an imaging study is performed."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -37,7 +37,7 @@ Logical: LmPatientServeTimeline
 Parent: bbs-lm-Patient
 Id: bbs-lm-Patient-serve-timeline
 Title: "Patient (Serve image and report timeline)"
-Description: "The person undergoing imaging research."
+Description: "The person on which an imaging study is performed."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -69,7 +69,7 @@ Logical: LmPatientServeImageReport
 Parent: bbs-lm-Patient
 Id: bbs-lm-Patient-serve-image-report
 Title: "Patient (Serve image and report)"
-Description: "The person undergoing imaging research."
+Description: "The person on which an imaging study is performed."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
@@ -97,15 +97,15 @@ Description: "The person undergoing imaging research."
 * Gender
   * ^mustSupport = true
 
-Logical: LmImagingResearch
+Logical: LmStudy
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: bbs-lm-ImagingResearch
-Title: "Imaging Research"
-Description: "Imaging research including images and reports."
+Id: bbs-lm-Study
+Title: "Study"
+Description: "Imaging study including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
-* ^purpose = "This LogicalModel represents the ImagingResearch building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* ^purpose = "This LogicalModel represents the Study building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
 * ^abstract = true
 * .
@@ -116,7 +116,7 @@ Description: "Imaging research including images and reports."
     * ^alias = "VerrichtingStartDatum"
   * ProcedureEndDate 0..1 dateTime "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted."
     * ^alias = "VerrichtingEindDatum"
-  * ProcedureType 0..1 CodeableConcept "Description of the procedure and/or the performed imaging research (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray)."
+  * ProcedureType 0..1 CodeableConcept "Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray)."
   * ProcedureType from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539 (extensible)
     * ^alias = "VerrichtingType"
   * ProcedureAnatomicalLocation 0..1 BackboneElement "Anatomical location which is the focus of the procedure."
@@ -165,7 +165,7 @@ Description: "Imaging research including images and reports."
       * HealthProfessionalRole 0..1 CodeableConcept "The role the health professional fulfils in the healthcare process."
       * HealthProfessionalRole from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20200901000000 (extensible)
         * ^alias = "ZorgverlenerRol"
-* ImageInformation 0..1 BackboneElement "Imaging research for images and reports: subset image information"
+* ImageInformation 0..1 BackboneElement "Imaging study for images and reports: subset image information"
   * ^alias = "Beeldinformatie"
   * ImageInformationIdentificationNumber 0..1 Identifier "Globally unique ID that describes the set of images. In DICOM the study/series UID can be used."
     * ^alias = "BeeldinformatieIdentificatienummer"
@@ -178,9 +178,9 @@ Description: "Imaging research including images and reports."
   * Modality 0..* CodeableConcept "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
   * Modality from $ModalityCombinedValueSetURL (required)
     * ^alias = "Modaliteit"
-* ReportInformation 0..1 BackboneElement "Imaging research for images and reports: subset report information"
+* ReportInformation 0..1 BackboneElement "Imaging study for images and reports: subset report information"
   * ^alias = "Verslaginformatie"
-  * ReportInformationIdentificationNumber 0..1 Identifier "Globally unique ID for the report of the imaging research. In DICOM the study/series UID can be used."
+  * ReportInformationIdentificationNumber 0..1 Identifier "Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used."
     * ^alias = "VerslaginformatieIdentificatienummer"
   * ReportDateTime 0..1 dateTime "Date/time on which the report has been autorised and/or made available."
     * ^alias = "VerslagDatumTijd"
@@ -190,7 +190,7 @@ Description: "Imaging research including images and reports."
     * ^alias = "Verslag"
 * AccessionNumberInformation 0..1 BackboneElement "Information on the Accession Number"
   * ^alias = "AccessionNumberInformatie"
-  * AccessionNumber 0..1 Identifier "Locally unique ID (in the RIS) that has been assigned to the imaging research."
+  * AccessionNumber 0..1 Identifier "Locally unique ID (in the RIS) that has been assigned to the imaging study."
     * ^alias = "AccessionNumber"
   * AssigningAuthority 0..1 BackboneElement "Assigning authority that issued the Accession Number."
     * ^alias = "UitgevendeInstantie"
@@ -209,15 +209,15 @@ Description: "Imaging research including images and reports."
 * StudyInstanceUID 0..1 Identifier "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
   * ^alias = "StudyInstanceUID"
 
-Logical: LmImagingResearchServeTimeline
-Parent: bbs-lm-ImagingResearch
-Id: bbs-lm-ImagingResearch-serve-timeline
-Title: "Imaging Research (Serve image and report timeline)"
-Description: "Imaging research including images and reports."
+Logical: LmStudyServeTimeline
+Parent: bbs-lm-Study
+Id: bbs-lm-Study-serve-timeline
+Title: "Study (Serve image and report timeline)"
+Description: "Imaging study including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
-* ^purpose = "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* ^purpose = "This LogicalModel represents (the functional requirements of) the Study building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
 * ^abstract = false
 * .
@@ -306,19 +306,19 @@ Description: "Imaging research including images and reports."
 * StudyInstanceUID
   * ^mustSupport = true
 
-Logical: LmImagingResearchServeImageReport
-Parent: bbs-lm-ImagingResearch
-Id: bbs-lm-ImagingResearch-serve-image-report
-Title: "Imaging Research (Serve image and report)"
-Description: "Imaging research including images and reports."
+Logical: LmStudyServeImageReport
+Parent: bbs-lm-Study
+Id: bbs-lm-Study-serve-image-report
+Title: "Study (Serve image and report)"
+Description: "Imaging study including images and reports."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContact
-* ^purpose = "This LogicalModel represents (the functional requirements of) the ImagingResearch building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
+* ^purpose = "This LogicalModel represents (the functional requirements of) the Study building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
 * ^abstract = false
 * .
-* ImageInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
+* ImageInformation obeys bbs-lm-Study-serve-image-report-1
   * ^mustSupport = true
   * ImageInformationIdentificationNumber 1..1
     * ^mustSupport = true
@@ -330,7 +330,7 @@ Description: "Imaging research including images and reports."
     * ^mustSupport = true
   * Modality 1..*
     * ^mustSupport = true
-* ReportInformation obeys bbs-lm-ImagingResearch-serve-image-report-1
+* ReportInformation obeys bbs-lm-Study-serve-image-report-1
   * ^mustSupport = true
   * ReportInformationIdentificationNumber 1..1
     * ^mustSupport = true
@@ -341,7 +341,7 @@ Description: "Imaging research including images and reports."
   * Report 1..1
     * ^mustSupport = true
 
-Invariant: bbs-lm-ImagingResearch-serve-image-report-1
+Invariant: bbs-lm-Study-serve-image-report-1
 Description: "At least one of ImageInformation or ReportInformation is present."
 Severity: #error
 Expression: "ImageInformation.exists() or ReportInformation.exists()"
@@ -362,12 +362,12 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
 * DateOfBirth -> "bbs-dataelement-167" "DateOfBirth"
 * Gender -> "bbs-dataelement-168" "Gender"
 
-Mapping: LmImagingResearchBeeldbeschikbaarheidNictiz
-Source: LmImagingResearch
+Mapping: LmStudyBeeldbeschikbaarheidNictiz
+Source: LmStudy
 Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
 Id: bbs-dataset-100-alpha2-20240208
 Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
-* -> "bbs-dataelement-66" "ImagingResearch"
+* -> "bbs-dataelement-66" "Study"
 * Procedure -> "bbs-dataelement-173" "Procedure"
   * ProcedureStartDate -> "bbs-dataelement-174" "ProcedureStartDate"
   * ProcedureEndDate -> "bbs-dataelement-175" "ProcedureEndDate"
@@ -401,8 +401,8 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * ReportDateTime -> "bbs-dataelement-101" "DateTime"
   * Report -> "bbs-dataelement-690" "Report"
 
-Mapping: LmImagingResearchMedMij-100-rc1
-Source: LmImagingResearch
+Mapping: LmStudyMedMij-100-rc1
+Source: LmStudy
 Id: bbs-medmij-dataset-100-rc1-20250919
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
 * ImageInformation
