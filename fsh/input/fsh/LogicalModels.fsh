@@ -401,10 +401,10 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * ReportDateTime -> "bbs-dataelement-101" "DateTime"
   * Report -> "bbs-dataelement-690" "Report"
 
-Mapping: LmStudyMedMij-100-rc1
+Mapping: LmStudyMedMij-100-rc2
 Source: LmStudy
-Id: bbs-medmij-dataset-100-rc1-20250919
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+Id: bbs-medmij-dataset-100-rc2-2025xxyy
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
 * ImageInformation
   * ImageTitle -> "bbs-medmij-dataelement-1" "ImageTitle"
   * Modality -> "bbs-medmij-dataelement-5" "Modality"
