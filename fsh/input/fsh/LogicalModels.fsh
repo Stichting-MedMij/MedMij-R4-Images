@@ -419,3 +419,36 @@ Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
       * DepartmentSpecialty -> "bbs-medmij-dataelement-11" "DepartmentSpecialty"
       * OrganizationType -> "bbs-medmij-dataelement-12" "OrganizationType"
 * StudyInstanceUID -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
+
+Mapping: LmPatientSNOMED
+Source: LmPatient
+Target: "http://snomed.info/sct"
+Id: SNOMED
+Title: "SNOMED CT"
+* -> "116154003" "patiënt"
+
+Mapping: LmPatientLOINC
+Source: LmPatient
+Target: "http://loinc.org"
+Id: LOINC
+Title: "LOINC"
+* DateOfBirth -> "21112-8" "Geboortedatum [tijdstempel] in ^patiënt"
+* Gender -> "46098-0" "Geslacht [type] in ^patiënt"
+
+Mapping: LmStudySNOMED
+Source: LmStudy
+Target: "http://snomed.info/sct"
+Id: SNOMED
+Title: "SNOMED CT"
+* Procedure -> "71388002" "verrichting"
+  * ProcedureAnatomicalLocation -> "405813007" "directe locatie van verrichting"
+    * Location -> "363698007" "locatie van bevinding"
+    * Laterality -> "272741003" "lateraliteit"
+  * Location
+    * HealthcareProvider -> "257622000" "zorginstelling"
+  * Performer
+    * HealthProfessional -> "223366009" "gezondheidszorgpersoneel"
+      * Specialty -> "394658006" "klinisch specialisme"
+* AccessionNumberInformation
+  * AssigningAuthority
+    * HealthcareProvider -> "257622000" "zorginstelling"

@@ -35,6 +35,11 @@
     {
       "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
       "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
     }
   ],
   "kind": "logical",
@@ -80,6 +85,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-173",
             "comment": "Procedure"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "71388002",
+            "comment": "verrichting"
           }
         ]
       },
@@ -176,6 +186,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-178",
             "comment": "ProcedureAnatomicalLocation"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "405813007",
+            "comment": "directe locatie van verrichting"
           }
         ]
       },
@@ -203,6 +218,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-179",
             "comment": "Location"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "363698007",
+            "comment": "locatie van bevinding"
           }
         ]
       },
@@ -230,6 +250,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-180",
             "comment": "Laterality"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "272741003",
+            "comment": "lateraliteit"
           }
         ]
       },
@@ -276,6 +301,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-521",
             "comment": "HealthcareProvider"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "257622000",
+            "comment": "zorginstelling"
           }
         ]
       },
@@ -422,6 +452,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-383",
             "comment": "HealthProfessional"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "223366009",
+            "comment": "gezondheidszorgpersoneel"
           }
         ]
       },
@@ -610,6 +645,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-397",
             "comment": "Specialty"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "394658006",
+            "comment": "klinisch specialisme"
           }
         ]
       },
@@ -986,6 +1026,11 @@
             "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-8",
             "comment": "HealthcareProvider"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "257622000",
+            "comment": "zorginstelling"
           }
         ]
       },

@@ -31,6 +31,16 @@
       "identity": "bbs-dataset-100-alpha2-20240208",
       "name": "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208",
       "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
+    },
+    {
+      "identity": "LOINC",
+      "name": "LOINC",
+      "uri": "http://loinc.org"
     }
   ],
   "kind": "logical",
@@ -53,6 +63,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-132",
             "comment": "Patient"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "116154003",
+            "comment": "patiënt"
           }
         ]
       },
@@ -237,6 +252,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-167",
             "comment": "DateOfBirth"
+          },
+          {
+            "identity": "LOINC",
+            "map": "21112-8",
+            "comment": "Geboortedatum [tijdstempel] in ^patiënt"
           }
         ]
       },
@@ -264,6 +284,11 @@
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-168",
             "comment": "Gender"
+          },
+          {
+            "identity": "LOINC",
+            "map": "46098-0",
+            "comment": "Geslacht [type] in ^patiënt"
           }
         ]
       }
