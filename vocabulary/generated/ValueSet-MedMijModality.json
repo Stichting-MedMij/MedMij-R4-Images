@@ -58,7 +58,7 @@
           },
           {
             "code": "OT",
-            "display": "Other"
+            "display": "Other Modality"
           },
           {
             "code": "PT",
@@ -67,10 +67,6 @@
           {
             "code": "RF",
             "display": "Radiofluoroscopy"
-          },
-          {
-            "code": "SC",
-            "display": "Secondary Capture"
           },
           {
             "code": "US",

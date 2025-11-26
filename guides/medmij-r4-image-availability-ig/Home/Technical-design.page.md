@@ -221,7 +221,7 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 | Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | Standard MRI images, supported by all systems. | MR | |
 | Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | Multi-frame MRI images with extensive metadata, used by modern MRI scanners. | MR | Yes |
 | Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Static 2D ultrasound images, often used in almost all ultrasound examinations. | US | |
-| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Digital photos or screenshots, e.g. from non-DICOM devices. | SC | |
+| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Digital photos or screenshots, e.g. from non-DICOM devices. | OT | |
 | X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Angiographic images. | XA | Yes |
 | X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Dynamic X-ray images, such as swallow study videos. | RF | Yes |
 | Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Images of gamma cameras used in nuclear medicine (not in radiology), important for functional imaging (e.g. thyroid, skeleton). | NM | |
