@@ -5,9 +5,9 @@ topic: TO
 # Technical design
 
 ## Introduction
-This IG describes a patient use case in the context of the [information standard "Image Availability" (Dutch: Beeldbeschikbaarheid or BBS), version 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). The information standard Image Availability as published by Nictiz does not yet include a patient use case, this may change in the future. Up until then, the patient use case will be published by MedMij.
+This technical design describes a patient use case in the context of the [information standard "Image Availability" (Dutch: Beeldbeschikbaarheid or BBS), version 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). The information standard Image Availability as published by Nictiz does not yet include a patient use case, this may change in the future. Up until then, the patient use case will be published by MedMij.
 
-This IG is a technical counterpart of the {{pagelink:FO, text: functional design}}. The FHIR version used for this IG is R4 (4.0.1).
+This technical design is a technical counterpart of the {{pagelink:FO, text: functional design}}. The FHIR version used for this technical design is R4 (4.0.1).
 
 ## Actors involved
 | Actor | | System | | FHIR CapabilityStatement |
@@ -19,12 +19,12 @@ This IG is a technical counterpart of the {{pagelink:FO, text: functional design
 **Table 1: Actors**
 
 ## Boundaries and relationships
-This FHIR IG includes use cases for the exchange of images and reports between healthcare providers (e.g. hospitals) and patients (e.g. in a PHR setting).
+This technical design includes use cases for the exchange of images and reports between healthcare providers (e.g. hospitals) and patients (e.g. in a PHR setting).
 
-This IG assumes that a PHR is able to make a connection to the right XIS that contains the patient's information. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/). In particular, each transaction is performed in the context of a specific authenticated patient, which has been established using the authentication mechanisms outlined in the MedMij Afsprakenstelsel (also see the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Afsprakenstelsel)), i.e. via an OAuth2 token. Each XIS gateway is required to perform filtering based on the patient associated with the context for the request, so only the records associated with the authenticated patient are returned. For this reason, search parameters should not be included for patient identification.
+This technical design assumes that a PHR is able to make a connection to the right XIS that contains the patient's information. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/). In particular, each transaction is performed in the context of a specific authenticated patient, which has been established using the authentication mechanisms outlined in the MedMij Afsprakenstelsel (also see the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Afsprakenstelsel)), i.e. via an OAuth2 token. Each XIS gateway is required to perform filtering based on the patient associated with the context for the request, so only the records associated with the authenticated patient are returned. For this reason, search parameters should not be included for patient identification.
 
 ## Relating FHIR (profiles) to its functional counterpart
-The [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access) describes the (intended) mapping between metadata, FHIR (DocumentReference) and the datasets in ART-DECOR. In this FHIR IG, we incorporate the aforementioned functional mapping provided by Nictiz BBS. This mapping has resulted in the {{pagelink:FHIR, text: bbs-DocumentReference profile}}.
+The [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access) describes the (intended) mapping between metadata, FHIR (DocumentReference) and the datasets in ART-DECOR. In this IG, we incorporate the aforementioned functional mapping provided by Nictiz BBS. This mapping has resulted in the {{pagelink:FHIR, text: bbs-DocumentReference profile}}.
 
 ## Identifiers
 There are several identifiers that play a role in the exchange of images and reports. The following table gives an overview of all these identifiers, and how they are related to each other.
@@ -48,10 +48,10 @@ Note the following:
 - When encoding a DICOM UID (e.g. Study Instance UID) in an Identifier datatype, use the `.system` *urn:dicom:uid*, and prefix the `.value` with *urn:oid:* (in accordance with the [FHIR identifier registry](https://hl7.org/fhir/R4/identifier-registry.html)).
 
 ## Use cases
-The use cases in this IG are based as much as possible on the specifications described in the [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access), namely IHE [MHD](https://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)) and [WIA](https://wiki.ihe.net/index.php/Web-based_Image_Access). Note however, that QIDO-RS (which is mentioned in the WIA specification) is currently not in scope.
+The use cases in this technical design are based as much as possible on the specifications described in the [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access), namely IHE [MHD](https://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)) and [WIA](https://wiki.ihe.net/index.php/Web-based_Image_Access). Note however, that QIDO-RS (which is mentioned in the WIA specification) is currently not in scope.
 
 ### Use case: Retrieve Image and Report in personal health environment
-The Nictiz BBS FHIR IG splits the transactions in different use cases, for reasons of convenience. Seen from the perspective of a patient using a PHR, retrieval of images and reports from a healthcare provider is a related activity performed in one action. Therefore, this IG bundles the BBS use cases as one.
+The Nictiz BBS FHIR IG splits the transactions in different use cases, for reasons of convenience. Seen from the perspective of a patient using a PHR, retrieval of images and reports from a healthcare provider is a related activity performed in one action. Therefore, this technical design bundles the BBS use cases as one.
 
 #### Query Timeline Data (MHD ITI-67)
 > Based on [Use case 3: Query Timeline Data (Raadplegen Tijdlijn Data)](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#Use_case_3:_Query_Timeline_Data_.28Raadplegen_Tijdlijn_Data.29_3) in the Nictiz BBS FHIR IG, see [ITI-67](https://profiles.ihe.net/ITI/MHD/ITI-67.html) for further details.
