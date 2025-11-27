@@ -7,7 +7,17 @@ topic: FHIR
 ## DocumentReference
 In the current version of this IG, the [IHE.MHD.UnContained.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference) is used as a base profile for the ITI-67 and ITI-68 based transactions. The bbs-DocumentReference profile is derived from the former profile, and contains mappings to the [Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), as well as the [Nationale IHE MetaData Set (2024)](https://decor.nictiz.nl/pub/nihemds/ihexds-html-20220712T144728/ds-2.16.840.1.113883.2.4.3.11.60.106.1.1-2013-12-04T122419.html), which were provided in [section 5.3 of the BBS FHIR IG](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access). Moreover, mappings to the {{pagelink:LM, text: MedMij dataset}} have been added for concepts that have been introduced in the MedMij use case.
 
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference}}
+    </tab>
+</tabs>
 
 Note the following:
 - The [Nictiz Profiling Guidelines for FHIR R4](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4) have been used as guidelines for creating the profile.

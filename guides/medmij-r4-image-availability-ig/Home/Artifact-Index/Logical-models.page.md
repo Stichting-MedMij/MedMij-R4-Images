@@ -13,10 +13,30 @@ Base Logical Models and derived Logical Models can (also) be distinguished from 
 
 ## Dataset
 ### Patient
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient}}
+    </tab>
+</tabs>
 
 ### Study
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study}}
+    </tab>
+</tabs>
 
 ## Use case: Serve image and report timeline
 Table 1 depicts the relevant building blocks in this use case.
@@ -29,10 +49,30 @@ Table 1 depicts the relevant building blocks in this use case.
 **Table 1: Building blocks in the 'Serve image and report timeline' use case**
 
 ### Patient
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-timeline, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-timeline, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-timeline}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-timeline}}
+    </tab>
+</tabs>
 
 ### Study
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline}}
+    </tab>
+</tabs>
 
 ## Use case: Serve image and report
 Table 2 depicts the relevant building blocks in this use case.
@@ -45,7 +85,27 @@ Table 2 depicts the relevant building blocks in this use case.
 **Table 2: Building blocks in the 'Serve image and report' use case**
 
 ### Patient
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-image-report, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-image-report, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-image-report}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-image-report}}
+    </tab>
+</tabs>
 
 ### Study
-{{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report, buttons}}
+<tabs>
+    <tab title="Tree view" active="true">
+      {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report, buttons}}
+    </tab>
+    <tab title="Xml">
+      {{xml:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report}}
+    </tab>
+    <tab title="Json">
+      {{json:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report}}
+    </tab>
+</tabs>
