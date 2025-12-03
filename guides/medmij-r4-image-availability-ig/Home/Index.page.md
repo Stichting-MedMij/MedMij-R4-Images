@@ -1,6 +1,6 @@
 # {{page-title}}
 
-This is the implementation guide for MedMij R4 Image Availability, also known as "Beeldbeschikbaarheid" or "BBS". 
+This is the implementation guide for MedMij R4 Image Availability, also known as "Beeldbeschikbaarheid" or "BBS".
 
 Please note that this guide is currently in its release candidate phase. As we progress through this phase, we are actively gathering feedback, identifying areas for improvement, and documenting lessons learned.
 

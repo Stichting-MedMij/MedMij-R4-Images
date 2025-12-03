@@ -1,0 +1,276 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "bbs-lm-Study-serve-timeline",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline",
+  "name": "LmStudyServeTimeline",
+  "title": "Study (Serve image and report timeline)",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Imaging study including images and reports.",
+  "purpose": "This LogicalModel represents (the functional requirements of) the Study building block in the 'Serve image and report timeline' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline",
+  "baseDefinition": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "bbs-lm-Study-serve-timeline",
+        "path": "bbs-lm-Study-serve-timeline",
+        "short": "Study (Serve image and report timeline)"
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure",
+        "path": "bbs-lm-Study-serve-timeline.Procedure",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.ProcedureStartDate",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.ProcedureStartDate",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.ProcedureEndDate",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.ProcedureEndDate",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.ProcedureType",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.ProcedureType",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.ProcedureAnatomicalLocation",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.ProcedureAnatomicalLocation",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.ProcedureAnatomicalLocation.Location",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.ProcedureAnatomicalLocation.Location",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.ProcedureAnatomicalLocation.Laterality",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.ProcedureAnatomicalLocation.Laterality",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Location",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Location",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.OrganizationName",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.OrganizationName",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.DepartmentSpecialty",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.DepartmentSpecialty",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.OrganizationType",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Location.HealthcareProvider.OrganizationType",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.FirstNames",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.FirstNames",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.Initials",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.Initials",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName.Prefix",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName.Prefix",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.Specialty",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.Specialty",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
+        "path": "bbs-lm-Study-serve-timeline.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ImageInformation",
+        "path": "bbs-lm-Study-serve-timeline.ImageInformation",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ImageInformation.ImageInformationIdentificationNumber",
+        "path": "bbs-lm-Study-serve-timeline.ImageInformation.ImageInformationIdentificationNumber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ImageInformation.ImageDateTime",
+        "path": "bbs-lm-Study-serve-timeline.ImageInformation.ImageDateTime",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ImageInformation.ImageTitle",
+        "path": "bbs-lm-Study-serve-timeline.ImageInformation.ImageTitle",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ImageInformation.Modality",
+        "path": "bbs-lm-Study-serve-timeline.ImageInformation.Modality",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ReportInformation",
+        "path": "bbs-lm-Study-serve-timeline.ReportInformation",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ReportInformation.ReportInformationIdentificationNumber",
+        "path": "bbs-lm-Study-serve-timeline.ReportInformation.ReportInformationIdentificationNumber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ReportInformation.ReportDateTime",
+        "path": "bbs-lm-Study-serve-timeline.ReportInformation.ReportDateTime",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.ReportInformation.ReportTitle",
+        "path": "bbs-lm-Study-serve-timeline.ReportInformation.ReportTitle",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AccessionNumber",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AccessionNumber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
+        "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
+        "mustSupport": true
+      },
+      {
+        "id": "bbs-lm-Study-serve-timeline.StudyInstanceUID",
+        "path": "bbs-lm-Study-serve-timeline.StudyInstanceUID",
+        "mustSupport": true
+      }
+    ]
+  }
+}

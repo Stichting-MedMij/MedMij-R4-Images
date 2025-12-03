@@ -5,7 +5,7 @@
 - name: Technical design
   filename: Technical-design.page.md
 - name: Artifact index
-  filename: Artifact-index.page.md
+  filename: Artifact-Index
 - name: Dependencies
   filename: Dependencies.page.md
 - name: Test material
