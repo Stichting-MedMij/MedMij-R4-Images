@@ -215,6 +215,8 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 | SOP Class Name | SOP Class UID | Description | Corresponding modality | May contain multi-frame images |
 | --- | --- | --- | --- | --- |
 | Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | *CR* | |
+| Digital X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.1 | Modern digital X-ray images, successor of Computed Radiography (CR) Image Storage. | DX |
+| Digital Mammography X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.2 | Specialized X-ray images for digital mammography. | MG |
 | Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Standard CT images. | *CT* | |
 | Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Enhanced CT images with multi-frame structure, recommended to be future-proof. | *CT* | Yes |
 | Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Dynamic ultrasound images (cine-loops). | *US* | Yes |
