@@ -214,22 +214,26 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 
 | SOP Class Name | SOP Class UID | Description | Corresponding modality | May contain multi-frame images |
 | --- | --- | --- | --- | --- |
-| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | CR | |
-| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Standard CT images. | CT | |
-| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Enhanced CT images with multi-frame structure, recommended to be future-proof. | CT | Yes |
-| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Dynamic ultrasound images (cine-loops). | US | Yes |
-| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | Standard MRI images, supported by all systems. | MR | |
-| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | Multi-frame MRI images with extensive metadata, used by modern MRI scanners. | MR | Yes |
-| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Static 2D ultrasound images, often used in almost all ultrasound examinations. | US | |
-| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Digital photos or screenshots, e.g. from non-DICOM devices. | SC | |
-| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Angiographic images. | XA | Yes |
-| X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Dynamic X-ray images, such as swallow study videos. | RF | Yes |
-| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Images of gamma cameras used in nuclear medicine (not in radiology), important for functional imaging (e.g. thyroid, skeleton). | NM | |
-| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Single-frame VL (Visible Light) endoscopic images. | ES | |
-| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Multi-frame video endoscopic images. | ES | Yes |
-| Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | Used to store PDF documents as DICOM objects, e.g. reports and attachments. | OT | |
-| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET scan images used in nuclear medicine. | PT | |
-| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Enhanced PET scan images used in nuclear medicine. | PT | Yes |
+| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | *CR* | |
+| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Standard CT images. | *CT* | |
+| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Enhanced CT images with multi-frame structure, recommended to be future-proof. | *CT* | Yes |
+| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Dynamic ultrasound images (cine-loops). | *US* | Yes |
+| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | Standard MRI images, supported by all systems. | *MR* | |
+| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | Multi-frame MRI images with extensive metadata, used by modern MRI scanners. | *MR* | Yes |
+| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Static 2D ultrasound images, often used in almost all ultrasound examinations. | *US* | |
+| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Digital photos or screenshots, e.g. from non-DICOM devices. | *OT* or more specific modality | |
+| Multi-frame Single Bit Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.1 | Images converted from a non-DICOM format, typically used for scanned documents and bitmap images of hand drawings. | *OT* or more specific modality | Yes |
+| Multi-frame Grayscale Byte Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.2 | Grayscale Byte images converted from a non-DICOM format, typically used for screen captured images for modalities that have pixel values of 8 bits, but also appropriate for scanned grayscale documents. | *OT* or more specific modality | Yes |
+| Multi-frame Grayscale Word Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.3 | Grayscale Word images converted from a non-DICOM format, typically used for screen captured images for modalities that have pixel values greater than 8 bits. | *OT* or more specific modality | Yes |
+| Multi-frame True Color Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.4 | True Color images converted from a non-DICOM format, typically used for screen captured or synthetic images where true color is used, but also appropriate for scanned color documents. | *OT* or more specific modality | Yes |
+| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Angiographic images. | *XA* | Yes |
+| X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Dynamic X-ray images, such as swallow study videos. | *RF* | Yes |
+| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Images of gamma cameras used in nuclear medicine (not in radiology), important for functional imaging (e.g. thyroid, skeleton). | *NM* | |
+| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Single-frame VL (Visible Light) endoscopic images. | *ES* | |
+| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Multi-frame video endoscopic images. | *ES* | Yes |
+| Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | Used to store PDF documents as DICOM objects, e.g. reports and attachments. | *OT* | |
+| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET scan images used in nuclear medicine. | *PT* | |
+| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Enhanced PET scan images used in nuclear medicine. | *PT* | Yes |
 
 **Table 9: Supported SOP classes**
 
