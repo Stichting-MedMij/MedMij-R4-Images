@@ -283,37 +283,52 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
 * date -> "bbs-dataelement-69" "DateTime"
 * author[location] -> "bbs-dataelement-185" "Location"
 * author[performer] -> "bbs-dataelement-187" "Performer"
-* content.attachment.creation -> "bbs-dataelement-101" "DateTime"
-* content.attachment.creation -> "bbs-dataelement-69" "DateTime"
-* context.event[procedureAnatomicalLocation] -> "bbs-dataelement-178" "ProcedureAnatomicalLocation"
-* context.event[procedureAnatomicalLocation] -> "bbs-dataelement-179" "Location"
-* context.event[procedureAnatomicalLocation].extension[http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality].valueCodeableConcept -> "bbs-dataelement-180" "Laterality"
-* context.period.start -> "bbs-dataelement-174" "ProcedureStartDate"
-* context.period.end -> "bbs-dataelement-175" "ProcedureEndDate"
-* context.facilityType -> "bbs-dataelement-546" "OrganizationType"
-* context.practiceSetting -> "bbs-dataelement-524" "DepartmentSpecialty"
+* content
+  * attachment
+    * creation -> "bbs-dataelement-101" "DateTime"
+    * creation -> "bbs-dataelement-69" "DateTime"
+* context
+  * event[procedureAnatomicalLocation] -> "bbs-dataelement-178" "ProcedureAnatomicalLocation"
+  * event[procedureAnatomicalLocation] -> "bbs-dataelement-179" "Location"
+    * extension[http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality]
+      * valueCodeableConcept -> "bbs-dataelement-180" "Laterality"
+  * period
+    * start -> "bbs-dataelement-174" "ProcedureStartDate"
+    * end -> "bbs-dataelement-175" "ProcedureEndDate"
+  * facilityType -> "bbs-dataelement-546" "OrganizationType"
+  * practiceSetting -> "bbs-dataelement-524" "DepartmentSpecialty"
 
 Mapping: MedMij-100-beta1
 Source: BbsDocumentReference
 Id: bbs-medmij-dataset-100-beta1-20250807
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
-* content.attachment.title -> "bbs-medmij-dataelement-2" "ReportTitle"
-* content.attachment.title -> "bbs-medmij-dataelement-1" "ImageTitle"
-* context.event[modality] -> "bbs-medmij-dataelement-5" "Modality"
-* context.related[accessionNumber].identifier -> "bbs-medmij-dataelement-3" "AccessionNumber"
-* context.related[studyInstanceUID].identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
+* content
+  * attachment
+    * title -> "bbs-medmij-dataelement-2" "ReportTitle"
+    * title -> "bbs-medmij-dataelement-1" "ImageTitle"
+* context
+  * event[modality] -> "bbs-medmij-dataelement-5" "Modality"
+  * related[accessionNumber]
+    * identifier -> "bbs-medmij-dataelement-3" "AccessionNumber"
+  * related[studyInstanceUID]
+    * identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
 
 Mapping: MedMij-100-rc1
 Source: BbsDocumentReference
 Id: bbs-medmij-dataset-100-rc1-20250919
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
-* content.attachment.title -> "bbs-medmij-dataelement-2" "ReportTitle"
-* content.attachment.title -> "bbs-medmij-dataelement-1" "ImageTitle"
-* context.event[modality] -> "bbs-medmij-dataelement-5" "Modality"
-* context.related[accessionNumber].identifier -> "bbs-medmij-dataelement-3" "AccessionNumber"
-* context.related[accessionNumber].identifier.system -> "bbs-medmij-dataelement-7" "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
-* context.related[accessionNumber].identifier.assigner -> "bbs-medmij-dataelement-7" "AssigningAuthority"
-* context.related[studyInstanceUID].identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
+* content
+  * attachment
+    * title -> "bbs-medmij-dataelement-2" "ReportTitle"
+    * title -> "bbs-medmij-dataelement-1" "ImageTitle"
+* context
+  * event[modality] -> "bbs-medmij-dataelement-5" "Modality"
+  * related[accessionNumber]
+    * identifier -> "bbs-medmij-dataelement-3" "AccessionNumber"
+      * system -> "bbs-medmij-dataelement-7" "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
+      * assigner -> "bbs-medmij-dataelement-7" "AssigningAuthority"
+  * related[studyInstanceUID]
+    * identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
 
 Mapping: IHEXDS
 Source: BbsDocumentReference
@@ -330,20 +345,24 @@ Title: "ART-DECOR Dataset Nationale IHE MetaData Set (2024)"
 * authenticator -> "ihexds-dataelement-17" "legalAuthenticator"
 * description -> "ihexds-dataelement-4" "comments"
 * securityLabel -> "ihexds-dataelement-10" "confidentialityCode"
-* content.attachment.contentType -> "ihexds-dataelement-18" "mimeType"
-* content.attachment.language -> "ihexds-dataelement-16" "languageCode"
-* content.attachment.url -> "ihexds-dataelement-30" "URI"
-* content.attachment.size -> "ihexds-dataelement-24" "size"
-* content.attachment.hash -> "ihexds-dataelement-14" "hash"
-* content.attachment.title -> "ihexds-dataelement-27" "title"
-* content.attachment.creation -> "ihexds-dataelement-11" "creationTime"
-* content.format -> "ihexds-dataelement-13" "formatCode"
-* context.encounter -> "ihexds-dataelement-117" "referenceIdList"
-* context.event -> "ihexds-dataelement-12" "eventCodeList"
-* context.period.start -> "ihexds-dataelement-22" "serviceStartTime"
-* context.period.end -> "ihexds-dataelement-23" "serviceStopTime"
-* context.facilityType -> "ihexds-dataelement-31" "healthcareFacilityTypeCode"
-* context.practiceSetting -> "ihexds-dataelement-20" "practiceSettingCode"
-* context.sourcePatientInfo -> "ihexds-dataelement-25" "sourcePatientId"
-* context.sourcePatientInfo -> "ihexds-dataelement-26" "sourcePatientInfo"
-* context.related -> "ihexds-dataelement-117" "referenceIdList"
+* content
+  * attachment
+    * contentType -> "ihexds-dataelement-18" "mimeType"
+    * language -> "ihexds-dataelement-16" "languageCode"
+    * url -> "ihexds-dataelement-30" "URI"
+    * size -> "ihexds-dataelement-24" "size"
+    * hash -> "ihexds-dataelement-14" "hash"
+    * title -> "ihexds-dataelement-27" "title"
+    * creation -> "ihexds-dataelement-11" "creationTime"
+  * format -> "ihexds-dataelement-13" "formatCode"
+* context
+  * encounter -> "ihexds-dataelement-117" "referenceIdList"
+  * event -> "ihexds-dataelement-12" "eventCodeList"
+  * period
+    * start -> "ihexds-dataelement-22" "serviceStartTime"
+    * end -> "ihexds-dataelement-23" "serviceStopTime"
+  * facilityType -> "ihexds-dataelement-31" "healthcareFacilityTypeCode"
+  * practiceSetting -> "ihexds-dataelement-20" "practiceSettingCode"
+  * sourcePatientInfo -> "ihexds-dataelement-25" "sourcePatientId"
+  * sourcePatientInfo -> "ihexds-dataelement-26" "sourcePatientInfo"
+  * related -> "ihexds-dataelement-117" "referenceIdList"
