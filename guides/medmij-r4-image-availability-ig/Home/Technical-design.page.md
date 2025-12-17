@@ -132,7 +132,7 @@ See [ITI-68 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#23684
 #### Retrieve Images (MHD ITI-68 and WADO-RS RAD-107)
 > Based on [Use case 5: Retrieve Images (Raadplegen Beeld)](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#Use_case_5:_Retrieve_Images_.28Raadplegen_Beeld.29_3) in the Nictiz BBS FHIR IG, see [ITI-68](https://profiles.ihe.net/ITI/MHD/ITI-68.html) and [WADO-RS Retrieve (RAD-107)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf), section 4.107 for further details.
 
-The retrieval of images consists of two consecutive steps, namely the ITI-68 transaction, which retrieves the imaging study manifest content referenced by a DocumentReference in `DocumentReference.content.attachment.url` (i.e. the DICOM KOS document), and the RAD-107 transaction, which retrieves the individual (image) instances (i.e. the SOP instances) based on the contents of the KOS document. Seen from the perspective of the patient using a PHR, these two transactions are performed in one action.
+The retrieval of images consists of two consecutive steps, namely the ITI-68 transaction, which retrieves the imaging study manifest content referenced by a DocumentReference in `DocumentReference.content.attachment.url` (i.e. the [DICOM KOS document](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)), and the RAD-107 transaction, which retrieves the individual (image) instances (i.e. the SOP instances) based on the contents of the KOS document. Seen from the perspective of the patient using a PHR, these two transactions are performed in one action.
 
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
@@ -174,6 +174,7 @@ The WADO-RS Retrieve request (RAD-107) is used to retrieve individual (image) in
 
 Note the following:
 - The required `[StudyInstanceUID]`, `[SeriesInstanceUID]` and `[SOPInstanceUID]` unique identifier values can be found in the DICOM KOS document, which is obtained via the ITI-68 Retrieve Document transaction. In Table 2, the corresponding DICOM tags are listed. Note however, that the SOP Instance UID of an individual instance which is referenced by the KOS document can be found in DICOM tag `(0008,1155)` (Referenced SOP Instance UID) within the KOS document.
+- Based on the [current DICOM specifications](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html), it is not possible to indicate the order of image instances in the KOS document, as DICOM tag `(0020,0013)` (Instance Number) is not available at the image instance level. Hence the PHR SHOULD assume the order of instances within the KOS document is the correct ordering, and retrieve and display the individual instances in that order.
 - By default, the request returns binary DICOM instances, while adding `/rendered` to the request results in rendered instances, e.g. in JPEG format (also see Table 10).
 - The part `/frames/[FrameIndex]` only needs to be added to the request when the SOP instance may contain multi-frame images, which is indicated in Table 9 below. Since the approaches of retrieving a single-frame or multi-frame image differ slightly, these are described separately below.
 
