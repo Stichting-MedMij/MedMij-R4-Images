@@ -7,6 +7,7 @@
 | Dataset               | Logical Models corresponding with the functional dataset and underlying use cases have been added, while the dataset in Excel format has been removed. | [DOSINZAGE2-827](https://medmij.atlassian.net/browse/DOSINZAGE2-827) |
 | Functional design     | A requirement which mandates a disclaimer in the PHR regarding the interpretation of images and reports has been added. | [DOSINZAGE2-715](https://medmij.atlassian.net/browse/DOSINZAGE2-715) |
 | Functional design     | A requirement related to incomplete image series has been added. Moreover, corresponding guidance has been added to the display guideline. | [DOSINZAGE2-736](https://medmij.atlassian.net/browse/DOSINZAGE2-736) |
+| Functional design     | A requirement with respect to displaying image instances within a series has been added. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
 | Functional design     | A requirement with respect to displaying multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
 | Functional design     | The requirements have been finetuned/updated. | [DOSINZAGE2-801](https://medmij.atlassian.net/browse/DOSINZAGE2-801), [DOSINZAGE2-819](https://medmij.atlassian.net/browse/DOSINZAGE2-819), [DOSINZAGE2-821](https://medmij.atlassian.net/browse/DOSINZAGE2-821) |
 | Functional design     | A requirement related to the retrieval of the image and report timeline when logging in to the PHR has been added. | [DOSINZAGE2-820](https://medmij.atlassian.net/browse/DOSINZAGE2-820) |
@@ -14,6 +15,7 @@
 | Technical design      | In the minimal set of SOP classes that need to be supported, *VL Endoscopic Image Storage* has been added. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
 | Technical design      | In the minimal set of SOP classes that need to be supported, additional Secondary Capture SOP classes have been added. Moreover, the corresponding modality *SC* has been replaced by *OT*. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
 | Technical design      | Added guidance on required attributes within the DICOM KOS document. | [DOSINZAGE2-752](https://medmij.atlassian.net/browse/DOSINZAGE2-752) |
+| Technical design      | Added guidance on the ordering of image instances within the DICOM KOS document. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
 | Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
 | Technical design      | Added link to the FHIR identifier registry to support the DICOM UID requirements. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
 | FHIR artifacts        | The code *SC* has been removed from ValueSet MedMijModality. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
