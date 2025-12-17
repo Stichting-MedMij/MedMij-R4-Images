@@ -175,7 +175,15 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 15 | Zorggebruiker | Dat frames die onderdeel uitmaken van hetzelfde beeld op de juiste volgorde worden getoond | Een dergelijk beeld correct kan interpreteren | S |
+| 15 | Zorggebruiker | Dat beelden die onderdeel uitmaken van dezelfde serie op de juiste volgorde worden getoond | Een dergelijke reeks van beelden correct kan interpreteren | S |
+
+| Acceptatiecriteria | Beschrijving |
+| --- | --- |
+| 1. | Alle opgehaalde beelden van een serie worden op dezelfde volgorde als in het bijbehorende DICOM KOS-document getoond of afgespeeld. |
+
+| ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
+| --- | --- | --- | --- | --- |
+| 16 | Zorggebruiker | Dat frames die onderdeel uitmaken van hetzelfde beeld op de juiste volgorde worden getoond | Een dergelijk beeld correct kan interpreteren | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
