@@ -102,28 +102,28 @@ De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die on
 
 | Naam SOP-klasse | SOP Class UID | Patiëntvriendelijke term |
 | --- | --- | --- |
-| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitale röntgenfoto / Röntgenfoto |
-| Digital X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.1 | Digitale röntgenfoto / Röntgenfoto |
-| Digital Mammography X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.2 | Röntgenfoto van de borst / Mammogram |
-| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | Röntgenfoto gemaakt met CT-scanner / CT-scan |
-| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | Röntgenfoto gemaakt met CT-scanner / CT-scan |
-| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Echobeeld / Echo |
-| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | Beeld gemaakt met MRI-scanner / MRI-scan |
-| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | Beeld gemaakt met MRI-scanner / MRI-scan |
-| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Echobeeld / Echo |
-| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Overig beeld / Ander soort beeld |
-| Multi-frame Single Bit Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.1 | Overig beeld / Ander soort beeld |
-| Multi-frame Grayscale Byte Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.2 | Overig beeld / Ander soort beeld |
-| Multi-frame Grayscale Word Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.3 | Overig beeld / Ander soort beeld |
-| Multi-frame True Color Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.4 | Overig beeld / Ander soort beeld |
-| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Röntgenfoto van de bloedvaten |
+| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Röntgenfoto |
+| Digital X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.1 | Röntgenfoto |
+| Digital Mammography X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.2 | Borstfoto |
+| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | CT-scan |
+| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | CT-scan |
+| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Echo |
+| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | MRI-scan |
+| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | MRI-scan |
+| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Echo |
+| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Overig medisch beeld |
+| Multi-frame Single Bit Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.1 | Overig medisch beeld |
+| Multi-frame Grayscale Byte Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.2 | Overig medisch beeld |
+| Multi-frame Grayscale Word Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.3 | Overig medisch beeld |
+| Multi-frame True Color Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.4 | Overig medisch beeld |
+| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Röntgenfoto van bloedvaten |
 | X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Bewegende röntgenbeelden |
-| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Nucleaire scan / Beeld gemaakt m.b.v. radioactieve stof / Isotopenonderzoek |
-| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Kijkonderzoek / Inwendig kijkonderzoek |
-| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Kijkonderzoek / Inwendig kijkonderzoek |
+| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Scan met radioactieve stof |
+| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Kijkonderzoek |
+| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Kijkonderzoek |
 | Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | PDF-document |
-| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | Beeld gemaakt met PET-scanner / PET-scan |
-| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Beeld gemaakt met PET-scanner / PET-scan |
+| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET-scan |
+| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | PET-scan |
 
 **Tabel 5: Patiëntvriendelijke termen SOP-klassen**
 
