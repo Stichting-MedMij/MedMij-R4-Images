@@ -85,7 +85,7 @@ Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en van
 **Tabel 3: Acceptatiecriteria voor het detailscherm van een verslag**
 
 ### Relevante gegevens
-In de tabel staan de gegevens uit de gegevensdienst Beeldbeschikbaarheid die relevant zijn voor deze weergaverichtlijn.
+In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverichtlijn.
 
 | Naam dataelement | Advies weergavetekst in PGO | Voorbeeld | Weergeven |
 | --- | --- | --- | --- |
@@ -97,6 +97,35 @@ In de tabel staan de gegevens uit de gegevensdienst Beeldbeschikbaarheid die rel
 | Modaliteit | Soort beeld | CT | Ja, indien het een beeld betreft |
 
 **Tabel 4: Relevante gegevens m.b.t. de weergaverichtlijn**
+
+De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die ondersteund moeten worden (zie ook Tabel 9 in het {{pagelink:TO, text: technisch ontwerp}}). Deze termen kunnen gebruikt worden als weergavetekst in de PGO. 
+
+| Naam SOP-klasse | SOP Class UID | Patiëntvriendelijke term |
+| --- | --- | --- |
+| Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Röntgenfoto |
+| Digital X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.1 | Röntgenfoto |
+| Digital Mammography X-Ray Image Storage – For Presentation | 1.2.840.10008.5.1.4.1.1.1.2 | Borstfoto |
+| Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2 | CT-scan |
+| Enhanced Computed Tomography (CT) Image Storage | 1.2.840.10008.5.1.4.1.1.2.1 | CT-scan |
+| Ultrasound Multi-frame Image Storage | 1.2.840.10008.5.1.4.1.1.3.1 | Echo |
+| Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4 | MRI-scan |
+| Enhanced Magnetic Resonance (MR) Image Storage | 1.2.840.10008.5.1.4.1.1.4.1 | MRI-scan |
+| Ultrasound Image Storage | 1.2.840.10008.5.1.4.1.1.6.1 | Echo |
+| Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 | Overig medisch beeld |
+| Multi-frame Single Bit Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.1 | Overig medisch beeld |
+| Multi-frame Grayscale Byte Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.2 | Overig medisch beeld |
+| Multi-frame Grayscale Word Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.3 | Overig medisch beeld |
+| Multi-frame True Color Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7.4 | Overig medisch beeld |
+| X-Ray Angiographic Image Storage | 1.2.840.10008.5.1.4.1.1.12.1 | Röntgenfoto van bloedvaten |
+| X-Ray Radiofluoroscopic Image Storage | 1.2.840.10008.5.1.4.1.1.12.2 | Bewegende röntgenbeelden |
+| Nuclear Medicine Image Storage | 1.2.840.10008.5.1.4.1.1.20 | Scan met radioactieve stof |
+| VL Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1 | Kijkonderzoek |
+| Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 | Kijkonderzoek |
+| Encapsulated PDF Storage | 1.2.840.10008.5.1.4.1.1.104.1 | PDF-document |
+| Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET-scan |
+| Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | PET-scan |
+
+**Tabel 5: Patiëntvriendelijke termen SOP-klassen**
 
 ### Disclaimers
 #### Downloaden van beelden
