@@ -10,7 +10,7 @@
   filename: Dependencies.page.md
 - name: Test material
   filename: Test-material.page.md
-- name: Solution architecture
-  filename: Solution-architecture.page.md
+- name: Solution design
+  filename: Solution-design.page.md
 - name: Release notes
   filename: Release-notes.page.md
