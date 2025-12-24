@@ -59,7 +59,7 @@ This sequence ensures that image retrieval is explicitly based on references obt
 The following IHE profiles are used within this architecture:
 
 - [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) - used for querying document metadata and retrieving documents, including reports and imaging manifests.
-- [Web-based Image Access (WIA)](https://wiki.ihe.net/index.php/Web-based_Image_Access) - used for retrieving imaging data via the DICOMweb WADO-RS transaction.
+- [Web-based Image Access (WIA)](https://wiki.ihe.net/index.php/Web-based_Image_Access) - used for retrieving imaging data via the WADO-RS transaction.
 
 Each system implements the appropriate IHE actors as illustrated in Figure 1, ensuring a clear separation of responsibilities between consumer, intermediary and source roles.
 
