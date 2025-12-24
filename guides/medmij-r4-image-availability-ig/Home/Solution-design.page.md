@@ -39,11 +39,7 @@ The PHR queries the document timeline via the XIS using MHD ITI-67.
 Step 2 – Retrieve document  
 The PHR retrieves a certain report using MHD ITI-68.
 
-In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved.
-
-See:
-[Query Timeline Data (MHD ITI-67)](https://simplifier.net/guide/medmij-r4-image-availability-ig/Home/Technical-design.page.md?#query-timeline-data-mhd-iti-67)  
-[Retrieve Imaging Report (MHD ITI-68)](https://simplifier.net/guide/medmij-r4-image-availability-ig/Home/Technical-design.page.md?#retrieve-imaging-report-mhd-iti-68)
+In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved. In the technical design, these transactions are described in the {{pagelink:TO, text: technical design}}, section 2.6.1.1 and 2.6.1.2.
 
 ### Imaging studies
 For imaging studies, the interaction sequence includes all three steps shown in Figure 1.
@@ -57,24 +53,17 @@ The PHR retrieves a certain document using MHD ITI-68. The response to this tran
 Step 3 – Retrieve image  
 Based on the references provided in the KOS document, the PHR retrieves the imaging data using the WADO-RS transaction (RAD-107).
 
-This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns.
-
-See:
-[Query Timeline Data (MHD ITI-67)](https://simplifier.net/guide/medmij-r4-image-availability-ig/Home/Technical-design.page.md?#query-timeline-data-mhd-iti-67)  
-[Retrieve Images (MHD ITI-68 and WADO-RS RAD-107)](https://simplifier.net/guide/medmij-r4-image-availability-ig/Home/Technical-design.page.md?#retrieve-images-mhd-iti-68-and-wado-rs-rad-107)
+This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns. In the technical design, these transactions are described in the {{pagelink:TO, text: technical design}}, section 2.6.1.1 and 2.6.1.3.
 
 ## Use of IHE Profiles
 The following IHE profiles are used within this architecture:
 
-- [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html)  
-  Used for querying document metadata and retrieving documents, including reports and imaging manifests.
-
-- [Web-based Image Access (WIA)](https://wiki.ihe.net/index.php/Web-based_Image_Access)
-  Used for retrieving imaging data via the DICOMweb WADO-RS transaction.
+- [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) - used for querying document metadata and retrieving documents, including reports and imaging manifests.
+- [Web-based Image Access (WIA)](https://wiki.ihe.net/index.php/Web-based_Image_Access) - used for retrieving imaging data via the DICOMweb WADO-RS transaction.
 
 Each system implements the appropriate IHE actors as illustrated in Figure 1, ensuring a clear separation of responsibilities between consumer, intermediary and source roles.
 
 ## Security and authorization
 Authentication between the PHR and the XIS relies on existing MedMij mechanisms and is outside the scope of this solution design.
 
-For interactions between the XIS and the XDS/XCA Gateway, requests are secured using JWT-based authorization. The XIS enriches the JWT with claims aligned with the IHE Internet User Authorization (IUA) profile. These claims provide the contextual information required to support authorization decisions within the XDS environment.
+For interactions between the XIS and the XDS/XCA Gateway, requests are secured using JWT-based authorization. The XIS enriches the JWT with claims aligned with the IHE Internet User Authorization (IUA) Profile. These claims provide the contextual information required to support authorization decisions within the XDS environment.
