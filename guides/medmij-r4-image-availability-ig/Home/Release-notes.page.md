@@ -20,6 +20,7 @@
 | Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
 | Technical design      | Added link to the FHIR identifier registry to support the DICOM UID requirements. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
 | FHIR artifacts        | The code *SC* has been removed from ValueSet MedMijModality. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
+| Solution design       | Added further documentation to the Solution design, updated the solution architecture overview. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
 
 ## 1.0.0-rc.1
 
@@ -85,4 +86,4 @@
 | Test material         | The `PractitionerRole.organization` has been removed from all test instances. | [DOSINZAGE2-620](https://medmij.atlassian.net/issues/DOSINZAGE2-620) |
 | Test material         | Test material of CZE has been added, containing a.o. a series of images. | [DOSINZAGE2-307](https://medmij.atlassian.net/issues/DOSINZAGE2-307), [DOSINZAGE2-336](https://medmij.atlassian.net/issues/DOSINZAGE2-336), [DOSINZAGE2-450](https://medmij.atlassian.net/issues/DOSINZAGE2-450), [DOSINZAGE2-461](https://medmij.atlassian.net/issues/DOSINZAGE2-461) |
 | Test material         | The Modality has been added to all test instances. | [DOSINZAGE2-671](https://medmij.atlassian.net/browse/DOSINZAGE2-671) |
-| Solution architecture | An initial version of the Solution architecture has been added. | [DOSINZAGE2-482](https://medmij.atlassian.net/issues/DOSINZAGE2-482) |
+| Solution design       | An initial version of the Solution design has been added. | [DOSINZAGE2-482](https://medmij.atlassian.net/issues/DOSINZAGE2-482) |
