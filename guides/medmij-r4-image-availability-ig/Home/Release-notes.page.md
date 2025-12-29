@@ -15,12 +15,12 @@
 | Functional design     | Patient-friendly terms for the SOP classes have been added to the display guideline. | [DOSINZAGE2-825](https://medmij.atlassian.net/browse/DOSINZAGE2-825) |
 | Technical design      | In the minimal set of SOP classes that need to be supported, *VL Endoscopic Image Storage* has been added. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
 | Technical design      | In the minimal set of SOP classes that need to be supported, additional Secondary Capture SOP classes have been added. Moreover, the corresponding modality *SC* has been replaced by *OT*. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
-| Technical design      | Added guidance on required attributes within the DICOM KOS document. | [DOSINZAGE2-752](https://medmij.atlassian.net/browse/DOSINZAGE2-752) |
-| Technical design      | Added guidance on the ordering of image instances within the DICOM KOS document. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
+| Technical design      | Guidance on required attributes within the DICOM KOS document has been added. | [DOSINZAGE2-752](https://medmij.atlassian.net/browse/DOSINZAGE2-752) |
+| Technical design      | Guidance on the ordering of image instances within the DICOM KOS document has been added. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
 | Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
-| Technical design      | Added link to the FHIR identifier registry to support the DICOM UID requirements. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
+| Technical design      | A link to the FHIR identifier registry to support the DICOM UID requirements has been added. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
 | FHIR artifacts        | The code *SC* has been removed from ValueSet MedMijModality. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
-| Solution design       | Added further documentation to the Solution design, updated the solution architecture overview. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
+| Solution design       | Further documentation to the Solution design has been added, and the solution architecture overview has been updated. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
 
 ## 1.0.0-rc.1
 
