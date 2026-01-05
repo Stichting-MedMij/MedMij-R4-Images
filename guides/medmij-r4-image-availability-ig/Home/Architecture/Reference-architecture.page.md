@@ -1,11 +1,15 @@
+---
+topic: RefArch
+---
+
 # Reference architecture and XDS/XCA context
 
 ## Scope and positioning
 
-This page provides architectural context for Image Availability when the backend of an XIS is based on an XDS/XCA infrastructure.
+This page provides architectural context for Image Availability when the backend of a XIS is based on an XDS/XCA infrastructure.
 
 The MedMij agreements describe the interactions between the PHR and the XIS. The internal architecture behind the XIS, including the use of XDS or XCA infrastructures, is outside the formal scope of MedMij.  
-This page serves as informative guidance for implementations that connect an XIS to an XDS/XCA-based backend.
+This page serves as informative guidance for implementations that connect a XIS to an XDS/XCA-based backend.
 
 ## Architectural overview
 
@@ -44,10 +48,7 @@ Relevant mapping documentation includes:
 - Mapping of MHD ITI-68 to XDS ITI-43 (Retrieve Document Set):  
   https://profiles.ihe.net/ITI/MHD/ITI-68.html
 
-- Imaging retrieval semantics and WADO-RS usage within IHE WIA:  
-  https://wiki.ihe.net/index.php/Web-based_Image_Access
-
-Implementations connecting an XIS to an XDS/XCA backend are expected to follow these IHE-defined mappings when translating RESTful requests to XDS/XCA transactions.
+Implementations connecting a XIS to an XDS/XCA backend are expected to follow these IHE-defined mappings when translating RESTful requests to XDS/XCA transactions.
 
 ## Authorization context
 
