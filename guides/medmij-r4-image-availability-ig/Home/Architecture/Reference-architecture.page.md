@@ -5,25 +5,19 @@ topic: RefArch
 # Reference architecture
 
 ## Scope and context
-This page provides architectural context for Image Availability when the backend of a XIS is based on an XDS/XCA infrastructure.
+This reference architecture provides architectural context for Image Availability when the backend of a XIS is based on an XDS/XCA infrastructure.
 
-The MedMij agreements describe the interactions between the PHR and the XIS. The internal architecture behind the XIS, including the use of XDS/XCA infrastructures, is outside the formal scope of MedMij. This page serves as informative guidance for implementations that connect a XIS to an XDS/XCA-based backend.
+The MedMij agreements describe the interactions between the PHR and the XIS. The internal architecture behind the XIS, including the use of XDS/XCA infrastructures, is outside the formal scope of MedMij. Hence, this reference architecture serves as informative guidance for implementations that connect a XIS to an XDS/XCA-based backend.
 
 ## Architectural overview
-Figure 1 illustrates the reference architecture for Image Availability using an XDS/XCA backend.
-
-The figure shows that the PHR interacts exclusively with the XIS within the MedMij domain. The XIS mediates access to the healthcare provider domain through an XDS/XCA Gateway exposing RESTful interfaces to an underlying XDS environment.
-
-RESTful transactions used between the PHR and the XIS are translated by the gateway to semantically equivalent XDS/XCA transactions towards the backend systems.
+Figure 1 illustrates the reference architecture for Image Availability using an XDS/XCA backend. The figure shows that the PHR interacts exclusively with the XIS within the MedMij domain. The XIS mediates access to the healthcare provider domain through an XDS/XCA Gateway exposing RESTful interfaces to an underlying XDS environment. This means that RESTful transactions used between the PHR and the XIS are translated by the XDS/XCA Gateway to semantically equivalent XDS/XCA transactions towards the backend systems.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Reference architecture.png}}
 
 **Figure 1: Reference architecture for Image Availability using an XDS/XCA backend**
 
 ## Transaction equivalence
-The RESTful transactions used within the MedMij Image Availability context are based on IHE profiles that explicitly define their relationship to XDS and XCA transactions.
-
-For XDS/XCA-based backends, the following conceptual equivalences apply:
+The RESTful transactions used within the MedMij Image Availability context are based on IHE profiles that explicitly define their relationship to XDS and XCA transactions. For XDS/XCA-based backends, the following conceptual equivalences apply:
 
 - [MHD ITI-67 (Find Document References)](https://profiles.ihe.net/ITI/MHD/ITI-67.html) corresponds to [XDS Registry Stored Query (ITI-18)](https://profiles.ihe.net/ITI/TF/Volume2/ITI-18.html);
 - [MHD ITI-68 (Retrieve Document)](https://profiles.ihe.net/ITI/MHD/ITI-68.html) corresponds to [XDS Retrieve Document Set (ITI-43)](https://profiles.ihe.net/ITI/TF/Volume2/ITI-43.html);
