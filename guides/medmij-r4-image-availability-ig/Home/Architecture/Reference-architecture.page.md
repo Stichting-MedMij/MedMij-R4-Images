@@ -25,19 +25,10 @@ The RESTful transactions used within the MedMij Image Availability context are b
 
 The concrete transport bindings used within the XDS/XCA environment are implementation details and fall outside the scope of MedMij.
 
-## Mapping references
-IHE provides normative documentation describing how RESTful query and retrieval parameters map to XDS/XCA parameters and identifiers. These mappings are maintained by IHE and are considered authoritative.
+### Parameter mappings
+IHE provides normative documentation describing how RESTful query and retrieval parameters map to XDS/XCA parameters and identifiers. These mappings are maintained by IHE and are considered authoritative. Implementations connecting a XIS to an XDS/XCA backend are expected to follow these IHE-defined mappings when translating RESTful requests to XDS/XCA transactions.
 
-Relevant mapping documentation includes:
-
-- Mapping of MHD ITI-67 to XDS ITI-18 (Registry Stored Query):  
-  https://profiles.ihe.net/ITI/MHD/ITI-67.html  
-  (see Table 2:3.67.4.1.3.1-1 – ITI-18 FindDocuments Query Parameter Mapping)
-
-- Mapping of MHD ITI-68 to XDS ITI-43 (Retrieve Document Set):  
-  https://profiles.ihe.net/ITI/MHD/ITI-68.html
-
-Implementations connecting a XIS to an XDS/XCA backend are expected to follow these IHE-defined mappings when translating RESTful requests to XDS/XCA transactions.
+The mapping of parameters between MHD ITI-67 and XDS ITI-18 is specified [here](https://profiles.ihe.net/ITI/MHD/ITI-67.html#:~:text=Table%202%3A3%2E67%2E4%2E1%2E3%2E1%2D1%3A%20ITI%2D18%20FindDocuments%20Query%20Parameter%20Mapping) in Table 2:3.67.4.1.3.1-1.
 
 ## Authorization context
 For interactions between the XIS and the XDS/XCA Gateway, requests are secured using JWT-based authorization. The XIS enriches the JWT with claims aligned with the IHE Internet User Authorization (IUA) profile, providing the contextual information required for authorization and audit logging within the XDS environment.
@@ -48,7 +39,7 @@ Figure 2 illustrates the sequence of interactions between the XIS and the XDS/XC
 
 **Figure 2: JWT-based authorization flow between XIS and XDS/XCA backend**
 
-### Example IUA claim structure
+### Example of IUA claim structure
 An example of the IUA-related claims included in the JWT is shown below. This example is illustrative and non-normative.
 
 ```json
