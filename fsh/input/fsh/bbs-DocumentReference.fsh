@@ -42,21 +42,20 @@ Description: "Imaging study including images and reports."
 * category
   * ^short = "ClassCode"
   * ^definition = "The code specifying the particular kind of document."
-* category.coding 1..*
-  * ^slicing.discriminator.type = #value
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* category.coding contains
-    images 0..1 and
-    reports 0..1
-* category.coding[images] 
-  * ^patternCoding = $XDSClassCode#IMAGES
-  * ^condition[0] = "bbs-DocumentReference-1"
-  * ^condition[1] = "bbs-DocumentReference-2"
-* category.coding[reports]
-  * ^patternCoding = $XDSClassCode#REPORTS
-  * ^condition = "bbs-DocumentReference-1"
-* category.coding
+  * coding 1..*
+    * ^slicing.discriminator.type = #value
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * coding contains
+      images 0..1 and
+      reports 0..1
+  * coding[images] 
+    * ^patternCoding = $XDSClassCode#IMAGES
+    * ^condition[0] = "bbs-DocumentReference-1"
+    * ^condition[1] = "bbs-DocumentReference-2"
+  * coding[reports]
+    * ^patternCoding = $XDSClassCode#REPORTS
+    * ^condition = "bbs-DocumentReference-1"
 * subject only Reference(Patient or http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
   * ^short = "Patient / PatientId"
   * ^alias = "Patient"
