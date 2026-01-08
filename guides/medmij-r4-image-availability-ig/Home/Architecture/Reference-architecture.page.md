@@ -21,14 +21,14 @@ The RESTful transactions used within the MedMij Image Availability context are b
 
 - [MHD ITI-67 (Find Document References)](https://profiles.ihe.net/ITI/MHD/ITI-67.html) corresponds to [XDS Registry Stored Query (ITI-18)](https://profiles.ihe.net/ITI/TF/Volume2/ITI-18.html);
 - [MHD ITI-68 (Retrieve Document)](https://profiles.ihe.net/ITI/MHD/ITI-68.html) corresponds to [XDS Retrieve Document Set (ITI-43)](https://profiles.ihe.net/ITI/TF/Volume2/ITI-43.html);
-- [WADO-RS (RAD-107)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) corresponds to XDS imaging retrieval semantics as defined by [Retrieve Imaging Document Set (RAD-69)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) in Chapter 4.69.
+- [WADO-RS (RAD-107)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) corresponds to XDS imaging retrieval semantics as defined by [Retrieve Imaging Document Set (RAD-69)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf), section 4.69.
 
 The technical mechanisms used within the XDS/XCA environment to realize these transactions are implementation details and fall outside the scope of MedMij.
 
 ### Parameter mappings
 IHE provides normative documentation describing how RESTful query and retrieval parameters map to XDS/XCA parameters and identifiers. These mappings are maintained by IHE and are considered authoritative. Implementations connecting a XIS to an XDS/XCA backend are expected to follow these IHE-defined mappings when translating RESTful requests to XDS/XCA transactions.
 
-The mapping of parameters between MHD ITI-67 and XDS ITI-18 is specified [here](https://profiles.ihe.net/ITI/MHD/ITI-67.html#:~:text=Table%202%3A3%2E67%2E4%2E1%2E3%2E1%2D1%3A%20ITI%2D18%20FindDocuments%20Query%20Parameter%20Mapping) in Table 2:3.67.4.1.3.1-1.
+The mapping of parameters between MHD ITI-67 and XDS ITI-18 is specified [here](https://profiles.ihe.net/ITI/MHD/ITI-67.html) in Table 2:3.67.4.1.3.1-1.
 
 ## Authorization context
 For interactions between the XIS and the XDS/XCA Gateway, requests are secured using JWT-based authorization. The XIS enriches the JWT with claims aligned with the IHE Internet User Authorization (IUA) profile, providing the contextual information required for authorization and audit logging within the XDS environment.
