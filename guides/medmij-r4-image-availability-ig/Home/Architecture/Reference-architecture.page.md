@@ -21,9 +21,9 @@ The RESTful transactions used within the MedMij Image Availability context are b
 
 - [MHD ITI-67 (Find Document References)](https://profiles.ihe.net/ITI/MHD/ITI-67.html) corresponds to [XDS Registry Stored Query (ITI-18)](https://profiles.ihe.net/ITI/TF/Volume2/ITI-18.html);
 - [MHD ITI-68 (Retrieve Document)](https://profiles.ihe.net/ITI/MHD/ITI-68.html) corresponds to [XDS Retrieve Document Set (ITI-43)](https://profiles.ihe.net/ITI/TF/Volume2/ITI-43.html);
-- [WADO-RS (RAD-107)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) corresponds to XDS imaging retrieval semantics as defined by Retrieve Imaging Document Set (RAD-69).
+- [WADO-RS (RAD-107)](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) corresponds to XDS imaging retrieval semantics as defined by [Retrieve Imaging Document Set (RAD-69)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) in Chapter 4.69.
 
-The concrete transport bindings used within the XDS/XCA environment are implementation details and fall outside the scope of MedMij.
+The technical mechanisms used within the XDS/XCA environment to realize these transactions are implementation details and fall outside the scope of MedMij.
 
 ### Parameter mappings
 IHE provides normative documentation describing how RESTful query and retrieval parameters map to XDS/XCA parameters and identifiers. These mappings are maintained by IHE and are considered authoritative. Implementations connecting a XIS to an XDS/XCA backend are expected to follow these IHE-defined mappings when translating RESTful requests to XDS/XCA transactions.
