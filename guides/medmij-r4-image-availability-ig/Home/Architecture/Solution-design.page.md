@@ -66,4 +66,4 @@ Each system implements the appropriate IHE actors as illustrated in Figure 1, en
 ## Security and authorization
 Authentication between the PHR and the XIS relies on existing MedMij mechanisms and is outside the scope of this solution design.
 
-For interactions between the XIS and the XDS/XCA Gateway, requests are secured using JWT-based authorization. The XIS enriches the JWT with claims aligned with the IHE Internet User Authorization (IUA) Profile. These claims provide the contextual information required to support authorization decisions within the XDS environment.
+For interactions between the XIS and the XDS/XCA Gateway, requests are secured using JWT-based authorization. The XIS enriches the JWT with claims aligned with the IHE Internet User Authorization (IUA) Profile. These claims provide the contextual information required to support authorization decisions within the XDS environment. More details are provided in the {{pagelink: RefArch, text: Reference architecture}}.
