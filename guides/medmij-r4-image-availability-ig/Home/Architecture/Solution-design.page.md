@@ -5,7 +5,7 @@ This solution design describes the architecture and interaction patterns for mak
 
 The architecture covers the interaction between a PHR, a XIS, and an XDS/XCA Gateway that provides access to an underlying XDS environment. The design is based on established IHE profiles and aligns with MedMij principles for interoperability and controlled access.
 
-Moreover, it focuses on the architectural flow and responsibilities. Detailed descriptions of individual transactions and message content are defined in the {{pagelink:TO, text: technical design}}.
+Moreover, it focuses on the architectural flow and responsibilities. Detailed descriptions of individual transactions and message content are defined in the {{pagelink:TD, text: technical design}}.
 
 ## Architectural overview
 The architecture follows a layered and mediated approach in which the PHR communicates exclusively with the XIS. The XIS mediates access to the XDS domain through an XDS/XCA Gateway. This separation ensures that the PHR is not exposed to XDS-specific complexity and that protocol handling and access control are handled centrally.
@@ -39,7 +39,7 @@ The PHR queries the document timeline via the XIS using MHD ITI-67.
 Step 2 – Retrieve document  
 The PHR retrieves a certain report using MHD ITI-68.
 
-In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved. In the technical design, these transactions are described in the sections {{pagelink:TO, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink:TO, text: Retrieve Imaging Report, anchor: RetrieveImagingReport}}.
+In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved. In the technical design, these transactions are described in the sections {{pagelink:TD, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink:TD, text: Retrieve Imaging Report, anchor: RetrieveImagingReport}}.
 
 ### Imaging studies
 For imaging studies, the interaction sequence includes all three steps shown in Figure 1.
@@ -53,7 +53,7 @@ The PHR retrieves a certain document using MHD ITI-68. The response to this tran
 Step 3 – Retrieve image  
 Based on the references provided in the KOS document, the PHR retrieves the imaging data using the WADO-RS transaction (RAD-107).
 
-This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns. In the technical design, these transactions are described in the sections {{pagelink:TO, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink:TO, text: Retrieve Images, anchor: RetrieveImages}}.
+This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns. In the technical design, these transactions are described in the sections {{pagelink:TD, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink:TD, text: Retrieve Images, anchor: RetrieveImages}}.
 
 ## Use of IHE Profiles
 The following IHE profiles are used within this architecture:
