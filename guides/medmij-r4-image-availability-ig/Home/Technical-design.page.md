@@ -23,12 +23,10 @@ This technical design includes use cases for the exchange of images and reports 
 
 This technical design assumes that a PHR is able to make a connection to the right XIS that contains the patient's information. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/). In particular, each transaction is performed in the context of a specific authenticated patient, which has been established using the authentication mechanisms outlined in the MedMij Afsprakenstelsel (also see the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Afsprakenstelsel)), i.e. via an OAuth2 token. Each XIS gateway is required to perform filtering based on the patient associated with the context for the request, so only the records associated with the authenticated patient are returned. For this reason, search parameters should not be included for patient identification.
 
-## Relating FHIR (profiles) to its functional counterpart
-<a name="RelatingFHIRToFunctionalCounterpart"/>
+## <a name="RelatingFHIRToFunctionalCounterpart"></a> Relating FHIR (profiles) to its functional counterpart
 The [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access) describes the (intended) mapping between metadata, FHIR (DocumentReference) and the datasets in ART-DECOR. In this IG, we incorporate the aforementioned functional mapping provided by Nictiz BBS. This mapping has resulted in the {{pagelink:FHIR, text: bbs-DocumentReference profile}}.
 
-## Identifiers
-<a name="Identifiers"/>
+## <a name="Identifiers"></a> Identifiers
 There are several identifiers that play a role in the exchange of images and reports. The following table gives an overview of all these identifiers, and how they are related to each other.
 
 | Identifier | Source | Definition | FHIR DocumentReference element |
@@ -55,8 +53,7 @@ The use cases in this technical design are based as much as possible on the spec
 ### Use case: Retrieve Image and Report in personal health environment
 The Nictiz BBS FHIR IG splits the transactions in different use cases, for reasons of convenience. Seen from the perspective of a patient using a PHR, retrieval of images and reports from a healthcare provider is a related activity performed in one action. Therefore, this technical design bundles the BBS use cases as one.
 
-#### Query Timeline Data (MHD ITI-67)
-<a name="QueryTimelineData"/>
+#### <a name="QueryTimelineData"></a> Query Timeline Data (MHD ITI-67)
 > Based on [Use case 3: Query Timeline Data (Raadplegen Tijdlijn Data)](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#Use_case_3:_Query_Timeline_Data_.28Raadplegen_Tijdlijn_Data.29_3) in the Nictiz BBS FHIR IG, see [ITI-67](https://profiles.ihe.net/ITI/MHD/ITI-67.html) for further details.
 
 The ITI-67 transaction is used to find available documents for a patient, based on a search on DocumentReference.
@@ -106,8 +103,7 @@ The XIS returns an HTTP Status code appropriate to the processing as well as a B
 
 See [ITI-67 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#236742-find-document-references-response-message) for further details.
 
-#### Retrieve Imaging Report (MHD ITI-68)
-<a name="RetrieveImagingReport"/>
+#### <a name="RetrieveImagingReport"></a> Retrieve Imaging Report (MHD ITI-68)
 > Based on [Use case 4: Retrieve Imaging Report (Raadplegen Verslag)](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#Use_case_4:_Retrieve_Imaging_Report_.28Raadplegen_Verslag.29_3) in the Nictiz BBS FHIR IG, see [ITI-68](https://profiles.ihe.net/ITI/MHD/ITI-68.html) for further details.
 
 | Transaction group | Transaction | Actor | System role |
@@ -133,8 +129,7 @@ If the XIS is unable to format the imaging report in a content type listed in th
 
 See [ITI-68 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#236842-retrieve-document-response-message) for further details.
 
-#### Retrieve Images (MHD ITI-68 and WADO-RS RAD-107)
-<a name="RetrieveImages"/>
+#### <a name="RetrieveImages"></a> Retrieve Images (MHD ITI-68 and WADO-RS RAD-107)
 > Based on [Use case 5: Retrieve Images (Raadplegen Beeld)](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#Use_case_5:_Retrieve_Images_.28Raadplegen_Beeld.29_3) in the Nictiz BBS FHIR IG, see [ITI-68](https://profiles.ihe.net/ITI/MHD/ITI-68.html) and [WADO-RS Retrieve (RAD-107)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf), section 4.107 for further details.
 
 The retrieval of images consists of two consecutive steps, namely the ITI-68 transaction, which retrieves the imaging study manifest content referenced by a DocumentReference in `DocumentReference.content.attachment.url` (i.e. the [DICOM KOS document](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html)), and the RAD-107 transaction, which retrieves the individual (image) instances (i.e. the SOP instances) based on the contents of the KOS document. Seen from the perspective of the patient using a PHR, these two transactions are performed in one action.
@@ -218,7 +213,7 @@ If the very first request (i.e. the request containing `/frames/1`) fails, the P
 **Supported SOP classes and WADO-RS requests** <br/>
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
 
-<a name="SupportedSOPClasses"/>
+<a name="SupportedSOPClasses"></a>
 | SOP Class Name | SOP Class UID | Description | Corresponding modality | May contain multi-frame images |
 | --- | --- | --- | --- | --- |
 | Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | *CR* | |
