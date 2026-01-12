@@ -12,7 +12,7 @@ Er bestaan op dit moment geen overkoepelende nationale richtlijnen voor het unie
 ## Duplicaatdetectie
 Duplicaatdetectie is het proces waarbij kopieën van gegevens worden geïdentificeerd. In de ideale situatie stelt elke zorgverlener uitsluitend zijn eigen beelden en verslagen beschikbaar. In de praktijk blijkt dit echter lastig door het ontbreken van domeinoverstijgende afspraken. Duplicaatdetectie via automatische detectie op basis van unieke kenmerken, is daarom noodzakelijk, zodat er voor de burger een bruikbaar en leesbaar overzicht van gegevens in de PGO wordt weergegeven.
 
-In sectie 2.5 van het {{pagelink:TO, text: technisch ontwerp}} is een overzicht weergegeven van alle relevante identificatienummers voor de uitwisseling van beelden en verslagen. In het bijzonder bevat dit overzicht extra toelichting voor de identificatienummers die gebruikt worden voor duplicaatdetectie. 
+In het {{pagelink:TO, text: technisch ontwerp, anchor: Identifiers}} is een overzicht weergegeven van alle relevante identificatienummers voor de uitwisseling van beelden en verslagen. In het bijzonder bevat dit overzicht extra toelichting voor de identificatienummers die gebruikt worden voor duplicaatdetectie. 
 
 ## Detectie en identificatie duplicaten 
 

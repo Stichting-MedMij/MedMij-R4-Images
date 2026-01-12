@@ -39,7 +39,7 @@ The PHR queries the document timeline via the XIS using MHD ITI-67.
 Step 2 – Retrieve document  
 The PHR retrieves a certain report using MHD ITI-68.
 
-In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved. In the technical design, these transactions are described in the {{pagelink:TO, text: technical design}}, section 2.6.1.1 and 2.6.1.2.
+In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved. In the technical design, these transactions are described in the sections {{pagelink:TO, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink:TO, text: Retrieve Imaging Report, anchor: RetrieveImagingReport}}.
 
 ### Imaging studies
 For imaging studies, the interaction sequence includes all three steps shown in Figure 1.
@@ -53,7 +53,7 @@ The PHR retrieves a certain document using MHD ITI-68. The response to this tran
 Step 3 – Retrieve image  
 Based on the references provided in the KOS document, the PHR retrieves the imaging data using the WADO-RS transaction (RAD-107).
 
-This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns. In the technical design, these transactions are described in the {{pagelink:TO, text: technical design}}, section 2.6.1.1 and 2.6.1.3.
+This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns. In the technical design, these transactions are described in the sections {{pagelink:TO, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink:TO, text: Retrieve Images, anchor: RetrieveImages}}.
 
 ## Use of IHE Profiles
 The following IHE profiles are used within this architecture:

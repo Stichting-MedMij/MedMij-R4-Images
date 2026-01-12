@@ -98,7 +98,7 @@ In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverich
 
 **Tabel 4: Relevante gegevens m.b.t. de weergaverichtlijn**
 
-De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die ondersteund moeten worden (zie ook Tabel 9 in het {{pagelink:TO, text: technisch ontwerp}}). Deze termen kunnen gebruikt worden als weergavetekst in de PGO. 
+De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die ondersteund moeten worden (zie ook Tabel 9 in het {{pagelink:TO, text: technisch ontwerp, anchor: SupportedSOPClasses}}). Deze termen kunnen gebruikt worden als weergavetekst in de PGO. 
 
 | Naam SOP-klasse | SOP Class UID | Patiëntvriendelijke term |
 | --- | --- | --- |
