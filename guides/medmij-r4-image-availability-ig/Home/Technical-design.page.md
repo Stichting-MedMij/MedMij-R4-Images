@@ -213,7 +213,6 @@ If the very first request (i.e. the request containing `/frames/1`) fails, the P
 **Supported SOP classes and WADO-RS requests** <br/>
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
 
-<a name="SupportedSOPClasses"></a>
 | SOP Class Name | SOP Class UID | Description | Corresponding modality | May contain multi-frame images |
 | --- | --- | --- | --- | --- |
 | Computed Radiography (CR) Image Storage | 1.2.840.10008.5.1.4.1.1.1 | Digitalized conventional X-ray images, often used in older systems. | *CR* | |
@@ -239,7 +238,7 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 | Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET scan images used in nuclear medicine. | *PT* | |
 | Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | Enhanced PET scan images used in nuclear medicine. | *PT* | Yes |
 
-**Table 9: Supported SOP classes**
+**<a name="SupportedSOPClasses"></a> Table 9: Supported SOP classes**
 
 The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the (image) instance in the preferred format. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS, as well as the corresponding WADO-RS request (both forms) that needs to be executed by the PHR. 
 
