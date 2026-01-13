@@ -78,12 +78,6 @@ Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en van
 
 **Figuur 4: Voorbeeld van een verslag**
 
-| | Acceptatiecriteria |
-| --- | --- |
-| 1. | Een gebruiker kan in- en uitzoomen in de PDF-viewer. |
-
-**Tabel 3: Acceptatiecriteria voor het detailscherm van een verslag**
-
 ### Relevante gegevens
 In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverichtlijn.
 

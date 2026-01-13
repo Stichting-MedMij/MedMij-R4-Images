@@ -62,6 +62,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | --- | --- |
 | 1. | Verslagen zijn in de PGO te openen zonder externe PDF-viewer of door ze eerst te downloaden. |
 | 2. | Verslagen zijn leesbaar op alle schermformaten (desktop, tablet, mobiel). |
+| 3. | De gebruiker kan in- en uitzoomen bij het bekijken van het verslag. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
