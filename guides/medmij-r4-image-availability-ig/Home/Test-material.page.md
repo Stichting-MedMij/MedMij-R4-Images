@@ -6,4 +6,4 @@ The functional test data, currently in Excel format, can be found on [GitHub](ht
 
 FHIR test material corresponding to the functional test material can also be found on [GitHub](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/tree/main/test/resources).
 
-For mapping between metadata, functional dataset and FHIR, please refer to {{pagelink:TO}}, section 2.4.
+For mapping between metadata, functional dataset and FHIR, please refer to the {{pagelink:TD, text: technical design, anchor: RelatingFHIRToFunctionalCounterpart}}.

@@ -45,8 +45,16 @@
             "display": "Computed Tomography"
           },
           {
+            "code": "DX",
+            "display": "Digital Radiography"
+          },
+          {
             "code": "ES",
             "display": "Endoscopy"
+          },
+          {
+            "code": "MG",
+            "display": "Mammography"
           },
           {
             "code": "MR",
@@ -58,7 +66,7 @@
           },
           {
             "code": "OT",
-            "display": "Other"
+            "display": "Other Modality"
           },
           {
             "code": "PT",
@@ -67,10 +75,6 @@
           {
             "code": "RF",
             "display": "Radiofluoroscopy"
-          },
-          {
-            "code": "SC",
-            "display": "Secondary Capture"
           },
           {
             "code": "US",

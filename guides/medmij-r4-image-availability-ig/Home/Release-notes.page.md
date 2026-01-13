@@ -4,10 +4,24 @@
 
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
+| Dataset               | Logical Models corresponding with the functional dataset and underlying use cases have been added, while the dataset in Excel format has been removed. | [DOSINZAGE2-827](https://medmij.atlassian.net/browse/DOSINZAGE2-827) |
 | Functional design     | A requirement which mandates a disclaimer in the PHR regarding the interpretation of images and reports has been added. | [DOSINZAGE2-715](https://medmij.atlassian.net/browse/DOSINZAGE2-715) |
 | Functional design     | A requirement related to incomplete image series has been added. Moreover, corresponding guidance has been added to the display guideline. | [DOSINZAGE2-736](https://medmij.atlassian.net/browse/DOSINZAGE2-736) |
-| Technical design      | The minimal set of SOP classes that need to be supported has been updated (i.e. *VL Endoscopic Image Storage* has been added, while *Digital X-Ray Image Storage - For Presentation* and *Digital Mammography X-Ray Image Storage - For Presentation* have been removed). | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
-| FHIR artifacts        | The codes *DX* and *MG* have been removed from ValueSet MedMijModality. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
+| Functional design     | A requirement with respect to displaying image instances within a series has been added. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
+| Functional design     | A requirement with respect to displaying multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
+| Functional design     | The requirements have been finetuned/updated. | [DOSINZAGE2-801](https://medmij.atlassian.net/browse/DOSINZAGE2-801), [DOSINZAGE2-819](https://medmij.atlassian.net/browse/DOSINZAGE2-819), [DOSINZAGE2-821](https://medmij.atlassian.net/browse/DOSINZAGE2-821) |
+| Functional design     | A requirement related to the retrieval of the image and report timeline when logging in to the PHR has been added. | [DOSINZAGE2-820](https://medmij.atlassian.net/browse/DOSINZAGE2-820) |
+| Functional design     | The relevant date for the images and reports (e.g. with respect to sorting/filtering) has been made clearer in the requirements and display guideline (i.e. 'datum' and 'uitvoerdatum' have been changed to 'onderzoeksdatum'). | [DOSINZAGE2-822](https://medmij.atlassian.net/browse/DOSINZAGE2-822) |
+| Functional design     | Patient-friendly terms for the SOP classes have been added to the display guideline. | [DOSINZAGE2-825](https://medmij.atlassian.net/browse/DOSINZAGE2-825) |
+| Technical design      | In the minimal set of SOP classes that need to be supported, *VL Endoscopic Image Storage* has been added. | [DOSINZAGE2-765](https://medmij.atlassian.net/browse/DOSINZAGE2-765) |
+| Technical design      | In the minimal set of SOP classes that need to be supported, additional Secondary Capture SOP classes have been added. Moreover, the corresponding modality *SC* has been replaced by *OT*. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
+| Technical design      | Guidance on required attributes within the DICOM KOS document has been added. | [DOSINZAGE2-752](https://medmij.atlassian.net/browse/DOSINZAGE2-752) |
+| Technical design      | Guidance on the ordering of image instances within the DICOM KOS document has been added. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
+| Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
+| Technical design      | A link to the FHIR identifier registry to support the DICOM UID requirements has been added. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
+| FHIR artifacts        | The code *SC* has been removed from ValueSet MedMijModality. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
+| Architecture          | Further documentation to the solution design has been added, and the solution architecture overview has been updated. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
+| Architecture          | The reference architecture for backends based on an XDS/XCA infrastructure has been added. | [DOSINZAGE2-670](https://medmij.atlassian.net/browse/DOSINZAGE2-670) |
 
 ## 1.0.0-rc.1
 
@@ -73,4 +87,4 @@
 | Test material         | The `PractitionerRole.organization` has been removed from all test instances. | [DOSINZAGE2-620](https://medmij.atlassian.net/issues/DOSINZAGE2-620) |
 | Test material         | Test material of CZE has been added, containing a.o. a series of images. | [DOSINZAGE2-307](https://medmij.atlassian.net/issues/DOSINZAGE2-307), [DOSINZAGE2-336](https://medmij.atlassian.net/issues/DOSINZAGE2-336), [DOSINZAGE2-450](https://medmij.atlassian.net/issues/DOSINZAGE2-450), [DOSINZAGE2-461](https://medmij.atlassian.net/issues/DOSINZAGE2-461) |
 | Test material         | The Modality has been added to all test instances. | [DOSINZAGE2-671](https://medmij.atlassian.net/browse/DOSINZAGE2-671) |
-| Solution architecture | An initial version of the Solution architecture has been added. | [DOSINZAGE2-482](https://medmij.atlassian.net/issues/DOSINZAGE2-482) |
+| Architecture          | An initial version of the solution design has been added. | [DOSINZAGE2-482](https://medmij.atlassian.net/issues/DOSINZAGE2-482) |
