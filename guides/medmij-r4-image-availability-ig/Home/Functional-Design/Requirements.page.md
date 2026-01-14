@@ -38,6 +38,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
+| 2. | Relevante dataelementen zijn: VerrichtingStartDatum (bbs-dataelement-174), BeeldTitel (bbs-medmij-dataelement-1), VerslagTitel (bbs-medmij-dataelement-2), OrganisatieNaam (bbs-dataelement-523), Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) (bbs-dataelement-187) (indien beschikbaar) en Modaliteit (bbs-medmij-dataelement-5). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -45,14 +46,16 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Vanuit het overzicht in de PGO kan de gebruiker met één klik een viewer openen om beelden en/of verslagen te bekijken. |
+| 1. | Vanuit het overzicht in de PGO kan de gebruiker met één klik een viewer openen om beelden te bekijken. |
 | 2. | Bij het uitvoeren van de requests aan de DVA wordt rekening gehouden met de door de DVA gespecificeerde rate limiting. |
 | 3. | De gebruiker kan (rendered) DICOM-beelden bekijken zonder extra software te installeren. |
 | 4. | De viewer werkt in gangbare webbrowsers en is bruikbaar op desktop, tablet en mobiel (responsive of mobiele variant). |
 | 5. | De gebruiker krijgt duidelijke visuele feedback (bijvoorbeeld een laadindicator of wachtcursor met tekst) wanneer beelden worden geladen. |
 | 6. | Indien mogelijk wordt de voortgang van het laden weergegeven in procenten of met een voortgangsbalk. | 
 | 7. | Als het laden langer duurt dan 60 seconden, dient de gebruiker te worden geïnformeerd. |
-| 8. | De viewer opent in hetzelfde venster of in een herkenbare tab/pagina binnen de PGO (geen verwarring met andere portalen). | 
+| 8. | De viewer opent in hetzelfde venster of in een herkenbare pagina binnen de PGO (geen verwarring met andere portalen). | 
+| 9. | De gebruiker kan in- en uitzoomen bij het bekijken van het beeld. | 
+| 10. | De gebruiker kan door verschillende beelden scrollen of deze afspelen als een filmpje wanneer een bestand meerdere beelden bevat (bijvoorbeeld bij een CT of MRI). | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -121,7 +124,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 9 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een duidelijke button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
+| 9 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |

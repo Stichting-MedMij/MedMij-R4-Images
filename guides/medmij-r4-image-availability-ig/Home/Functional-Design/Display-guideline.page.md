@@ -63,14 +63,6 @@ Als de gebruiker een specifiek beeld in het overzichtsscherm selecteert en vanui
 
 **Figuur 3: Voorbeeld van een beeld**
 
-| | Acceptatiecriteria |
-| --- | --- |
-| 1. | Een gebruiker kan het beeld of het volledige onderzoek downloaden. |
-| 2. | Een gebruiker kan in- en uitzoomen. |
-| 3. | Indien het bestand meerdere beelden bevat (bijvoorbeeld bij een CT of MRI), kan een gebruiker door de verschillende beelden heen scrollen of deze beelden afspelen als een filmpje. |
-
-**Tabel 2: Acceptatiecriteria voor het detailscherm van een beeld**
-
 ### Detailscherm verslag
 Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en vanuit daar opent, wordt een PDF-viewer geopend waarin het betreffende verslag wordt getoond.
 
@@ -81,16 +73,16 @@ Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en van
 ### Relevante gegevens
 In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverichtlijn.
 
-| Naam dataelement | Advies weergavetekst in PGO | Voorbeeld | Weergeven |
-| --- | --- | --- | --- |
-| VerrichtingStartDatum | Onderzoeksdatum | 31-01-2020 | Ja  |
-| BeeldTitel | Naam onderzoek | C. van Wijk radiologiebeelden | Ja, indien beschikbaar  |
-| VerslagTitel | Naam onderzoek | Cardiologiebeelden C. van Wijk | Ja, indien beschikbaar  |
-| OrganisatieNaam | Zorginstelling | OLVG Oost | Ja  |
-| Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) | Uitvoerend zorgverlener | J. ter Velde | Ja, indien beschikbaar |
-| Modaliteit | Soort beeld | CT | Ja, indien het een beeld betreft |
+| Naam dataelement | Code dataelement |Advies weergavetekst in PGO | Voorbeeld | Weergeven |
+| --- | --- | --- | --- | --- |
+| VerrichtingStartDatum | bbs-dataelement-174 | Onderzoeksdatum | 31-01-2020 | Ja  |
+| BeeldTitel | bbs-medmij-dataelement-1 | Naam onderzoek | C. van Wijk radiologiebeelden | Ja, indien beschikbaar  |
+| VerslagTitel | bbs-medmij-dataelement-2 | Naam onderzoek | Cardiologiebeelden C. van Wijk | Ja, indien beschikbaar  |
+| OrganisatieNaam | bbs-dataelement-523 | Zorginstelling | OLVG Oost | Ja  |
+| Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) | bbs-dataelement-187 | Uitvoerend zorgverlener | J. ter Velde | Ja, indien beschikbaar |
+| Modaliteit | bbs-medmij-dataelement-5 | Soort beeld | CT | Ja, indien het een beeld betreft |
 
-**Tabel 4: Relevante gegevens m.b.t. de weergaverichtlijn**
+**Tabel 1: Relevante gegevens m.b.t. de weergaverichtlijn**
 
 De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die ondersteund moeten worden (zie ook Tabel 9 in het {{pagelink:TD, text: technisch ontwerp, anchor: SupportedSOPClasses}}). Deze termen kunnen gebruikt worden als weergavetekst in de PGO. 
 
