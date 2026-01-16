@@ -97,7 +97,7 @@ De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die on
 | Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.128 | PET-scan |
 | Enhanced Positron Emission Tomography (PET) Image Storage | 1.2.840.10008.5.1.4.1.1.130 | PET-scan |
 
-**Tabel 5: Patiëntvriendelijke termen SOP-klassen**
+**Tabel 2: Patiëntvriendelijke termen SOP-klassen**
 
 ### Disclaimers
 #### Downloaden van beelden
