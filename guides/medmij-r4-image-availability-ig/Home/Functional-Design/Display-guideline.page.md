@@ -19,7 +19,7 @@ Naast de weergaverichtlijn zijn ook {{pagelink:Requirements, text: requirements}
 ## Weergave in PGO
 Het inloggen en authenticeren bij de zorgaanbieder is niet opgenomen in deze richtlijn.
 
-Nadat de gebruiker één of meerdere zorgaanbieders heeft gekozen waar de beschikbare beelden en verslagen opgehaald moeten worden, kan de gebruiker vanuit het hoofdmenu navigeren naar het overzichtsscherm/de tijdlijn waar de beelden en verslagen kunnen worden opgehaald.
+Nadat de gebruiker één of meerdere zorgaanbieders heeft gekozen waar de beschikbare beelden en verslagen opgehaald moeten worden, kan de gebruiker vanuit het hoofdmenu navigeren naar het overzichtsscherm waar de beelden en verslagen kunnen worden opgehaald.
 
 ### Overzichtsscherm beelden en verslagen
 Er zijn twee weergaven gedefinieerd voor het overzicht van de beelden en verslagen:
@@ -29,32 +29,18 @@ Er zijn twee weergaven gedefinieerd voor het overzicht van de beelden en verslag
 Deze weergaves vormen voorbeelden van hoe een UX-design getoond kan worden. Een PGO is vrij om één of beide van deze scenario’s te ondersteunen of zelf een weergave te maken.
 
 #### Tabelweergave
-De tabelweergave biedt gebruikers een compact overzicht van medische verslagen en beelden die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave in tabelvorm.
+De tabelweergave biedt gebruikers een compact overzicht van beelden en verslagen die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave in tabelvorm.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Tabelweergave.png}}
 
 **Figuur 1: Voorbeeld van de tabelweergave**
 
 #### Tijdlijnweergave
-De tijdlijnweergave biedt gebruikers een visueel overzicht van alle medische verslagen en beelden die beschikbaar zijn in de PGO. De figuur hieronder bevat een visuele weergave van de tijdlijn.
+De tijdlijnweergave biedt gebruikers een lineair uitgebreid overzicht van alle beelden en verslagen die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave van de tijdlijn.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Tijdlijnweergave.png}}
 
 **Figuur 2: Voorbeeld van de tijdlijnweergave**
-
-#### Acceptatiecriteria
-| | Acceptatiecriteria |
-| --- | --- |
-| 1. | Standaard worden alle beelden en verslagen van alle zorgaanbieders weergegeven. |
-| 2. | Beelden en verslagen zijn standaard chronologisch gesorteerd van nieuw naar oud. |
-| 3. | Zoeken op (een deel van) de naam van het onderzoek of informatie uit andere kolommen is mogelijk. |
-| 4. | Voor elk document wordt basisinformatie getoond (onderzoeksdatum, type document (i.e. verslag of beeld), naam onderzoek (beeldtitel/verslagtitel), zorginstelling, soort beeld). |
-| 5. | Als de titel van een verslag of beeld ontbreekt, dan wordt dit expliciet gemeld in de betreffende tijdlijnregel. |
-| 6. | Filteren van beelden en verslagen is mogelijk op onderzoeksdatum, zorginstelling en type bestand. |
-| 7. | Verslag en beeld zijn visueel gelinkt indien beide beschikbaar zijn en in de bron gekoppeld zijn middels het Accession Number. |
-| 8. | Een gebruiker kan een verslag of een volledig onderzoek (corresponderend met één tijdlijnregel) downloaden. |
-
-**Tabel 1: Acceptatiecriteria voor het overzichtsscherm**
 
 ### Detailscherm beeld
 Als de gebruiker een specifiek beeld in het overzichtsscherm selecteert en vanuit daar opent, wordt een detailscherm van het betreffende beeld aan de gebruiker getoond. De beeld-viewer wordt geopend in de browser of als programma/app in de PGO.
@@ -78,9 +64,9 @@ In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverich
 | VerrichtingStartDatum | bbs-dataelement-174 | Onderzoeksdatum | 31-01-2020 | Ja  |
 | BeeldTitel | bbs-medmij-dataelement-1 | Naam onderzoek | C. van Wijk radiologiebeelden | Ja, indien beschikbaar  |
 | VerslagTitel | bbs-medmij-dataelement-2 | Naam onderzoek | Cardiologiebeelden C. van Wijk | Ja, indien beschikbaar  |
-| OrganisatieNaam | bbs-dataelement-523 | Zorginstelling | OLVG Oost | Ja  |
+| OrganisatieNaam | bbs-dataelement-523 | Zorgaanbieder | OLVG Oost | Ja  |
 | Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) | bbs-dataelement-187 | Uitvoerend zorgverlener | J. ter Velde | Ja, indien beschikbaar |
-| Modaliteit | bbs-medmij-dataelement-5 | Soort beeld | CT | Ja, indien het een beeld betreft |
+| Modaliteit | bbs-medmij-dataelement-5 | Type beeld | CT | Ja, indien het een beeld betreft |
 
 **Tabel 1: Relevante gegevens m.b.t. de weergaverichtlijn**
 

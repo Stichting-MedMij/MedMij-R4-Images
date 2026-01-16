@@ -38,7 +38,8 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
-| 2. | Relevante dataelementen zijn: VerrichtingStartDatum (bbs-dataelement-174), BeeldTitel (bbs-medmij-dataelement-1), VerslagTitel (bbs-medmij-dataelement-2), OrganisatieNaam (bbs-dataelement-523), Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) (bbs-dataelement-187) (indien beschikbaar) en Modaliteit (bbs-medmij-dataelement-5). |
+| 2. | Voor elk document (beeld of verslag) wordt basisinformatie getoond, namelijk: Onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174), type document (Beelden, bbs-dataelement-689; Verslag, bbs-dataelement-690), naam onderzoek (BeeldTitel, bbs-medmij-dataelement-1; VerslagTitel, bbs-medmij-dataelement-2), zorgaanbieder (OrganisatieNaam, bbs-dataelement-523), uitvoerend zorgverlener (indien beschikbaar) (Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam), bbs-dataelement-187) en type beeld (Modaliteit, bbs-medmij-dataelement-5). |
+| 3. | Als de titel van het beeld of verslag ontbreekt, dan wordt dit expliciet vermeld in de betreffende overzichtsregel.  |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -74,7 +75,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Bij elk verslag of beeld wordt automatisch gecontroleerd of er een bijbehorend gekoppeld item is (i.e. verslag bij beeld of beeld bij verslag). |
-| 2. | Indien gekoppeld, worden deze gegevens samen weergegeven of met een duidelijke visuele link. |
+| 2. | Indien gekoppeld, worden deze gegevens samen weergegeven of duidelijk visueel gelinkt. |
 | 3. | De koppeling gebeurt op basis van een gedeelde unieke identifier (Accession Number). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -114,13 +115,14 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 8 | Zorggebruiker | Beelden en verslagen kunnen doorzoeken | Snel de juiste te onderzoeken kan zien | S |
+| 8 | Zorggebruiker | Beelden en verslagen kunnen doorzoeken | Snel de juiste onderzoeken kan zien | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Invoer in de zoekbalk filtert de rijen in realtime of na bevestiging (bijvoorbeeld Enter-toets). |
-| 2. | Invoer in de zoekbalk filtert de rijen op basis van deels overeenkomende waarden in de kolommen ('contains'). |
-| 3. | De zoekterm wordt niet hoofdlettergevoelig behandeld (i.e. zoeken is case insensitive). |
+| 1. | Zoeken op (een deel van) de naam van het onderzoek in een zoekbalk is mogelijk. |
+| 2. | Invoer in de zoekbalk filtert de rijen in realtime of na bevestiging (bijvoorbeeld Enter-toets). |
+| 3. | Invoer in de zoekbalk filtert de rijen op basis van deels overeenkomende waarden in de kolommen ('contains'). |
+| 4. | De zoekterm wordt niet hoofdlettergevoelig behandeld (i.e. zoeken is case insensitive). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
