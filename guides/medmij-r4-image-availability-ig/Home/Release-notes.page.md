@@ -20,6 +20,7 @@
 | Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
 | Technical design      | A link to the FHIR identifier registry to support the DICOM UID requirements has been added. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
 | FHIR artifacts        | The code *SC* has been removed from ValueSet MedMijModality. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
+| Test material         | The test material has been expanded/updated, as well as relocated to the IG. | [DOSINZAGE2-537](https://medmij.atlassian.net/browse/DOSINZAGE2-537) |
 | Architecture          | Further documentation to the solution design has been added, and the solution architecture overview has been updated. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
 | Architecture          | The reference architecture for backends based on an XDS/XCA infrastructure has been added. | [DOSINZAGE2-670](https://medmij.atlassian.net/browse/DOSINZAGE2-670) |
 
