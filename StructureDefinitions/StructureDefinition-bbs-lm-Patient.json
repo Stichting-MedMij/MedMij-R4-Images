@@ -74,7 +74,7 @@
       {
         "id": "bbs-lm-Patient.NameInformation",
         "path": "bbs-lm-Patient.NameInformation",
-        "short": "Patient's full name.",
+        "short": "Name information",
         "definition": "Patient's full name.",
         "alias": [
           "Naamgegevens"
@@ -97,7 +97,7 @@
       {
         "id": "bbs-lm-Patient.NameInformation.FirstNames",
         "path": "bbs-lm-Patient.NameInformation.FirstNames",
-        "short": "The first names of the patient.",
+        "short": "First names",
         "definition": "The first names of the patient.",
         "alias": [
           "Voornamen"
@@ -120,7 +120,7 @@
       {
         "id": "bbs-lm-Patient.NameInformation.Initials",
         "path": "bbs-lm-Patient.NameInformation.Initials",
-        "short": "The initials of the patient.",
+        "short": "Initials",
         "definition": "The initials of the patient.",
         "alias": [
           "Initialen"
@@ -143,7 +143,7 @@
       {
         "id": "bbs-lm-Patient.NameInformation.LastName",
         "path": "bbs-lm-Patient.NameInformation.LastName",
-        "short": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
+        "short": "Last name",
         "definition": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
         "alias": [
           "Geslachtsnaam"
@@ -166,7 +166,7 @@
       {
         "id": "bbs-lm-Patient.NameInformation.LastName.Prefix",
         "path": "bbs-lm-Patient.NameInformation.LastName.Prefix",
-        "short": "Prefix to the last name of the patient.",
+        "short": "Prefix",
         "definition": "Prefix to the last name of the patient.",
         "alias": [
           "Voorvoegsels"
@@ -189,7 +189,7 @@
       {
         "id": "bbs-lm-Patient.NameInformation.LastName.LastName",
         "path": "bbs-lm-Patient.NameInformation.LastName.LastName",
-        "short": "The last name of the patient.",
+        "short": "Last name",
         "definition": "The last name of the patient.",
         "alias": [
           "Achternaam"
@@ -212,7 +212,7 @@
       {
         "id": "bbs-lm-Patient.PatientIdentificationNumber",
         "path": "bbs-lm-Patient.PatientIdentificationNumber",
-        "short": "The patient's identification number.",
+        "short": "Patient identification number",
         "definition": "The patient's identification number.",
         "alias": [
           "Identificatienummer"
@@ -235,7 +235,7 @@
       {
         "id": "bbs-lm-Patient.DateOfBirth",
         "path": "bbs-lm-Patient.DateOfBirth",
-        "short": "Patient's date of birth.",
+        "short": "Date of birth",
         "definition": "Patient's date of birth.",
         "alias": [
           "Geboortedatum"
@@ -263,7 +263,7 @@
       {
         "id": "bbs-lm-Patient.Gender",
         "path": "bbs-lm-Patient.Gender",
-        "short": "Patient's administrative gender.",
+        "short": "Gender",
         "definition": "Patient's administrative gender.",
         "alias": [
           "Geslacht"
