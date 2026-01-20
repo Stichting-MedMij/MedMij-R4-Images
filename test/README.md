@@ -6,7 +6,7 @@ This directory contains test resources intended for testing MedMij R4 Image Avai
 - The `pgo` folder contains a prototype PGO (Personal Health Environment) implementation, made by MedMij.
 - The `resources` folder contains the FHIR test resources.
 - The `dicom` folder contains DICOM files referenced by the FHIR resources.
-- The [Excel file](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/blob/main/test/Testdata_MedMij_Beeldbeschikbaarheid_1.0.0-rc.1.xlsx) contains the functional test data from which the FHIR resources are generated.
+- The IG contains the functional test data from which the FHIR resources are generated.
 
 ## Important notes
 - Various identifiers, such as the Study Instance UID, Accession Number, and `DocumentReference.masterIdentifier`, are dummy/mocked values and may not reference any actual data. Adjust these as needed to fit your testing scenarios.
