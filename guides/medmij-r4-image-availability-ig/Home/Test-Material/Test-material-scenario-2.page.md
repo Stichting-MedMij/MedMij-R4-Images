@@ -42,13 +42,13 @@
 | ReportInformation.ReportTitle | |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-19285 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Erasmus MC |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Radiologie (code '0362' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.2.826.0.1.3680043.8.498.77615907425522706317163091876421984542 |
 
-| Data element | Scenario 2.2 |
+| Scenario 2.2 |
 | --- | --- |
 | ProcedureStartDate | 06-02-1993 |
 | ProcedureEndDate | |
@@ -76,7 +76,7 @@
 | ReportInformation.ReportTitle | longfoto |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | |
@@ -110,7 +110,7 @@
 | ReportInformation.ReportTitle | longfoto |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-50637 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Erasmus MC |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Radiologie (code '0362' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
@@ -144,7 +144,7 @@
 | ReportInformation.ReportTitle | röntgenfoto van linker kaakgewricht |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-74920 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Erasmus MC |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Mondzorg en kaakchirurgie, implantoloog (code '1101' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |

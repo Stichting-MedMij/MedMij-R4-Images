@@ -42,7 +42,7 @@
 | ReportInformation.ReportTitle | |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-47092 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 6010754 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6010754 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Stichting Spaarne Gasthuis |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Radiologie (code '0362' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |

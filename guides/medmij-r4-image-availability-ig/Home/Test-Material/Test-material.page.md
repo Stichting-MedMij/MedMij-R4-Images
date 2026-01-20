@@ -2,7 +2,7 @@
 topic: TestMaterial
 ---
 
-# Test material
+# Introduction
 
 Please review this [README](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/blob/main/test/README.md) before starting any testing.
 

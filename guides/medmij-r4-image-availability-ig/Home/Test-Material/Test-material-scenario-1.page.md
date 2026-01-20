@@ -42,7 +42,7 @@
 | ReportInformation.ReportTitle | Röntgen Clavicula rechts |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-83472 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 6010713 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6010713 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | OLVG |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Radiologie (code '0362' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |

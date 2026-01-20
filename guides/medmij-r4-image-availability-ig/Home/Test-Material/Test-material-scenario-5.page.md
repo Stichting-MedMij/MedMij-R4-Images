@@ -42,7 +42,7 @@
 | ReportInformation.ReportTitle | |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | EXT-14117 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Catharina Ziekenhuis Eindhoven |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Radiotherapie (code '0361' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
@@ -76,7 +76,7 @@
 | ReportInformation.ReportTitle | |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | EXT-14114 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Catharina Ziekenhuis Eindhoven |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | Radiotherapie (code '0361' from code system 'Vektis AGB medische specialismen') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
@@ -110,7 +110,7 @@
 | ReportInformation.ReportTitle | CR CWK MedMij |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | 5003249215 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Catharina Ziekenhuis Eindhoven |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
@@ -144,7 +144,7 @@
 | ReportInformation.ReportTitle | |
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | AGFA00000173699 |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Amsterdam UMC |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
