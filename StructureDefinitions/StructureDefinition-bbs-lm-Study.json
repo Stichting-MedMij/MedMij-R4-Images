@@ -68,7 +68,7 @@
       {
         "id": "bbs-lm-Study.Procedure",
         "path": "bbs-lm-Study.Procedure",
-        "short": "Root concept of the Procedure building block. This root concept contains all data elements of the Procedure building block.",
+        "short": "Procedure",
         "definition": "Root concept of the Procedure building block. This root concept contains all data elements of the Procedure building block.",
         "alias": [
           "Verrichting"
@@ -96,7 +96,7 @@
       {
         "id": "bbs-lm-Study.Procedure.ProcedureStartDate",
         "path": "bbs-lm-Study.Procedure.ProcedureStartDate",
-        "short": "Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken.",
+        "short": "Procedure start date",
         "definition": "Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken.",
         "alias": [
           "VerrichtingStartDatum"
@@ -119,7 +119,7 @@
       {
         "id": "bbs-lm-Study.Procedure.ProcedureEndDate",
         "path": "bbs-lm-Study.Procedure.ProcedureEndDate",
-        "short": "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
+        "short": "Procedure end date",
         "definition": "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
         "alias": [
           "VerrichtingEindDatum"
@@ -142,7 +142,7 @@
       {
         "id": "bbs-lm-Study.Procedure.ProcedureType",
         "path": "bbs-lm-Study.Procedure.ProcedureType",
-        "short": "Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).",
+        "short": "Procedure type",
         "definition": "Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).",
         "alias": [
           "VerrichtingType"
@@ -169,7 +169,7 @@
       {
         "id": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation",
         "path": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation",
-        "short": "Anatomical location which is the focus of the procedure.",
+        "short": "Procedure anatomical location",
         "definition": "Anatomical location which is the focus of the procedure.",
         "alias": [
           "VerrichtingAnatomischeLocatie"
@@ -197,7 +197,7 @@
       {
         "id": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Location",
         "path": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Location",
-        "short": "Localisation on/in the body.",
+        "short": "Location",
         "definition": "Localisation on/in the body.",
         "alias": [
           "Locatie"
@@ -229,7 +229,7 @@
       {
         "id": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Laterality",
         "path": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Laterality",
-        "short": "Laterality adds information about body site to the anatomical location, e.g. left.",
+        "short": "Laterality",
         "definition": "Laterality adds information about body site to the anatomical location, e.g. left.",
         "alias": [
           "Lateraliteit"
@@ -261,7 +261,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Location",
         "path": "bbs-lm-Study.Procedure.Location",
-        "short": "The healthcare center where the procedure was, is or will be carried out.",
+        "short": "Location",
         "definition": "The healthcare center where the procedure was, is or will be carried out.",
         "alias": [
           "Locatie"
@@ -284,7 +284,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider",
         "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider",
-        "short": "Root concept of the HealthcareProvider building block. This root concept contains all data elements of the HealthcareProvider building block.",
+        "short": "Healthcare provider",
         "definition": "Root concept of the HealthcareProvider building block. This root concept contains all data elements of the HealthcareProvider building block.",
         "alias": [
           "Zorgaanbieder"
@@ -312,7 +312,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
         "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
-        "short": "The organization's identification number.",
+        "short": "Healthcare provider identification number",
         "definition": "The organization's identification number.",
         "alias": [
           "ZorgaanbiederIdentificatienummer"
@@ -335,7 +335,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationName",
         "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationName",
-        "short": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "short": "Organization name",
         "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
         "alias": [
           "OrganisatieNaam"
@@ -358,7 +358,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.DepartmentSpecialty",
         "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.DepartmentSpecialty",
-        "short": "The specialty of the healthcare provider's department where the procedure has been performed.",
+        "short": "Department specialty",
         "definition": "The specialty of the healthcare provider's department where the procedure has been performed.",
         "alias": [
           "AfdelingSpecialisme"
@@ -385,7 +385,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationType",
         "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationType",
-        "short": "The type of healthcare provider.",
+        "short": "Organization type",
         "definition": "The type of healthcare provider.",
         "alias": [
           "OrganisatieType"
@@ -412,7 +412,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer",
         "path": "bbs-lm-Study.Procedure.Performer",
-        "short": "The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the health professional. In the context of image exchange, the Performing Physician should be conveyed here, and NOT the laboratory technician who makes the images (i.e. the Operator).",
+        "short": "Performer",
         "definition": "The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the health professional. In the context of image exchange, the Performing Physician should be conveyed here, and NOT the laboratory technician who makes the images (i.e. the Operator).",
         "alias": [
           "Uitvoerder"
@@ -435,7 +435,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional",
-        "short": "Root concept of the HealthProfessional building block. This root concept contains all data elements of the HealthProfessional building block.",
+        "short": "Health professional",
         "definition": "Root concept of the HealthProfessional building block. This root concept contains all data elements of the HealthProfessional building block.",
         "alias": [
           "Zorgverlener"
@@ -463,7 +463,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
-        "short": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.",
+        "short": "Health professional identification number",
         "definition": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.",
         "alias": [
           "ZorgverlenerIdentificatienummer"
@@ -486,7 +486,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation",
-        "short": "Health professional's full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.",
+        "short": "Name information",
         "definition": "Health professional's full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.",
         "alias": [
           "Naamgegevens"
@@ -509,7 +509,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.FirstNames",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.FirstNames",
-        "short": "The first names of the health professional.",
+        "short": "First names",
         "definition": "The first names of the health professional.",
         "alias": [
           "Voornamen"
@@ -532,7 +532,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.Initials",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.Initials",
-        "short": "The initials of the health professional.",
+        "short": "Initials",
         "definition": "The initials of the health professional.",
         "alias": [
           "Initialen"
@@ -555,7 +555,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName",
-        "short": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
+        "short": "Last name",
         "definition": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
         "alias": [
           "Geslachtsnaam"
@@ -578,7 +578,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.Prefix",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.Prefix",
-        "short": "Prefix to the last name of the health professional.",
+        "short": "Prefix",
         "definition": "Prefix to the last name of the health professional.",
         "alias": [
           "Voorvoegsels"
@@ -601,7 +601,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
-        "short": "The last name of the health professional.",
+        "short": "Last name",
         "definition": "The last name of the health professional.",
         "alias": [
           "Achternaam"
@@ -624,7 +624,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.Specialty",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.Specialty",
-        "short": "Health professional's medical specialty.",
+        "short": "Specialty",
         "definition": "Health professional's medical specialty.",
         "alias": [
           "Specialisme"
@@ -656,7 +656,7 @@
       {
         "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
         "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
-        "short": "The role the health professional fulfils in the healthcare process.",
+        "short": "Health professional role",
         "definition": "The role the health professional fulfils in the healthcare process.",
         "alias": [
           "ZorgverlenerRol"
@@ -683,7 +683,7 @@
       {
         "id": "bbs-lm-Study.ImageInformation",
         "path": "bbs-lm-Study.ImageInformation",
-        "short": "Imaging study for images and reports: subset image information",
+        "short": "Image information",
         "definition": "Imaging study for images and reports: subset image information",
         "alias": [
           "Beeldinformatie"
@@ -706,7 +706,7 @@
       {
         "id": "bbs-lm-Study.ImageInformation.ImageInformationIdentificationNumber",
         "path": "bbs-lm-Study.ImageInformation.ImageInformationIdentificationNumber",
-        "short": "Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.",
+        "short": "Image information identification number",
         "definition": "Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.",
         "alias": [
           "BeeldinformatieIdentificatienummer"
@@ -729,7 +729,7 @@
       {
         "id": "bbs-lm-Study.ImageInformation.ImageDateTime",
         "path": "bbs-lm-Study.ImageInformation.ImageDateTime",
-        "short": "Date/time on which the radiological examination has been performed on the patient and/or the images have been made.",
+        "short": "Image date time",
         "definition": "Date/time on which the radiological examination has been performed on the patient and/or the images have been made.",
         "alias": [
           "BeeldDatumTijd"
@@ -752,7 +752,7 @@
       {
         "id": "bbs-lm-Study.ImageInformation.ImageTitle",
         "path": "bbs-lm-Study.ImageInformation.ImageTitle",
-        "short": "The title of the image.",
+        "short": "Image title",
         "definition": "The title of the image.",
         "alias": [
           "BeeldTitel"
@@ -775,7 +775,7 @@
       {
         "id": "bbs-lm-Study.ImageInformation.Images",
         "path": "bbs-lm-Study.ImageInformation.Images",
-        "short": "The images themselves. In DICOM the images are structured in series.",
+        "short": "Images",
         "definition": "The images themselves. In DICOM the images are structured in series.",
         "alias": [
           "Beelden"
@@ -798,7 +798,7 @@
       {
         "id": "bbs-lm-Study.ImageInformation.Modality",
         "path": "bbs-lm-Study.ImageInformation.Modality",
-        "short": "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine.",
+        "short": "Modality",
         "definition": "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine.",
         "alias": [
           "Modaliteit"
@@ -825,7 +825,7 @@
       {
         "id": "bbs-lm-Study.ReportInformation",
         "path": "bbs-lm-Study.ReportInformation",
-        "short": "Imaging study for images and reports: subset report information",
+        "short": "Report information",
         "definition": "Imaging study for images and reports: subset report information",
         "alias": [
           "Verslaginformatie"
@@ -848,7 +848,7 @@
       {
         "id": "bbs-lm-Study.ReportInformation.ReportInformationIdentificationNumber",
         "path": "bbs-lm-Study.ReportInformation.ReportInformationIdentificationNumber",
-        "short": "Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.",
+        "short": "Report information identification number",
         "definition": "Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.",
         "alias": [
           "VerslaginformatieIdentificatienummer"
@@ -871,7 +871,7 @@
       {
         "id": "bbs-lm-Study.ReportInformation.ReportDateTime",
         "path": "bbs-lm-Study.ReportInformation.ReportDateTime",
-        "short": "Date/time on which the report has been autorised and/or made available.",
+        "short": "Report date time",
         "definition": "Date/time on which the report has been autorised and/or made available.",
         "alias": [
           "VerslagDatumTijd"
@@ -894,7 +894,7 @@
       {
         "id": "bbs-lm-Study.ReportInformation.ReportTitle",
         "path": "bbs-lm-Study.ReportInformation.ReportTitle",
-        "short": "The title of the report.",
+        "short": "Report title",
         "definition": "The title of the report.",
         "alias": [
           "VerslagTitel"
@@ -917,7 +917,7 @@
       {
         "id": "bbs-lm-Study.ReportInformation.Report",
         "path": "bbs-lm-Study.ReportInformation.Report",
-        "short": "The report itself.",
+        "short": "Report",
         "definition": "The report itself.",
         "alias": [
           "Verslag"
@@ -940,7 +940,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation",
         "path": "bbs-lm-Study.AccessionNumberInformation",
-        "short": "Information on the Accession Number",
+        "short": "Accession Number information",
         "definition": "Information on the Accession Number",
         "alias": [
           "AccessionNumberInformatie"
@@ -963,7 +963,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AccessionNumber",
         "path": "bbs-lm-Study.AccessionNumberInformation.AccessionNumber",
-        "short": "Locally unique ID (in the RIS) that has been assigned to the imaging study.",
+        "short": "Accession Number",
         "definition": "Locally unique ID (in the RIS) that has been assigned to the imaging study.",
         "alias": [
           "AccessionNumber"
@@ -986,7 +986,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority",
         "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority",
-        "short": "Assigning authority that issued the Accession Number.",
+        "short": "Assigning authority",
         "definition": "Assigning authority that issued the Accession Number.",
         "alias": [
           "UitgevendeInstantie"
@@ -1009,7 +1009,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
         "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
-        "short": "Root concept of the HealthcareProvider building block. This root concept contains all data elements of the HealthcareProvider building block.",
+        "short": "Healthcare provider",
         "definition": "Root concept of the HealthcareProvider building block. This root concept contains all data elements of the HealthcareProvider building block.",
         "alias": [
           "Zorgaanbieder"
@@ -1037,7 +1037,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
         "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
-        "short": "The organization's identification number.",
+        "short": "Healthcare provider identification number",
         "definition": "The organization's identification number.",
         "alias": [
           "ZorgaanbiederIdentificatienummer"
@@ -1060,7 +1060,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName",
         "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName",
-        "short": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "short": "Organization name",
         "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
         "alias": [
           "OrganisatieNaam"
@@ -1083,7 +1083,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
         "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
-        "short": "The specialty of the healthcare provider's department.",
+        "short": "Department specialty",
         "definition": "The specialty of the healthcare provider's department.",
         "alias": [
           "AfdelingSpecialisme"
@@ -1110,7 +1110,7 @@
       {
         "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
         "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
-        "short": "The type of healthcare provider.",
+        "short": "Organization type",
         "definition": "The type of healthcare provider.",
         "alias": [
           "OrganisatieType"
@@ -1137,7 +1137,7 @@
       {
         "id": "bbs-lm-Study.StudyInstanceUID",
         "path": "bbs-lm-Study.StudyInstanceUID",
-        "short": "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS.",
+        "short": "Study Instance UID",
         "definition": "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS.",
         "alias": [
           "StudyInstanceUID"
