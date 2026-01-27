@@ -14,13 +14,14 @@ Description: "DICOM modalities that need to be supported in the MedMij use case 
 * insert PublisherAndContact
 * $DCM#CR "Computed Radiography"
 * $DCM#CT "Computed Tomography"
+* $DCM#DX "Digital Radiography"
 * $DCM#ES "Endoscopy"
+* $DCM#MG "Mammography"
 * $DCM#MR "Magnetic Resonance"
 * $DCM#NM "Nuclear Medicine"
-* $DCM#OT "Other"
+* $DCM#OT "Other Modality"
 * $DCM#PT "Positron emission tomography"
 * $DCM#RF "Radiofluoroscopy"
-* $DCM#SC "Secondary Capture"
 * $DCM#US "Ultrasound"
 * $DCM#XA "X-Ray Angiography"
 

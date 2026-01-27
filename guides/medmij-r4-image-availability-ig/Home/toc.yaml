@@ -5,12 +5,12 @@
 - name: Technical design
   filename: Technical-design.page.md
 - name: Artifact index
-  filename: Artifact-index.page.md
+  filename: Artifact-Index
 - name: Dependencies
   filename: Dependencies.page.md
 - name: Test material
   filename: Test-material.page.md
-- name: Solution architecture
-  filename: Solution-architecture.page.md
+- name: Architecture
+  filename: Architecture
 - name: Release notes
   filename: Release-notes.page.md

@@ -1,0 +1,1162 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "bbs-lm-Study",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study",
+  "name": "LmStudy",
+  "title": "Study",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Imaging study including images and reports.",
+  "purpose": "This LogicalModel represents the Study building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid).",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "bbs-dataset-100-alpha2-20240208",
+      "name": "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208",
+      "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
+    },
+    {
+      "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
+    },
+    {
+      "identity": "SNOMED",
+      "name": "SNOMED CT",
+      "uri": "http://snomed.info/sct"
+    }
+  ],
+  "kind": "logical",
+  "abstract": true,
+  "type": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "bbs-lm-Study",
+        "path": "bbs-lm-Study",
+        "short": "Study",
+        "definition": "Imaging study including images and reports.",
+        "alias": [
+          "Onderzoek"
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-66",
+            "comment": "Study"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure",
+        "path": "bbs-lm-Study.Procedure",
+        "short": "Procedure",
+        "definition": "Root concept of the Procedure building block. This root concept contains all data elements of the Procedure building block.",
+        "alias": [
+          "Verrichting"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-173",
+            "comment": "Procedure"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "71388002",
+            "comment": "verrichting"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.ProcedureStartDate",
+        "path": "bbs-lm-Study.Procedure.ProcedureStartDate",
+        "short": "Procedure start date",
+        "definition": "Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken.",
+        "alias": [
+          "VerrichtingStartDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-174",
+            "comment": "ProcedureStartDate"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.ProcedureEndDate",
+        "path": "bbs-lm-Study.Procedure.ProcedureEndDate",
+        "short": "Procedure end date",
+        "definition": "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
+        "alias": [
+          "VerrichtingEindDatum"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-175",
+            "comment": "ProcedureEndDate"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.ProcedureType",
+        "path": "bbs-lm-Study.Procedure.ProcedureType",
+        "short": "Procedure type",
+        "definition": "Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).",
+        "alias": [
+          "VerrichtingType"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-176",
+            "comment": "ProcedureType"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation",
+        "path": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation",
+        "short": "Procedure anatomical location",
+        "definition": "Anatomical location which is the focus of the procedure.",
+        "alias": [
+          "VerrichtingAnatomischeLocatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-178",
+            "comment": "ProcedureAnatomicalLocation"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "405813007",
+            "comment": "directe locatie van verrichting"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Location",
+        "path": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Location",
+        "short": "Location",
+        "definition": "Localisation on/in the body.",
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.19--20240205123345"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-179",
+            "comment": "Location"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "363698007",
+            "comment": "locatie van bevinding"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Laterality",
+        "path": "bbs-lm-Study.Procedure.ProcedureAnatomicalLocation.Laterality",
+        "short": "Laterality",
+        "definition": "Laterality adds information about body site to the anatomical location, e.g. left.",
+        "alias": [
+          "Lateraliteit"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.7.2--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-180",
+            "comment": "Laterality"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "272741003",
+            "comment": "lateraliteit"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Location",
+        "path": "bbs-lm-Study.Procedure.Location",
+        "short": "Location",
+        "definition": "The healthcare center where the procedure was, is or will be carried out.",
+        "alias": [
+          "Locatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-185",
+            "comment": "Location"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider",
+        "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider",
+        "short": "Healthcare provider",
+        "definition": "Root concept of the HealthcareProvider building block. This root concept contains all data elements of the HealthcareProvider building block.",
+        "alias": [
+          "Zorgaanbieder"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-521",
+            "comment": "HealthcareProvider"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "257622000",
+            "comment": "zorginstelling"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "short": "Healthcare provider identification number",
+        "definition": "The organization's identification number.",
+        "alias": [
+          "ZorgaanbiederIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-522",
+            "comment": "HealthcareProviderIdentificationNumber"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationName",
+        "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationName",
+        "short": "Organization name",
+        "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "alias": [
+          "OrganisatieNaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-523",
+            "comment": "OrganizationName"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.DepartmentSpecialty",
+        "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.DepartmentSpecialty",
+        "short": "Department specialty",
+        "definition": "The specialty of the healthcare provider's department where the procedure has been performed.",
+        "alias": [
+          "AfdelingSpecialisme"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-524",
+            "comment": "DepartmentSpecialty"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationType",
+        "path": "bbs-lm-Study.Procedure.Location.HealthcareProvider.OrganizationType",
+        "short": "Organization type",
+        "definition": "The type of healthcare provider.",
+        "alias": [
+          "OrganisatieType"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-546",
+            "comment": "OrganizationType"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer",
+        "path": "bbs-lm-Study.Procedure.Performer",
+        "short": "Performer",
+        "definition": "The health professional who carried out or will carry out the procedure. In most cases, only the medical specialty is entered, and not the name of the health professional. In the context of image exchange, the Performing Physician should be conveyed here, and NOT the laboratory technician who makes the images (i.e. the Operator).",
+        "alias": [
+          "Uitvoerder"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-187",
+            "comment": "Performer"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional",
+        "short": "Health professional",
+        "definition": "Root concept of the HealthProfessional building block. This root concept contains all data elements of the HealthProfessional building block.",
+        "alias": [
+          "Zorgverlener"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-383",
+            "comment": "HealthProfessional"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "223366009",
+            "comment": "gezondheidszorgpersoneel"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalIdentificationNumber",
+        "short": "Health professional identification number",
+        "definition": "The healthcare provider identification number is a number that uniquely identifies the healthcare provider.",
+        "alias": [
+          "ZorgverlenerIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-384",
+            "comment": "HealthProfessionalIdentificationNumber"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation",
+        "short": "Name information",
+        "definition": "Health professional's full name. If a health professional identification number is entered, it will be the name as listed in UZI, AGB or by the healthcare center.",
+        "alias": [
+          "Naamgegevens"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-385",
+            "comment": "NameInformation"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.FirstNames",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.FirstNames",
+        "short": "First names",
+        "definition": "The first names of the health professional.",
+        "alias": [
+          "Voornamen"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-386",
+            "comment": "FirstNames"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.Initials",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.Initials",
+        "short": "Initials",
+        "definition": "The initials of the health professional.",
+        "alias": [
+          "Initialen"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-387",
+            "comment": "Initials"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName",
+        "short": "Last name",
+        "definition": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
+        "alias": [
+          "Geslachtsnaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-390",
+            "comment": "LastName"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.Prefix",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.Prefix",
+        "short": "Prefix",
+        "definition": "Prefix to the last name of the health professional.",
+        "alias": [
+          "Voorvoegsels"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-391",
+            "comment": "Prefix"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.NameInformation.LastName.LastName",
+        "short": "Last name",
+        "definition": "The last name of the health professional.",
+        "alias": [
+          "Achternaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-392",
+            "comment": "LastName"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.Specialty",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.Specialty",
+        "short": "Specialty",
+        "definition": "Health professional's medical specialty.",
+        "alias": [
+          "Specialisme"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.22--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-397",
+            "comment": "Specialty"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "394658006",
+            "comment": "klinisch specialisme"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
+        "path": "bbs-lm-Study.Procedure.Performer.HealthProfessional.HealthProfessionalRole",
+        "short": "Health professional role",
+        "definition": "The role the health professional fulfils in the healthcare process.",
+        "alias": [
+          "ZorgverlenerRol"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.1.5--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-422",
+            "comment": "HealthProfessionalRole"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ImageInformation",
+        "path": "bbs-lm-Study.ImageInformation",
+        "short": "Image information",
+        "definition": "Imaging study for images and reports: subset image information",
+        "alias": [
+          "Beeldinformatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-67",
+            "comment": "ImageInformation"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ImageInformation.ImageInformationIdentificationNumber",
+        "path": "bbs-lm-Study.ImageInformation.ImageInformationIdentificationNumber",
+        "short": "Image information identification number",
+        "definition": "Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.",
+        "alias": [
+          "BeeldinformatieIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-784",
+            "comment": "ImageInformationIdentificationNumber"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ImageInformation.ImageDateTime",
+        "path": "bbs-lm-Study.ImageInformation.ImageDateTime",
+        "short": "Image date time",
+        "definition": "Date/time on which the radiological examination has been performed on the patient and/or the images have been made.",
+        "alias": [
+          "BeeldDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-69",
+            "comment": "DateTime"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ImageInformation.ImageTitle",
+        "path": "bbs-lm-Study.ImageInformation.ImageTitle",
+        "short": "Image title",
+        "definition": "The title of the image.",
+        "alias": [
+          "BeeldTitel"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-1",
+            "comment": "ImageTitle"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ImageInformation.Images",
+        "path": "bbs-lm-Study.ImageInformation.Images",
+        "short": "Images",
+        "definition": "The images themselves. In DICOM the images are structured in series.",
+        "alias": [
+          "Beelden"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-689",
+            "comment": "Images"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ImageInformation.Modality",
+        "path": "bbs-lm-Study.ImageInformation.Modality",
+        "short": "Modality",
+        "definition": "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine.",
+        "alias": [
+          "Modaliteit"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://medmij.nl/fhir/ValueSet/ModalityCombined"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-5",
+            "comment": "Modality"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ReportInformation",
+        "path": "bbs-lm-Study.ReportInformation",
+        "short": "Report information",
+        "definition": "Imaging study for images and reports: subset report information",
+        "alias": [
+          "Verslaginformatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-99",
+            "comment": "ReportInformation"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ReportInformation.ReportInformationIdentificationNumber",
+        "path": "bbs-lm-Study.ReportInformation.ReportInformationIdentificationNumber",
+        "short": "Report information identification number",
+        "definition": "Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.",
+        "alias": [
+          "VerslaginformatieIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-100",
+            "comment": "ReportInformationIdentificationNumber"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ReportInformation.ReportDateTime",
+        "path": "bbs-lm-Study.ReportInformation.ReportDateTime",
+        "short": "Report date time",
+        "definition": "Date/time on which the report has been autorised and/or made available.",
+        "alias": [
+          "VerslagDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-101",
+            "comment": "DateTime"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ReportInformation.ReportTitle",
+        "path": "bbs-lm-Study.ReportInformation.ReportTitle",
+        "short": "Report title",
+        "definition": "The title of the report.",
+        "alias": [
+          "VerslagTitel"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-2",
+            "comment": "ReportTitle"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.ReportInformation.Report",
+        "path": "bbs-lm-Study.ReportInformation.Report",
+        "short": "Report",
+        "definition": "The report itself.",
+        "alias": [
+          "Verslag"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-dataset-100-alpha2-20240208",
+            "map": "bbs-dataelement-690",
+            "comment": "Report"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation",
+        "path": "bbs-lm-Study.AccessionNumberInformation",
+        "short": "Accession Number information",
+        "definition": "Information on the Accession Number",
+        "alias": [
+          "AccessionNumberInformatie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-6",
+            "comment": "AccessionNumberInformation"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AccessionNumber",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AccessionNumber",
+        "short": "Accession Number",
+        "definition": "Locally unique ID (in the RIS) that has been assigned to the imaging study.",
+        "alias": [
+          "AccessionNumber"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-3",
+            "comment": "AccessionNumber"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority",
+        "short": "Assigning authority",
+        "definition": "Assigning authority that issued the Accession Number.",
+        "alias": [
+          "UitgevendeInstantie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-7",
+            "comment": "AssigningAuthority"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider",
+        "short": "Healthcare provider",
+        "definition": "Root concept of the HealthcareProvider building block. This root concept contains all data elements of the HealthcareProvider building block.",
+        "alias": [
+          "Zorgaanbieder"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-8",
+            "comment": "HealthcareProvider"
+          },
+          {
+            "identity": "SNOMED",
+            "map": "257622000",
+            "comment": "zorginstelling"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.HealthcareProviderIdentificationNumber",
+        "short": "Healthcare provider identification number",
+        "definition": "The organization's identification number.",
+        "alias": [
+          "ZorgaanbiederIdentificatienummer"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-9",
+            "comment": "HealthcareProviderIdentificationNumber"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName",
+        "short": "Organization name",
+        "definition": "Name of the organization. If an identification number is given, the name must match the name that corresponds to the identification number.",
+        "alias": [
+          "OrganisatieNaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-10",
+            "comment": "OrganizationName"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty",
+        "short": "Department specialty",
+        "definition": "The specialty of the healthcare provider's department.",
+        "alias": [
+          "AfdelingSpecialisme"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-11",
+            "comment": "DepartmentSpecialty"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
+        "path": "bbs-lm-Study.AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType",
+        "short": "Organization type",
+        "definition": "The type of healthcare provider.",
+        "alias": [
+          "OrganisatieType"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.17.2.3--20200901000000"
+        },
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-12",
+            "comment": "OrganizationType"
+          }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study.StudyInstanceUID",
+        "path": "bbs-lm-Study.StudyInstanceUID",
+        "short": "Study Instance UID",
+        "definition": "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS.",
+        "alias": [
+          "StudyInstanceUID"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-4",
+            "comment": "StudyInstanceUID"
+          }
+        ]
+      }
+    ]
+  }
+}

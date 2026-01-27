@@ -12,7 +12,7 @@ Er bestaan op dit moment geen overkoepelende nationale richtlijnen voor het unie
 ## Duplicaatdetectie
 Duplicaatdetectie is het proces waarbij kopieën van gegevens worden geïdentificeerd. In de ideale situatie stelt elke zorgverlener uitsluitend zijn eigen beelden en verslagen beschikbaar. In de praktijk blijkt dit echter lastig door het ontbreken van domeinoverstijgende afspraken. Duplicaatdetectie via automatische detectie op basis van unieke kenmerken, is daarom noodzakelijk, zodat er voor de burger een bruikbaar en leesbaar overzicht van gegevens in de PGO wordt weergegeven.
 
-In sectie 2.5 van het {{pagelink:TO, text: technisch ontwerp}} is een overzicht weergegeven van alle relevante identificatienummers voor de uitwisseling van beelden en verslagen. In het bijzonder bevat dit overzicht extra toelichting voor de identificatienummers die gebruikt worden voor duplicaatdetectie. 
+In het {{pagelink:TD, text: technisch ontwerp, anchor: Identifiers}} is een overzicht weergegeven van alle relevante identificatienummers voor de uitwisseling van beelden en verslagen. In het bijzonder bevat dit overzicht extra toelichting voor de identificatienummers die gebruikt worden voor duplicaatdetectie. 
 
 ## Detectie en identificatie duplicaten 
 
@@ -24,7 +24,7 @@ Als twee verslagen een identiek VerslaginformatieIdentificatienummer hebben, kan
 
 ### Beelden 
 Duplicaatdetectie van medische beelden gebeurt op basis van:
-- Study Instance UID ([MedMij dataset](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/blob/main/dataset/Dataset_MedMij_Beeldbeschikbaarheid_1.0.0-rc.1.xlsx), bbs-medmij-dataelement-4): het unieke identificatienummer van een beeldvormend onderzoek binnen DICOM.
+- Study Instance UID ({{pagelink:LM, text: MedMij dataset}}, bbs-medmij-dataelement-4): het unieke identificatienummer van een beeldvormend onderzoek binnen DICOM.
 - BeeldinformatieIdentificatienummer ([Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-784): het unieke ID van het beeld in een PACS of NVA.
 
 Als twee beelden een identiek Study Instance UID hebben, kan worden aangenomen dat deze beelden duplicaten zijn. Mocht het Study Instance UID leeg zijn bij (één van) de beelden, dan moet het BeeldinformatieIdentificatienummer van beide beelden vergeleken worden. Als deze laatste identificatienummers in dat geval identiek zijn, kan worden aangenomen dat de betreffende beelden duplicaten zijn.
