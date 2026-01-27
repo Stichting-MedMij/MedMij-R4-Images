@@ -36,7 +36,7 @@ De tabelweergave biedt gebruikers een compact overzicht van beelden en verslagen
 **Figuur 1: Voorbeeld van de tabelweergave**
 
 #### Tijdlijnweergave
-De tijdlijnweergave biedt gebruikers een lineair uitgebreid overzicht van alle beelden en verslagen die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave van de tijdlijn.
+De tijdlijnweergave biedt gebruikers een tijdlijn van alle beelden en verslagen die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave van de tijdlijn.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Tijdlijnweergave.png}}
 
@@ -59,13 +59,13 @@ Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en van
 ### Relevante gegevens
 In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverichtlijn.
 
-| Naam dataelement | Code dataelement |Advies weergavetekst in PGO | Voorbeeld | Weergeven |
+| Naam dataelement | Id dataelement | Advies weergavetekst in PGO | Voorbeeld | Weergeven |
 | --- | --- | --- | --- | --- |
 | VerrichtingStartDatum | bbs-dataelement-174 | Onderzoeksdatum | 31-01-2020 | Ja  |
 | BeeldTitel | bbs-medmij-dataelement-1 | Naam onderzoek | C. van Wijk radiologiebeelden | Ja, indien beschikbaar  |
 | VerslagTitel | bbs-medmij-dataelement-2 | Naam onderzoek | Cardiologiebeelden C. van Wijk | Ja, indien beschikbaar  |
 | OrganisatieNaam | bbs-dataelement-523 | Zorgaanbieder | OLVG Oost | Ja  |
-| Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) | bbs-dataelement-187 | Uitvoerend zorgverlener | J. ter Velde | Ja, indien beschikbaar |
+| Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) | bbs-dataelement-385 | Uitvoerend zorgverlener | J. ter Velde | Ja, indien beschikbaar |
 | Modaliteit | bbs-medmij-dataelement-5 | Type beeld | CT | Ja, indien het een beeld betreft |
 
 **Tabel 1: Relevante gegevens m.b.t. de weergaverichtlijn**

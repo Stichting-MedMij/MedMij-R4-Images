@@ -38,8 +38,8 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
-| 2. | Voor elk document (beeld of verslag) wordt basisinformatie getoond, namelijk: Onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174), type document (Beelden, bbs-dataelement-689; Verslag, bbs-dataelement-690), naam onderzoek (BeeldTitel, bbs-medmij-dataelement-1; VerslagTitel, bbs-medmij-dataelement-2), zorgaanbieder (OrganisatieNaam, bbs-dataelement-523), uitvoerend zorgverlener (indien beschikbaar) (Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam), bbs-dataelement-187) en type beeld (Modaliteit, bbs-medmij-dataelement-5). |
-| 3. | Als de titel van het beeld of verslag ontbreekt, dan wordt dit expliciet vermeld in de betreffende overzichtsregel.  |
+| 2. | Voor elk document (beeld of verslag) wordt basisinformatie getoond, namelijk: <br/> <ul> <li> onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174); <li> type document (i.e. beeld of verslag); <li> naam onderzoek (BeeldTitel, bbs-medmij-dataelement-1; VerslagTitel, bbs-medmij-dataelement-2); <li> zorgaanbieder (OrganisatieNaam, bbs-dataelement-523); <li> uitvoerend zorgverlener (indien beschikbaar) (Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam), bbs-dataelement-385); <li> type beeld (Modaliteit, bbs-medmij-dataelement-5). |
+| 3. | Als de titel van het beeld of verslag ontbreekt, dan wordt dit expliciet vermeld in de betreffende overzichtsregel. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | 7. | Als het laden langer duurt dan 60 seconden, dient de gebruiker te worden geïnformeerd. |
 | 8. | De viewer opent in hetzelfde venster of in een herkenbare pagina binnen de PGO (geen verwarring met andere portalen). | 
 | 9. | De gebruiker kan in- en uitzoomen bij het bekijken van het beeld. | 
-| 10. | De gebruiker kan door verschillende beelden scrollen of deze afspelen als een filmpje wanneer een bestand meerdere beelden bevat (bijvoorbeeld bij een CT of MRI). | 
+| 10. | De gebruiker kan door verschillende beelden scrollen of deze afspelen als een filmpje wanneer een document meerdere beelden bevat (bijvoorbeeld bij een CT of MRI). | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -74,9 +74,9 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Bij elk verslag of beeld wordt automatisch gecontroleerd of er een bijbehorend gekoppeld item is (i.e. verslag bij beeld of beeld bij verslag). |
+| 1. | Bij elk verslag of beeld wordt automatisch gecontroleerd of er een bijbehorend gekoppeld document is (i.e. verslag bij beeld of beeld bij verslag). |
 | 2. | Indien gekoppeld, worden deze gegevens samen weergegeven of duidelijk visueel gelinkt. |
-| 3. | De koppeling gebeurt op basis van een gedeelde unieke identifier (Accession Number). |
+| 3. | De koppeling gebeurt op basis van een gedeelde unieke identifier (AccessionNumber, bbs-medmij-dataelement-3). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -88,7 +88,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | 2. | De sortering kan handmatig worden gewijzigd. |
 | 3. | De sortering blijft behouden bij filteracties door de gebruiker. |
 | 4. | De onderzoeksdatum wordt zichtbaar getoond bij ieder verslag/beeld. |
-| 5. | Indien twee items dezelfde onderzoeksdatum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
+| 5. | Indien twee documenten dezelfde onderzoeksdatum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
 | 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. | 
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -98,7 +98,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Beelden en verslagen van meerdere zorgaanbieders worden in één gecombineerd overzicht weergegeven. |
-| 2. | Elk item in het overzicht toont duidelijk de naam van de zorgaanbieder waar het onderzoek heeft plaatsgevonden. |
+| 2. | Elk document in het overzicht toont duidelijk de naam van de zorgaanbieder waar het onderzoek heeft plaatsgevonden. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -108,7 +108,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | --- | --- |
 | 1. | De gebruiker kan een datumfilter instellen in het overzicht van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
 | 2. | Het filter werkt op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174). |
-| 3. | Er is standaard geen filter actief; alle items worden getoond tot de gebruiker zelf filtert. |
+| 3. | Er is standaard geen filter actief; alle documenten worden getoond tot de gebruiker zelf filtert. |
 | 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. | 
 | 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. | 
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
@@ -126,17 +126,17 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 9 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een button op mijn device | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
+| 9 | Zorggebruiker | Beelden kunnen downloaden in het originele bestandsformaat via een knop in mijn PGO | Zelf beschikking heb over mijn beelden en deze kan delen met andere zorgverleners of bewaren voor mijn eigen administratie | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | De gebruiker ziet bij elk beschikbaar beeld of onderzoek een duidelijke downloadknop. |
+| 1. | Bij elk beschikbaar beeld is een duidelijke knop zichtbaar met het label 'Download beeld'. |
 | 2. | De gebruiker kan kiezen om dit op te slaan in: <br/> <ul> <li> [DICOM-formaat](https://dicom.nema.org/medical/dicom/2018d/output/html/part10.html) (standaard voor beelden); <li> JPEG-formaat (voor persoonlijk gebruik of eenvoudige weergave). |
 | 3. | Wanneer de gebruiker kiest voor het originele formaat (DICOM), wordt een melding getoond met: <br/> <ul> <li> de aanduiding dat het om een DICOM-bestand gaat; <li> een korte uitleg dat voor het openen van dit bestand een geschikte viewer nodig is; <li> een waarschuwing dat het bestand persoonlijke data bevat; <li> de verwachte bestandsgrootte (MB/GB). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 10 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een button op mijn device | Zelf beschikking heb over mijn verslagen | S |
+| 10 | Zorggebruiker | Verslagen van beelden kunnen downloaden via een knop in mijn PGO | Zelf beschikking heb over mijn verslagen | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
@@ -152,7 +152,7 @@ Naast de requirements is ook de {{pagelink:Weergaverichtlijn, text: weergaverich
 | --- | --- |
 | 1. | De gebruiker ziet een filter waarin de beschikbare zorgaanbieders worden weergegeven. |
 | 2. | Na selectie van een zorgaanbieder worden alleen de bijbehorende beelden en verslagen getoond in het overzicht. |
-| 3. | In de lijst van beelden en verslagen is duidelijk aangegeven welke zorgaanbieder het item heeft aangeleverd. |
+| 3. | In de lijst van beelden en verslagen is duidelijk aangegeven welke zorgaanbieder het document heeft aangeleverd. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
