@@ -69,7 +69,7 @@
 | ImageInformation.ImageInformationIdentificationNumber | 14206553-b245-4f16-bd9b-78e3b667d879 |
 | ImageInformation.ImageDateTime | 17-01-2025 08:44 |
 | ImageInformation.ImageTitle | MedMij PGO CT |
-| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/1.3.6.1.4.1.40371.1.2.34918.38044.4213.28506.36249.13159.15375/instances/1.3.6.1.4.1.40371.1.2.54669.8988.31283.18427.40504.58602.13002</span> |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/2.25.256349895707598734186138072546186518851/instances/2.25.72595492073934071827553043814438953233</span> |
 | ImageInformation.Modality | Computed Tomography (code 'CT' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | |
 | ReportInformation.ReportDateTime | |
@@ -103,7 +103,7 @@
 | ImageInformation.ImageInformationIdentificationNumber | 63bab3df-700c-4640-906c-b75e5d028437 |
 | ImageInformation.ImageDateTime | 25-02-2025 13:53 |
 | ImageInformation.ImageTitle | CR CWK MedMij |
-| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.274063247206700392104463021119046041322/instances/2.25.14847566227272909846770863478608943689</span> |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.108847635469312156146643524434054792831/instances/2.25.309231887273872075720754766855723493608</span> |
 | ImageInformation.Modality | Computed Radiography (code 'CR' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | cc9008c2-8a08-457e-a928-c42d43b1efb7 |
 | ReportInformation.ReportDateTime | 25-02-2025 14:07 |
@@ -137,7 +137,7 @@
 | ImageInformation.ImageInformationIdentificationNumber | 550e8400-e29b-41d4-a716-446655440000 |
 | ImageInformation.ImageDateTime | 16-10-2025 16:11 |
 | ImageInformation.ImageTitle | CR Thorax |
-| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.92864427782257641375402563416912250814/instances/2.25.143915543518206872168207688572280834499</span> |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.167108995133488949839452387666407162515/instances/2.25.261563445634063596325870299400694071686</span> |
 | ImageInformation.Modality | Digital Radiography (code 'DX' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | |
 | ReportInformation.ReportDateTime | |

@@ -60,7 +60,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/1.3.6.1.4.1.40371.1.2.34918.38044.4213.28506.36249.13159.15375/instances/1.3.6.1.4.1.40371.1.2.54669.8988.31283.18427.40504.58602.13002" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/2.25.256349895707598734186138072546186518851/instances/2.25.72595492073934071827553043814438953233" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "MedMij PGO CT" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-01-17T08:44:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -101,7 +101,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.274063247206700392104463021119046041322/instances/2.25.14847566227272909846770863478608943689" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.108847635469312156146643524434054792831/instances/2.25.309231887273872075720754766855723493608" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "CR CWK MedMij" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-02-25T13:53:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -188,7 +188,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.92864427782257641375402563416912250814/instances/2.25.143915543518206872168207688572280834499" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.167108995133488949839452387666407162515/instances/2.25.261563445634063596325870299400694071686" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "CR Thorax" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-10-16T16:11:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset

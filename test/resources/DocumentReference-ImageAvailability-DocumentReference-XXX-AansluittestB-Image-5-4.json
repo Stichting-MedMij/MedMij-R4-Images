@@ -62,7 +62,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.92864427782257641375402563416912250814/instances/2.25.143915543518206872168207688572280834499",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.167108995133488949839452387666407162515/instances/2.25.261563445634063596325870299400694071686",
         "title": "CR Thorax",
         "creation": "2025-10-16T16:11:00+02:00"
       },
