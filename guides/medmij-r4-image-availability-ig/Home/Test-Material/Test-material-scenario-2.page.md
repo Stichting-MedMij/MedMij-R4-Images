@@ -35,7 +35,7 @@
 | ImageInformation.ImageInformationIdentificationNumber | 49b82e94-cf06-4507-b5a3-361d5937e77d |
 | ImageInformation.ImageDateTime | 10-02-1990 12:00 |
 | ImageInformation.ImageTitle | longfoto |
-| ImageInformation.Images | |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.77615907425522706317163091876421984542/series/2.25.214382059335083939558620318712574547160/instances/2.25.11642993451842870396897140495770614031</span> |
 | ImageInformation.Modality | Other (code 'OT' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | |
 | ReportInformation.ReportDateTime | |
@@ -74,7 +74,7 @@
 | ReportInformation.ReportInformationIdentificationNumber | c4a902d3-1259-4881-9dd1-17376cef5ce5 |
 | ReportInformation.ReportDateTime | 06-02-1993 12:00 |
 | ReportInformation.ReportTitle | longfoto |
-| ReportInformation.Report | |
+| ReportInformation.Report | Binary/ImageAvailability-Binary-Report-2-2 |
 | AccessionNumberInformation.AccessionNumber | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | |
@@ -103,12 +103,12 @@
 | ImageInformation.ImageInformationIdentificationNumber | 57b49159-5c9e-424d-8a09-b240c13a395d |
 | ImageInformation.ImageDateTime | 06-02-1993 12:00 |
 | ImageInformation.ImageTitle | longfoto |
-| ImageInformation.Images | |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456789/series/2.25.99377514515580500840839615593451061523/instances/2.25.258000159807854729618851821502203021554</span> |
 | ImageInformation.Modality | Other (code 'OT' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | 53338e45-a078-4886-8501-7cf1ec838afd |
 | ReportInformation.ReportDateTime | 06-02-1993 12:00 |
 | ReportInformation.ReportTitle | longfoto |
-| ReportInformation.Report | |
+| ReportInformation.Report | Binary/ImageAvailability-Binary-Report-2-3 |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-50637 |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Erasmus MC |
@@ -137,12 +137,12 @@
 | ImageInformation.ImageInformationIdentificationNumber | d7236f3e-5c10-4caf-9864-255baa23611b |
 | ImageInformation.ImageDateTime | 10-08-2020 12:00 |
 | ImageInformation.ImageTitle | röntgenfoto van linker kaakgewricht |
-| ImageInformation.Images | |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456342/series/2.25.285651067871713283196753380709199456206/instances/2.25.16334082318769461496963509104742703811</span> |
 | ImageInformation.Modality | Other (code 'OT' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | 0a61a231-1b52-4ba5-b86c-9edac0bfa044 |
 | ReportInformation.ReportDateTime | 10-08-2020 12:00 |
 | ReportInformation.ReportTitle | röntgenfoto van linker kaakgewricht |
-| ReportInformation.Report | |
+| ReportInformation.Report | Binary/ImageAvailability-Binary-Report-2-4 |
 | AccessionNumberInformation.AccessionNumber | RAD-20250212-74920 |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Erasmus MC |

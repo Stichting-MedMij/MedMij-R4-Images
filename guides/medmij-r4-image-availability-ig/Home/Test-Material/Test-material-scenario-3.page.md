@@ -35,7 +35,7 @@
 | ImageInformation.ImageInformationIdentificationNumber | e5864703-93bd-46dc-9754-fcd2c0f16489 |
 | ImageInformation.ImageDateTime | 03-03-2020 12:00 |
 | ImageInformation.ImageTitle | MRI van linker bovenbeen |
-| ImageInformation.Images | |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.90783674708684117220863480423356599801/series/2.25.293465249639799179250315041314515880819/instances/2.25.225370106192817013781822914585593250010</span> |
 | ImageInformation.Modality | Other (code 'OT' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | |
 | ReportInformation.ReportDateTime | |
