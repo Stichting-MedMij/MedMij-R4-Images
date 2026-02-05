@@ -90,7 +90,7 @@ The XIS MAY be capable of processing some or all query parameters listed there. 
 See [ITI-67 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#236741-find-document-references-request-message) for further details.
 
 ##### XIS: response message
-The XIS returns an HTTP Status code appropriate to the processing as well as a Bundle of the matching DocumentReference resources. Based on the value of `DocumentReference.category` it can be derived whether each respective DocumentReference refers to a report or an image (and hence, in what way the subsequent ITI-68 request should be handled). Other elements, such as `.content.attachment.contentType` and `.content.format`, also indicate whether the DocumentReference concerns a report or an image. The table below illustrates some of the possible values (i.e. `code`-`system` pairs) in the DocumentReference for reports and images, but it is not meant to be comprehensive.
+The XIS returns an HTTP Status code appropriate to the processing outcome as well as a Bundle, with `Bundle.type` equal to *searchset*, including the matching DocumentReference resources. Based on the value of `DocumentReference.category` it can be derived whether each respective DocumentReference refers to a report or an image (and hence, in what way the subsequent ITI-68 request should be handled). Other elements, such as `.content.attachment.contentType` and `.content.format`, also indicate whether the DocumentReference concerns a report or an image. The table below illustrates some of the possible values (i.e. `code`-`system` pairs) in the DocumentReference for reports and images, but it is not meant to be comprehensive.
 
 | FHIR element | Image | Report (PDF) | Report (DICOM) |
 | --- | --- | --- | --- |
@@ -123,7 +123,7 @@ The PHR MAY supply a MIME type in the Accept header other than *application/pdf*
 See [ITI-68 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#236841-retrieve-document-request-message) for further details.
 
 ##### XIS: response message
-The XIS returns an HTTP Status code appropriate to the processing. When the requested imaging report is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging report SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. This MAY include CDA, PDF, or other structured or unstructured formats originating from an EHR.
+The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested imaging report is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging report SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. This MAY include CDA, PDF, or other structured or unstructured formats originating from an EHR.
 
 If the XIS is unable to format the imaging report in a content type listed in the Accept header, it SHALL respond with HTTP Status Code 406.
 
@@ -159,7 +159,7 @@ The PHR MAY supply a MIME type in the Accept header other than those indicated b
 See [ITI-68 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#236841-retrieve-document-request-message) for further details.
 
 ##### XIS: response message (MHD ITI-68)
-The XIS returns an HTTP Status code appropriate to the processing. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. 
+The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. 
 
 The imaging study manifest SHOULD contain references to the relevant images following the [WADO-RS format](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/). Moreover, the attributes listed in [Table 4.68.4.1.2.1.1-1 of IHE RAD TF-2](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) SHALL be supported by the XIS. This means that all attributes indicated with either *R* or *R+* SHALL be included in the DICOM KOS document, as well as the Retrieve URL attribute (see Note 1 below the linked table).
 
@@ -252,6 +252,6 @@ The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type,
 See [WADO-RS Retrieve (RAD-107)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf), section 4.107, for further details.
 
 ##### XIS: response message (WADO-RS RAD-107)
-The XIS returns an HTTP Status code appropriate to the processing. When the requested (image) instance is returned, the XIS SHALL respond with HTTP Status Code 200, and the (image) instance SHOULD use a correct content type based on the Accept header supplied in the request by the PHR.
+The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested (image) instance is returned, the XIS SHALL respond with HTTP Status Code 200, and the (image) instance SHOULD use a correct content type based on the Accept header supplied in the request by the PHR.
 
 See [WADO-RS Retrieve (RAD-107)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf), section 4.107, for further details.
