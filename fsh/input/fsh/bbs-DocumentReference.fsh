@@ -297,10 +297,10 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * facilityType -> "bbs-dataelement-546" "OrganizationType"
   * practiceSetting -> "bbs-dataelement-524" "DepartmentSpecialty"
 
-Mapping: MedMij-100-beta1
+Mapping: MedMij-100-rc1
 Source: BbsDocumentReference
-Id: bbs-medmij-dataset-100-beta1-20250807
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
+Id: bbs-medmij-dataset-100-rc1-20250919
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
 * content
   * attachment
     * title -> "bbs-medmij-dataelement-2" "ReportTitle"
@@ -309,13 +309,15 @@ Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
   * event[modality] -> "bbs-medmij-dataelement-5" "Modality"
   * related[accessionNumber]
     * identifier -> "bbs-medmij-dataelement-3" "AccessionNumber"
+      * system -> "bbs-medmij-dataelement-7" "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
+      * assigner -> "bbs-medmij-dataelement-7" "AssigningAuthority"
   * related[studyInstanceUID]
     * identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
 
-Mapping: MedMij-100-rc1
+Mapping: MedMij-100-rc2
 Source: BbsDocumentReference
-Id: bbs-medmij-dataset-100-rc1-20250919
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+Id: bbs-medmij-dataset-100-rc2-2025xxyy
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
 * content
   * attachment
     * title -> "bbs-medmij-dataelement-2" "ReportTitle"

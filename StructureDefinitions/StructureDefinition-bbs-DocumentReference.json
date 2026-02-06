@@ -33,12 +33,12 @@
       "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
     },
     {
-      "identity": "bbs-medmij-dataset-100-beta1-20250807",
-      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
-    },
-    {
       "identity": "bbs-medmij-dataset-100-rc1-20250919",
       "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+    },
+    {
+      "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
     },
     {
       "identity": "ihexds-dataset-2024-20220712",
@@ -505,22 +505,22 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
             "map": "bbs-medmij-dataelement-2",
             "comment": "ReportTitle"
           },
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
             "map": "bbs-medmij-dataelement-1",
             "comment": "ImageTitle"
           },
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-2",
             "comment": "ReportTitle"
           },
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-1",
             "comment": "ImageTitle"
           },
@@ -713,12 +713,12 @@
         },
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
             "map": "bbs-medmij-dataelement-5",
             "comment": "Modality"
           },
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-5",
             "comment": "Modality"
           }
@@ -890,12 +890,12 @@
         "min": 1,
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
             "map": "bbs-medmij-dataelement-3",
             "comment": "AccessionNumber"
           },
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-3",
             "comment": "AccessionNumber"
           }
@@ -921,6 +921,11 @@
         "mapping": [
           {
             "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "map": "bbs-medmij-dataelement-7",
+            "comment": "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
+          },
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
           }
@@ -953,6 +958,11 @@
             "identity": "bbs-medmij-dataset-100-rc1-20250919",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority"
+          },
+          {
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "map": "bbs-medmij-dataelement-7",
+            "comment": "AssigningAuthority"
           }
         ]
       },
@@ -974,12 +984,12 @@
         "min": 1,
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
+            "identity": "bbs-medmij-dataset-100-rc1-20250919",
             "map": "bbs-medmij-dataelement-4",
             "comment": "StudyInstanceUID"
           },
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
             "map": "bbs-medmij-dataelement-4",
             "comment": "StudyInstanceUID"
           }
