@@ -236,7 +236,6 @@
       {
         "id": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority",
         "path": "bbs-lm-Study-serve-timeline.AccessionNumberInformation.AssigningAuthority",
-        "min": 1,
         "mustSupport": true
       },
       {
