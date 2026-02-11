@@ -291,7 +291,7 @@ Description: "Imaging study including images and reports."
   * ^mustSupport = true
   * AccessionNumber 1..1
     * ^mustSupport = true
-  * AssigningAuthority 1..1
+  * AssigningAuthority
     * ^mustSupport = true
     * HealthcareProvider 1..1
       * ^mustSupport = true
