@@ -1,4 +1,4 @@
-// Bundle with FHIR test instances in FSH format for Image Availability test scenario 1
+// FHIR test instances in FSH format for Image Availability test scenario 1
 
 Instance: ImageAvailability-DocumentReference-Blaak-Image-1-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference

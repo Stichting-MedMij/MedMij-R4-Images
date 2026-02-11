@@ -1,4 +1,4 @@
-// Bundle with FHIR test instances in FSH format for Image Availability test scenario 4
+// FHIR test instances in FSH format for Image Availability test scenario 4
 
 Instance: ImageAvailability-Patient-Tjong-A-Kon
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
