@@ -21,6 +21,7 @@
   ],
   "name": [
     {
+      "use": "official",
       "given": [
         "Pieter"
       ],
@@ -34,7 +35,6 @@
           ]
         }
       ],
-      "use": "official",
       "text": "Pieter Blaak",
       "family": "Blaak",
       "_family": {

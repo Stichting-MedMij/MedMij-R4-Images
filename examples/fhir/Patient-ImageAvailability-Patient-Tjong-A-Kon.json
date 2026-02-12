@@ -21,6 +21,7 @@
   ],
   "name": [
     {
+      "use": "official",
       "given": [
         "Xi"
       ],
@@ -34,7 +35,6 @@
           ]
         }
       ],
-      "use": "official",
       "text": "Xi Tjong A Kon",
       "family": "Tjong A Kon",
       "_family": {

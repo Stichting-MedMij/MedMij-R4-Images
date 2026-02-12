@@ -93,7 +93,7 @@ Usage: #example
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked // gemaskeerd BSN
-* name
+* name[nameInformation]
   * use = #official
   * text = "Pieter Blaak"
   * family = "Blaak"
@@ -108,13 +108,12 @@ Instance: ImageAvailability-PractitionerRole-De-Pater
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * practitioner = Reference(ImageAvailability-Practitioner-De-Pater) "A.C.H. de Pater"
-* specialty
-  * coding = $UZI#01.032 "Orthopedisch chirurg"
+* specialty[specialty] = $UZI#01.032 "Orthopedisch chirurg"
 
 Instance: ImageAvailability-Practitioner-De-Pater
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* name
+* name[nameInformation]
   * use = #official
   * text = "A.C.H. de Pater"
   * family = "de Pater"

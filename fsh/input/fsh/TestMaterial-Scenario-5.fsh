@@ -216,7 +216,7 @@ Usage: #example
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked // gemaskeerd BSN
-* name
+* name[nameInformation]
   * use = #official
   * text = "B. XXX-Aansluittest-B"
   * family = "XXX-Aansluittest-B"
@@ -230,14 +230,12 @@ Usage: #example
 Instance: ImageAvailability-PractitionerRole-Cardioloog
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
-* specialty
-  * coding = $UZI#01.010 "Cardioloog"
+* specialty[specialty] = $UZI#01.010 "Cardioloog"
 
 Instance: ImageAvailability-PractitionerRole-Huisarts
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
-* specialty
-  * coding = $UZI#01.015 "Huisarts"
+* specialty[specialty] = $UZI#01.015 "Huisarts"
 
 Instance: ImageAvailability-Organization-CZE-Radiotherapie
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization

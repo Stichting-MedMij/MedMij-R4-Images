@@ -6,7 +6,7 @@ Usage: #example
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked // gemaskeerd BSN
-* name
+* name[nameInformation]
   * use = #official
   * text = "Xi Tjong A Kon"
   * family = "Tjong A Kon"

@@ -8,6 +8,7 @@
   },
   "name": [
     {
+      "use": "official",
       "given": [
         "C.",
         "H."
@@ -30,7 +31,6 @@
           ]
         }
       ],
-      "use": "official",
       "text": "C.H. Coenen",
       "family": "Coenen",
       "_family": {

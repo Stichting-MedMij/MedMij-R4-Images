@@ -21,6 +21,7 @@
   ],
   "name": [
     {
+      "use": "official",
       "given": [
         "José"
       ],
@@ -34,7 +35,6 @@
           ]
         }
       ],
-      "use": "official",
       "text": "José Klaassen-Groen",
       "family": "Klaassen-Groen",
       "_family": {

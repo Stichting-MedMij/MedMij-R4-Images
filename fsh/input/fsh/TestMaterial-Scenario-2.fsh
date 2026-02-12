@@ -261,7 +261,7 @@ Usage: #example
 * identifier
   * system = $BSN
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked // gemaskeerd BSN
-* name
+* name[nameInformation]
   * use = #official
   * text = "José Klaassen-Groen"
   * family = "Klaassen-Groen"
@@ -276,13 +276,12 @@ Instance: ImageAvailability-PractitionerRole-Van-Der-Ham
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * practitioner = Reference(ImageAvailability-Practitioner-Van-Der-Ham) "van der Ham"
-* specialty
-  * coding = $UZI#01.032 "Orthopedisch chirurg"
+* specialty[specialty] = $UZI#01.032 "Orthopedisch chirurg"
 
 Instance: ImageAvailability-Practitioner-Van-Der-Ham
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* name
+* name[nameInformation]
   * use = #official
   * text = "van der Ham"
   * family = "van der Ham"
@@ -293,13 +292,12 @@ Instance: ImageAvailability-PractitionerRole-Janssen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * practitioner = Reference(ImageAvailability-Practitioner-Janssen) "Janssen"
-* specialty
-  * coding = $UZI#01.032 "Orthopedisch chirurg"
+* specialty[specialty] = $UZI#01.032 "Orthopedisch chirurg"
 
 Instance: ImageAvailability-Practitioner-Janssen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* name
+* name[nameInformation]
   * use = #official
   * text = "Janssen"
   * family = "Janssen"
@@ -309,13 +307,12 @@ Instance: ImageAvailability-PractitionerRole-Coenen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * practitioner = Reference(ImageAvailability-Practitioner-Coenen) "C.H. Coenen"
-* specialty
-  * coding = $UZI#02.054 "Kaakchirurg"
+* specialty[specialty] = $UZI#02.054 "Kaakchirurg"
 
 Instance: ImageAvailability-Practitioner-Coenen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* name
+* name[nameInformation]
   * use = #official
   * text = "C.H. Coenen"
   * family = "Coenen"

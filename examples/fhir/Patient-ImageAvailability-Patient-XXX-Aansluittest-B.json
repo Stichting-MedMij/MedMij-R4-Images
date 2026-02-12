@@ -21,6 +21,7 @@
   ],
   "name": [
     {
+      "use": "official",
       "given": [
         "B."
       ],
@@ -34,7 +35,6 @@
           ]
         }
       ],
-      "use": "official",
       "text": "B. XXX-Aansluittest-B",
       "family": "XXX-Aansluittest-B",
       "_family": {
