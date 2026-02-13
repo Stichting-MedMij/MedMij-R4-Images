@@ -178,7 +178,7 @@ Note the following:
 - By default, the request returns binary DICOM instances, while adding `/rendered` to the request results in rendered instances, e.g. in JPEG format (also see Table 10).
 - The part `/frames/[FrameIndex]` only needs to be added to the request when the SOP instance may contain multi-frame images, which is indicated in Table 9 below. Since the approaches of retrieving a single-frame or multi-frame image differ slightly, these are described separately below.
 
-**Retrieve single-frame image** <br/>
+**<a name="RetrieveSingleFrameImage"></a> Retrieve single-frame image** <br/>
 Instead of constructing the above URL from scratch by searching all these identifier values from various locations within the KOS document, DICOM tag `(0008,1115)` (Referenced Series Sequence) provides a structured way to access this information. This sequence contains one or more referenced image series. Each item in the sequence corresponds to a specific series and contains:
 - Retrieve URL `(0008,1190)`
 - A sequence of referenced instances (Referenced SOP Sequence `(0008,1199)`), each containing:
@@ -196,7 +196,7 @@ for each series. To create the WADO-RS request with which the image (i.e. SOP in
 This approach allows the PHR to iterate over all items in the KOS document in the Referenced Series Sequence `(0008,1115)`.
 
 **Retrieve multi-frame image** <br/>
-Some DICOM instances contain multiple frames within a single SOP Instance. If the retrieval approach described above would be used for a multi-frame image, only the first frame would be returned by the XIS. To retrieve all frames, one of the iterative procedures described below SHALL be followed for such images instead. Table 9 indicates which SOP classes (of the ones that need to be supported) may contain multi-frame images, and thus for which this approach applies.
+Some DICOM instances contain multiple frames within a single SOP Instance. If the retrieval approach described above would be used for a multi-frame image, only the first frame would be returned by the XIS. To retrieve all frames, one of the iterative procedures described below SHALL be followed for such images instead. Table 9 indicates which SOP classes (of the ones that need to be supported) may contain multi-frame images, and thus for which these procedures apply.
 
 *Method 1* <br/>
 To retrieve all frames of a multi-frame image, the PHR iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS using URLs of the form:
@@ -209,16 +209,24 @@ or, equivalently:
 
 where `[FrameIndex]` attains the values 1, 2, 3, ..., consecutively. Since the total number of frames cannot be derived from the KOS document (as a KOS document does not include DICOM tag `(0028,0008)`, i.e. the Number of Frames), the PHR SHALL attempt consecutive requests with increasing frame index until an HTTP error code is returned, indicating that no additional frames exist. Examples of such error codes are HTTP 404 (Not Found) and 416 (Range Not Satisfiable). If the error is returned on the request with `[FrameIndex]` equal to *n*, the PHR SHALL assume that the frame with index *n-1* is the final valid frame for that instance.
  
-If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the previous subsection.
+If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
 
 *Method 2* <br/>
-Whether or not instances contain multiframes can also be determined from Dicom tag `(0028,0008) NumberOfFrames` in the metadata. The PHR can request this metadata by using the following endpoint:
+Whether or not instances contain multiple frames can also be determined from DICOM tag `(0028,0008)` (Number of Frames) in the metadata. The PHR can request this metadata by executing the following HTTP GET request against the WADO-RS endpoint of the XIS:
+
+`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/metadata`
+
+or, equivalently:
 
 `GET [RetrieveURL]/instances/[SOPInstanceUID]/metadata`
 
-If `NumberOfFrames` is greater than 1, the PHR then executes HTTP GET requests against the WADO-RS endpoint of the XIS while looping through the number to retrieve all frames of a multi-frame image:
+If Number of Frames is greater than 1, the PHR then iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS to retrieve all frames of the multi-frame image:
 
 `GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+
+where `[FrameIndex]` attains the values 1, 2, 3, ..., Number of Frames, consecutively.
+
+If Number of Frames is equal to 1, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
 
 **Supported SOP classes and WADO-RS requests** <br/>
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
