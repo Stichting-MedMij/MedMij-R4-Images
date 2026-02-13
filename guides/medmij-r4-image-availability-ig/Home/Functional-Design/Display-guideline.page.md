@@ -14,7 +14,7 @@ Deze richtlijn heeft als doel om duidelijke handvatten te bieden voor een patië
 
 De richtlijn geeft géén handvatten voor de vormgeving (kleur, vorm, lettertype, etc.) van gegevens.
 
-Naast de weergaverichtlijn zijn ook {{pagelink:Requirements, text: requirements}} opgesteld. De requirements bevatten de minimale eisen waaraan een PGO moet voldoen en de weergaverichtlijn bestaat daaropvolgend uit visuele richtlijnen en UX-voorbeelden die aangeven hoe deze functionaliteit patiëntvriendelijk kan worden gepresenteerd.
+Naast de weergaverichtlijn zijn ook {{pagelink: Requirements, text: requirements}} opgesteld. De requirements bevatten de minimale eisen waaraan een PGO moet voldoen en de weergaverichtlijn bestaat daaropvolgend uit visuele richtlijnen en UX-voorbeelden die aangeven hoe deze functionaliteit patiëntvriendelijk kan worden gepresenteerd.
 
 ## Weergave in PGO
 Het inloggen en authenticeren bij de zorgaanbieder is niet opgenomen in deze richtlijn.
@@ -70,7 +70,7 @@ In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverich
 
 **Tabel 1: Relevante gegevens m.b.t. de weergaverichtlijn**
 
-De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die ondersteund moeten worden (zie ook Tabel 9 in het {{pagelink:TD, text: technisch ontwerp, anchor: SupportedSOPClasses}}). Deze termen kunnen gebruikt worden als weergavetekst in de PGO. 
+De volgende tabel bevat patiëntvriendelijke termen voor alle SOP-klassen die ondersteund moeten worden (zie ook Tabel 9 in het {{pagelink: TD, text: technisch ontwerp, anchor: SupportedSOPClasses}}). Deze termen kunnen gebruikt worden als weergavetekst in de PGO. 
 
 | Naam SOP-klasse | SOP Class UID | Patiëntvriendelijke term |
 | --- | --- | --- |
