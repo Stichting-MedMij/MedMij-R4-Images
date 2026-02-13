@@ -21,6 +21,7 @@
 | Technical design      | Guidance on the ordering of image instances within the DICOM KOS document has been added. | [DOSINZAGE2-802](https://medmij.atlassian.net/browse/DOSINZAGE2-802) |
 | Technical design      | Guidance on the retrieval approach for multi-frame images has been added. | [DOSINZAGE2-696](https://medmij.atlassian.net/browse/DOSINZAGE2-696) |
 | Technical design      | A link to the FHIR identifier registry to support the DICOM UID requirements has been added. | [DOSINZAGE2-727](https://medmij.atlassian.net/browse/DOSINZAGE2-727) |
+| Technical design      | An alternative method to approach the retrieval of multi-frame images has been added. | [DOSINZAGE2-941](https://medmij.atlassian.net/browse/DOSINZAGE2-941) |
 | FHIR artifacts        | The code *SC* has been removed from ValueSet MedMijModality. | [DOSINZAGE2-855](https://medmij.atlassian.net/browse/DOSINZAGE2-855) |
 | Architecture          | Further documentation to the solution design has been added, and the solution architecture overview has been updated. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
 | Architecture          | The reference architecture for backends based on an XDS/XCA infrastructure has been added. | [DOSINZAGE2-670](https://medmij.atlassian.net/browse/DOSINZAGE2-670) |
