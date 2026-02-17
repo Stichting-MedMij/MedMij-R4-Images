@@ -31,7 +31,7 @@ Daarnaast gelden de specificaties genoemd in de [algemene inleiding](https://inf
 Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Geografische_reikwijdte) van de functionele ontwerpen binnen MedMij.
 
 ### Kwalificatie en testen
-Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept (PoC). Later volgt meer informatie over kwalificatie.
+Op dit moment wordt de usecase uit dit ontwerp getoetst in een pilot. Later volgt meer informatie over kwalificatie.
 
 ## Usecases
 
