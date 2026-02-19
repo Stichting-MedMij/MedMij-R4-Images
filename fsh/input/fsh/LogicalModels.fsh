@@ -317,8 +317,9 @@ Description: "Imaging study including images and reports."
 * ^purpose = "This LogicalModel represents (the functional requirements of) the Study building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
 * ^abstract = false
-* .
-* ImageInformation obeys bbs-lm-Study-serve-image-report-1
+* . obeys bbs-lm-Study-serve-image-report-1
+* ImageInformation
+  * ^condition = "bbs-lm-Study-serve-image-report-1"
   * ^mustSupport = true
   * ImageInformationIdentificationNumber 1..1
     * ^mustSupport = true
@@ -330,7 +331,8 @@ Description: "Imaging study including images and reports."
     * ^mustSupport = true
   * Modality 1..*
     * ^mustSupport = true
-* ReportInformation obeys bbs-lm-Study-serve-image-report-1
+* ReportInformation
+  * ^condition = "bbs-lm-Study-serve-image-report-1"
   * ^mustSupport = true
   * ReportInformationIdentificationNumber 1..1
     * ^mustSupport = true
