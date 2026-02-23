@@ -68,11 +68,15 @@ The ITI-67 transaction is used to find available documents for a patient, based 
 ##### PHR: request message
 The PHR executes an HTTP search conform the [FHIR specification](https://hl7.org/fhir/R4/search.html) against the DocumentReference endpoint of the XIS using the following URL:
 
-`GET [base]/DocumentReference{?[parameters]}`
+```
+GET [base]/DocumentReference{?[parameters]}
+```
 
 Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Since only approved documents are to be exchanged, the PHR SHALL always include the search parameter `status` with value *current* in their request:
 
-`GET [base]/DocumentReference?status=current{&[additional parameters]}`
+```
+GET [base]/DocumentReference?status=current{&[additional parameters]}
+```
 
 The search parameters listed in the table below SHALL be supported by both PHR and XIS.
 
@@ -170,7 +174,9 @@ See [ITI-68 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#23684
 ##### PHR: request message (WADO-RS RAD-107)
 The WADO-RS Retrieve request (RAD-107) is used to retrieve individual (image) instances. For each (image) instance the PHR wants to retrieve, it executes an HTTP GET against the WADO-RS endpoint of the XIS using the following URL:
 
-`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}{/rendered}`
+```
+GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}{/rendered}
+```
 
 Note the following:
 - The required `[StudyInstanceUID]`, `[SeriesInstanceUID]` and `[SOPInstanceUID]` unique identifier values can be found in the DICOM KOS document, which is obtained via the ITI-68 Retrieve Document transaction. In Table 2, the corresponding DICOM tags are listed. Note however, that the SOP Instance UID of an individual instance which is referenced by the KOS document can be found in DICOM tag `(0008,1155)` (Referenced SOP Instance UID) within the KOS document.
@@ -185,13 +191,11 @@ Instead of constructing the above URL from scratch by searching all these identi
   - Referenced SOP Class UID `(0008,1150)`
   - Referenced SOP Instance UID `(0008,1155)`
 
-To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,1190)` can be used, as it attains the value
+To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,1190)` can be used, as it attains the value `[WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]` for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows: 
 
-`[WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]`
-
-for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows: 
-
-`GET [RetrieveURL]/instances/[SOPInstanceUID]`
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]
+```
 
 This approach allows the PHR to iterate over all items in the KOS document in the Referenced Series Sequence `(0008,1115)`.
 
@@ -201,11 +205,15 @@ Some DICOM instances contain multiple frames within a single SOP Instance. If th
 *Method 1* <br/>
 To retrieve all frames of a multi-frame image, the PHR iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS using URLs of the form:
 
-`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+```
+GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/frames/[FrameIndex]
+```
 
 or, equivalently:
 
-`GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]
+```
 
 where `[FrameIndex]` attains the values 1, 2, 3, ..., consecutively. Since the total number of frames cannot be derived from the KOS document (as a KOS document does not include DICOM tag `(0028,0008)`, i.e. the Number of Frames), the PHR SHALL attempt consecutive requests with increasing frame index until an HTTP error code is returned, indicating that no additional frames exist. Examples of such error codes are HTTP 404 (Not Found) and 416 (Range Not Satisfiable). If the error is returned on the request with `[FrameIndex]` equal to *n*, the PHR SHALL assume that the frame with index *n-1* is the final valid frame for that instance.
  
