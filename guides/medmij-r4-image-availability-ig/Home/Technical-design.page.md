@@ -66,22 +66,22 @@ The ITI-67 transaction is used to find available documents for a patient, based 
 **Table 3: Transactions within sub use case Query Timeline Data**
 
 ##### PHR: request message
-The PHR executes an HTTP search against the DocumentReference endpoint of the XIS using the following URL:
+The PHR executes an HTTP search conform the [FHIR specification](https://hl7.org/fhir/R4/search.html) against the DocumentReference endpoint of the XIS using the following URL:
 
-`GET [base]/DocumentReference{?<query>}`
+`GET [base]/DocumentReference{?[parameters]}`
 
-The `<query>` represents a series of encoded name-value pairs representing the filter for the query. The search parameters listed in the table below SHALL be supported by both PHR and XIS.
+Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Since only approved documents are to be exchanged, the PHR SHALL always include the search parameter `status` with value *current* in their request:
+
+`GET [base]/DocumentReference?status=current{&[additional parameters]}`
+
+The search parameters listed in the table below SHALL be supported by both PHR and XIS.
 
 | Image Availability search parameter | Description | FHIR search parameter | Examples |
 | --- | --- | --- | --- | --- | --- |
-| availabilityStatus | Search on the status of the DocumentReference. | `status` | Retrieve all DocumentReference resources that refer to an approved document. <br/> `GET [base]/DocumentReference?status=current` <br/> |
-| mimeType | Search on the MIME type of the document. | `contenttype` | Retrieve all DocumentReference resources that refer to a report in PDF format. <br/> `GET [base]/DocumentReference?contenttype=application/pdf` <br/> <br/> Retrieve all DocumentReference resources that refer to an imaging study available as DICOM KOS document. <br/> `GET [base]/DocumentReference?contenttype=application/dicom` |
+| availabilityStatus | Search on the status of the DocumentReference. | `status` | Retrieve all DocumentReference resources that correspond to an approved document. <br/> `GET [base]/DocumentReference?status=current` |
+| mimeType | Search on the MIME type of the document. | `contenttype` | Retrieve all DocumentReference resources that correspond to a report in PDF format. <br/> `GET [base]/DocumentReference?contenttype=application/pdf` <br/> <br/> Retrieve all DocumentReference resources that correspond to an imaging study available as DICOM KOS document. <br/> `GET [base]/DocumentReference?contenttype=application/dicom` |
 
 **Table 4: Supported search parameters for ITI-67**
-
-Since only approved documents are to be exchanged, the PHR SHALL always include the search parameter `status` with value *current* in their request:
-
-`GET [base]/DocumentReference?status=current{&<additional parameters>}`
 
 Other search parameters can be found in the [ITI-67 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#23674121-query-search-parameters) specification. The PHR MAY supply all query parameters listed there, with the exception of the `patient` and `patient.identifier` search parameters, as patient identification is done differently in the MedMij context (i.e. via an OAuth2 token).
 
