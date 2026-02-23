@@ -222,15 +222,21 @@ If the very first request (i.e. the request containing `/frames/1`) fails, the P
 *Method 2* <br/>
 Whether or not instances contain multiple frames can also be determined from DICOM tag `(0028,0008)` (Number of Frames) in the metadata. The PHR can request this metadata by executing the following HTTP GET request against the WADO-RS endpoint of the XIS:
 
-`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/metadata`
+```
+GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/metadata
+```
 
 or, equivalently:
 
-`GET [RetrieveURL]/instances/[SOPInstanceUID]/metadata`
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]/metadata
+```
 
 If Number of Frames is greater than 1, the PHR then iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS to retrieve all frames of the multi-frame image:
 
-`GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]
+```
 
 where `[FrameIndex]` attains the values 1, 2, 3, ..., Number of Frames, consecutively.
 
