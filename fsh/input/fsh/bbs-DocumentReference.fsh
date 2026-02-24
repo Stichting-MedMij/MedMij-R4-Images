@@ -166,7 +166,7 @@ Description: "Imaging study including images and reports."
       """
     * ^alias[0] = "VerrichtingAnatomischeLocatie"
     * ^alias[1] = "Locatie"
-  * event[modality] from $ModalityCombinedValueSetURL (required)
+  * event[modality] from ModalityCombined (required)
     * ^short = "Modality"
     * ^definition = "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
     * ^comment = "For an image or series of images the modalities SHALL be specified."

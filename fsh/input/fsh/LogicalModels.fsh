@@ -176,7 +176,7 @@ Description: "Imaging study including images and reports."
   * Images 0..* Attachment "Images" "The images themselves. In DICOM the images are structured in series."
     * ^alias = "Beelden"
   * Modality 0..* CodeableConcept "Modality" "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
-  * Modality from $ModalityCombinedValueSetURL (required)
+  * Modality from ModalityCombined (required)
     * ^alias = "Modaliteit"
 * ReportInformation 0..1 BackboneElement "Report information" "Imaging study for images and reports: subset report information"
   * ^alias = "Verslaginformatie"
