@@ -36,11 +36,7 @@
       {
         "id": "bbs-lm-Study-serve-image-report",
         "path": "bbs-lm-Study-serve-image-report",
-        "short": "Study (Serve image and report)"
-      },
-      {
-        "id": "bbs-lm-Study-serve-image-report.ImageInformation",
-        "path": "bbs-lm-Study-serve-image-report.ImageInformation",
+        "short": "Study (Serve image and report)",
         "constraint": [
           {
             "key": "bbs-lm-Study-serve-image-report-1",
@@ -49,6 +45,13 @@
             "expression": "ImageInformation.exists() or ReportInformation.exists()",
             "source": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report"
           }
+        ]
+      },
+      {
+        "id": "bbs-lm-Study-serve-image-report.ImageInformation",
+        "path": "bbs-lm-Study-serve-image-report.ImageInformation",
+        "condition": [
+          "bbs-lm-Study-serve-image-report-1"
         ],
         "mustSupport": true
       },
@@ -84,14 +87,8 @@
       {
         "id": "bbs-lm-Study-serve-image-report.ReportInformation",
         "path": "bbs-lm-Study-serve-image-report.ReportInformation",
-        "constraint": [
-          {
-            "key": "bbs-lm-Study-serve-image-report-1",
-            "severity": "error",
-            "human": "At least one of ImageInformation or ReportInformation is present.",
-            "expression": "ImageInformation.exists() or ReportInformation.exists()",
-            "source": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report"
-          }
+        "condition": [
+          "bbs-lm-Study-serve-image-report-1"
         ],
         "mustSupport": true
       },
