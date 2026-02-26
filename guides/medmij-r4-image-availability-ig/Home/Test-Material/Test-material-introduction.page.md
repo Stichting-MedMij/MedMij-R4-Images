@@ -4,14 +4,14 @@ topic: TestMaterial
 
 # Introduction
 
-The functional test data can be found on the underlying pages for each of the different test scenarios. This test data is intended to support interoperability testing. FHIR and DICOM test material corresponding to the functional test material can be found on [GitHub](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/tree/main/test/examples).
+The functional test data can be found on the underlying pages for each of the different test scenarios. This test data is intended to support interoperability testing. FHIR and DICOM test material corresponding to the functional test material can be found on [GitHub](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/tree/main/examples).
 
-For mapping between metadata, functional dataset and FHIR, please refer to the {{pagelink:TD, text: technical design, anchor: RelatingFHIRToFunctionalCounterpart}}.
+For mapping between metadata, functional dataset and FHIR, please refer to the {{pagelink: TD, text: technical design, anchor: RelatingFHIRToFunctionalCounterpart}}.
 
 ## Structure  
-- The `examples/fhir` folder contains the FHIR test resources.
-- The `examples/dicom` folder contains DICOM files referenced by the FHIR resources.
 - This IG contains the functional test data from which the FHIR resources are generated.
+- The `examples/fhir` folder on GitHub contains the FHIR test resources.
+- The `examples/dicom` folder on GitHub contains DICOM files referenced by the FHIR resources.
 
 ## Important notes
 - Various identifiers, such as the Study Instance UID, Accession Number and `DocumentReference.masterIdentifier`, are dummy/mocked values and may not reference any actual data. While testing, these should be adjusted as needed to fit the testing scenarios for the source system which is subject to the test.
