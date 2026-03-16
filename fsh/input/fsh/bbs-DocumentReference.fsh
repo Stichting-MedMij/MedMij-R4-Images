@@ -1,4 +1,4 @@
-// Profile on DocumentReference derived from IHE MHD to be used in Image Availability
+// Profile on DocumentReference derived from IHE MHD used in Image Availability
 
 Profile: BbsDocumentReference
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference
@@ -268,7 +268,7 @@ Description: "Each DICOM UID value is a proper OID."
 Severity: #error
 Expression: "$this.startsWith('urn:oid:')"
 
-Mapping: BeeldbeschikbaarheidNictiz
+Mapping: BbsDocumentReferenceBeeldbeschikbaarheidNictiz
 Source: BbsDocumentReference
 Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
 Id: bbs-dataset-100-alpha2-20240208
@@ -297,7 +297,7 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * facilityType -> "bbs-dataelement-546" "OrganizationType"
   * practiceSetting -> "bbs-dataelement-524" "DepartmentSpecialty"
 
-Mapping: MedMij-100-beta1
+Mapping: BbsDocumentReferenceMedMij-100-beta1
 Source: BbsDocumentReference
 Id: bbs-medmij-dataset-100-beta1-20250807
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
@@ -312,7 +312,7 @@ Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
   * related[studyInstanceUID]
     * identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
 
-Mapping: MedMij-100-rc1
+Mapping: BbsDocumentReferenceMedMij-100-rc1
 Source: BbsDocumentReference
 Id: bbs-medmij-dataset-100-rc1-20250919
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
@@ -329,7 +329,7 @@ Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
   * related[studyInstanceUID]
     * identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
 
-Mapping: IHEXDS
+Mapping: BbsDocumentReferenceIHEXDS
 Source: BbsDocumentReference
 Target: "https://decor.nictiz.nl/pub/nihemds/ihexds-html-20220712T144728/ds-2.16.840.1.113883.2.4.3.11.60.106.1.1-2013-12-04T122419.html"
 Id: ihexds-dataset-2024-20220712

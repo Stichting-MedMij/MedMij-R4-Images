@@ -49,8 +49,8 @@ Table 1 depicts the relevant building blocks in this use case.
 
 | Building block | Logical Model | Cardinality |
 | --- | --- | --- |
-| Patient | LmPatientServeTimeline | `1..1` |
-| Study | LmStudyServeTimeline | `1..*` |
+| Patient | BbsLmPatientServeTimeline | `1..1` |
+| Study | BbsLmStudyServeTimeline | `1..*` |
 
 **Table 1: Building blocks in the 'Serve image and report timeline' use case**
 
@@ -85,8 +85,8 @@ Table 2 depicts the relevant building blocks in this use case.
 
 | Building block | Logical Model | Cardinality |
 | --- | --- | --- |
-| Patient | LmPatientServeImageReport | `1..1` |
-| Study | LmStudyServeTimeline | `1..*` |
+| Patient | BbsLmPatientServeImageReport | `1..1` |
+| Study | BbsLmStudyServeTimeline | `1..*` |
 
 **Table 2: Building blocks in the 'Serve image and report' use case**
 

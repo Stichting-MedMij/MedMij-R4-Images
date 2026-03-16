@@ -6,7 +6,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
   "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-image-report",
-  "name": "LmStudyServeImageReport",
+  "name": "BbsLmStudyServeImageReport",
   "title": "Study (Serve image and report)",
   "status": "active",
   "publisher": "MedMij",
