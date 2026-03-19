@@ -28,7 +28,7 @@ Usage: #definition
       * type = #token
       * documentation = "Only approved documents are to be exchanged, hence only searching on the value *current* needs to be supported."
     * searchParam[1]
-      * name = "contenttype"
+      * name = "content-type"
       * type = #token
   * resource[+]
     * type = #Binary
@@ -100,7 +100,7 @@ Usage: #definition
       * type = #token
       * documentation = "Only approved documents are to be exchanged, hence only searching on the value *current* needs to be supported."
     * searchParam[1]
-      * name = "contenttype"
+      * name = "content-type"
       * type = #token
   * resource[+]
     * type = #Binary

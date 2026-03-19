@@ -53,7 +53,7 @@
               "documentation": "Only approved documents are to be exchanged, hence only searching on the value *current* needs to be supported."
             },
             {
-              "name": "contenttype",
+              "name": "content-type",
               "type": "token"
             }
           ]
