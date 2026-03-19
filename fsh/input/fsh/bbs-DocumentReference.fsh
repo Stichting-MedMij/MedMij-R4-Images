@@ -49,7 +49,7 @@ Description: "Imaging study including images and reports."
   * coding contains
       images 0..1 and
       reports 0..1
-  * coding[images] 
+  * coding[images]
     * ^patternCoding = $XDSClassCode#IMAGES
     * ^condition[0] = "bbs-DocumentReference-1"
     * ^condition[1] = "bbs-DocumentReference-2"
@@ -187,7 +187,7 @@ Description: "Imaging study including images and reports."
       * ^short = "ProcedureEndDate / ServiceStopTime"
       * ^definition = """
         * The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.
-        The element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted. 
+        The element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.
         * The stop time the service being documented took place.
         """
       * ^alias = "VerrichtingEindDatum"
@@ -203,7 +203,7 @@ Description: "Imaging study including images and reports."
     * ^definition = """
       * The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.
       The bound value set is the value set that has been proposed by IHE MCWG to the EU (Xt-EHR) for national and international exchange.
-      * The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology). 
+      * The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology).
       """
     * ^alias = "AfdelingSpecialisme"
   * sourcePatientInfo only Reference(Patient or http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
@@ -218,7 +218,7 @@ Description: "Imaging study including images and reports."
     * ^slicing.rules = #open
     * ^short = "ReferenceIdList"
     * ^definition = """
-      A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc. 
+      A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc.
       
       For Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.
       """

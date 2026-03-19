@@ -120,7 +120,7 @@ See [ITI-67 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#23674
 ##### PHR: request message
 The PHR sends an HTTP GET request to the XIS server to retrieve the imaging report content referenced by a DocumentReference in `DocumentReference.content.attachment.url`.
 
-The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging report requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The XIS SHALL support the Accept header *application/pdf*, irrespective of the value of `.contentType`. 
+The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging report requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The XIS SHALL support the Accept header *application/pdf*, irrespective of the value of `.contentType`.
 
 The PHR MAY supply a MIME type in the Accept header other than *application/pdf* or the MIME type indicated in `DocumentReference.content.attachment.contentType`. Support for such headers by the XIS is optional.
 
@@ -148,7 +148,7 @@ The retrieval of images consists of two consecutive steps, namely the ITI-68 tra
 ##### PHR: request message (MHD ITI-68)
 The PHR sends an HTTP GET request to the XIS server to retrieve the imaging study manifest content referenced by a DocumentReference in `DocumentReference.content.attachment.url`.
 
-The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging study manifest requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS relative to the `.contentType` present in the DocumentReference for which the PHR requests the content. In particular, the XIS has to support reformatting a DICOM KOS document (with `.contentType` equal to *application/dicom*) into the [DICOM JSON Model](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_f.html) (with `.contentType` equal to *application/dicom+json*). 
+The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging study manifest requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS relative to the `.contentType` present in the DocumentReference for which the PHR requests the content. In particular, the XIS has to support reformatting a DICOM KOS document (with `.contentType` equal to *application/dicom*) into the [DICOM JSON Model](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_f.html) (with `.contentType` equal to *application/dicom+json*).
 
 The PHR MAY supply a MIME type in the Accept header other than those indicated by the table below or the MIME type indicated in `DocumentReference.content.attachment.contentType`. Support for such headers by the XIS is optional.
 
@@ -163,7 +163,7 @@ The PHR MAY supply a MIME type in the Accept header other than those indicated b
 See [ITI-68 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#236841-retrieve-document-request-message) for further details.
 
 ##### XIS: response message (MHD ITI-68)
-The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. 
+The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR.
 
 The imaging study manifest SHOULD contain references to the relevant images following the [WADO-RS format](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/). Moreover, the attributes listed in [Table 4.68.4.1.2.1.1-1 of IHE RAD TF-2](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) SHALL be supported by the XIS. This means that all attributes indicated with either *R* or *R+* SHALL be included in the DICOM KOS document, as well as the Retrieve URL attribute (see Note 1 below the linked table).
 
@@ -191,7 +191,7 @@ Instead of constructing the above URL from scratch by searching all these identi
   - Referenced SOP Class UID `(0008,1150)`
   - Referenced SOP Instance UID `(0008,1155)`
 
-To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,1190)` can be used, as it attains the value `[WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]` for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows: 
+To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,1190)` can be used, as it attains the value `[WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]` for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows:
 
 ```
 GET [RetrieveURL]/instances/[SOPInstanceUID]
@@ -216,7 +216,7 @@ GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]
 ```
 
 where `[FrameIndex]` attains the values 1, 2, 3, ..., consecutively. Since the total number of frames cannot be derived from the KOS document (as a KOS document does not include DICOM tag `(0028,0008)`, i.e. the Number of Frames), the PHR SHALL attempt consecutive requests with increasing frame index until an HTTP error code is returned, indicating that no additional frames exist. Examples of such error codes are HTTP 404 (Not Found) and 416 (Range Not Satisfiable). If the error is returned on the request with `[FrameIndex]` equal to *n*, the PHR SHALL assume that the frame with index *n-1* is the final valid frame for that instance.
- 
+
 If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
 
 *Method 2* <br/>
@@ -272,7 +272,7 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 
 **<a name="SupportedSOPClasses"></a> Table 9: Supported SOP classes**
 
-The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the (image) instance in the preferred format. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS, as well as the corresponding WADO-RS request (both forms) that needs to be executed by the PHR. 
+The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the (image) instance in the preferred format. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS, as well as the corresponding WADO-RS request (both forms) that needs to be executed by the PHR.
 
 | WADO-RS request | Accept header |
 | --- | --- |

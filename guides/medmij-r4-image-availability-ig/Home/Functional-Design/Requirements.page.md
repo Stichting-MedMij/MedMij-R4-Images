@@ -60,11 +60,11 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | 3. | De gebruiker kan (rendered) DICOM-beelden bekijken zonder extra software te installeren. |
 | 4. | De viewer werkt in gangbare webbrowsers en is bruikbaar op desktop, tablet en mobiel (responsive of mobiele variant). |
 | 5. | De gebruiker krijgt duidelijke visuele feedback (bijvoorbeeld een laadindicator of wachtcursor met tekst) wanneer beelden worden geladen. |
-| 6. | Indien mogelijk wordt de voortgang van het laden weergegeven in procenten of met een voortgangsbalk. | 
+| 6. | Indien mogelijk wordt de voortgang van het laden weergegeven in procenten of met een voortgangsbalk. |
 | 7. | Als het laden langer duurt dan 60 seconden, dient de gebruiker te worden geïnformeerd. |
-| 8. | De viewer opent in hetzelfde venster of in een herkenbare pagina binnen de PGO (geen verwarring met andere portalen). | 
-| 9. | De gebruiker kan in- en uitzoomen bij het bekijken van het beeld. | 
-| 10. | De gebruiker kan door verschillende beelden scrollen of deze afspelen als een filmpje wanneer een document meerdere beelden bevat (bijvoorbeeld bij een CT of MRI). | 
+| 8. | De viewer opent in hetzelfde venster of in een herkenbare pagina binnen de PGO (geen verwarring met andere portalen). |
+| 9. | De gebruiker kan in- en uitzoomen bij het bekijken van het beeld. |
+| 10. | De gebruiker kan door verschillende beelden scrollen of deze afspelen als een filmpje wanneer een document meerdere beelden bevat (bijvoorbeeld bij een CT of MRI). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | 3. | De sortering blijft behouden bij filteracties door de gebruiker. |
 | 4. | De onderzoeksdatum wordt zichtbaar getoond bij ieder verslag/beeld. |
 | 5. | Indien twee documenten dezelfde onderzoeksdatum hebben, worden ze op tijdstip gesorteerd (indien beschikbaar). |
-| 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. | 
+| 6. | De sortering blijft behouden na openen en sluiten van een beeld of verslag. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -117,8 +117,8 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | 1. | De gebruiker kan een datumfilter instellen in het overzicht van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
 | 2. | Het filter werkt op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174). |
 | 3. | Er is standaard geen filter actief; alle documenten worden getoond tot de gebruiker zelf filtert. |
-| 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. | 
-| 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. | 
+| 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. |
+| 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. |
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
@@ -150,7 +150,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | --- | --- |
 | 1. | Bij elk beschikbaar verslag is een duidelijke knop zichtbaar met het label 'Download verslag'. |
 | 2. | Verslagen zijn te downloaden als PDF-bestand. |
-| 3. | Na het klikken op de downloadknop ontvangt de gebruiker visuele feedback, bijvoorbeeld een melding 'Download gestart' of 'Verslag opgeslagen'. | 
+| 3. | Na het klikken op de downloadknop ontvangt de gebruiker visuele feedback, bijvoorbeeld een melding 'Download gestart' of 'Verslag opgeslagen'. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
