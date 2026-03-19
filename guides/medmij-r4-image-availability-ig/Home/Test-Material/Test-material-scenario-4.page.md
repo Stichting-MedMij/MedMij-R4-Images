@@ -43,7 +43,7 @@
 | ReportInformation.Report | |
 | AccessionNumberInformation.AccessionNumber | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | |
-| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | 
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | |
 | StudyInstanceUID | |
