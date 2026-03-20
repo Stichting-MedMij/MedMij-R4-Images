@@ -21,7 +21,7 @@ This technical design is a technical counterpart of the {{pagelink: FO, text: fu
 ## Boundaries and relationships
 This technical design includes use cases for the exchange of images and reports between healthcare providers (e.g. hospitals) and patients (e.g. in a PHR setting).
 
-This technical design assumes that a PHR is able to make a connection to the right XIS that contains the patient's information. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/). In particular, each transaction is performed in the context of a specific authenticated patient, which has been established using the authentication mechanisms outlined in the MedMij Afsprakenstelsel (also see the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Afsprakenstelsel)), i.e. via an OAuth2 token. Each XIS gateway is required to perform filtering based on the patient associated with the context for the request, so only the records associated with the authenticated patient are returned. For this reason, search parameters should not be included for patient identification.
+This technical design assumes that a PHR is able to make a connection to the right XIS that contains the patient's information. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/). In particular, each transaction is performed in the context of a specific authenticated patient, which has been established using the authentication mechanisms outlined in the MedMij Afsprakenstelsel (also see the [MedMij FHIR IG by Nictiz](https://informatiestandaarden.nictiz.nl/wiki/MedMij:IG:V1/FHIR_IG#Afsprakenstelsel)), i.e. via an OAuth2 token. Each XIS gateway is required to perform filtering based on the patient associated with the context for the request, so only the records associated with the authenticated patient are returned. For this reason, search parameters for patient identification SHALL NOT be included.
 
 ## <a name="RelatingFHIRToFunctionalCounterpart"></a> Relating FHIR (profiles) to its functional counterpart
 The [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access) describes the (intended) mapping between metadata, FHIR (DocumentReference) and the datasets in ART-DECOR. In this IG, we incorporate the aforementioned functional mapping provided by Nictiz BBS. This mapping has resulted in the {{pagelink: FHIR, text: bbs-DocumentReference profile}}.
@@ -66,22 +66,26 @@ The ITI-67 transaction is used to find available documents for a patient, based 
 **Table 3: Transactions within sub use case Query Timeline Data**
 
 ##### PHR: request message
-The PHR executes an HTTP search against the DocumentReference endpoint of the XIS using the following URL:
+The PHR executes an HTTP search conform the [FHIR specification](https://hl7.org/fhir/R4/search.html) against the DocumentReference endpoint of the XIS using the following URL:
 
-`GET [base]/DocumentReference{?<query>}`
+```
+GET [base]/DocumentReference{?[parameters]}
+```
 
-The `<query>` represents a series of encoded name-value pairs representing the filter for the query. The search parameters listed in the table below SHALL be supported by both PHR and XIS.
+Here, `[parameters]` represents a series of encoded name-value pairs representing the filter for the query. Note that this use case is strictly limited to the exchange of approved documents. As a `.status` with value *current* is used to represent approved documents, the PHR SHALL always include the search parameter `status` with value *current* in their request, resulting in:
+
+```
+GET [base]/DocumentReference?status=current{&[additional parameters]}
+```
+
+The search parameters listed in the table below SHALL be supported by both PHR and XIS.
 
 | Image Availability search parameter | Description | FHIR search parameter | Examples |
 | --- | --- | --- | --- | --- | --- |
-| availabilityStatus | Search on the status of the DocumentReference. | `status` | Retrieve all DocumentReference resources that refer to an approved document. <br/> `GET [base]/DocumentReference?status=current` <br/> |
-| mimeType | Search on the MIME type of the document. | `contenttype` | Retrieve all DocumentReference resources that refer to a report in PDF format. <br/> `GET [base]/DocumentReference?contenttype=application/pdf` <br/> <br/> Retrieve all DocumentReference resources that refer to an imaging study available as DICOM KOS document. <br/> `GET [base]/DocumentReference?contenttype=application/dicom` |
+| availabilityStatus | Search on the status of the DocumentReference. | `status` | Retrieve all DocumentReference resources that correspond to an approved document. <br/> `GET [base]/DocumentReference?status=current` |
+| mimeType | Search on the MIME type of the document. | `contenttype` | Retrieve all DocumentReference resources that correspond to a report in PDF format. <br/> `GET [base]/DocumentReference?contenttype=application/pdf` <br/> <br/> Retrieve all DocumentReference resources that correspond to an imaging study available as DICOM KOS document. <br/> `GET [base]/DocumentReference?contenttype=application/dicom` |
 
 **Table 4: Supported search parameters for ITI-67**
-
-Since only approved documents are to be exchanged, the PHR SHALL always include the search parameter `status` with value *current* in their request:
-
-`GET [base]/DocumentReference?status=current{&<additional parameters>}`
 
 Other search parameters can be found in the [ITI-67 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#23674121-query-search-parameters) specification. The PHR MAY supply all query parameters listed there, with the exception of the `patient` and `patient.identifier` search parameters, as patient identification is done differently in the MedMij context (i.e. via an OAuth2 token).
 
@@ -116,7 +120,7 @@ See [ITI-67 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#23674
 ##### PHR: request message
 The PHR sends an HTTP GET request to the XIS server to retrieve the imaging report content referenced by a DocumentReference in `DocumentReference.content.attachment.url`.
 
-The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging report requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The XIS SHALL support the Accept header *application/pdf*, irrespective of the value of `.contentType`. 
+The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging report requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The XIS SHALL support the Accept header *application/pdf*, irrespective of the value of `.contentType`.
 
 The PHR MAY supply a MIME type in the Accept header other than *application/pdf* or the MIME type indicated in `DocumentReference.content.attachment.contentType`. Support for such headers by the XIS is optional.
 
@@ -144,7 +148,7 @@ The retrieval of images consists of two consecutive steps, namely the ITI-68 tra
 ##### PHR: request message (MHD ITI-68)
 The PHR sends an HTTP GET request to the XIS server to retrieve the imaging study manifest content referenced by a DocumentReference in `DocumentReference.content.attachment.url`.
 
-The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging study manifest requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS relative to the `.contentType` present in the DocumentReference for which the PHR requests the content. In particular, the XIS has to support reformatting a DICOM KOS document (with `.contentType` equal to *application/dicom*) into the [DICOM JSON Model](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_f.html) (with `.contentType` equal to *application/dicom+json*). 
+The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the imaging study manifest requested in an encoding other than the encoding indicated in the `DocumentReference.content.attachment.contentType`. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS relative to the `.contentType` present in the DocumentReference for which the PHR requests the content. In particular, the XIS has to support reformatting a DICOM KOS document (with `.contentType` equal to *application/dicom*) into the [DICOM JSON Model](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_f.html) (with `.contentType` equal to *application/dicom+json*).
 
 The PHR MAY supply a MIME type in the Accept header other than those indicated by the table below or the MIME type indicated in `DocumentReference.content.attachment.contentType`. Support for such headers by the XIS is optional.
 
@@ -159,7 +163,7 @@ The PHR MAY supply a MIME type in the Accept header other than those indicated b
 See [ITI-68 Request Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#236841-retrieve-document-request-message) for further details.
 
 ##### XIS: response message (MHD ITI-68)
-The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR. 
+The XIS returns an HTTP Status code appropriate to the processing outcome. When the requested imaging study manifest is returned, the XIS SHALL respond with HTTP Status Code 200, and the imaging study manifest SHOULD use a correct content type based on the Accept header supplied in the request by the PHR.
 
 The imaging study manifest SHOULD contain references to the relevant images following the [WADO-RS format](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri/). Moreover, the attributes listed in [Table 4.68.4.1.2.1.1-1 of IHE RAD TF-2](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) SHALL be supported by the XIS. This means that all attributes indicated with either *R* or *R+* SHALL be included in the DICOM KOS document, as well as the Retrieve URL attribute (see Note 1 below the linked table).
 
@@ -170,7 +174,9 @@ See [ITI-68 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-68.html#23684
 ##### PHR: request message (WADO-RS RAD-107)
 The WADO-RS Retrieve request (RAD-107) is used to retrieve individual (image) instances. For each (image) instance the PHR wants to retrieve, it executes an HTTP GET against the WADO-RS endpoint of the XIS using the following URL:
 
-`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}{/rendered}`
+```
+GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]{/frames/[FrameIndex]}{/rendered}
+```
 
 Note the following:
 - The required `[StudyInstanceUID]`, `[SeriesInstanceUID]` and `[SOPInstanceUID]` unique identifier values can be found in the DICOM KOS document, which is obtained via the ITI-68 Retrieve Document transaction. In Table 2, the corresponding DICOM tags are listed. Note however, that the SOP Instance UID of an individual instance which is referenced by the KOS document can be found in DICOM tag `(0008,1155)` (Referenced SOP Instance UID) within the KOS document.
@@ -178,37 +184,63 @@ Note the following:
 - By default, the request returns binary DICOM instances, while adding `/rendered` to the request results in rendered instances, e.g. in JPEG format (also see Table 10).
 - The part `/frames/[FrameIndex]` only needs to be added to the request when the SOP instance may contain multi-frame images, which is indicated in Table 9 below. Since the approaches of retrieving a single-frame or multi-frame image differ slightly, these are described separately below.
 
-**Retrieve single-frame image** <br/>
+**<a name="RetrieveSingleFrameImage"></a> Retrieve single-frame image** <br/>
 Instead of constructing the above URL from scratch by searching all these identifier values from various locations within the KOS document, DICOM tag `(0008,1115)` (Referenced Series Sequence) provides a structured way to access this information. This sequence contains one or more referenced image series. Each item in the sequence corresponds to a specific series and contains:
 - Retrieve URL `(0008,1190)`
 - A sequence of referenced instances (Referenced SOP Sequence `(0008,1199)`), each containing:
   - Referenced SOP Class UID `(0008,1150)`
   - Referenced SOP Instance UID `(0008,1155)`
 
-To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,1190)` can be used, as it attains the value
+To simplify the construction of the WADO-RS request, the Retrieve URL `(0008,1190)` can be used, as it attains the value `[WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]` for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows:
 
-`[WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]`
-
-for each series. To create the WADO-RS request with which the image (i.e. SOP instance) is retrieved, the PHR would then only need to append the value of the corresponding Referenced SOP Instance UID `(0008,1155)` as follows: 
-
-`GET [RetrieveURL]/instances/[SOPInstanceUID]`
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]
+```
 
 This approach allows the PHR to iterate over all items in the KOS document in the Referenced Series Sequence `(0008,1115)`.
 
 **Retrieve multi-frame image** <br/>
-Some DICOM instances contain multiple frames within a single SOP Instance. If the retrieval approach described above would be used for a multi-frame image, only the first frame would be returned by the XIS. To retrieve all frames, the iterative procedure described below SHALL be followed for such images instead. Table 9 indicates which SOP classes (of the ones that need to be supported) may contain multi-frame images, and thus for which this approach applies.
+Some DICOM instances contain multiple frames within a single SOP Instance. If the retrieval approach described above would be used for a multi-frame image, only the first frame would be returned by the XIS. To retrieve all frames, one of the iterative procedures described below SHALL be followed for such images instead. Table 9 indicates which SOP classes (of the ones that need to be supported) may contain multi-frame images, and thus for which these procedures apply.
 
+*Method 1* <br/>
 To retrieve all frames of a multi-frame image, the PHR iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS using URLs of the form:
 
-`GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+```
+GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/frames/[FrameIndex]
+```
 
 or, equivalently:
 
-`GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]`
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]
+```
 
 where `[FrameIndex]` attains the values 1, 2, 3, ..., consecutively. Since the total number of frames cannot be derived from the KOS document (as a KOS document does not include DICOM tag `(0028,0008)`, i.e. the Number of Frames), the PHR SHALL attempt consecutive requests with increasing frame index until an HTTP error code is returned, indicating that no additional frames exist. Examples of such error codes are HTTP 404 (Not Found) and 416 (Range Not Satisfiable). If the error is returned on the request with `[FrameIndex]` equal to *n*, the PHR SHALL assume that the frame with index *n-1* is the final valid frame for that instance.
- 
-If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the previous subsection.
+
+If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
+
+*Method 2* <br/>
+Whether or not instances contain multiple frames can also be determined from DICOM tag `(0028,0008)` (Number of Frames) in the metadata. The PHR can request this metadata by executing the following HTTP GET request against the WADO-RS endpoint of the XIS:
+
+```
+GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/metadata
+```
+
+or, equivalently:
+
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]/metadata
+```
+
+If Number of Frames is greater than 1, the PHR then iteratively executes HTTP GET requests against the WADO-RS endpoint of the XIS to retrieve all frames of the multi-frame image:
+
+```
+GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]
+```
+
+where `[FrameIndex]` attains the values 1, 2, 3, ..., Number of Frames, consecutively.
+
+If Number of Frames is equal to 1, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
 
 **Supported SOP classes and WADO-RS requests** <br/>
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
@@ -240,7 +272,7 @@ The table below indicates the minimal set of SOP classes that SHALL be supported
 
 **<a name="SupportedSOPClasses"></a> Table 9: Supported SOP classes**
 
-The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the (image) instance in the preferred format. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS, as well as the corresponding WADO-RS request (both forms) that needs to be executed by the PHR. 
+The PHR SHALL provide an HTTP Accept header to indicate the preferred MIME type, such that the XIS can provide the (image) instance in the preferred format. The table below indicates which MIME types as value of the Accept header SHALL be supported by the XIS, as well as the corresponding WADO-RS request (both forms) that needs to be executed by the PHR.
 
 | WADO-RS request | Accept header |
 | --- | --- |

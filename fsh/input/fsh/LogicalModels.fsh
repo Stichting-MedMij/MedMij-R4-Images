@@ -1,6 +1,6 @@
 // All LogicalModels used in Image Availability
 
-Logical: LmPatient
+Logical: BbsLmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: bbs-lm-Patient
 Title: "Patient"
@@ -33,7 +33,7 @@ Description: "The person on which an imaging study is performed."
 * Gender from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000 (required)
   * ^alias = "Geslacht"
 
-Logical: LmPatientServeTimeline
+Logical: BbsLmPatientServeTimeline
 Parent: bbs-lm-Patient
 Id: bbs-lm-Patient-serve-timeline
 Title: "Patient (Serve image and report timeline)"
@@ -65,7 +65,7 @@ Description: "The person on which an imaging study is performed."
 * Gender
   * ^mustSupport = true
 
-Logical: LmPatientServeImageReport
+Logical: BbsLmPatientServeImageReport
 Parent: bbs-lm-Patient
 Id: bbs-lm-Patient-serve-image-report
 Title: "Patient (Serve image and report)"
@@ -97,7 +97,7 @@ Description: "The person on which an imaging study is performed."
 * Gender
   * ^mustSupport = true
 
-Logical: LmStudy
+Logical: BbsLmStudy
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: bbs-lm-Study
 Title: "Study"
@@ -209,7 +209,7 @@ Description: "Imaging study including images and reports."
 * StudyInstanceUID 0..1 Identifier "Study Instance UID" "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
   * ^alias = "StudyInstanceUID"
 
-Logical: LmStudyServeTimeline
+Logical: BbsLmStudyServeTimeline
 Parent: bbs-lm-Study
 Id: bbs-lm-Study-serve-timeline
 Title: "Study (Serve image and report timeline)"
@@ -291,7 +291,7 @@ Description: "Imaging study including images and reports."
   * ^mustSupport = true
   * AccessionNumber 1..1
     * ^mustSupport = true
-  * AssigningAuthority 1..1
+  * AssigningAuthority
     * ^mustSupport = true
     * HealthcareProvider 1..1
       * ^mustSupport = true
@@ -306,7 +306,7 @@ Description: "Imaging study including images and reports."
 * StudyInstanceUID
   * ^mustSupport = true
 
-Logical: LmStudyServeImageReport
+Logical: BbsLmStudyServeImageReport
 Parent: bbs-lm-Study
 Id: bbs-lm-Study-serve-image-report
 Title: "Study (Serve image and report)"
@@ -317,8 +317,9 @@ Description: "Imaging study including images and reports."
 * ^purpose = "This LogicalModel represents (the functional requirements of) the Study building block in the 'Serve image and report' transaction within the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
 * insert Copyright
 * ^abstract = false
-* .
-* ImageInformation obeys bbs-lm-Study-serve-image-report-1
+* . obeys bbs-lm-Study-serve-image-report-1
+* ImageInformation
+  * ^condition = "bbs-lm-Study-serve-image-report-1"
   * ^mustSupport = true
   * ImageInformationIdentificationNumber 1..1
     * ^mustSupport = true
@@ -330,7 +331,8 @@ Description: "Imaging study including images and reports."
     * ^mustSupport = true
   * Modality 1..*
     * ^mustSupport = true
-* ReportInformation obeys bbs-lm-Study-serve-image-report-1
+* ReportInformation
+  * ^condition = "bbs-lm-Study-serve-image-report-1"
   * ^mustSupport = true
   * ReportInformationIdentificationNumber 1..1
     * ^mustSupport = true
@@ -346,8 +348,8 @@ Description: "At least one of ImageInformation or ReportInformation is present."
 Severity: #error
 Expression: "ImageInformation.exists() or ReportInformation.exists()"
 
-Mapping: LmPatientBeeldbeschikbaarheidNictiz
-Source: LmPatient
+Mapping: BbsLmPatientBeeldbeschikbaarheidNictiz
+Source: BbsLmPatient
 Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
 Id: bbs-dataset-100-alpha2-20240208
 Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
@@ -362,8 +364,23 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
 * DateOfBirth -> "bbs-dataelement-167" "DateOfBirth"
 * Gender -> "bbs-dataelement-168" "Gender"
 
-Mapping: LmStudyBeeldbeschikbaarheidNictiz
-Source: LmStudy
+Mapping: BbsLmPatientSNOMED
+Source: BbsLmPatient
+Target: "http://snomed.info/sct"
+Id: SNOMED
+Title: "SNOMED CT"
+* -> "116154003" "patiënt"
+
+Mapping: BbsLmPatientLOINC
+Source: BbsLmPatient
+Target: "http://loinc.org"
+Id: LOINC
+Title: "LOINC"
+* DateOfBirth -> "21112-8" "Geboortedatum [tijdstempel] in ^patiënt"
+* Gender -> "46098-0" "Geslacht [type] in ^patiënt"
+
+Mapping: BbsLmStudyBeeldbeschikbaarheidNictiz
+Source: BbsLmStudy
 Target: "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
 Id: bbs-dataset-100-alpha2-20240208
 Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
@@ -401,8 +418,8 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * ReportDateTime -> "bbs-dataelement-101" "DateTime"
   * Report -> "bbs-dataelement-690" "Report"
 
-Mapping: LmStudyMedMij-100-rc2
-Source: LmStudy
+Mapping: BbsLmStudyMedMij-100-rc2
+Source: BbsLmStudy
 Id: bbs-medmij-dataset-100-rc2-2025xxyy
 Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
 * ImageInformation
@@ -420,23 +437,8 @@ Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
       * OrganizationType -> "bbs-medmij-dataelement-12" "OrganizationType"
 * StudyInstanceUID -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
 
-Mapping: LmPatientSNOMED
-Source: LmPatient
-Target: "http://snomed.info/sct"
-Id: SNOMED
-Title: "SNOMED CT"
-* -> "116154003" "patiënt"
-
-Mapping: LmPatientLOINC
-Source: LmPatient
-Target: "http://loinc.org"
-Id: LOINC
-Title: "LOINC"
-* DateOfBirth -> "21112-8" "Geboortedatum [tijdstempel] in ^patiënt"
-* Gender -> "46098-0" "Geslacht [type] in ^patiënt"
-
-Mapping: LmStudySNOMED
-Source: LmStudy
+Mapping: BbsLmStudySNOMED
+Source: BbsLmStudy
 Target: "http://snomed.info/sct"
 Id: SNOMED
 Title: "SNOMED CT"

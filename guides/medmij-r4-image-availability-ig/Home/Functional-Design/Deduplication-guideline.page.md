@@ -12,17 +12,17 @@ Er bestaan op dit moment geen overkoepelende nationale richtlijnen voor het unie
 ## Duplicaatdetectie
 Duplicaatdetectie is het proces waarbij kopieën van gegevens worden geïdentificeerd. In de ideale situatie stelt elke zorgverlener uitsluitend zijn eigen beelden en verslagen beschikbaar. In de praktijk blijkt dit echter lastig door het ontbreken van domeinoverstijgende afspraken. Duplicaatdetectie via automatische detectie op basis van unieke kenmerken, is daarom noodzakelijk, zodat er voor de burger een bruikbaar en leesbaar overzicht van gegevens in de PGO wordt weergegeven.
 
-In het {{pagelink: TD, text: technisch ontwerp, anchor: Identifiers}} is een overzicht weergegeven van alle relevante identificatienummers voor de uitwisseling van beelden en verslagen. In het bijzonder bevat dit overzicht extra toelichting voor de identificatienummers die gebruikt worden voor duplicaatdetectie. 
+In het {{pagelink: TD, text: technisch ontwerp, anchor: Identifiers}} is een overzicht weergegeven van alle relevante identificatienummers voor de uitwisseling van beelden en verslagen. In het bijzonder bevat dit overzicht extra toelichting voor de identificatienummers die gebruikt worden voor duplicaatdetectie.
 
-## Detectie en identificatie duplicaten 
+## Detectie en identificatie duplicaten
 
-### Verslagen  
-Duplicaatdetectie van verslagen gebeurt op basis van: 
+### Verslagen
+Duplicaatdetectie van verslagen gebeurt op basis van:
 - VerslaginformatieIdentificatienummer ([Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-100): het unieke ID van het verslag in een XIS.
 
-Als twee verslagen een identiek VerslaginformatieIdentificatienummer hebben, kan worden aangenomen dat deze verslagen duplicaten zijn. 
+Als twee verslagen een identiek VerslaginformatieIdentificatienummer hebben, kan worden aangenomen dat deze verslagen duplicaten zijn.
 
-### Beelden 
+### Beelden
 Duplicaatdetectie van medische beelden gebeurt op basis van:
 - Study Instance UID ({{pagelink: LM, text: MedMij dataset}}, bbs-medmij-dataelement-4): het unieke identificatienummer van een beeldvormend onderzoek binnen DICOM.
 - BeeldinformatieIdentificatienummer ([Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-784): het unieke ID van het beeld in een PACS of NVA.
