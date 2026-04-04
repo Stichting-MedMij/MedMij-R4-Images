@@ -2,7 +2,7 @@
 
 ## Patient data
 
-| Scenario 4 |
+| Scenario 4 | |
 | --- | --- |
 | NameInformation.FirstNames | Xi |
 | NameInformation.Initials | |
@@ -14,7 +14,7 @@
 
 ## Study data
 
-| Scenario 4.1 |
+| Scenario 4.1 | |
 | --- | --- |
 | ProcedureStartDate | |
 | ProcedureEndDate | |

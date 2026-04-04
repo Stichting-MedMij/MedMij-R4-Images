@@ -2,7 +2,7 @@
 
 ## Patient data
 
-| Scenario 1 |
+| Scenario 1 | |
 | --- | --- |
 | NameInformation.FirstNames | Pieter |
 | NameInformation.Initials | |
@@ -14,7 +14,7 @@
 
 ## Study data
 
-| Scenario 1.1 |
+| Scenario 1.1 | |
 | --- | --- |
 | ProcedureStartDate | 23-05-2024 |
 | ProcedureEndDate | |

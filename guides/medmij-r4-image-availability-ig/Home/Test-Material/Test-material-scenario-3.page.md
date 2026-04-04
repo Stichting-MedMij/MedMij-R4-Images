@@ -2,7 +2,7 @@
 
 ## Patient data
 
-| Scenario 3 |
+| Scenario 3 | |
 | --- | --- |
 | NameInformation.FirstNames | |
 | NameInformation.Initials | |
@@ -14,7 +14,7 @@
 
 ## Study data
 
-| Scenario 3.1 |
+| Scenario 3.1 | |
 | --- | --- |
 | ProcedureStartDate | 03-03-2020 |
 | ProcedureEndDate | |

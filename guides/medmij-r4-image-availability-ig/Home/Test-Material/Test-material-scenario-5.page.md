@@ -2,7 +2,7 @@
 
 ## Patient data
 
-| Scenario 5 |
+| Scenario 5 | |
 | --- | --- |
 | NameInformation.FirstNames | |
 | NameInformation.Initials | B. |
@@ -14,7 +14,7 @@
 
 ## Study data
 
-| Scenario 5.1 |
+| Scenario 5.1 | |
 | --- | --- |
 | ProcedureStartDate | 22-08-2024 |
 | ProcedureEndDate | |
@@ -48,7 +48,7 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003 |
 
-| Scenario 5.2 |
+| Scenario 5.2 | |
 | --- | --- |
 | ProcedureStartDate | 17-01-2025 |
 | ProcedureEndDate | |
@@ -82,7 +82,7 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003 |
 
-| Scenario 5.3 |
+| Scenario 5.3 | |
 | --- | --- |
 | ProcedureStartDate | 17-01-2025 |
 | ProcedureEndDate | |
@@ -116,7 +116,7 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.2.752.24.7.3059655634.36522 |
 
-| Scenario 5.4 |
+| Scenario 5.4 | |
 | --- | --- |
 | ProcedureStartDate | 17-01-2025 |
 | ProcedureEndDate | |

@@ -2,7 +2,7 @@
 
 ## Patient data
 
-| Scenario 2 |
+| Scenario 2 | |
 | --- | --- |
 | NameInformation.FirstNames | José |
 | NameInformation.Initials | |
@@ -14,7 +14,7 @@
 
 ## Study data
 
-| Scenario 2.1 |
+| Scenario 2.1 | |
 | --- | --- |
 | ProcedureStartDate | 10-02-1990 |
 | ProcedureEndDate | |
@@ -48,7 +48,7 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.2.826.0.1.3680043.8.498.77615907425522706317163091876421984542 |
 
-| Scenario 2.2 |
+| Scenario 2.2 | |
 | --- | --- |
 | ProcedureStartDate | 06-02-1993 |
 | ProcedureEndDate | |
@@ -82,7 +82,7 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | |
 | StudyInstanceUID | 2.16.528.1.1007.3.1.20250212.789012 |
 
-| Scenario 2.3 |
+| Scenario 2.3 | |
 | --- | --- |
 | ProcedureStartDate | 06-02-1993 |
 | ProcedureEndDate | |
@@ -116,7 +116,7 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 2.16.528.1.1007.3.1.20250212.456789 |
 
-| Scenario 2.4 |
+| Scenario 2.4 | |
 | --- | --- |
 | ProcedureStartDate | 10-08-2020 |
 | ProcedureEndDate | |
