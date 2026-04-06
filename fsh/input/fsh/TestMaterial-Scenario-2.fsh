@@ -63,7 +63,7 @@ Usage: #example
     * url = "Binary/ImageAvailability-Binary-Report-2-2" // geen mapping naar dataset | verwijst naar een Binary
     * title = "longfoto" // title | Onderzoek.Verslaginformatie.VerslagTitel
     * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
-  * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
+  * format = $FormatCode#urn:ihe:rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
@@ -144,7 +144,7 @@ Usage: #example
     * url = "Binary/ImageAvailability-Binary-Report-2-3" // geen mapping naar dataset | verwijst naar een Binary
     * title = "longfoto" // title | Onderzoek.Verslaginformatie.VerslagTitel
     * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
-  * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
+  * format = $FormatCode#urn:ihe:rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
@@ -231,7 +231,7 @@ Usage: #example
     * url = "Binary/ImageAvailability-Binary-Report-2-4" // geen mapping naar dataset | verwijst naar een Binary
     * title = "röntgenfoto van linker kaakgewricht" // title | Onderzoek.Verslaginformatie.VerslagTitel
     * creation = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
-  * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
+  * format = $FormatCode#urn:ihe:rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "2020-08-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType

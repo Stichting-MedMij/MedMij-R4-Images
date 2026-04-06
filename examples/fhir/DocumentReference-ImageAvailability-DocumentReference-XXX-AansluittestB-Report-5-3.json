@@ -67,7 +67,7 @@
         "creation": "2025-02-25T14:07:00+01:00"
       },
       "format": {
-        "code": "urn.ihe.rad:PDF",
+        "code": "urn:ihe:rad:PDF",
         "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
       }
     }

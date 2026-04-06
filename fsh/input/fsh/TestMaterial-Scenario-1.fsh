@@ -63,7 +63,7 @@ Usage: #example
     * url = "Binary/ImageAvailability-Binary-Report-1-1" // geen mapping naar dataset | verwijst naar een Binary
     * title = "Röntgen Clavicula rechts" // title | Onderzoek.Verslaginformatie.VerslagTitel
     * creation = "2024-05-24T12:00:00+02:00" // creationTime | Onderzoek.Verslaginformatie.DatumTijd
-  * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
+  * format = $FormatCode#urn:ihe:rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "2024-05-23" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType

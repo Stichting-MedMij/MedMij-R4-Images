@@ -145,7 +145,7 @@ Usage: #example
     * url = "Binary/ImageAvailability-Binary-Report-5-3" // geen mapping naar dataset | verwijst naar een Binary
     * title = "CR CWK MedMij" // title | Onderzoek.Verslaginformatie.VerslagTitel
     * creation = "2025-02-25T14:07:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-  * format = $FormatCode#urn.ihe.rad:PDF // formatCode | geen mapping naar dataset
+  * format = $FormatCode#urn:ihe:rad:PDF // formatCode | geen mapping naar dataset
 * context
   * period.start = "2025-02-25" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType

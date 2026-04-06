@@ -67,7 +67,7 @@
         "creation": "2024-05-24T12:00:00+02:00"
       },
       "format": {
-        "code": "urn.ihe.rad:PDF",
+        "code": "urn:ihe:rad:PDF",
         "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode"
       }
     }
