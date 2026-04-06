@@ -132,7 +132,8 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "6010713"
-* type
-  * coding[0] = $VektisAGB#0362 "Radiologie"
-  * coding[1] = $OrganizationType#V6 "Algemeen ziekenhuis"
+* type[0]
+  * coding = $VektisAGB#0362 "Radiologie"
+* type[1]
+  * coding = $OrganizationType#V6 "Algemeen ziekenhuis"
 * name = "OLVG"

@@ -243,9 +243,10 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "06011009"
-* type
-  * coding[0] = $VektisAGB#0361 "Radiotherapie"
-  * coding[1] = $OrganizationType#V6 "Algemeen ziekenhuis"
+* type[0]
+  * coding = $VektisAGB#0361 "Radiotherapie"
+* type[1]
+  * coding = $OrganizationType#V6 "Algemeen ziekenhuis"
 * name = "Catharina Ziekenhuis Eindhoven"
 
 Instance: ImageAvailability-Organization-CZE

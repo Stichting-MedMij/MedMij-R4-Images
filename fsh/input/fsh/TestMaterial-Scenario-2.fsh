@@ -328,9 +328,10 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "6020806"
-* type
-  * coding[0] = $VektisAGB#0362 "Radiologie"
-  * coding[1] = $OrganizationType#V5 "Universitair Medisch Centrum"
+* type[0]
+  * coding = $VektisAGB#0362 "Radiologie"
+* type[1]
+  * coding = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Erasmus MC"
 
 Instance: ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair
@@ -339,7 +340,8 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "6020806"
-* type
-  * coding[0] = $VektisAGB#1101 "Mondzorg en kaakchirurgie, implantoloog"
-  * coding[1] = $OrganizationType#V5 "Universitair Medisch Centrum"
+* type[0]
+  * coding = $VektisAGB#1101 "Mondzorg en kaakchirurgie, implantoloog"
+* type[1]
+  * coding = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Erasmus MC"
