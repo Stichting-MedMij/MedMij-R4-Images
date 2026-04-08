@@ -210,6 +210,46 @@ Usage: #example
       * system = $DICOMUniqueId
       * value = "urn:oid:1.2.40.0.13.1.309496748046569320805636965993460666632" // Onderzoek.StudyInstanceUID
 
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $URI
+  * value = "urn:uuid:77c3b3da-fa6d-4f03-9455-f1518a2ec348" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $SCT#386831001 "gastroscopie" // Onderzoek.Verrichting.VerrichtingType| use the SNOMED CT display name of the procedure code sequence in (0008,1032)
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2017-04-14T17:54:20+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/1.2.276.0.67.5.4988233814.20170414171618308.147/instances/1.2.276.0.67.5.4988233814.20170414180747093.254" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "ENDOSCOPIE-KAMER 5" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2017-04-14T17:54:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#ES "Endoscopy" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2017-04-14" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "V-24031" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.276.0.50.10201000171.1821207.15297928.15756" // Onderzoek.StudyInstanceUID
+
 Instance: ImageAvailability-Patient-XXX-Aansluittest-B
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example

@@ -149,3 +149,37 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.2.40.0.13.1.309496748046569320805636965993460666632 |
+
+| Scenario 5.5 | |
+| --- | --- |
+| ProcedureStartDate | 14-04-2017 |
+| ProcedureEndDate | |
+| ProcedureType | gastroscopie (code '386831001' from code system 'SNOMED CT') |
+| ProcedureAnatomicalLocation.Location | |
+| ProcedureAnatomicalLocation.Laterality | |
+| Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
+| Location.HealthcareProvider.OrganizationName | Catharina Ziekenhuis Eindhoven |
+| Location.HealthcareProvider.DepartmentSpecialty | Radiological specialties (code '394734003' from code system 'SNOMED CT') |
+| Location.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
+| Performer.HealthProfessional.HealthProfessionalIdentificationNumber | |
+| Performer.HealthProfessional.NameInformation.FirstNames | |
+| Performer.HealthProfessional.NameInformation.Initials | |
+| Performer.HealthProfessional.NameInformation.LastName.Prefix | |
+| Performer.HealthProfessional.NameInformation.LastName.LastName | |
+| Performer.HealthProfessional.Specialty | |
+| Performer.HealthProfessional.HealthProfessionalRole | |
+| ImageInformation.ImageInformationIdentificationNumber | 77c3b3da-fa6d-4f03-9455-f1518a2ec348 |
+| ImageInformation.ImageDateTime | 14-4-2017  17:54 |
+| ImageInformation.ImageTitle | ENDOSCOPIE-KAMER 5 |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/1.2.276.0.67.5.4988233814.20170414171618308.147/instances/1.2.276.0.67.5.4988233814.20170414180747093.254</span> |
+| ImageInformation.Modality | Endoscopy (code 'ES' from code system 'DICOM Controlled Terminology Definitions') |
+| ReportInformation.ReportInformationIdentificationNumber | |
+| ReportInformation.ReportDateTime | |
+| ReportInformation.ReportTitle | |
+| ReportInformation.Report | |
+| AccessionNumberInformation.AccessionNumber | V-24031 |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Catharina Ziekenhuis Eindhoven |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
+| StudyInstanceUID | 1.2.276.0.50.10201000171.1821207.15297928.15756 |
