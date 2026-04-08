@@ -89,7 +89,7 @@
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
         "short": "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID",
-        "definition": "* Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.\n* Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The globally unique identifier assigned by the document creator to this document.",
+        "definition": "* Worldwide unique ID for the report of the imaging study. In DICOM the study/series UID can be used.\n* Worldwide unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The worldwide unique identifier assigned by the document creator to this document.",
         "alias": [
           "VerslaginformatieIdentificatienummer",
           "BeeldinformatieIdentificatienummer"
@@ -561,7 +561,7 @@
         "id": "DocumentReference.content.format",
         "path": "DocumentReference.content.format",
         "short": "FormatCode",
-        "definition": "Code globally uniquely specifying the format of the document.",
+        "definition": "Code worldwide uniquely specifying the format of the document.",
         "binding": {
           "strength": "extensible",
           "valueSet": "http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.7--20131212104106"
@@ -967,7 +967,7 @@
         "id": "DocumentReference.context.related:studyInstanceUID.identifier",
         "path": "DocumentReference.context.related.identifier",
         "short": "StudyInstanceUID",
-        "definition": "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS.",
+        "definition": "The worldwide unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS.",
         "alias": [
           "StudyInstanceUID"
         ],
