@@ -33,11 +33,11 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 ## Eisen voor PGO
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 1 | Zorggebruiker | Zo vroeg mogelijk in het proces geattendeerd worden dat mijn beelden het beste bekeken kunnen worden op een computerscherm | Begrijp dat mijn beelden op een groot scherm het meest duidelijk en het beste beoordeeld kunnen worden en niet onnodig op een ongeschikt apparaat mijn beelden ophaal | S |
+| 1 | Zorggebruiker | Zo vroeg mogelijk in het proces geattendeerd worden dat mijn beelden het beste bekeken kunnen worden op een computerscherm | Begrijp dat mijn beelden op een groot scherm duidelijker getoond en beter beoordeeld kunnen worden dan op een mobiel of tablet, en dat ik mijn beelden niet onnodig op een ongeschikt apparaat ophaal | S |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Er wordt zo vroeg mogelijk in het proces een visueel duidelijke melding getoond bij het openen van een beeld op mobiel of tablet in zowel de webviewer als DICOM-download. |
+| 1. | Er wordt zo vroeg mogelijk in het proces een visueel duidelijke melding getoond, in ieder geval vóór het ophalen van beelden op de tijdlijn op mobiel of tablet (in zowel de webviewer als DICOM-download). |
 | 2. | In de melding wordt een advies beschreven om de beelden op een computerscherm te bekijken. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
