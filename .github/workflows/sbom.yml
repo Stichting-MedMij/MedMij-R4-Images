@@ -1,0 +1,35 @@
+name: Generate SBOM for impl/java
+on:
+  push:
+    paths:
+      - 'impl/java/**'
+  workflow_dispatch:
+
+jobs:
+  generate-sbom:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: impl/java
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Generate SBOM with CycloneDX
+        run: |
+          mvn org.cyclonedx:cyclonedx-maven-plugin:makeAggregateBom
+
+      - name: Upload SBOM artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sbom-impl-java
+          path: impl/java/target/bom.xml
+          if-no-files-found: error
