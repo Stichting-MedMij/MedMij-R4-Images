@@ -4,10 +4,10 @@ Instance: ImageAvailability-DocumentReference-Blaak-Image-1-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:7ce26098-1b2f-4ad8-bd45-d1e931e94ca0" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.30908951586507656182973713777298371979" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#3511000087103 "röntgenfoto van rechter sleutelbeen" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-Blaak) "Pieter Blaak"
@@ -24,7 +24,7 @@ Usage: #example
     * creation = "2024-05-23T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
-  * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality] = $DCM#OT "Other Modality" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "2024-05-23" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker

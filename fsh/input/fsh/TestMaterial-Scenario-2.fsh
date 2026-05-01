@@ -4,10 +4,10 @@ Instance: ImageAvailability-DocumentReference-Klaassen-Groen-Image-2-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:49b82e94-cf06-4507-b5a3-361d5937e77d" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.11642993451842870396897140495770614031" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -24,7 +24,7 @@ Usage: #example
     * creation = "1990-02-10T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
-  * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality] = $DCM#OT "Other Modality" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "1990-02-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
@@ -85,10 +85,10 @@ Instance: ImageAvailability-DocumentReference-Klaassen-Groen-Image-2-3
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:57b49159-5c9e-424d-8a09-b240c13a395d" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.258000159807854729618851821502203021554" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -105,7 +105,7 @@ Usage: #example
     * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
-  * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality] = $DCM#OT "Other Modality" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "1993-02-06" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
@@ -129,7 +129,7 @@ Usage: #example
   * system = $URI
   * value = "urn:uuid:53338e45-a078-4886-8501-7cf1ec838afd" // document uniqueId | Onderzoek.Verslaginformatie.VerslaginformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#399208008 "longfoto" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[reports] = $XDSClassCode#REPORTS "Reports" // classCode
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -172,10 +172,10 @@ Instance: ImageAvailability-DocumentReference-Klaassen-Groen-Image-2-4
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:d7236f3e-5c10-4caf-9864-255baa23611b" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.16334082318769461496963509104742703811" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#142771000146105 "röntgenfoto van linker kaakgewricht" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"
@@ -192,7 +192,7 @@ Usage: #example
     * creation = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
-  * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality] = $DCM#OT "Other Modality" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "2020-08-10" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
@@ -216,7 +216,7 @@ Usage: #example
   * system = $URI
   * value = "urn:uuid:0a61a231-1b52-4ba5-b86c-9edac0bfa044" // document uniqueId | Onderzoek.Verslaginformatie.VerslaginformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#142771000146105 "röntgenfoto van linker kaakgewricht" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[reports] = $XDSClassCode#REPORTS "Reports" // classCode
 * subject = Reference(ImageAvailability-Patient-Klaassen-Groen) "José Klaassen-Groen"

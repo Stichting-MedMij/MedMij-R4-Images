@@ -19,31 +19,32 @@
     }
   ],
   "masterIdentifier": {
-    "system": "urn:ietf:rfc:3986",
-    "value": "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
+    "system": "urn:dicom:uid",
+    "value": "urn:oid:2.25.150606558103072029784566806744418491720"
   },
   "type": {
     "coding": [
       {
-        "code": "44491008",
-        "system": "http://snomed.info/sct",
-        "display": "röntgendoorlichting"
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
       }
-    ]
+    ],
+    "text": "CR THORAX"
   },
   "subject": {
     "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
     "display": "B. XXX-Aansluittest-B"
   },
-  "date": "2025-10-16T16:11:00+02:00",
+  "date": "2025-09-02T08:36:00+02:00",
   "author": [
-    {
-      "reference": "PractitionerRole/ImageAvailability-PractitionerRole-Huisarts",
-      "display": "Huisarts"
-    },
     {
       "reference": "Organization/ImageAvailability-Organization-AUMC",
       "display": "Amsterdam UMC, Universitair Medisch Centrum"
+    },
+    {
+      "reference": "Practitioner/ImageAvailability-Practitioner-Bakker-AUMC",
+      "display": "Bart Bakker"
     }
   ],
   "securityLabel": [
@@ -62,9 +63,9 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.167108995133488949839452387666407162515/instances/2.25.261563445634063596325870299400694071686",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.195433058229186809480367734543916316743/instances/2.25.150606558103072029784566806744418491720",
         "title": "CR Thorax",
-        "creation": "2025-10-16T16:11:00+02:00"
+        "creation": "2025-09-02T08:36:00+02:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",
@@ -85,7 +86,7 @@
       }
     ],
     "period": {
-      "start": "2025-10-16"
+      "start": "2025-09-02"
     },
     "facilityType": {
       "coding": [

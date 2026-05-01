@@ -19,8 +19,8 @@
     }
   ],
   "masterIdentifier": {
-    "system": "urn:ietf:rfc:3986",
-    "value": "urn:uuid:77c3b3da-fa6d-4f03-9455-f1518a2ec348"
+    "system": "urn:dicom:uid",
+    "value": "urn:oid:2.25.150599066413166673819115182759068623778"
   },
   "type": {
     "coding": [
@@ -39,7 +39,11 @@
   "author": [
     {
       "reference": "Organization/ImageAvailability-Organization-CZE",
-      "display": "Catharina Ziekenhuis Eindhoven"
+      "display": "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+    },
+    {
+      "reference": "Practitioner/ImageAvailability-Practitioner-Willems-CZE",
+      "display": "Thomas Hugo Willems"
     }
   ],
   "securityLabel": [
@@ -58,9 +62,9 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/1.2.276.0.67.5.4988233814.20170414171618308.147/instances/1.2.276.0.67.5.4988233814.20170414180747093.254",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/2.25.828214698350840955484898921792912694/instances/2.25.150599066413166673819115182759068623778",
         "title": "ENDOSCOPIE-KAMER 5",
-        "creation": "2017-04-14T17:54:00+02:00"
+        "creation": "2017-04-14T17:54:20+02:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",
@@ -116,7 +120,7 @@
               }
             ]
           },
-          "system": "urn:oid:2.16.840.1.113883.2.4.3.114",
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.104",
           "value": "V-24031",
           "assigner": {
             "reference": "Organization/ImageAvailability-Organization-CZE",

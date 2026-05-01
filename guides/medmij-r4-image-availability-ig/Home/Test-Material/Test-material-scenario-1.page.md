@@ -18,7 +18,7 @@
 | --- | --- |
 | ProcedureStartDate | 23-05-2024 |
 | ProcedureEndDate | |
-| ProcedureType | röntgenfoto van rechter sleutelbeen (code '3511000087103' from code system 'SNOMED CT') |
+| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 6010713 (in identifier system 'AGB-Z') |
@@ -32,11 +32,11 @@
 | Performer.HealthProfessional.NameInformation.LastName.LastName | Pater |
 | Performer.HealthProfessional.Specialty | Orthopedisch chirurg (code '01.032' from code system 'Role Code NL Zorgverlenertypen') |
 | Performer.HealthProfessional.HealthProfessionalRole | |
-| ImageInformation.ImageInformationIdentificationNumber | 7ce26098-1b2f-4ad8-bd45-d1e931e94ca0 |
+| ImageInformation.ImageInformationIdentificationNumber | 2.25.30908951586507656182973713777298371979 |
 | ImageInformation.ImageDateTime | 23-05-2024 12:00 |
 | ImageInformation.ImageTitle | röntgenfoto van rechter sleutelbeen |
 | ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.123456/series/2.25.298440724747098310794747640134633075284/instances/2.25.30908951586507656182973713777298371979</span> |
-| ImageInformation.Modality | Other (code 'OT' from code system 'DICOM Controlled Terminology Definitions') |
+| ImageInformation.Modality | Other Modality (code 'OT' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | b042e5cc-442d-4abd-840d-57f3c9f86f73 |
 | ReportInformation.ReportDateTime | 24-05-2024 12:00 |
 | ReportInformation.ReportTitle | Röntgen Clavicula rechts |

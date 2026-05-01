@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-1",
+  "id": "ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-12",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"
@@ -20,7 +20,7 @@
   ],
   "masterIdentifier": {
     "system": "urn:dicom:uid",
-    "value": "urn:oid:2.25.98685467489423581429980749441050035880"
+    "value": "urn:oid:2.25.175209346284073273900540986423954919243"
   },
   "type": {
     "coding": [
@@ -35,15 +35,15 @@
     "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
     "display": "B. XXX-Aansluittest-B"
   },
-  "date": "2024-08-22T16:45:42+02:00",
+  "date": "2025-09-11T09:35:30+02:00",
   "author": [
     {
-      "reference": "Organization/ImageAvailability-Organization-CZE",
-      "display": "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+      "reference": "Organization/ImageAvailability-Organization-AUMC",
+      "display": "Amsterdam UMC, Universitair Medisch Centrum"
     },
     {
-      "reference": "Practitioner/ImageAvailability-Practitioner-Janssen-CZE",
-      "display": "Janssen"
+      "reference": "Practitioner/ImageAvailability-Practitioner-Smit-AUMC",
+      "display": "Prof. Smit"
     }
   ],
   "securityLabel": [
@@ -62,9 +62,9 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/series/2.25.62435657674771067210271088065092768055/instances/2.25.98685467489423581429980749441050035880",
-        "title": "MedMij PGO test CT",
-        "creation": "2024-08-22T16:45:42+02:00"
+        "url": "https://examplepacs.example.com/wado/studies/9.25.17032597195948003129503533750762258202/series/2.25.309460615655030623753206898257276436897/instances/2.25.175209346284073273900540986423954919243",
+        "title": "CARDIALE - IMPORT",
+        "creation": "2025-09-11T09:35:30+02:00"
       },
       "format": {
         "code": "1.2.840.10008.5.1.4.1.1.88.59",
@@ -77,22 +77,22 @@
       {
         "coding": [
           {
-            "code": "CT",
+            "code": "ECG",
             "system": "http://dicom.nema.org/resources/ontology/DCM",
-            "display": "Computed Tomography"
+            "display": "Electrocardiography"
           }
         ]
       }
     ],
     "period": {
-      "start": "2024-08-22"
+      "start": "2025-09-11"
     },
     "facilityType": {
       "coding": [
         {
-          "code": "V6",
+          "code": "V5",
           "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
-          "display": "Algemeen ziekenhuis"
+          "display": "Universitair Medisch Centrum"
         }
       ]
     },
@@ -120,11 +120,11 @@
               }
             ]
           },
-          "system": "urn:oid:2.16.840.1.113883.2.4.3.104",
-          "value": "EXT-14117",
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.114",
+          "value": "AL99250911093530",
           "assigner": {
-            "reference": "Organization/ImageAvailability-Organization-CZE",
-            "display": "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+            "reference": "Organization/ImageAvailability-Organization-AUMC",
+            "display": "Amsterdam UMC, Universitair Medisch Centrum"
           }
         }
       },
@@ -139,7 +139,7 @@
             ]
           },
           "system": "urn:dicom:uid",
-          "value": "urn:oid:1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003"
+          "value": "urn:oid:9.25.17032597195948003129503533750762258202"
         }
       }
     ]

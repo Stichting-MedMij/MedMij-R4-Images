@@ -25,9 +25,9 @@
   "type": {
     "coding": [
       {
-        "code": "142771000146105",
-        "system": "http://snomed.info/sct",
-        "display": "röntgenfoto van linker kaakgewricht"
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
       }
     ]
   },

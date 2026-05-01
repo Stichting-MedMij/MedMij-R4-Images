@@ -4,10 +4,10 @@ Instance: ImageAvailability-DocumentReference-De-Graaff-Image-3-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:e5864703-93bd-46dc-9754-fcd2c0f16489" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.225370106192817013781822914585593250010" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#16831000087101 "MRI van linker bovenbeen" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-De-Graaff) "de Graaff"
@@ -24,7 +24,7 @@ Usage: #example
     * creation = "2020-03-03T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
-  * event[modality] = $DCM#OT "Other" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality] = $DCM#OT "Other Modality" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "2020-03-03" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker

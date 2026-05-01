@@ -25,9 +25,9 @@
   "type": {
     "coding": [
       {
-        "code": "399208008",
-        "system": "http://snomed.info/sct",
-        "display": "longfoto"
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
       }
     ]
   },

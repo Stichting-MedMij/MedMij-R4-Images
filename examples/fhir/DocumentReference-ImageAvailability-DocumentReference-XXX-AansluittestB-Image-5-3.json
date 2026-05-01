@@ -19,17 +19,18 @@
     }
   ],
   "masterIdentifier": {
-    "system": "urn:ietf:rfc:3986",
-    "value": "urn:uuid:63bab3df-700c-4640-906c-b75e5d028437"
+    "system": "urn:dicom:uid",
+    "value": "urn:oid:2.25.5736788717031364046150233872058022718"
   },
   "type": {
     "coding": [
       {
-        "code": "44491008",
-        "system": "http://snomed.info/sct",
-        "display": "röntgendoorlichting"
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
       }
-    ]
+    ],
+    "text": "CR Bekken + heup(en)"
   },
   "subject": {
     "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
@@ -38,12 +39,12 @@
   "date": "2025-02-25T13:53:00+01:00",
   "author": [
     {
-      "reference": "PractitionerRole/ImageAvailability-PractitionerRole-Huisarts",
-      "display": "Huisarts"
-    },
-    {
       "reference": "Organization/ImageAvailability-Organization-CZE",
       "display": "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+    },
+    {
+      "reference": "Practitioner/ImageAvailability-Practitioner-VanDenBerg-CZE",
+      "display": "v.d. Berg"
     }
   ],
   "securityLabel": [
@@ -62,7 +63,7 @@
       "attachment": {
         "contentType": "application/dicom+json",
         "language": "nl",
-        "url": "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.108847635469312156146643524434054792831/instances/2.25.309231887273872075720754766855723493608",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.327109396484713206896779734146872144676/instances/2.25.5736788717031364046150233872058022718",
         "title": "CR CWK MedMij",
         "creation": "2025-02-25T13:53:00+01:00"
       },
@@ -74,6 +75,15 @@
   ],
   "context": {
     "event": [
+      {
+        "coding": [
+          {
+            "code": "OT",
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "display": "Other Modality"
+          }
+        ]
+      },
       {
         "coding": [
           {

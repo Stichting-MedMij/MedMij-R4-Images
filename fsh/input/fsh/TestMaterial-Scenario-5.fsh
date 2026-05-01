@@ -4,24 +4,24 @@ Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:a013c0cf-d4f9-4bc5-aa76-ac41347454bd" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.98685467489423581429980749441050035880" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#77477000 "CT" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
-* date = "2024-08-22T16:45:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-* author[0] = Reference(ImageAvailability-PractitionerRole-Cardioloog) "Cardioloog"
-* author[1] = Reference(ImageAvailability-Organization-CZE-Radiotherapie) "Catharina Ziekenhuis Eindhoven, Radiotherapie, Algemeen ziekenhuis"
+* date = "2024-08-22T16:45:42+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-Janssen-CZE) "Janssen"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/series/1.3.6.1.4.1.40371.1.2.5339.4775.58000.21082.26972.30098.27044/instances/1.3.6.1.4.1.40371.1.2.62771.65477.14037.18246.59242.13152.33179" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/series/2.25.62435657674771067210271088065092768055/instances/2.25.98685467489423581429980749441050035880" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "MedMij PGO test CT" // title | Onderzoek.Beeldinformatie.BeeldTitel
-    * creation = "2024-08-22T16:45:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2024-08-22T16:45:42+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#CT "Computed Tomography" // Onderzoek.Beeldinformatie.Modaliteit
@@ -34,7 +34,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDCZE
       * value = "EXT-14117" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-CZE-Radiotherapie) "Catharina Ziekenhuis Eindhoven, Radiotherapie, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -45,24 +45,24 @@ Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-2
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:14206553-b245-4f16-bd9b-78e3b667d879" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.98689969643066273416183602755420758806" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#77477000 "CT" // Onderzoek.Verrichting.VerrichtingType
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
-* date = "2025-01-17T08:44:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-* author[0] = Reference(ImageAvailability-PractitionerRole-Cardioloog) "Cardioloog"
-* author[1] = Reference(ImageAvailability-Organization-CZE-Radiotherapie) "Catharina Ziekenhuis Eindhoven, Radiotherapie, Algemeen ziekenhuis"
+* date = "2025-01-17T08:44:35+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-Janssen-CZE) "Janssen"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/2.25.256349895707598734186138072546186518851/instances/2.25.72595492073934071827553043814438953233" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/2.25.155401871976277323518300317632862814864/instances/2.25.98689969643066273416183602755420758806" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "MedMij PGO CT" // title | Onderzoek.Beeldinformatie.BeeldTitel
-    * creation = "2025-01-17T08:44:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2025-01-17T08:44:35+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#CT "Computed Tomography" // Onderzoek.Beeldinformatie.Modaliteit
@@ -75,7 +75,7 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2013:accession
       * system = $OIDCZE
       * value = "EXT-14114" // Onderzoek.AccessionNumberInformatie.AccessionNumber
-      * assigner = Reference(ImageAvailability-Organization-CZE-Radiotherapie) "Catharina Ziekenhuis Eindhoven, Radiotherapie, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -86,27 +86,30 @@ Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-3
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:63bab3df-700c-4640-906c-b75e5d028437" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.5736788717031364046150233872058022718" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#44491008 "röntgendoorlichting" // Onderzoek.Verrichting.VerrichtingType
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "CR Bekken + heup(en)" // Procedure Code Sequence > Code Meaning
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-02-25T13:53:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-* author[0] = Reference(ImageAvailability-PractitionerRole-Huisarts) "Huisarts"
-* author[1] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-VanDenBerg-CZE) "v.d. Berg"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.108847635469312156146643524434054792831/instances/2.25.309231887273872075720754766855723493608" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.327109396484713206896779734146872144676/instances/2.25.5736788717031364046150233872058022718" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "CR CWK MedMij" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-02-25T13:53:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
-  * event[modality] = $DCM#CR "Computed Radiography" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality][0] = $DCM#OT "Other Modality" // Onderzoek.Beeldinformatie.Modaliteit
+  * event[modality][1] = $DCM#CR "Computed Radiography" // Onderzoek.Beeldinformatie.Modaliteit
   * period.start = "2025-02-25" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
@@ -130,13 +133,15 @@ Usage: #example
   * system = $URI
   * value = "urn:uuid:cc9008c2-8a08-457e-a928-c42d43b1efb7" // document uniqueId | Onderzoek.Verslaginformatie.VerslaginformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#44491008 "röntgendoorlichting" // Onderzoek.Verrichting.VerrichtingType
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "CR Bekken + heup(en)" // Procedure Code Sequence > Code Meaning
 * category
   * coding[reports] = $XDSClassCode#REPORTS "Reports" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-02-25T14:07:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-* author[0] = Reference(ImageAvailability-PractitionerRole-Huisarts) "Huisarts"
-* author[1] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-VanDenBerg-CZE) "v.d. Berg"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -173,28 +178,30 @@ Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-4
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:550e8400-e29b-41d4-a716-446655440000" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.150606558103072029784566806744418491720" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#44491008 "röntgendoorlichting" // Onderzoek.Verrichting.VerrichtingType
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "CR THORAX" // Procedure Code Sequence > Code Meaning
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
-* date = "2025-10-16T16:11:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-* author[0] = Reference(ImageAvailability-PractitionerRole-Huisarts) "Huisarts"
-* author[1] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* date = "2025-09-02T08:36:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-Bakker-AUMC) "Bart Bakker"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.167108995133488949839452387666407162515/instances/2.25.261563445634063596325870299400694071686" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.195433058229186809480367734543916316743/instances/2.25.150606558103072029784566806744418491720" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
     * title = "CR Thorax" // title | Onderzoek.Beeldinformatie.BeeldTitel
-    * creation = "2025-10-16T16:11:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2025-09-02T08:36:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#DX "Digital Radiography" // Onderzoek.Beeldinformatie.Modaliteit
-  * period.start = "2025-10-16" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * period.start = "2025-09-02" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
   * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
   * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
   * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
@@ -214,23 +221,24 @@ Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-5
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 Usage: #example
 * masterIdentifier
-  * system = $URI
-  * value = "urn:uuid:77c3b3da-fa6d-4f03-9455-f1518a2ec348" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.150599066413166673819115182759068623778" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
 * type = $SCT#386831001 "gastroscopie" // Onderzoek.Verrichting.VerrichtingType| use the SNOMED CT display name of the procedure code sequence in (0008,1032)
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2017-04-14T17:54:20+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
-* author = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven"
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-Willems-CZE) "Thomas Hugo Willems"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/1.2.276.0.67.5.4988233814.20170414171618308.147/instances/1.2.276.0.67.5.4988233814.20170414180747093.254" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * url = "https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/2.25.828214698350840955484898921792912694/instances/2.25.150599066413166673819115182759068623778" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "ENDOSCOPIE-KAMER 5" // title | Onderzoek.Beeldinformatie.BeeldTitel
-    * creation = "2017-04-14T17:54:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+    * creation = "2017-04-14T17:54:20+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
 * context
   * event[modality] = $DCM#ES "Endoscopy" // Onderzoek.Beeldinformatie.Modaliteit
@@ -241,7 +249,7 @@ Usage: #example
   * related[0]
     * identifier
       * type = $URI#urn:ihe:iti:xds:2013:accession
-      * system = $OIDAUMC
+      * system = $OIDCZE
       * value = "V-24031" // Onderzoek.AccessionNumberInformatie.AccessionNumber
       * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
   * related[1]
@@ -249,6 +257,551 @@ Usage: #example
       * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
       * system = $DICOMUniqueId
       * value = "urn:oid:1.2.276.0.50.10201000171.1821207.15297928.15756" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-6
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.299189956795323170040878896967724638182" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $SCT#89846007 "orthopantomografie" // Onderzoek.Verrichting.VerrichtingType| tag (0008,1032) afwezig
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2022-11-04T10:27:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-ElHasnaoui-AUMC) "dr. El Hasnaoui"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.840.114350.2.408.2.798268.2.195735974.1/series/2.25.323702012275538077411012975373843146745/instances/2.25.299189956795323170040878896967724638182" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "MKA OPG" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2022-11-04T10:27:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#CR "Computed Radiography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2022-11-04" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000173980" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.840.114350.2.408.2.798268.2.195735974.1" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-7
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.248079036533563831387504106862601127541" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-02-05T10:56:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-Smit-AUMC) "Prof. Smit"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.69733758576694720070492648219173934289/series/2.25.242760769491036901522158779432493781289/instances/2.25.248079036533563831387504106862601127541" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "HARTKATHERISATIE PROCEDURE" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-02-05T10:56:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#XA "X-Ray Angiography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-02-05" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000161857" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.40.0.13.1.69733758576694720070492648219173934289" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-8
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.220898900706959638015881319843209781157" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "CT van thorax" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-02-05T11:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-Bakker-AUMC) "Bart Bakker"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.138837531083422306522668993373321653689/series/2.25.270619276528496920951032352575495403911/instances/2.25.220898900706959638015881319843209781157" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "CT THORAX ZONDER CONTRAST" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-02-05T11:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#CT "Computed Tomography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-02-05" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000161858" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.40.0.13.1.138837531083422306522668993373321653689" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-9
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.233721447186178566629253945530832235048" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "echografie van thorax" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-02-05T11:04:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-Smit-AUMC) "Prof. Smit"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.178957074549929243218633389655900449143/series/2.25.133607736876396318990498262516943986643/instances/2.25.233721447186178566629253945530832235048" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "TTE - TRANSTHORACALE ECHO" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-02-05T11:04:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#US "Ultrasound" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-02-05" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000161860" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.40.0.13.1.178957074549929243218633389655900449143" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-10
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.95966818745833947741618595219711037190" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "MG MAMMOGRAFIE" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-02T15:50:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-Visser-AUMC) "N. Visser"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.122947418999141105980865839639187651261/series/2.25.323146501594166118692321542834534350905/instances/2.25.95966818745833947741618595219711037190" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "MG MAMMOGRAFIE" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-02T15:50:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#MG "Mammography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-02" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000173698" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.40.0.13.1.122947418999141105980865839639187651261" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-11
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.307449147627356852524957366186549952381" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-02T08:02:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-DeWit-AUMC) "R.J. de Wit"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.68247088999053756731944807439344102682/series/2.25.190154591464996163805893070239744947839/instances/2.25.307449147627356852524957366186549952381" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "MRI WERVELKOLOM" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-02T08:02:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#MR "Magnetic Resonance" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-02" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000173701" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.40.0.13.1.68247088999053756731944807439344102682" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-12
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.175209346284073273900540986423954919243" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-11T09:35:30+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-Smit-AUMC) "Prof. Smit"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/9.25.17032597195948003129503533750762258202/series/2.25.309460615655030623753206898257276436897/instances/2.25.175209346284073273900540986423954919243" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "CARDIALE - IMPORT" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-11T09:35:30+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#ECG "Electrocardiography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-11" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AL99250911093530" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:9.25.17032597195948003129503533750762258202" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-13
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.330111262929410421071085714147237434458" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2011-01-01T14:06:06+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* author[1] = Reference(ImageAvailability-Practitioner-DeWit-AUMC) "R.J. de Wit"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.3.46.670589.11.1.5.0.6560.2011072814060507000/series/2.25.161282779865325765090434193997200815530/instances/2.25.330111262929410421071085714147237434458" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "dS Knee 16ch, T1W, 3D Wats, PDW, PDW SPAIR" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2011-01-01T14:06:06+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#MR "Magnetic Resonance" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2011-01-01" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "JUGFIKYUGJ" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.3.46.670589.11.1.5.0.6560.2011072814060507000" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-14
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.8155354506839150953620648368106652370" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2006-12-19T11:11:54+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.3.6.1.4.1.5962.1.2.10.1166562673.14401/series/2.25.74124144285881267481009363901553308280/instances/2.25.8155354506839150953620648368106652370" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * creation = "2006-12-19T11:11:54+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#CT "Computed Tomography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2006-12-19" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "0010" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.3.6.1.4.1.5962.1.2.10.1166562673.14401" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-15
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.116761086889095445112420115394215297755" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "MG Mammadiagnostiek poli controle" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-22T14:08:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-Vermeulen-CZE) "M. Vermeulen"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.38679/series/2.25.64610254706112505877700170291725645778/instances/2.25.116761086889095445112420115394215297755" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "MG Mammadiagnostiek poli nieuw" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-22T14:08:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#MG "Mammography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-22" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDCZE
+      * value = "5003464504" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.752.24.7.3059655634.38679" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-16
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.294345119309672963947070671061734905689" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "RF Slikfoto's" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-22T14:13:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-DeGroot-CZE) "De Groot"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.38682/series/2.25.109803258301112139902786026585121598428/instances/2.25.294345119309672963947070671061734905689" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "RF Slikfoto's" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-22T14:13:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#RF "Radiofluoroscopy" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-22" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDCZE
+      * value = "5003464515" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.752.24.7.3059655634.38682" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-17
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.337427242843909492698887129236242906414" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "MRI Kleine bekken" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-22T14:11:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-Peters-CZE) "Drs. Peters"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.38681/series/2.25.53816663829293364096282132029358647592/instances/2.25.337427242843909492698887129236242906414" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "MRI Kleine bekken" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-22T14:11:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#MR "Magnetic Resonance" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-22" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDCZE
+      * value = "5003464511" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.752.24.7.3059655634.38681" // Onderzoek.StudyInstanceUID
+
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-18
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.110504336777711299355968964491341709663" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type
+  * coding = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+  * text = "CR Pols links" // Procedure Code Sequence > Code Meaning
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-22T14:06:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+* author[1] = Reference(ImageAvailability-Practitioner-VanDenBerg-CZE) "v.d. Berg"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.38678/series/2.25.230575252117478056186092211520176569618/instances/2.25.110504336777711299355968964491341709663" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "CR Pols links" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-22T14:06:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#CR "Computed Radiography" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-22" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V6 "Algemeen ziekenhuis" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDCZE
+      * value = "5003464501" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.752.24.7.3059655634.38678" // Onderzoek.StudyInstanceUID
 
 Instance: ImageAvailability-Patient-XXX-Aansluittest-B
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
@@ -267,27 +820,82 @@ Usage: #example
   * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = $AdministrativeGender#F "Female"
 * birthDate = "1950-02-02"
 
-Instance: ImageAvailability-PractitionerRole-Cardioloog
-InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
+Instance: ImageAvailability-Practitioner-Janssen-CZE
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* specialty[specialty] = $UZI#01.010 "Cardioloog"
+* name[nameInformation]
+  * use = #official
+  * text = "Janssen"
 
-Instance: ImageAvailability-PractitionerRole-Huisarts
-InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
+Instance: ImageAvailability-Practitioner-VanDenBerg-CZE
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* specialty[specialty] = $UZI#01.015 "Huisarts"
+* name[nameInformation]
+  * use = #official
+  * text = "v.d. Berg"
 
-Instance: ImageAvailability-Organization-CZE-Radiotherapie
-InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
+Instance: ImageAvailability-Practitioner-Vermeulen-CZE
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
-* identifier
-  * system = $AGB
-  * value = "06011009"
-* type[0]
-  * coding = $VektisAGB#0361 "Radiotherapie"
-* type[1]
-  * coding = $OrganizationType#V6 "Algemeen ziekenhuis"
-* name = "Catharina Ziekenhuis Eindhoven"
+* name[nameInformation]
+  * use = #official
+  * text = "M. Vermeulen"
+
+Instance: ImageAvailability-Practitioner-DeGroot-CZE
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "De Groot"
+
+Instance: ImageAvailability-Practitioner-Peters-CZE
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "Drs. Peters"
+
+Instance: ImageAvailability-Practitioner-Willems-CZE
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "Thomas Hugo Willems"
+
+Instance: ImageAvailability-Practitioner-Bakker-AUMC
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "Bart Bakker"
+
+Instance: ImageAvailability-Practitioner-ElHasnaoui-AUMC
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "dr. El Hasnaoui"
+
+Instance: ImageAvailability-Practitioner-Smit-AUMC
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "Prof. Smit"
+
+Instance: ImageAvailability-Practitioner-Visser-AUMC
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "N. Visser"
+
+Instance: ImageAvailability-Practitioner-DeWit-AUMC
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* name[nameInformation]
+  * use = #official
+  * text = "R.J. de Wit"
 
 Instance: ImageAvailability-Organization-CZE
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization

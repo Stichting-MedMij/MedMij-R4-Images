@@ -25,11 +25,12 @@
   "type": {
     "coding": [
       {
-        "code": "44491008",
-        "system": "http://snomed.info/sct",
-        "display": "röntgendoorlichting"
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
       }
-    ]
+    ],
+    "text": "CR Bekken + heup(en)"
   },
   "subject": {
     "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
@@ -38,12 +39,12 @@
   "date": "2025-02-25T14:07:00+01:00",
   "author": [
     {
-      "reference": "PractitionerRole/ImageAvailability-PractitionerRole-Huisarts",
-      "display": "Huisarts"
-    },
-    {
       "reference": "Organization/ImageAvailability-Organization-CZE",
       "display": "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
+    },
+    {
+      "reference": "Practitioner/ImageAvailability-Practitioner-VanDenBerg-CZE",
+      "display": "v.d. Berg"
     }
   ],
   "securityLabel": [
