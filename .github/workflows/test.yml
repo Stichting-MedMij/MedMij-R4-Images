@@ -2,10 +2,10 @@ name: Java CI with JaCoCo
 on:
   push:
     paths:
-      - 'impl/java/**'  # Alleen uitvoeren als er wijzigingen zijn in impl/java/
+      - 'impl/java/**'
   pull_request:
     paths:
-      - 'impl/java/**'  # Alleen uitvoeren als er wijzigingen zijn in impl/java/
+      - 'impl/java/**'
 
 jobs:
   build:
