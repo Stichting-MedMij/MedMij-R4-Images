@@ -77,7 +77,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 5 | Zorggebruiker | Verslagen kunnen bekijken via de browser | Geen PDF-software op mijn device hoef te downloaden | M |
+| 5 | Zorggebruiker | Verslagen kunnen bekijken via de browser | Geen PDF-software op mijn apparaat hoef te downloaden | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
