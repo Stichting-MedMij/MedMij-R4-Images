@@ -1,4 +1,4 @@
 - name: Logical Models
-  filename: Logical-models.page.md
+  filename: Logical-Models
 - name: FHIR profiles
-  filename: FHIR-profiles.page.md
+  filename: FHIR-Profiles
