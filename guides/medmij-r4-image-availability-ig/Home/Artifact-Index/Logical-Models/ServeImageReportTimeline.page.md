@@ -11,3 +11,9 @@ Table 1 depicts the relevant building blocks in this use case.
 | Study | BbsLmStudyServeTimeline | `1..*` |
 
 **Table 1: Building blocks in the 'Serve image and report timeline' use case**
+
+## Patient
+{{page: BbsLmPatientServeTimeline}}
+
+## Study
+{{page: BbsLmStudyServeTimeline}}
