@@ -1,8 +1,4 @@
-- name: Index
-  filename: Index.page.md
-- name: Dataset
-  filename: Dataset
-- name: 'Use case: Serve image and report timeline'
-  filename: Serve-Image-Report-Timeline
-- name: 'Use case: Serve image and report'
-  filename: Serve-Image-Report
+- name: Patient
+  filename: Patient.page.md
+- name: Study
+  filename: Study.page.md

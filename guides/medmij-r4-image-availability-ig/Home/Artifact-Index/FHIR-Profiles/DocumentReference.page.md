@@ -3,7 +3,7 @@ topic: BbsDocumentReference
 canonical: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
 ---
 
-# Report
+# DocumentReference
 
 <tabs>
     <tab title="Tree view" active="true">
