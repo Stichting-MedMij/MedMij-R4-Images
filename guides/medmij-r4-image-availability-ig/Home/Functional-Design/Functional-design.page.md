@@ -87,8 +87,8 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | BeeldVerslagRaadplegen | MM-1.0-BR-FHIR |  Raadplegen beeld en verslag bij zorgaanbieder |
-| XIS | BeeldVerslagBeschikbaarStellen | MM-1.0-BB-FHIR | Beschikbaar stellen beeld en verslag bij patiënt |
+| PGO | BeeldVerslagRaadplegen | BBS-BR-1.0.0-rc.2 |  Raadplegen beeld en verslag bij zorgaanbieder |
+| XIS | BeeldVerslagBeschikbaarStellen | BBS-BB-1.0.0-rc.2 | Beschikbaar stellen beeld en verslag bij patiënt |
 
 **Tabel 2: Systeemrollen**
 
@@ -103,10 +103,10 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Beeld en verslag tijdlijn (PULL) | Raadplegen beeld en verslag tijdlijn | MM-1.0-BR-FHIR | PGO | Patiënt |
-| Verzamelen Beeld en verslag tijdlijn (PULL) | Beschikbaar stellen beeld en verslag tijdlijn | MM-1.0-BB-FHIR | XIS | Zorgaanbieder |
-| Verzamelen Beeld en verslag (PULL) | Raadplegen beeld en verslag | MM-1.0-BR-FHIR | PGO | Patiënt |
-| Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | MM-1.0-BB-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Beeld en verslag tijdlijn (PULL) | Raadplegen beeld en verslag tijdlijn | BBS-BR-1.0.0-rc.2 | PGO | Patiënt |
+| Verzamelen Beeld en verslag tijdlijn (PULL) | Beschikbaar stellen beeld en verslag tijdlijn | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
+| Verzamelen Beeld en verslag (PULL) | Raadplegen beeld en verslag | BBS-BR-1.0.0-rc.2 | PGO | Patiënt |
+| Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 

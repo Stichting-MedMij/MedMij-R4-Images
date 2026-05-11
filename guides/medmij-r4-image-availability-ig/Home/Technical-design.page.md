@@ -60,8 +60,8 @@ The ITI-67 transaction is used to find available documents for a patient, based 
 
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
-| Image and report timeline (PULL) | Retrieve image and report timeline | Patient (using a PHR) | MM-1.0-BR-FHIR |
-| Image and report timeline (PULL) | Serve image and report timeline | Healthcare provider (using a XIS) | MM-1.0-BB-FHIR |
+| Image and report timeline (PULL) | Retrieve image and report timeline | Patient (using a PHR) | BBS-BR-1.0.0-rc.2 |
+| Image and report timeline (PULL) | Serve image and report timeline | Healthcare provider (using a XIS) | BBS-BB-1.0.0-rc.2 |
 
 **Table 3: Transactions within sub use case Query Timeline Data**
 
@@ -112,8 +112,8 @@ See [ITI-67 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#23674
 
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
-| Image and report (PULL) | Retrieve image and report | Patient (using a PHR) | MM-1.0-BR-FHIR |
-| Image and report (PULL) | Serve image and report | Healthcare provider (using a XIS) | MM-1.0-BB-FHIR |
+| Image and report (PULL) | Retrieve image and report | Patient (using a PHR) | BBS-BR-1.0.0-rc.2 |
+| Image and report (PULL) | Serve image and report | Healthcare provider (using a XIS) | BBS-BB-1.0.0-rc.2 |
 
 **Table 6: Transactions within sub use case Retrieve Imaging Report**
 
@@ -140,8 +140,8 @@ The retrieval of images consists of two consecutive steps, namely the ITI-68 tra
 
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
-| Image and report (PULL) | Retrieve image and report | Patient (using a PHR) | MM-1.0-BR-FHIR |
-| Image and report (PULL) | Serve image and report | Healthcare provider (using a XIS) | MM-1.0-BB-FHIR |
+| Image and report (PULL) | Retrieve image and report | Patient (using a PHR) | BBS-BR-1.0.0-rc.2 |
+| Image and report (PULL) | Serve image and report | Healthcare provider (using a XIS) | BBS-BB-1.0.0-rc.2 |
 
 **Table 7: Transactions within sub use case Retrieve Images**
 
