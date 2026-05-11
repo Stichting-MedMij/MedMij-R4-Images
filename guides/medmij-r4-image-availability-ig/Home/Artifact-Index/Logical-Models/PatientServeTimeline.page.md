@@ -2,8 +2,6 @@
 topic: BbsLmPatientServeTimeline
 ---
 
-# Patient
-
 <tabs>
     <tab title="Tree view" active="true">
       {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient-serve-timeline, buttons}}

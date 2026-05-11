@@ -2,7 +2,7 @@
 topic: ServeTimelineIndex
 ---
 
-# Use case: Serve image and report timeline
+## Use case: Serve image and report timeline
 Table 1 depicts the relevant building blocks in this use case.
 
 | Building block | Logical Model | Cardinality |
@@ -12,8 +12,8 @@ Table 1 depicts the relevant building blocks in this use case.
 
 **Table 1: Building blocks in the 'Serve image and report timeline' use case**
 
-## Patient
+### Patient
 {{page: BbsLmPatientServeTimeline}}
 
-## Study
+### Study
 {{page: BbsLmStudyServeTimeline}}

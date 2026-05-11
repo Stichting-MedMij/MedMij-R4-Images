@@ -1,10 +1,10 @@
 ---
-topic: DtasetIndex
+topic: DatasetIndex
 ---
 
-# Dataset
-## Patient
+## Dataset
+### Patient
 {{page: BbsLmPatient}}
 
-## Study
+### Study
 {{page: BbsLmStudy}}

@@ -3,8 +3,6 @@ topic: BbsLmStudy
 canonical: http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study
 ---
 
-# Study
-
 <tabs>
     <tab title="Tree view" active="true">
       {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study, buttons}}

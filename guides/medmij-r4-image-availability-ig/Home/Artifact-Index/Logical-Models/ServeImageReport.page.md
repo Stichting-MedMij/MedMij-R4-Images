@@ -2,7 +2,7 @@
 topic: ServeImageReportIndex
 ---
 
-# Use case: Serve image and report
+## Use case: Serve image and report
 Table 2 depicts the relevant building blocks in this use case.
 
 | Building block | Logical Model | Cardinality |
@@ -12,8 +12,8 @@ Table 2 depicts the relevant building blocks in this use case.
 
 **Table 2: Building blocks in the 'Serve image and report' use case**
 
-## Patient
+### Patient
 {{page: BbsLmPatientServeImageReport}}
 
-## Study
+### Study
 {{page: BbsLmStudyServeImageReport}}

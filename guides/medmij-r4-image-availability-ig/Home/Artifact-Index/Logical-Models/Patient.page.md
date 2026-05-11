@@ -3,8 +3,6 @@ topic: BbsLmPatient
 canonical: http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient
 ---
 
-# Patient
-
 <tabs>
     <tab title="Tree view" active="true">
       {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Patient, buttons}}

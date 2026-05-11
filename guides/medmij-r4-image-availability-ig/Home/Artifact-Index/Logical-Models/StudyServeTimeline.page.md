@@ -2,8 +2,6 @@
 topic: BbsLmStudyServeTimeline
 ---
 
-# Study
-
 <tabs>
     <tab title="Tree view" active="true">
       {{tree:http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study-serve-timeline, buttons}}
