@@ -33,12 +33,8 @@
       "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
     },
     {
-      "identity": "bbs-medmij-dataset-100-rc1-20250919",
-      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
-    },
-    {
-      "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
-      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
+      "identity": "bbs-medmij-dataset-100-rc2-20260513",
+      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 20260513"
     },
     {
       "identity": "ihexds-dataset-2024-20220712",
@@ -505,22 +501,12 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-2",
             "comment": "ReportTitle"
           },
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-1",
-            "comment": "ImageTitle"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
-            "map": "bbs-medmij-dataelement-2",
-            "comment": "ReportTitle"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-1",
             "comment": "ImageTitle"
           },
@@ -713,12 +699,7 @@
         },
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-5",
-            "comment": "Modality"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-5",
             "comment": "Modality"
           }
@@ -890,12 +871,7 @@
         "min": 1,
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-3",
-            "comment": "AccessionNumber"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-3",
             "comment": "AccessionNumber"
           }
@@ -920,12 +896,7 @@
         "comment": "In DICOM, the Accession Number is just a string (namely of DICOM data type _Short String_ (_SH_)). In order to ensure uniqueness of the Accession Number, a `.system` SHOULD be provided. It is up to the Assigning Authority that issued the Accession Number to determine and manage an appropriate URL or URN as `.system`. If no specific URL or URN for the Accession Number identifier system is provided in the source data, the identifier of the Assigning Authority itself SHOULD be used as fallback, i.e. the OID registered for the Assigning Authority, which should be present in DICOM tag `(0040,0032)` (Universal Entity ID) as part of `(0008,0051)` (Issuer of Accession Number Sequence).",
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-7",
-            "comment": "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
           }
@@ -955,12 +926,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-7",
-            "comment": "AssigningAuthority"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority"
           }
@@ -984,12 +950,7 @@
         "min": 1,
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-4",
-            "comment": "StudyInstanceUID"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-4",
             "comment": "StudyInstanceUID"
           }

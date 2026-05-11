@@ -420,8 +420,8 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
 
 Mapping: BbsLmStudyMedMij-100-rc2
 Source: BbsLmStudy
-Id: bbs-medmij-dataset-100-rc2-2025xxyy
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
+Id: bbs-medmij-dataset-100-rc2-20260513
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 20260513"
 * ImageInformation
   * ImageTitle -> "bbs-medmij-dataelement-1" "ImageTitle"
   * Modality -> "bbs-medmij-dataelement-5" "Modality"
