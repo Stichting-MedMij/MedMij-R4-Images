@@ -11,10 +11,10 @@ topic: fql-get-mappings
     differential.element 
   select
     id, join mapping {identity, map, comment}
+  order by identity, map
   select
     'Mapping name': identity,
     'Concept id': map,
     'FHIR element': id,
     Comments: comment
-  order by identity
 </fql>
