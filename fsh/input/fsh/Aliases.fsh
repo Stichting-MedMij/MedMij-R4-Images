@@ -2,6 +2,7 @@
 
 Alias: $AdministrativeGender = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
 Alias: $AGB = http://fhir.nl/fhir/NamingSystem/agb-z
+Alias: $BbsLmStudyOID = urn:oid:2.16.528.1.1023.3.2.1
 Alias: $BSN = http://fhir.nl/fhir/NamingSystem/bsn
 Alias: $Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $DCM = http://dicom.nema.org/resources/ontology/DCM

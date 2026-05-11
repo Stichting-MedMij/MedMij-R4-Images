@@ -6,6 +6,13 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
   "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.3.2.1"
+    }
+  ],
   "name": "BbsLmStudy",
   "title": "Study",
   "status": "active",
@@ -120,7 +127,7 @@
         "id": "bbs-lm-Study.Procedure.ProcedureEndDate",
         "path": "bbs-lm-Study.Procedure.ProcedureEndDate",
         "short": "Procedure end date",
-        "definition": "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
+        "definition": "The end date (and if possible end time) of the procedure. A 'vague' date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
         "alias": [
           "VerrichtingEindDatum"
         ],

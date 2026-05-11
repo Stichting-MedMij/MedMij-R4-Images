@@ -103,6 +103,9 @@ Id: bbs-lm-Study
 Title: "Study"
 Description: "Imaging study including images and reports."
 * insert DefaultNarrative
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $BbsLmStudyOID
 * ^status = #active
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Study building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
@@ -114,7 +117,7 @@ Description: "Imaging study including images and reports."
   * ^alias = "Verrichting"
   * ProcedureStartDate 0..1 dateTime "Procedure start date" "Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken."
     * ^alias = "VerrichtingStartDatum"
-  * ProcedureEndDate 0..1 dateTime "Procedure end date" "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted."
+  * ProcedureEndDate 0..1 dateTime "Procedure end date" "The end date (and if possible end time) of the procedure. A 'vague' date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted."
     * ^alias = "VerrichtingEindDatum"
   * ProcedureType 0..1 CodeableConcept "Procedure type" "Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray)."
   * ProcedureType from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539 (extensible)
