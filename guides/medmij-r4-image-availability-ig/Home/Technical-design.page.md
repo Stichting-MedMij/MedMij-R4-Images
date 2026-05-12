@@ -45,7 +45,7 @@ There are several identifiers that play a role in the exchange of images and rep
 Note the following:
 - The cardinality of `DocumentReference.masterIdentifier` is `1..1`. If a XIS wants to provide additional identifiers (e.g. a report identifier assigned in the EHR), the `DocumentReference.identifier` can be used.
 - If the Accession Number is known, it SHALL be conveyed in all DocumentReference resources that refer to the corresponding images and reports. In particular, this ensures that images and reports that belong to the same imaging study, are linked together.
-- When encoding a DICOM UID (e.g. Study Instance UID) in an Identifier datatype, use the `.system` *urn:dicom:uid*, and prefix the `.value` with *urn:oid:* (in accordance with the [FHIR identifier registry](https://hl7.org/fhir/R4/identifier-registry.html)).
+- When encoding a DICOM UID (e.g. Study Instance UID) in an Identifier data type, use the `.system` *urn:dicom:uid*, and prefix the `.value` with *urn:oid:* (in accordance with the [FHIR identifier registry](https://hl7.org/fhir/R4/identifier-registry.html)).
 
 ## Use cases
 The use cases in this technical design are based as much as possible on the specifications described in the [BBS FHIR IG, section 5.3](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#MHD.2FWIA:_Mobile_access_to_Health_Documents_.2F_Web-based_Image_Access), namely IHE [MHD](https://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD)) and [WIA](https://wiki.ihe.net/index.php/Web-based_Image_Access). Note however, that QIDO-RS (which is mentioned in the WIA specification) is currently not in scope.
