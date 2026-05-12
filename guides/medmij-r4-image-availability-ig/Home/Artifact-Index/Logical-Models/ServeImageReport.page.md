@@ -1,5 +1,5 @@
 ---
-topic: ServeImageReportIndex
+topic: ServeImageReport
 ---
 
 ## Use case: Serve image and report

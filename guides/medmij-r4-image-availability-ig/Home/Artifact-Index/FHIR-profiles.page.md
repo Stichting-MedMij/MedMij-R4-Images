@@ -8,7 +8,7 @@ The following FHIR profiles have been introduced for the Image Availability stan
 
 | CIM (concept) | FHIR resource | FHIR profile |
 | --- | --- | --- |
-| {{pagelink: LogicalModelsIndex, text: Study}} | DocumentReference | bbs-DocumentReference |
+| {{pagelink: LogicalModelsIndex, text: Study, anchor: Dataset}} | DocumentReference | bbs-DocumentReference |
 
 **Table 1: Relevant image availability-specific profiles**
 

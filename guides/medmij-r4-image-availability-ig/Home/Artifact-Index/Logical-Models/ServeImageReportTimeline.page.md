@@ -1,5 +1,5 @@
 ---
-topic: ServeTimelineIndex
+topic: ServeTimeline
 ---
 
 ## Use case: Serve image and report timeline

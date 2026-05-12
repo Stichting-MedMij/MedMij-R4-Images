@@ -1,5 +1,5 @@
 ---
-topic: DatasetIndex
+topic: Dataset
 ---
 
 ## Dataset
