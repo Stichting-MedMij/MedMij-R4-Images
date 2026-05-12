@@ -1,5 +1,5 @@
 ---
-topic: FHIRProfilesIndex
+topic: FHIRProfiles
 ---
 
 # FHIR profiles
