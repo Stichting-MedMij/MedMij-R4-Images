@@ -44,4 +44,4 @@ In rare circumstances, there is only a Practitioner instance, in which case it i
 This is in line with the [Nictiz Profiling Guidelines for FHIR R4](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4#Referencing_zib_HealthProfessional).
 - The zib HealthcareProvider is mapped to both a Location and Organization profile. In general the Location profile acts as the focal resource, because most references to this zib are concerned about the recording of the physical location where the care to patient takes place rather than the organizational information. However, within Image Availability (and in particular the DocumentReference resource), the HealthcareProvider is only referenced directly on `.author`, and indirectly via the PractitionerRole resource, hence a reference to the Organization profile is sufficient in those cases. The Location profile is mentioned in the table above for completeness purposes.
 
-{{page: BbsLmPatientServeTimeline}}
+{{page: BbsDocumentReference}}
