@@ -11,7 +11,7 @@ For mapping between metadata, functional dataset and FHIR, please refer to the {
 ## Structure
 - This IG contains the functional test data from which the FHIR resources are generated.
 - The Simplifier project and the `examples/fhir` folder on GitHub both contain the FHIR test resources.
-- The `examples/dicom` folder on GitHub contains DICOM files referenced by the FHIR resources.
+- The `examples/dicom` and `examples/kos` folders on GitHub contain the DICOM files referenced by the FHIR resources and corresponding KOS objects, respectively.
 
 ## Important notes
 - Various identifiers, such as the Study Instance UID, Accession Number and `DocumentReference.masterIdentifier`, are dummy/mocked values and may not reference any actual data. While testing, these should be adjusted as needed to fit the testing scenarios for the source system which is subject to the test.
