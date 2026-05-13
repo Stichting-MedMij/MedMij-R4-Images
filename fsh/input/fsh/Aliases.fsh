@@ -12,7 +12,6 @@ Alias: $FormatCode = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatco
 Alias: $MedMijModalityValueSetOID = urn:oid:2.16.528.1.1023.4.2.2
 Alias: $MedMijModalityValueSetURL = http://medmij.nl/fhir/ValueSet/Modality
 Alias: $ModalityCombinedValueSetOID = urn:oid:2.16.528.1.1023.4.2.1
-Alias: $ModalityCombinedValueSetURL = http://medmij.nl/fhir/ValueSet/ModalityCombined
 Alias: $NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $OIDAUMC = urn:oid:2.16.840.1.113883.2.4.3.114
 Alias: $OIDCZE = urn:oid:2.16.840.1.113883.2.4.3.104
