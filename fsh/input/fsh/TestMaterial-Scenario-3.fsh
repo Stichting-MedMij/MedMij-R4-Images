@@ -19,7 +19,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.90783674708684117220863480423356599801/series/2.25.293465249639799179250315041314515880819/instances/2.25.225370106192817013781822914585593250010" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.90783674708684117220863480423356599801/series/2.25.293465249639799179250315041314515880819/instances/2.25.225370106192817013781822914585593250010" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "MRI van linker bovenbeen" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2020-03-03T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -78,8 +78,6 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "6010754"
-* type[0]
-  * coding = $VektisAGB#0362 "Radiologie"
-* type[1]
-  * coding = $OrganizationType#V6 "Algemeen ziekenhuis"
+* type[0] = $VektisAGB#0362 "Radiologie"
+* type[1] = $OrganizationType#V6 "Algemeen ziekenhuis"
 * name = "Stichting Spaarne Gasthuis"

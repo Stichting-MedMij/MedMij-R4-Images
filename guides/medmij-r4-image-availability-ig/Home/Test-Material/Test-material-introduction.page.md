@@ -10,7 +10,7 @@ For mapping between metadata, functional dataset and FHIR, please refer to the {
 
 ## Structure
 - This IG contains the functional test data from which the FHIR resources are generated.
-- The Simplifier project and the `examples` folder on GitHub both contain the FHIR test resources.
+- The Simplifier project and the `examples/fhir` folder on GitHub both contain the FHIR test resources.
 - The `examples/dicom` folder on GitHub contains DICOM files referenced by the FHIR resources.
 
 ## Important notes

@@ -17,9 +17,9 @@ Description: "Imaging study including images and reports."
 * masterIdentifier
   * ^short = "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID"
   * ^definition = """
-      * Worldwide unique ID for the report of the imaging study. In DICOM the study/series UID can be used.
-      * Worldwide unique ID that describes the set of images. In DICOM the study/series UID can be used.
-      * The worldwide unique identifier assigned by the document creator to this document.
+      * Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.
+      * Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.
+      * The globally unique identifier assigned by the document creator to this document.
     """
   * ^alias[0] = "VerslaginformatieIdentificatienummer"
   * ^alias[1] = "BeeldinformatieIdentificatienummer"
@@ -141,7 +141,7 @@ Description: "Imaging study including images and reports."
       * ^alias = "DatumTijd"
   * format from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.7--20131212104106 (extensible)
     * ^short = "FormatCode"
-    * ^definition = "Code worldwide uniquely specifying the format of the document."
+    * ^definition = "Code globally uniquely specifying the format of the document."
 * context
   * encounter only Reference(Encounter or EpisodeOfCare or http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter)
     * ^short = "ReferenceIdList"
@@ -243,7 +243,7 @@ Description: "Imaging study including images and reports."
   * related[studyInstanceUID]
     * identifier 1..1
       * ^short = "StudyInstanceUID"
-      * ^definition = "The worldwide unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
+      * ^definition = "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
       * ^alias = "StudyInstanceUID"
       * type 1..1
         * ^patternCodeableConcept = $URI#urn:ihe:iti:xds:2016:studyInstanceUID

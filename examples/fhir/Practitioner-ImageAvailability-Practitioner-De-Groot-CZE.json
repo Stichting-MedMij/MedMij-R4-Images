@@ -1,6 +1,6 @@
 {
   "resourceType": "Practitioner",
-  "id": "ImageAvailability-Practitioner-DeGroot-CZE",
+  "id": "ImageAvailability-Practitioner-De-Groot-CZE",
   "meta": {
     "profile": [
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
