@@ -6,7 +6,7 @@ Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "bbs Retrieve"
 * status = #active
-* date = "2025-09-19"
+* date = "2026-05-13"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a client to fulfill the 'Retrieve image and report timeline' and 'Retrieve image and report' transactions within Image Availability. It is partly based on the CapabilityStatement defined by IHE ITI for the [Document Consumer](https://profiles.ihe.net/ITI/MHD/CapabilityStatement/IHE.MHD.DocumentConsumer)."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -17,7 +17,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #client
-  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve image and report timeline' and 'Retrieve image and report' transactions (system role: MM-1.0-BR-FHIR)."
+  * documentation = "Minimal requirements for a client to fulfill the 'Retrieve image and report timeline' and 'Retrieve image and report' transactions (system role: BBS-BR-1.0.0-rc.2)."
   * resource[+]
     * type = #DocumentReference
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"
@@ -78,7 +78,7 @@ Usage: #definition
 * insert DefaultNarrativeInstance
 * name = "bbs Serve"
 * status = #active
-* date = "2025-09-19"
+* date = "2026-05-13"
 * insert PublisherAndContactInstance
 * description = "This CapabilityStatement describes the minimal requirements for a server to fulfill the 'Serve image and report timeline' and 'Serve image and report' transactions within Image Availability. It is partly based on the CapabilityStatement defined by IHE ITI for the [Document Responder](https://profiles.ihe.net/ITI/MHD/CapabilityStatement/IHE.MHD.DocumentResponder)."
 * purpose = "This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide should be consulted."
@@ -89,7 +89,7 @@ Usage: #definition
 * format[1] = #json
 * rest
   * mode = #server
-  * documentation = "Minimal requirements for a server to fulfill the 'Serve image and report timeline' and 'Serve image and report' transactions (system role: MM-1.0-BB-FHIR)."
+  * documentation = "Minimal requirements for a server to fulfill the 'Serve image and report timeline' and 'Serve image and report' transactions (system role: BBS-BB-1.0.0-rc.2)."
   * resource[+]
     * type = #DocumentReference
     * supportedProfile = "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"

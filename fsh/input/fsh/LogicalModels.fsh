@@ -103,6 +103,9 @@ Id: bbs-lm-Study
 Title: "Study"
 Description: "Imaging study including images and reports."
 * insert DefaultNarrative
+* ^identifier.use = #official
+* ^identifier.system = $URI
+* ^identifier.value = $BbsLmStudyOID
 * ^status = #active
 * insert PublisherAndContact
 * ^purpose = "This LogicalModel represents the Study building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid)."
@@ -114,7 +117,7 @@ Description: "Imaging study including images and reports."
   * ^alias = "Verrichting"
   * ProcedureStartDate 0..1 dateTime "Procedure start date" "Date/time on which the radiological examination has been performed on the patient and/or the images have been made. In practice the time is the instance on which the first image has been taken."
     * ^alias = "VerrichtingStartDatum"
-  * ProcedureEndDate 0..1 dateTime "Procedure end date" "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted."
+  * ProcedureEndDate 0..1 dateTime "Procedure end date" "The end date (and if possible end time) of the procedure. A 'vague' date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted."
     * ^alias = "VerrichtingEindDatum"
   * ProcedureType 0..1 CodeableConcept "Procedure type" "Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray)."
   * ProcedureType from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.133.11.1--20230808113539 (extensible)
@@ -176,7 +179,7 @@ Description: "Imaging study including images and reports."
   * Images 0..* Attachment "Images" "The images themselves. In DICOM the images are structured in series."
     * ^alias = "Beelden"
   * Modality 0..* CodeableConcept "Modality" "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
-  * Modality from $ModalityCombinedValueSetURL (required)
+  * Modality from ModalityCombined (required)
     * ^alias = "Modaliteit"
 * ReportInformation 0..1 BackboneElement "Report information" "Imaging study for images and reports: subset report information"
   * ^alias = "Verslaginformatie"
@@ -420,8 +423,8 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
 
 Mapping: BbsLmStudyMedMij-100-rc2
 Source: BbsLmStudy
-Id: bbs-medmij-dataset-100-rc2-2025xxyy
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
+Id: bbs-medmij-dataset-100-rc2-20260513
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 20260513"
 * ImageInformation
   * ImageTitle -> "bbs-medmij-dataelement-1" "ImageTitle"
   * Modality -> "bbs-medmij-dataelement-5" "Modality"

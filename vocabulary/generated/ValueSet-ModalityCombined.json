@@ -14,7 +14,7 @@
     {
       "use": "official",
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.528.1.1023.11.2.3.11.12"
+      "value": "urn:oid:2.16.528.1.1023.4.2.1"
     }
   ],
   "experimental": false,

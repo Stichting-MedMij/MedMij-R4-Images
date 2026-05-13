@@ -6,6 +6,13 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
   "url": "http://medmij.nl/fhir/StructureDefinition/bbs-lm-Study",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.528.1.1023.3.2.1"
+    }
+  ],
   "name": "BbsLmStudy",
   "title": "Study",
   "status": "active",
@@ -33,8 +40,8 @@
       "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
     },
     {
-      "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
-      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 2025xxyy"
+      "identity": "bbs-medmij-dataset-100-rc2-20260513",
+      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 20260513"
     },
     {
       "identity": "SNOMED",
@@ -120,7 +127,7 @@
         "id": "bbs-lm-Study.Procedure.ProcedureEndDate",
         "path": "bbs-lm-Study.Procedure.ProcedureEndDate",
         "short": "Procedure end date",
-        "definition": "The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
+        "definition": "The end date (and if possible end time) of the procedure. A 'vague' date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.",
         "alias": [
           "VerrichtingEindDatum"
         ],
@@ -766,7 +773,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-1",
             "comment": "ImageTitle"
           }
@@ -816,7 +823,7 @@
         },
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-5",
             "comment": "Modality"
           }
@@ -908,7 +915,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-2",
             "comment": "ReportTitle"
           }
@@ -954,7 +961,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-6",
             "comment": "AccessionNumberInformation"
           }
@@ -977,7 +984,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-3",
             "comment": "AccessionNumber"
           }
@@ -1000,7 +1007,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority"
           }
@@ -1023,7 +1030,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-8",
             "comment": "HealthcareProvider"
           },
@@ -1051,7 +1058,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-9",
             "comment": "HealthcareProviderIdentificationNumber"
           }
@@ -1074,7 +1081,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-10",
             "comment": "OrganizationName"
           }
@@ -1101,7 +1108,7 @@
         },
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-11",
             "comment": "DepartmentSpecialty"
           }
@@ -1128,7 +1135,7 @@
         },
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-12",
             "comment": "OrganizationType"
           }
@@ -1151,7 +1158,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc2-2025xxyy",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-4",
             "comment": "StudyInstanceUID"
           }
