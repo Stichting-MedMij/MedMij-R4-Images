@@ -19,7 +19,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/series/2.25.62435657674771067210271088065092768055/instances/2.25.98685467489423581429980749441050035880" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000024082216430327200000003/series/2.25.62435657674771067210271088065092768055/instances/2.25.98685467489423581429980749441050035880" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "MedMij PGO test CT" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2024-08-22T16:45:42+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -60,7 +60,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/2.25.155401871976277323518300317632862814864/instances/2.25.98689969643066273416183602755420758806" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.3.12.2.1107.5.1.7.130290.30000025011708292397300000003/series/2.25.155401871976277323518300317632862814864/instances/2.25.98689969643066273416183602755420758806" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "MedMij PGO CT" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-01-17T08:44:35+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -97,13 +97,13 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-02-25T13:53:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
-* author[1] = Reference(ImageAvailability-Practitioner-VanDenBerg-CZE) "v.d. Berg"
+* author[1] = Reference(ImageAvailability-Practitioner-Van-Den-Berg-CZE) "v.d. Berg"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.327109396484713206896779734146872144676/instances/2.25.5736788717031364046150233872058022718" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.752.24.7.3059655634.36522/series/2.25.327109396484713206896779734146872144676/instances/2.25.5736788717031364046150233872058022718" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "CR CWK MedMij" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-02-25T13:53:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -141,7 +141,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-02-25T14:07:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
-* author[1] = Reference(ImageAvailability-Practitioner-VanDenBerg-CZE) "v.d. Berg"
+* author[1] = Reference(ImageAvailability-Practitioner-Van-Den-Berg-CZE) "v.d. Berg"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -195,7 +195,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.195433058229186809480367734543916316743/instances/2.25.150606558103072029784566806744418491720" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.195433058229186809480367734543916316743/instances/2.25.150606558103072029784566806744418491720" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "CR Thorax" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2025-09-02T08:36:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -224,7 +224,7 @@ Usage: #example
   * system = $DICOMUniqueId
   * value = "urn:oid:2.25.150599066413166673819115182759068623778" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#386831001 "gastroscopie" // Onderzoek.Verrichting.VerrichtingType| use the SNOMED CT display name of the procedure code sequence in (0008,1032)
+* type = $SCT#386831001 "gastroscopie" // Onderzoek.Verrichting.VerrichtingType | use the SNOMED CT display name of the procedure code sequence in (0008,1032)
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
@@ -265,13 +265,13 @@ Usage: #example
   * system = $DICOMUniqueId
   * value = "urn:oid:2.25.299189956795323170040878896967724638182" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
 * status = #current // availabilityStatus | geen mapping naar dataset
-* type = $SCT#89846007 "orthopantomografie" // Onderzoek.Verrichting.VerrichtingType| tag (0008,1032) afwezig
+* type = $SCT#89846007 "orthopantomografie" // Onderzoek.Verrichting.VerrichtingType | tag (0008,1032) afwezig
 * category
   * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2022-11-04T10:27:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
-* author[1] = Reference(ImageAvailability-Practitioner-ElHasnaoui-AUMC) "dr. El Hasnaoui"
+* author[1] = Reference(ImageAvailability-Practitioner-El-Hasnaoui-AUMC) "dr. El Hasnaoui"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -482,7 +482,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-09-02T08:02:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
-* author[1] = Reference(ImageAvailability-Practitioner-DeWit-AUMC) "R.J. de Wit"
+* author[1] = Reference(ImageAvailability-Practitioner-De-Wit-AUMC) "R.J. de Wit"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -564,7 +564,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2011-01-01T14:06:06+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
-* author[1] = Reference(ImageAvailability-Practitioner-DeWit-AUMC) "R.J. de Wit"
+* author[1] = Reference(ImageAvailability-Practitioner-De-Wit-AUMC) "R.J. de Wit"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -689,7 +689,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-09-22T14:13:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
-* author[1] = Reference(ImageAvailability-Practitioner-DeGroot-CZE) "De Groot"
+* author[1] = Reference(ImageAvailability-Practitioner-De-Groot-CZE) "De Groot"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -775,7 +775,7 @@ Usage: #example
 * subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
 * date = "2025-09-22T14:06:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
 * author[0] = Reference(ImageAvailability-Organization-CZE) "Catharina Ziekenhuis Eindhoven, Algemeen ziekenhuis"
-* author[1] = Reference(ImageAvailability-Practitioner-VanDenBerg-CZE) "v.d. Berg"
+* author[1] = Reference(ImageAvailability-Practitioner-Van-Den-Berg-CZE) "v.d. Berg"
 * securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
 * content
   * attachment
@@ -827,7 +827,7 @@ Usage: #example
   * use = #official
   * text = "Janssen"
 
-Instance: ImageAvailability-Practitioner-VanDenBerg-CZE
+Instance: ImageAvailability-Practitioner-Van-Den-Berg-CZE
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * name[nameInformation]
@@ -841,7 +841,7 @@ Usage: #example
   * use = #official
   * text = "M. Vermeulen"
 
-Instance: ImageAvailability-Practitioner-DeGroot-CZE
+Instance: ImageAvailability-Practitioner-De-Groot-CZE
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * name[nameInformation]
@@ -869,7 +869,7 @@ Usage: #example
   * use = #official
   * text = "Bart Bakker"
 
-Instance: ImageAvailability-Practitioner-ElHasnaoui-AUMC
+Instance: ImageAvailability-Practitioner-El-Hasnaoui-AUMC
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * name[nameInformation]
@@ -890,7 +890,7 @@ Usage: #example
   * use = #official
   * text = "N. Visser"
 
-Instance: ImageAvailability-Practitioner-DeWit-AUMC
+Instance: ImageAvailability-Practitioner-De-Wit-AUMC
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * name[nameInformation]
@@ -903,8 +903,7 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "06011009"
-* type
-  * coding = $OrganizationType#V6 "Algemeen ziekenhuis"
+* type = $OrganizationType#V6 "Algemeen ziekenhuis"
 * name = "Catharina Ziekenhuis Eindhoven"
 
 Instance: ImageAvailability-Organization-AUMC
@@ -913,6 +912,5 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "06020701"
-* type
-  * coding = $OrganizationType#V5 "Universitair Medisch Centrum"
+* type = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Amsterdam UMC"

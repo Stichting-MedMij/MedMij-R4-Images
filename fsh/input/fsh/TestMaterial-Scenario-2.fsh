@@ -19,7 +19,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.77615907425522706317163091876421984542/series/2.25.214382059335083939558620318712574547160/instances/2.25.11642993451842870396897140495770614031" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/1.2.826.0.1.3680043.8.498.77615907425522706317163091876421984542/series/2.25.214382059335083939558620318712574547160/instances/2.25.11642993451842870396897140495770614031" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "longfoto" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "1990-02-10T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -100,7 +100,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456789/series/2.25.99377514515580500840839615593451061523/instances/2.25.258000159807854729618851821502203021554" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456789/series/2.25.99377514515580500840839615593451061523/instances/2.25.258000159807854729618851821502203021554" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "longfoto" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "1993-02-06T12:00:00+01:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -187,7 +187,7 @@ Usage: #example
   * attachment
     * contentType = #application/dicom+json
     * language = #nl // languageCode | geen mapping naar dataset
-    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456342/series/2.25.285651067871713283196753380709199456206/instances/2.25.16334082318769461496963509104742703811" // geen mapping naar dataset | verwijst naar een dummy URL op een PACS
+    * url = "https://examplepacs.example.com/wado/studies/2.16.528.1.1007.3.1.20250212.456342/series/2.25.285651067871713283196753380709199456206/instances/2.25.16334082318769461496963509104742703811" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
     * title = "röntgenfoto van linker kaakgewricht" // title | Onderzoek.Beeldinformatie.BeeldTitel
     * creation = "2020-08-10T12:00:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
   * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
@@ -328,10 +328,8 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "6020806"
-* type[0]
-  * coding = $VektisAGB#0362 "Radiologie"
-* type[1]
-  * coding = $OrganizationType#V5 "Universitair Medisch Centrum"
+* type[0] = $VektisAGB#0362 "Radiologie"
+* type[1] = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Erasmus MC"
 
 Instance: ImageAvailability-Organization-ErasmusMC-Mondzorg-Universitair
@@ -340,8 +338,6 @@ Usage: #example
 * identifier
   * system = $AGB
   * value = "6020806"
-* type[0]
-  * coding = $VektisAGB#1101 "Mondzorg en kaakchirurgie, implantoloog"
-* type[1]
-  * coding = $OrganizationType#V5 "Universitair Medisch Centrum"
+* type[0] = $VektisAGB#1101 "Mondzorg en kaakchirurgie, implantoloog"
+* type[1] = $OrganizationType#V5 "Universitair Medisch Centrum"
 * name = "Erasmus MC"

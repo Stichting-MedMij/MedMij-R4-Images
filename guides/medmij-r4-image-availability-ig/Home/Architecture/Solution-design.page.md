@@ -19,13 +19,13 @@ Figure 1 provides an overview of the participating systems, their responsibiliti
 ## Interaction Model
 As shown in Figure 1, the interaction model consists of three main interaction steps. All interactions are initiated by the PHR and routed via the XIS to the XDS/XCA Gateway.
 
-Step 1 – Query timeline  
+Step 1 – Query timeline <br/>
 The PHR queries the document timeline via the XIS using the [MHD ITI-67](https://profiles.ihe.net/ITI/MHD/ITI-67.html) transaction, to obtain an overview of available reports and imaging studies. The XIS forwards the request of the PHR to the XDS/XCA Gateway, which retrieves the required data from the XDS environment and returns the response via the XIS to the PHR.
 
-Step 2 – Retrieve document  
+Step 2 – Retrieve document <br/>
 Based on the timeline data, the PHR retrieves a certain document, such as a radiology report or an imaging manifest, using the [MHD ITI-68](https://profiles.ihe.net/ITI/MHD/ITI-68.html) transaction. The XIS forwards the request of the PHR to the XDS/XCA Gateway, which retrieves the required data from the XDS environment and returns the response via the XIS to the PHR.
 
-Step 3 – Retrieve image  
+Step 3 – Retrieve image <br/>
 For imaging studies, the PHR retrieves image data using [WADO-RS](https://www.dicomstandard.org/using/dicomweb/retrieve-wado-rs-and-wado-uri) (more specific, the [RAD-107](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf) transaction). Image retrieval is based on references obtained from a document retrieved in the previous step. The request of the PHR is routed via the XIS to the XDS/XCA Gateway.
 
 ## Transaction sequences
@@ -33,10 +33,10 @@ For imaging studies, the PHR retrieves image data using [WADO-RS](https://www.di
 ### Document-based reports
 For document-based content such as radiology reports, the interaction sequence consists of the first two steps as illustrated in Figure 1.
 
-Step 1 – Query timeline  
+Step 1 – Query timeline <br/>
 The PHR queries the document timeline via the XIS using MHD ITI-67.
 
-Step 2 – Retrieve document  
+Step 2 – Retrieve document <br/>
 The PHR retrieves a certain report using MHD ITI-68.
 
 In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transactions are involved. In the technical design, these transactions are described in the sections {{pagelink: TD, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink: TD, text: Retrieve Imaging Report, anchor: RetrieveImagingReport}}.
@@ -44,13 +44,13 @@ In this scenario, ITI-67 is followed by ITI-68 and no imaging-specific transacti
 ### Imaging studies
 For imaging studies, the interaction sequence includes all three steps shown in Figure 1.
 
-Step 1 – Query timeline  
+Step 1 – Query timeline <br/>
 The PHR queries the document timeline via the XIS using MHD ITI-67.
 
-Step 2 – Retrieve document  
+Step 2 – Retrieve document <br/>
 The PHR retrieves a certain document using MHD ITI-68. The response to this transaction is a [DICOM Key Object Selection (KOS) document](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_c.17.6.2.html), which contains references to the actual imaging instances.
 
-Step 3 – Retrieve image  
+Step 3 – Retrieve image <br/>
 Based on the references provided in the KOS document, the PHR retrieves the imaging data using the WADO-RS transaction (RAD-107).
 
 This sequence ensures that image retrieval is explicitly based on references obtained from the XDS environment and follows established IHE WIA patterns. In the technical design, these transactions are described in the sections {{pagelink: TD, text: Query Timeline Data, anchor: QueryTimelineData}} and {{pagelink: TD, text: Retrieve Images, anchor: RetrieveImages}}.

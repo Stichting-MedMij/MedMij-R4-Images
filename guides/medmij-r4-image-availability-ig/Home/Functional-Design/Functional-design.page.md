@@ -44,7 +44,7 @@ Een usecase is een gedetailleerde beschrijving van een praktijksituatie in de zo
 Het doel is om patiënten toegang te geven tot medische beelden en bijbehorende verslagen, zodat zij een beter inzicht krijgen in hun eigen medische situatie. Dit draagt bij aan een beter begrip van hun gezondheid en de behandelingen die zij ondergaan. Voor zorgverleners betekent dit dat patiënten beter geïnformeerd zijn over eerdere onderzoeken, wat kan bijdragen aan efficiëntere consulten en een beter afgestemd zorgproces.
 
 ##### Patiëntreis raadplegen beeld en verslag
-Roos Dalstra heeft pijn op de borst en besluit naar de huisartsenpost te gaan. Hier aangekomen wordt ze gelijk naar de spoedeisende hulp doorverwezen. Er wordt een echo gemaakt van het hart. De cardioloog besluit haar in te sturen naar het academische ziekenhuis i.v.m. andere aandoeningen die Roos ook heeft. In het academische ziekenhuis worden nog een CT-scan en thoraxröntgenfoto gemaakt. Roos verblijft enkele dagen in het ziekenhuis en mag daarna naar huis. Roos wil bij thuiskomst de radiologische beelden en de bijbehorende verslagen van beide ziekenhuizen in haar PGO inzien. Hierdoor krijgt ze meer inzicht in haar situatie en kan ze de vervolgbehandeling beter voorbereiden. 
+Roos Dalstra heeft pijn op de borst en besluit naar de huisartsenpost te gaan. Hier aangekomen wordt ze gelijk naar de spoedeisende hulp doorverwezen. Er wordt een echo gemaakt van het hart. De cardioloog besluit haar in te sturen naar het academische ziekenhuis i.v.m. andere aandoeningen die Roos ook heeft. In het academische ziekenhuis worden nog een CT-scan en thoraxröntgenfoto gemaakt. Roos verblijft enkele dagen in het ziekenhuis en mag daarna naar huis. Roos wil bij thuiskomst de radiologische beelden en de bijbehorende verslagen van beide ziekenhuizen in haar PGO inzien. Hierdoor krijgt ze meer inzicht in haar situatie en kan ze de vervolgbehandeling beter voorbereiden.
 
 #### Procesbeschrijving beeld en verslag
 
@@ -87,8 +87,8 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | BeeldVerslagRaadplegen | MM-1.0-BR-FHIR |  Raadplegen beeld en verslag bij zorgaanbieder |
-| XIS | BeeldVerslagBeschikbaarStellen | MM-1.0-BB-FHIR | Beschikbaar stellen beeld en verslag bij patiënt |
+| PGO | BeeldVerslagRaadplegen | BBS-BR-1.0.0-rc.2 | Raadplegen beeld en verslag bij zorgaanbieder |
+| XIS | BeeldVerslagBeschikbaarStellen | BBS-BB-1.0.0-rc.2 | Beschikbaar stellen beeld en verslag bij patiënt |
 
 **Tabel 2: Systeemrollen**
 
@@ -99,14 +99,14 @@ Hieronder zijn de systemen en systeemrollen schematisch weergegeven.
 **Figuur 2: Componentendiagram**
 
 ### Transacties en transactiegroepen
-Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt met behulp van {{pagelink: LM, text: Logical Models}} de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties, zie het {{pagelink: TD, text: technisch ontwerp}}.
+Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt met behulp van {{pagelink: LogicalModelsIndex, text: Logical Models}} de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties, zie het {{pagelink: TD, text: technisch ontwerp}}.
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Beeld en verslag tijdlijn (PULL) | Raadplegen beeld en verslag tijdlijn | MM-1.0-BR-FHIR | PGO | Patiënt |
-| Verzamelen Beeld en verslag tijdlijn (PULL) | Beschikbaar stellen beeld en verslag tijdlijn | MM-1.0-BB-FHIR | XIS | Zorgaanbieder |
-| Verzamelen Beeld en verslag (PULL) | Raadplegen beeld en verslag | MM-1.0-BR-FHIR | PGO | Patiënt |
-| Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | MM-1.0-BB-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Beeld en verslag tijdlijn (PULL) | Raadplegen beeld en verslag tijdlijn | BBS-BR-1.0.0-rc.2 | PGO | Patiënt |
+| Verzamelen Beeld en verslag tijdlijn (PULL) | Beschikbaar stellen beeld en verslag tijdlijn | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
+| Verzamelen Beeld en verslag (PULL) | Raadplegen beeld en verslag | BBS-BR-1.0.0-rc.2 | PGO | Patiënt |
+| Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 
@@ -116,4 +116,4 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 **Figuur 3: Usecasediagram**
 
 ### Dataset
-De dataset is uitgewerkt aan de hand van {{pagelink: LM, text: Logical Models}}.
+De dataset is uitgewerkt aan de hand van {{pagelink: LogicalModelsIndex, text: Logical Models, anchor: Dataset}}.

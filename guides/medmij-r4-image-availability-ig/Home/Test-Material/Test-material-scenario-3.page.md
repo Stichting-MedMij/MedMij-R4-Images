@@ -18,7 +18,7 @@
 | --- | --- |
 | ProcedureStartDate | 03-03-2020 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 6010754 (in identifier system 'AGB-Z') |

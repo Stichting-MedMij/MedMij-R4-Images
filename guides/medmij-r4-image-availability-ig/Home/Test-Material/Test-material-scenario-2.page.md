@@ -18,7 +18,7 @@
 | --- | --- |
 | ProcedureStartDate | 10-02-1990 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
@@ -86,7 +86,7 @@
 | --- | --- |
 | ProcedureStartDate | 06-02-1993 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |
@@ -120,7 +120,7 @@
 | --- | --- |
 | ProcedureStartDate | 10-08-2020 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 6020806 (in identifier system 'AGB-Z') |

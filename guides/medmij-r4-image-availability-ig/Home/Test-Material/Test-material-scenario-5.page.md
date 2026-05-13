@@ -18,7 +18,7 @@
 | --- | --- |
 | ProcedureStartDate | 22-08-2024 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
@@ -49,7 +49,7 @@
 | --- | --- |
 | ProcedureStartDate | 17-01-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
@@ -80,7 +80,7 @@
 | --- | --- |
 | ProcedureStartDate | 25-02-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'CR Bekken + heup(en)'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): CR Bekken + heup(en) |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
@@ -111,7 +111,7 @@
 | --- | --- |
 | ProcedureStartDate | 02-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'CR THORAX' |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): CR THORAX |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -123,7 +123,7 @@
 | Performer.HealthProfessional.Specialty | |
 | Performer.HealthProfessional.HealthProfessionalRole | |
 | ImageInformation.ImageInformationIdentificationNumber | 2.25.150606558103072029784566806744418491720 |
-| ImageInformation.ImageDateTime | 02-09-2025 8:36 |
+| ImageInformation.ImageDateTime | 02-09-2025 08:36 |
 | ImageInformation.ImageTitle | CR Thorax |
 | ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.309496748046569320805636965993460666632/series/2.25.195433058229186809480367734543916316743/instances/2.25.150606558103072029784566806744418491720</span> |
 | ImageInformation.Modality | Digital Radiography (code 'DX' from code system 'DICOM Controlled Terminology Definitions') |
@@ -154,7 +154,7 @@
 | Performer.HealthProfessional.Specialty | |
 | Performer.HealthProfessional.HealthProfessionalRole | |
 | ImageInformation.ImageInformationIdentificationNumber | 2.25.150599066413166673819115182759068623778 |
-| ImageInformation.ImageDateTime | 14-4-2017  17:54:20 |
+| ImageInformation.ImageDateTime | 14-04-2017 17:54:20 |
 | ImageInformation.ImageTitle | ENDOSCOPIE-KAMER 5 |
 | ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.276.0.50.10201000171.1821207.15297928.15756/series/2.25.828214698350840955484898921792912694/instances/2.25.150599066413166673819115182759068623778</span> |
 | ImageInformation.Modality | Endoscopy (code 'ES' from code system 'DICOM Controlled Terminology Definitions') |
@@ -173,7 +173,7 @@
 | --- | --- |
 | ProcedureStartDate | 04-11-2022 |
 | ProcedureEndDate | |
-| ProcedureType | orthopantomografie (code '89846007' from code system 'SNOMED CT')  |
+| ProcedureType | orthopantomografie (code '89846007' from code system 'SNOMED CT') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -202,9 +202,9 @@
 
 | Scenario 5.7 | |
 | --- | --- |
-| ProcedureStartDate | 25-02-2025 |
+| ProcedureStartDate | 05-02-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -216,7 +216,7 @@
 | Performer.HealthProfessional.Specialty | |
 | Performer.HealthProfessional.HealthProfessionalRole | |
 | ImageInformation.ImageInformationIdentificationNumber | 2.25.248079036533563831387504106862601127541 |
-| ImageInformation.ImageDateTime | 25-02-2025 10:56 |
+| ImageInformation.ImageDateTime | 05-02-2025 10:56 |
 | ImageInformation.ImageTitle | HARTKATHERISATIE PROCEDURE |
 | ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.69733758576694720070492648219173934289/series/2.25.242760769491036901522158779432493781289/instances/2.25.248079036533563831387504106862601127541</span> |
 | ImageInformation.Modality | X-Ray Angiography (code 'XA' from code system 'DICOM Controlled Terminology Definitions') |
@@ -235,7 +235,7 @@
 | --- | --- |
 | ProcedureStartDate | 05-02-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'CT van thorax'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): CT van thorax |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -266,7 +266,7 @@
 | --- | --- |
 | ProcedureStartDate | 05-02-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'echografie van thorax'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): echografie van thorax |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -297,7 +297,7 @@
 | --- | --- |
 | ProcedureStartDate | 02-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'MG MAMMOGRAFIE'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): MG MAMMOGRAFIE |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -328,7 +328,7 @@
 | --- | --- |
 | ProcedureStartDate | 02-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -359,7 +359,7 @@
 | --- | --- |
 | ProcedureStartDate | 11-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -390,7 +390,7 @@
 | --- | --- |
 | ProcedureStartDate | 01-01-2011 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -421,7 +421,7 @@
 | --- | --- |
 | ProcedureStartDate | 19-12-2006 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
@@ -452,7 +452,7 @@
 | --- | --- |
 | ProcedureStartDate | 22-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'MG Mammadiagnostiek poli controle'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): MG Mammadiagnostiek poli controle |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
@@ -483,7 +483,7 @@
 | --- | --- |
 | ProcedureStartDate | 22-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'RF Slikfoto's'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): RF Slikfoto's |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
@@ -514,7 +514,7 @@
 | --- | --- |
 | ProcedureStartDate | 22-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'MRI Kleine bekken'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): MRI Kleine bekken |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |
@@ -545,7 +545,7 @@
 | --- | --- |
 | ProcedureStartDate | 22-09-2025 |
 | ProcedureEndDate | |
-| ProcedureType | Other (code 'OTH' from code system 'v3.NullFlavor') met text 'CR Pols links'  |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor'): CR Pols links |
 | ProcedureAnatomicalLocation.Location | |
 | ProcedureAnatomicalLocation.Laterality | |
 | Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06011009 (in identifier system 'AGB-Z') |

@@ -17,9 +17,9 @@ Description: "Imaging study including images and reports."
 * masterIdentifier
   * ^short = "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID"
   * ^definition = """
-      * Worldwide unique ID for the report of the imaging study. In DICOM the study/series UID can be used.
-      * Worldwide unique ID that describes the set of images. In DICOM the study/series UID can be used.
-      * The worldwide unique identifier assigned by the document creator to this document.
+      * Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.
+      * Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.
+      * The globally unique identifier assigned by the document creator to this document.
     """
   * ^alias[0] = "VerslaginformatieIdentificatienummer"
   * ^alias[1] = "BeeldinformatieIdentificatienummer"
@@ -49,7 +49,7 @@ Description: "Imaging study including images and reports."
   * coding contains
       images 0..1 and
       reports 0..1
-  * coding[images] 
+  * coding[images]
     * ^patternCoding = $XDSClassCode#IMAGES
     * ^condition[0] = "bbs-DocumentReference-1"
     * ^condition[1] = "bbs-DocumentReference-2"
@@ -141,7 +141,7 @@ Description: "Imaging study including images and reports."
       * ^alias = "DatumTijd"
   * format from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.7--20131212104106 (extensible)
     * ^short = "FormatCode"
-    * ^definition = "Code worldwide uniquely specifying the format of the document."
+    * ^definition = "Code globally uniquely specifying the format of the document."
 * context
   * encounter only Reference(Encounter or EpisodeOfCare or http://nictiz.nl/fhir/StructureDefinition/nl-core-Encounter)
     * ^short = "ReferenceIdList"
@@ -166,7 +166,7 @@ Description: "Imaging study including images and reports."
       """
     * ^alias[0] = "VerrichtingAnatomischeLocatie"
     * ^alias[1] = "Locatie"
-  * event[modality] from $ModalityCombinedValueSetURL (required)
+  * event[modality] from ModalityCombined (required)
     * ^short = "Modality"
     * ^definition = "Type of medical imaging device, process or method that originally acquired or produced the data used to create the image or series of images, such as a CT scanner or MRI machine."
     * ^comment = "For an image or series of images the modalities SHALL be specified."
@@ -186,8 +186,8 @@ Description: "Imaging study including images and reports."
     * end
       * ^short = "ProcedureEndDate / ServiceStopTime"
       * ^definition = """
-        * The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.
-        The element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted. 
+        * The end date (and if possible end time) of the procedure. A 'vague' date, such as only the year, is permitted.
+        The element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.
         * The stop time the service being documented took place.
         """
       * ^alias = "VerrichtingEindDatum"
@@ -201,9 +201,9 @@ Description: "Imaging study including images and reports."
   * practiceSetting from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.106.11.22--20240205133006 (required)
     * ^short = "DepartmentSpecialty / PracticeSettingCode "
     * ^definition = """
-      * The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.
+      * The specialty of the healthcare provider's department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.
       The bound value set is the value set that has been proposed by IHE MCWG to the EU (Xt-EHR) for national and international exchange.
-      * The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology). 
+      * The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology).
       """
     * ^alias = "AfdelingSpecialisme"
   * sourcePatientInfo only Reference(Patient or http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
@@ -218,7 +218,7 @@ Description: "Imaging study including images and reports."
     * ^slicing.rules = #open
     * ^short = "ReferenceIdList"
     * ^definition = """
-      A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc. 
+      A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc.
       
       For Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.
       """
@@ -243,7 +243,7 @@ Description: "Imaging study including images and reports."
   * related[studyInstanceUID]
     * identifier 1..1
       * ^short = "StudyInstanceUID"
-      * ^definition = "The worldwide unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
+      * ^definition = "The globally unique DICOM identifier of the imaging study upon which the imaging report is based, assigned by the modality or PACS."
       * ^alias = "StudyInstanceUID"
       * type 1..1
         * ^patternCodeableConcept = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
@@ -297,25 +297,10 @@ Title: "ART-DECOR Dataset BBS 1.0.0-alpha.2 20240208"
   * facilityType -> "bbs-dataelement-546" "OrganizationType"
   * practiceSetting -> "bbs-dataelement-524" "DepartmentSpecialty"
 
-Mapping: BbsDocumentReferenceMedMij-100-beta1
+Mapping: BbsDocumentReferenceMedMij-100-rc2
 Source: BbsDocumentReference
-Id: bbs-medmij-dataset-100-beta1-20250807
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
-* content
-  * attachment
-    * title -> "bbs-medmij-dataelement-2" "ReportTitle"
-    * title -> "bbs-medmij-dataelement-1" "ImageTitle"
-* context
-  * event[modality] -> "bbs-medmij-dataelement-5" "Modality"
-  * related[accessionNumber]
-    * identifier -> "bbs-medmij-dataelement-3" "AccessionNumber"
-  * related[studyInstanceUID]
-    * identifier -> "bbs-medmij-dataelement-4" "StudyInstanceUID"
-
-Mapping: BbsDocumentReferenceMedMij-100-rc1
-Source: BbsDocumentReference
-Id: bbs-medmij-dataset-100-rc1-20250919
-Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+Id: bbs-medmij-dataset-100-rc2-20260513
+Title: "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 20260513"
 * content
   * attachment
     * title -> "bbs-medmij-dataelement-2" "ReportTitle"
