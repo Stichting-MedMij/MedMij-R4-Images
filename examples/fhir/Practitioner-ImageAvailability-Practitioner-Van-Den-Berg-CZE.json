@@ -1,0 +1,15 @@
+{
+  "resourceType": "Practitioner",
+  "id": "ImageAvailability-Practitioner-Van-Den-Berg-CZE",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "v.d. Berg"
+    }
+  ]
+}

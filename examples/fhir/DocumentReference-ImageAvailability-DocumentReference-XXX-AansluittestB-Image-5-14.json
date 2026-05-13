@@ -1,0 +1,142 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-14",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"
+    ]
+  },
+  "status": "current",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "IMAGES",
+          "system": "urn:oid:1.3.6.1.4.1.19376.1.2.6.1",
+          "display": "Images"
+        }
+      ]
+    }
+  ],
+  "masterIdentifier": {
+    "system": "urn:dicom:uid",
+    "value": "urn:oid:2.25.8155354506839150953620648368106652370"
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
+    "display": "B. XXX-Aansluittest-B"
+  },
+  "date": "2006-12-19T11:11:54+01:00",
+  "author": [
+    {
+      "reference": "Organization/ImageAvailability-Organization-AUMC",
+      "display": "Amsterdam UMC, Universitair Medisch Centrum"
+    }
+  ],
+  "securityLabel": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "display": "Normal"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/dicom+json",
+        "language": "nl",
+        "url": "https://examplepacs.example.com/wado/studies/1.3.6.1.4.1.5962.1.2.10.1166562673.14401/series/2.25.74124144285881267481009363901553308280/instances/2.25.8155354506839150953620648368106652370",
+        "creation": "2006-12-19T11:11:54+01:00"
+      },
+      "format": {
+        "code": "1.2.840.10008.5.1.4.1.1.88.59",
+        "system": "http://dicom.nema.org/resources/ontology/DCMUID"
+      }
+    }
+  ],
+  "context": {
+    "event": [
+      {
+        "coding": [
+          {
+            "code": "CT",
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "display": "Computed Tomography"
+          }
+        ]
+      }
+    ],
+    "period": {
+      "start": "2006-12-19"
+    },
+    "facilityType": {
+      "coding": [
+        {
+          "code": "V5",
+          "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+          "display": "Universitair Medisch Centrum"
+        }
+      ]
+    },
+    "practiceSetting": {
+      "coding": [
+        {
+          "code": "394734003",
+          "system": "http://snomed.info/sct",
+          "display": "Radiological specialties"
+        }
+      ]
+    },
+    "sourcePatientInfo": {
+      "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
+      "display": "B. XXX-Aansluittest-B"
+    },
+    "related": [
+      {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "urn:ihe:iti:xds:2013:accession",
+                "system": "urn:ietf:rfc:3986"
+              }
+            ]
+          },
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.114",
+          "value": "0010",
+          "assigner": {
+            "reference": "Organization/ImageAvailability-Organization-AUMC",
+            "display": "Amsterdam UMC, Universitair Medisch Centrum"
+          }
+        }
+      },
+      {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "urn:ihe:iti:xds:2016:studyInstanceUID",
+                "system": "urn:ietf:rfc:3986"
+              }
+            ]
+          },
+          "system": "urn:dicom:uid",
+          "value": "urn:oid:1.3.6.1.4.1.5962.1.2.10.1166562673.14401"
+        }
+      }
+    ]
+  }
+}

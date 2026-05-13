@@ -1,7 +1,7 @@
 {
   "name": "medmij.fhir.nl.r4.imageavailability",
-  "version": "1.0.0-rc.1",
-  "description": "Package of FHIR R4 conformance resources for MedMij Image Availability version 1.0.0-rc.1.",
+  "version": "1.0.0-rc.2",
+  "description": "Package of FHIR R4 conformance resources for MedMij Image Availability version 1.0.0-rc.2.",
   "author": "MedMij",
   "license": "CC0-1.0",
   "title": "FHIR implementation of Image Availability",
@@ -11,7 +11,7 @@
     }
   ],
   "dependencies": {
-    "nictiz.fhir.nl.r4.nl-core": "0.12.0-beta.1",
+    "nictiz.fhir.nl.r4.nl-core": "0.12.0-beta.4",
     "ihe.iti.mhd": "4.2.2",
     "hl7.fhir.r4.core": "4.0.1"
   },

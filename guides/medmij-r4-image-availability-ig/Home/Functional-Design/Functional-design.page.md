@@ -7,7 +7,7 @@ topic: FO
 ## Inleiding
 
 ### Algemeen
-Dit ontwerp beschrijft een usecase voor de persoon in het kader van de [informatiestandaard Beeldbeschikbaarheid, versie 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). Deze informatiestandaard behandelt de uitwisseling van gegevens met de persoon nog niet expliciet. Dit ontwerp heeft als doel het scenario 'Beelden beschikbaar stellen aan een persoon in een PGO' op termijn op te nemen in de standaard Beeldbeschikbaarheid. Dit scenario wordt uitgewerkt in de vorm van de usecase 'Raadplegen beeld en verslag in persoonlijke gezondheidsomgeving'.
+Dit ontwerp beschrijft een usecase voor de persoon in het kader van de [informatiestandaard Beeldbeschikbaarheid, versie 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). Deze informatiestandaard behandelt de uitwisseling van gegevens met de persoon nog niet expliciet. Dit ontwerp heeft als doel het scenario 'Beelden beschikbaar stellen aan een persoon in een PGO' op termijn op te nemen in de standaard Beeldbeschikbaarheid. Dit scenario wordt uitgewerkt in de vorm van de usecase 'Raadplegen beeld en verslag in persoonlijke gezondheidsomgeving'. In het vervolg wordt de term 'patiënt' gebruikt om de persoon aan te duiden.
 
 ### Doelgroep
 De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Doelgroep) van de functionele ontwerpen binnen MedMij.
@@ -28,10 +28,10 @@ Voor deze usecase is een infrastructuur vereist waarin zorgaanbieders medische b
 Daarnaast gelden de specificaties genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Infrastructuur) van de functionele ontwerpen binnen MedMij.
 
 #### Geografische reikwijdte
-Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.02/Ontwerpen#Geografische_reikwijdte) van de functionele ontwerpen binnen MedMij.
+Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Geografische_reikwijdte) van de functionele ontwerpen binnen MedMij.
 
 ### Kwalificatie en testen
-Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept (PoC). Later volgt meer informatie over kwalificatie.
+Op dit moment wordt de usecase uit dit ontwerp getoetst in een pilot. Later volgt meer informatie over kwalificatie.
 
 ## Usecases
 
@@ -43,8 +43,8 @@ Een usecase is een gedetailleerde beschrijving van een praktijksituatie in de zo
 #### Doel en relevantie raadplegen beeld en verslag
 Het doel is om patiënten toegang te geven tot medische beelden en bijbehorende verslagen, zodat zij een beter inzicht krijgen in hun eigen medische situatie. Dit draagt bij aan een beter begrip van hun gezondheid en de behandelingen die zij ondergaan. Voor zorgverleners betekent dit dat patiënten beter geïnformeerd zijn over eerdere onderzoeken, wat kan bijdragen aan efficiëntere consulten en een beter afgestemd zorgproces.
 
-##### Patient journey raadplegen beeld en verslag
-Roos Dalstra heeft pijn op de borst en besluit naar de huisartsenpost te gaan. Hier aangekomen wordt ze gelijk naar de spoedeisende hulp doorverwezen. Er wordt een echo gemaakt van het hart. De cardioloog besluit haar in te sturen naar het academische ziekenhuis i.v.m. andere aandoeningen die Roos ook heeft. In het academische ziekenhuis worden nog een CT-scan en thoraxröntgenfoto gemaakt. Roos verblijft enkele dagen in het ziekenhuis en mag daarna naar huis. Roos wil bij thuiskomst de radiologische beelden en de bijbehorende verslagen van beide ziekenhuizen in haar PGO inzien. Hierdoor krijgt ze meer inzicht in haar situatie en kan ze de vervolgbehandeling beter voorbereiden. 
+##### Patiëntreis raadplegen beeld en verslag
+Roos Dalstra heeft pijn op de borst en besluit naar de huisartsenpost te gaan. Hier aangekomen wordt ze gelijk naar de spoedeisende hulp doorverwezen. Er wordt een echo gemaakt van het hart. De cardioloog besluit haar in te sturen naar het academische ziekenhuis i.v.m. andere aandoeningen die Roos ook heeft. In het academische ziekenhuis worden nog een CT-scan en thoraxröntgenfoto gemaakt. Roos verblijft enkele dagen in het ziekenhuis en mag daarna naar huis. Roos wil bij thuiskomst de radiologische beelden en de bijbehorende verslagen van beide ziekenhuizen in haar PGO inzien. Hierdoor krijgt ze meer inzicht in haar situatie en kan ze de vervolgbehandeling beter voorbereiden.
 
 #### Procesbeschrijving beeld en verslag
 
@@ -53,21 +53,21 @@ Roos Dalstra heeft pijn op de borst en besluit naar de huisartsenpost te gaan. H
 - Het beeld en/of het verslag zijn geregistreerd en beschikbaar voor systemen die tijdlijngegevens kunnen opvragen.
 
 ##### Proces
-- De patiënt raadpleegt de beelden en verslagen in zijn of haar PGO.
+- De patiënt raadpleegt de beelden en verslagen in zijn PGO.
 - Het systeem van de patiënt (PGO) vraagt om beschikbare medische gegevens bij de zorgaanbieder.
 - Het systeem van de zorgaanbieder (XIS) levert een lijst met metadata over de gevonden beelden en verslagen op voor de patiënt.
 - De patiënt gebruikt de persoonlijke gezondheidsomgeving om het gewenste beeld en/of verslag te raadplegen of te downloaden.
 - Het systeem van de zorgaanbieder (XIS) levert het gevraagde beeld en/of verslag op voor de patiënt.
 
 ##### Postproces
-- De patiënt ziet het opgevraagde beeld en/of verslag in zijn of haar PGO.
+- De patiënt ziet het opgevraagde beeld en/of verslag in zijn PGO.
 
 ### Bedrijfsrollen en UML activity diagram
-Deze usecase onderscheidt twee bedrijfsrollen, namelijk de Persoon en de (Zorg)Aanbieder, zoals te zien in onderstaande tabel.
+Deze usecase onderscheidt twee bedrijfsrollen, namelijk de *Patiënt* en de *Zorgaanbieder*, zoals te zien in onderstaande tabel.
 
 | Bedrijfsrol (actor) | Beschrijving | Activiteit |
 | --- | --- | --- |
-| Patiënt/persoon | Gebruiker van de PGO | Wil medische beelden en verslagen raadplegen |
+| Patiënt | Gebruiker van de PGO | Wil medische beelden en verslagen raadplegen |
 | Zorgaanbieder | Gebruiker van het XIS | Stelt medische beelden en verslagen beschikbaar |
 
 **Tabel 1: Bedrijfsrollen**
@@ -77,18 +77,18 @@ Deze usecase onderscheidt twee bedrijfsrollen, namelijk de Persoon en de (Zorg)A
 **Figuur 1: Activiteitendiagram**
 
 ### Informatieoverdracht
-Zowel de persoon als de zorgaanbieder maken ieder gebruik van een informatiesysteem:
+Zowel de patiënt als de zorgaanbieder maken ieder gebruik van een informatiesysteem:
 
-- PGO (persoon)
+- PGO (patiënt)
 - XIS (zorgaanbieder)
 
 #### Systemen en systeemrollen
-Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van gegevens tussen deze systemen mogelijk maken. Hier gaat het om de beeld en verslag van zorgaanbieder naar de persoon.
+Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van gegevens tussen deze systemen mogelijk maken. Hier gaat het om de uitwisseling van beelden en verslagen die zijn geregistreerd bij de zorgaanbieder naar de patiënt.
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | BeeldVerslagRaadplegen | MM-1.0-BR-FHIR |  Raadplegen beeld en verslag bij zorgaanbieder |
-| XIS | BeeldVerslagBeschikbaarStellen | MM-1.0-BB-FHIR | Beschikbaar stellen beeld en verslag bij patiënt |
+| PGO | BeeldVerslagRaadplegen | BBS-BR-1.0.0-rc.2 | Raadplegen beeld en verslag bij zorgaanbieder |
+| XIS | BeeldVerslagBeschikbaarStellen | BBS-BB-1.0.0-rc.2 | Beschikbaar stellen beeld en verslag bij patiënt |
 
 **Tabel 2: Systeemrollen**
 
@@ -99,16 +99,14 @@ Hieronder zijn de systemen en systeemrollen schematisch weergegeven.
 **Figuur 2: Componentendiagram**
 
 ### Transacties en transactiegroepen
-Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt in ART-DECOR de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties en implementation guide, zie de {{pagelink:TO, text:FHIR IG}}.
-
-**Noot:** De specificaties voor de transacties in dit ontwerp staan op dit moment in de dataset maar nog niet in ART-DECOR. Bij een toekomstige samenvoeging met de informatiestandaard van Nictiz zullen deze worden opgenomen.
+Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt met behulp van {{pagelink: LogicalModelsIndex, text: Logical Models}} de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties, zie het {{pagelink: TD, text: technisch ontwerp}}.
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Beeld en verslag tijdlijn (PULL) | Raadplegen beeld en verslag tijdlijn | MM-1.0-BR-FHIR | PGO | Patiënt |
-| Verzamelen Beeld en verslag tijdlijn (PULL) | Beschikbaar stellen beeld en verslag tijdlijn | MM-1.0-BB-FHIR | XIS | Zorgaanbieder |
-| Verzamelen Beeld en verslag (PULL) | Raadplegen beeld en verslag | MM-1.0-BR-FHIR | PGO | Patiënt |
-| Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | MM-1.0-BB-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Beeld en verslag tijdlijn (PULL) | Raadplegen beeld en verslag tijdlijn | BBS-BR-1.0.0-rc.2 | PGO | Patiënt |
+| Verzamelen Beeld en verslag tijdlijn (PULL) | Beschikbaar stellen beeld en verslag tijdlijn | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
+| Verzamelen Beeld en verslag (PULL) | Raadplegen beeld en verslag | BBS-BR-1.0.0-rc.2 | PGO | Patiënt |
+| Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
 
@@ -118,4 +116,4 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 **Figuur 3: Usecasediagram**
 
 ### Dataset
-De dataset kan gevonden worden op [GitHub](https://github.com/Stichting-MedMij/MedMij-R4-ImageAvailability/blob/main/dataset/Dataset_MedMij_Beeldbeschikbaarheid_1.0.0-rc.1.xlsx).
+De dataset is uitgewerkt aan de hand van {{pagelink: LogicalModelsIndex, text: Logical Models, anchor: Dataset}}.

@@ -22,8 +22,8 @@
       ]
     }
   ],
-  "description": "Imaging research including images and reports.",
-  "purpose": "This DocumentReference resource represents the Onderzoek building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). This profile is based on the [IHE.MHD.UnContained.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference).",
+  "description": "Imaging study including images and reports.",
+  "purpose": "This DocumentReference resource represents the Study building block for patient use cases in the context of the information standard [Image Availability (Beeldbeschikbaarheid)](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). This profile is based on the [IHE.MHD.UnContained.Comprehensive.DocumentReference profile](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.DocumentReference).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -33,12 +33,8 @@
       "uri": "https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html"
     },
     {
-      "identity": "bbs-medmij-dataset-100-beta1-20250807",
-      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-beta.1 20250807"
-    },
-    {
-      "identity": "bbs-medmij-dataset-100-rc1-20250919",
-      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.1 20250919"
+      "identity": "bbs-medmij-dataset-100-rc2-20260513",
+      "name": "Dataset Beeldbeschikbaarheid MedMij 1.0.0-rc.2 20260513"
     },
     {
       "identity": "ihexds-dataset-2024-20220712",
@@ -56,8 +52,8 @@
       {
         "id": "DocumentReference",
         "path": "DocumentReference",
-        "short": "ImagingResearch",
-        "definition": "Imaging research including images and reports.",
+        "short": "Study",
+        "definition": "Imaging study including images and reports.",
         "alias": [
           "Onderzoek"
         ],
@@ -81,7 +77,7 @@
           {
             "identity": "bbs-dataset-100-alpha2-20240208",
             "map": "bbs-dataelement-66",
-            "comment": "ImagingResearch"
+            "comment": "Study"
           }
         ]
       },
@@ -89,7 +85,7 @@
         "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
         "short": "ReportInformationIdentificationNumber / ImageInformationIdentificationNumber / UniqueID",
-        "definition": "* Globally unique ID for the report of the imaging research. In DICOM the study/series UID can be used.\n* Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The globally unique identifier assigned by the document creator to this document.",
+        "definition": "* Globally unique ID for the report of the imaging study. In DICOM the study/series UID can be used.\n* Globally unique ID that describes the set of images. In DICOM the study/series UID can be used.\n* The globally unique identifier assigned by the document creator to this document.",
         "alias": [
           "VerslaginformatieIdentificatienummer",
           "BeeldinformatieIdentificatienummer"
@@ -130,7 +126,7 @@
         "id": "DocumentReference.type",
         "path": "DocumentReference.type",
         "short": "ProcedureType / TypeCode",
-        "definition": "* Description of the procedure and/or the performed imaging research (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).\n* The code specifying the precise kind of document (e.g. Pulmonary History and Physical, Discharge Summary, Ultrasound Report).",
+        "definition": "* Description of the procedure and/or the performed imaging study (e.g. CT thorax, MRI knee, ultrasonography of breast, X-ray).\n* The code specifying the precise kind of document (e.g. Pulmonary History and Physical, Discharge Summary, Ultrasound Report).",
         "comment": "The value set bound to this element is a thesaurus managed, owned and distributed by DHD (namely the Verrichtingenthesaurus (VT)). Every concept in the VT is linked to a unique SNOMED concept, but it is no SNOMED reference set, and in particular it is not published on the SNOMED browsers. In order to retrieve the contents of the VT, authorized access is required.\n\nThe XDS metadata element typeCode, which normally contains the precise type of document, is mapped on `.type` in [core FHIR](https://hl7.org/fhir/R4/documentreference-mappings.html#xds). In XDS-I, and consequently, the Nictiz IG, the typeCode element is used to indicate the procedure type instead. Even though `.context.event` is better suited to convey the procedure type from a FHIR perspective, the core FHIR mapping between typeCode and `.type` is retained.",
         "alias": [
           "VerrichtingType"
@@ -505,22 +501,12 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-2",
             "comment": "ReportTitle"
           },
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
-            "map": "bbs-medmij-dataelement-1",
-            "comment": "ImageTitle"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
-            "map": "bbs-medmij-dataelement-2",
-            "comment": "ReportTitle"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-1",
             "comment": "ImageTitle"
           },
@@ -713,12 +699,7 @@
         },
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
-            "map": "bbs-medmij-dataelement-5",
-            "comment": "Modality"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-5",
             "comment": "Modality"
           }
@@ -755,7 +736,7 @@
         "id": "DocumentReference.context.period.end",
         "path": "DocumentReference.context.period.end",
         "short": "ProcedureEndDate / ServiceStopTime",
-        "definition": "* The end date (and if possible end time) of the procedure. A ‘vague’ date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted. \n* The stop time the service being documented took place.",
+        "definition": "* The end date (and if possible end time) of the procedure. A 'vague' date, such as only the year, is permitted.\nThe element offers the option to indicate the end of the period of a series of related procedures. The end date element is only used for a procedures that takes some time and is then always applied. If the procedure still continues, the value is left empty. For instantaneous or very short lasting procedures the element is omitted.\n* The stop time the service being documented took place.",
         "alias": [
           "VerrichtingEindDatum"
         ],
@@ -801,7 +782,7 @@
         "id": "DocumentReference.context.practiceSetting",
         "path": "DocumentReference.context.practiceSetting",
         "short": "DepartmentSpecialty / PracticeSettingCode ",
-        "definition": "* The specialty of the healthcare provider’s department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.\nThe bound value set is the value set that has been proposed by IHE MCWG to the EU (Xt-EHR) for national and international exchange.\n* The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology). ",
+        "definition": "* The specialty of the healthcare provider's department. The departmental specialty can be filled in if further indication of the healthcare provider is needed. This refers to the recognized medical specialties as stated in the BIG Act.\nThe bound value set is the value set that has been proposed by IHE MCWG to the EU (Xt-EHR) for national and international exchange.\n* The code specifying the clinical specialty where the act that resulted in the document was performed (e.g. Family Practice, Laboratory, Radiology).",
         "alias": [
           "AfdelingSpecialisme"
         ],
@@ -862,7 +843,7 @@
           "rules": "open"
         },
         "short": "ReferenceIdList",
-        "definition": "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc. \n\nFor Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.",
+        "definition": "A list of identifiers that apply to the document. Identifiers may be Accession Numbers, Order Numbers, Referral Request Identifiers, XDS Workflow Instance Identifiers, etc.\n\nFor Imaging (Reports), use the Accession Number with Assigning Authority, Order Number with Assigning Authority and StudyUID, as proposed by the IHE MCWG to support linking the Images and Reports together.",
         "comment": "Encounters on the ReferenceIdList are conveyed via `.context.encounter`.",
         "mapping": [
           {
@@ -890,12 +871,7 @@
         "min": 1,
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
-            "map": "bbs-medmij-dataelement-3",
-            "comment": "AccessionNumber"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-3",
             "comment": "AccessionNumber"
           }
@@ -917,11 +893,10 @@
       {
         "id": "DocumentReference.context.related:accessionNumber.identifier.system",
         "path": "DocumentReference.context.related.identifier.system",
-        "comment": "In DICOM, the Accession Number is just a string (namely of DICOM data type _Short String_ (_SH_)). In order to ensure uniqueness of the Accession Number, a `.system` SHALL be provided. It is up to the Assigning Authority that issued the Accession Number to determine and manage an appropriate URL or URN as `.system`. If no specific URL or URN for the Accession Number identifier system is provided in the source data, the identifier of the Assigning Authority itself SHOULD be used as fallback, i.e. the OID registered for the Assigning Authority, which should be present in DICOM tag `(0040,0032)` (Universal Entity ID) as part of `(0008,0051)` (Issuer of Accession Number Sequence).",
-        "min": 1,
+        "comment": "In DICOM, the Accession Number is just a string (namely of DICOM data type _Short String_ (_SH_)). In order to ensure uniqueness of the Accession Number, a `.system` SHOULD be provided. It is up to the Assigning Authority that issued the Accession Number to determine and manage an appropriate URL or URN as `.system`. If no specific URL or URN for the Accession Number identifier system is provided in the source data, the identifier of the Assigning Authority itself SHOULD be used as fallback, i.e. the OID registered for the Assigning Authority, which should be present in DICOM tag `(0040,0032)` (Universal Entity ID) as part of `(0008,0051)` (Issuer of Accession Number Sequence).",
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority (implicit, main mapping is on .context.related[accessionNumber].identifier.assigner)"
           }
@@ -951,7 +926,7 @@
         ],
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-7",
             "comment": "AssigningAuthority"
           }
@@ -975,12 +950,7 @@
         "min": 1,
         "mapping": [
           {
-            "identity": "bbs-medmij-dataset-100-beta1-20250807",
-            "map": "bbs-medmij-dataelement-4",
-            "comment": "StudyInstanceUID"
-          },
-          {
-            "identity": "bbs-medmij-dataset-100-rc1-20250919",
+            "identity": "bbs-medmij-dataset-100-rc2-20260513",
             "map": "bbs-medmij-dataelement-4",
             "comment": "StudyInstanceUID"
           }
