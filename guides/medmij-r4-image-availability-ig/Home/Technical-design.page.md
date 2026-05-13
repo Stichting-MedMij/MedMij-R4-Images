@@ -5,7 +5,7 @@ topic: TD
 # Technical design
 
 ## Introduction
-This technical design describes a patient use case in the context of the [information standard "Image Availability" (Dutch: Beeldbeschikbaarheid or BBS), version 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). The information standard Image Availability as published by Nictiz does not yet include a patient use case, however, this may change in the future. Up until then, the patient use case will be published by MedMij.
+This technical design describes a patient use case in the context of the [information standard Image Availability (Dutch: Beeldbeschikbaarheid or BBS), version 1.0.0-alpha.2](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Beeldbeschikbaarheid). The information standard Image Availability as published by Nictiz does not yet include a patient use case, however, this may change in the future. Up until then, the patient use case will be published by MedMij.
 
 This technical design is a technical counterpart of the {{pagelink: FO, text: functional design}}. The FHIR version used for this technical design is R4 (4.0.1).
 
