@@ -30,7 +30,6 @@ Id: ModalityCombined
 Title: "ModalityCombined ValueSet."
 Description: "Value set combining the (overlapping) value sets that are defined by DICOM (in [CID 29 Acquisition Modality](https://dicom.nema.org/medical/dicom/2018a/output/chtml/part16/sect_CID_29.html)) and MedMij, respectively."
 * insert DefaultNarrative
-* ^url = $ModalityCombinedValueSetURL
 * ^identifier.use = #official
 * ^identifier.system = $URI
 * ^identifier.value = $ModalityCombinedValueSetOID
