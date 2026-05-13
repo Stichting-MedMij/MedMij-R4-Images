@@ -18,14 +18,14 @@ In het {{pagelink: TD, text: technisch ontwerp, anchor: Identifiers}} is een ove
 
 ### Verslagen
 Duplicaatdetectie van verslagen gebeurt op basis van:
-- VerslaginformatieIdentificatienummer ([Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-100): het unieke ID van het verslag in een XIS.
+- VerslaginformatieIdentificatienummer ([Nictiz BBS-dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-100): het unieke ID van het verslag in een XIS.
 
 Als twee verslagen een identiek VerslaginformatieIdentificatienummer hebben, kan worden aangenomen dat deze verslagen duplicaten zijn.
 
 ### Beelden
 Duplicaatdetectie van medische beelden gebeurt op basis van:
-- Study Instance UID ({{pagelink: LogicalModelsIndex, text: MedMij dataset, anchor: Dataset}}, bbs-medmij-dataelement-4): het unieke identificatienummer van een beeldvormend onderzoek binnen DICOM.
-- BeeldinformatieIdentificatienummer ([Nictiz BBS dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-784): het unieke ID van het beeld in een PACS of NVA.
+- Study Instance UID ({{pagelink: LogicalModelsIndex, text: MedMij-dataset, anchor: Dataset}}, bbs-medmij-dataelement-4): het unieke identificatienummer van een beeldvormend onderzoek binnen DICOM.
+- BeeldinformatieIdentificatienummer ([Nictiz BBS-dataset (1.0.0-alpha.2)](https://decor.nictiz.nl/pub/bbs/bbs-html-20240208T092809/ds-2.16.840.1.113883.2.4.3.11.60.133.1.1-2022-03-09T122352.html), bbs-dataelement-784): het unieke ID van het beeld in een PACS of NVA.
 
 Als twee beelden een identiek Study Instance UID hebben, kan worden aangenomen dat deze beelden duplicaten zijn. Mocht het Study Instance UID leeg zijn bij (één van) de beelden, dan moet het BeeldinformatieIdentificatienummer van beide beelden vergeleken worden. Als deze laatste identificatienummers in dat geval identiek zijn, kan worden aangenomen dat de betreffende beelden duplicaten zijn.
 
