@@ -61,10 +61,10 @@ In de tabel hieronder staan de gegevens die relevant zijn voor deze weergaverich
 
 | Naam dataelement | Id dataelement | Advies weergavetekst in PGO | Voorbeeld | Weergeven |
 | --- | --- | --- | --- | --- |
-| VerrichtingStartDatum | bbs-dataelement-174 | Onderzoeksdatum | 31-01-2020 | Ja  |
-| BeeldTitel | bbs-medmij-dataelement-1 | Naam onderzoek | C. van Wijk radiologiebeelden | Ja, indien beschikbaar  |
-| VerslagTitel | bbs-medmij-dataelement-2 | Naam onderzoek | Cardiologiebeelden C. van Wijk | Ja, indien beschikbaar  |
-| OrganisatieNaam | bbs-dataelement-523 | Zorgaanbieder | OLVG Oost | Ja  |
+| VerrichtingStartDatum | bbs-dataelement-174 | Onderzoeksdatum | 31-01-2020 | Ja |
+| BeeldTitel | bbs-medmij-dataelement-1 | Naam onderzoek | C. van Wijk radiologiebeelden | Ja, indien beschikbaar |
+| VerslagTitel | bbs-medmij-dataelement-2 | Naam onderzoek | Cardiologiebeelden C. van Wijk | Ja, indien beschikbaar |
+| OrganisatieNaam | bbs-dataelement-523 | Zorgaanbieder | OLVG Oost | Ja |
 | Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam) | bbs-dataelement-385 | Uitvoerend zorgverlener | J. ter Velde | Ja, indien beschikbaar |
 | Modaliteit | bbs-medmij-dataelement-5 | Type beeld | CT | Ja, indien het een beeld betreft |
 

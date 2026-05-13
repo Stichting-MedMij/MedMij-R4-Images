@@ -87,7 +87,7 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | BeeldVerslagRaadplegen | BBS-BR-1.0.0-rc.2 |  Raadplegen beeld en verslag bij zorgaanbieder |
+| PGO | BeeldVerslagRaadplegen | BBS-BR-1.0.0-rc.2 | Raadplegen beeld en verslag bij zorgaanbieder |
 | XIS | BeeldVerslagBeschikbaarStellen | BBS-BB-1.0.0-rc.2 | Beschikbaar stellen beeld en verslag bij patiënt |
 
 **Tabel 2: Systeemrollen**

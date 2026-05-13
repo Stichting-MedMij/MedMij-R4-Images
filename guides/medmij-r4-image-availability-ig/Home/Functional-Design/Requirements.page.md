@@ -52,7 +52,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
-| 3 | Zorggebruiker |  Geïnformeerd worden dat er een vertraging kan zitten op de vrijgave van de beelden en verslagen van mijn onderzoek | Duidelijkheid heb over de variërende tijdsduur in beschikbaarheid van mijn beelden en verslagen | M |
+| 3 | Zorggebruiker | Geïnformeerd worden dat er een vertraging kan zitten op de vrijgave van de beelden en verslagen van mijn onderzoek | Duidelijkheid heb over de variërende tijdsduur in beschikbaarheid van mijn beelden en verslagen | M |
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
