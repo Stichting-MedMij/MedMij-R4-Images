@@ -1,0 +1,15 @@
+{
+  "resourceType": "Practitioner",
+  "id": "ImageAvailability-Practitioner-Visser-AUMC",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"
+    ]
+  },
+  "name": [
+    {
+      "use": "official",
+      "text": "N. Visser"
+    }
+  ]
+}

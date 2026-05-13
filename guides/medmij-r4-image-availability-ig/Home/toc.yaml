@@ -9,7 +9,7 @@
 - name: Dependencies
   filename: Dependencies.page.md
 - name: Test material
-  filename: Test-material.page.md
+  filename: Test-Material
 - name: Architecture
   filename: Architecture
 - name: Release notes

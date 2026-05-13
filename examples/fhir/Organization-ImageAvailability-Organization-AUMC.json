@@ -1,0 +1,27 @@
+{
+  "resourceType": "Organization",
+  "id": "ImageAvailability-Organization-AUMC",
+  "meta": {
+    "profile": [
+      "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.nl/fhir/NamingSystem/agb-z",
+      "value": "06020701"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "V5",
+          "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+          "display": "Universitair Medisch Centrum"
+        }
+      ]
+    }
+  ],
+  "name": "Amsterdam UMC"
+}

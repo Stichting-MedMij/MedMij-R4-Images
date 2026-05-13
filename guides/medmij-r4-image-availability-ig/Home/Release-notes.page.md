@@ -29,6 +29,7 @@
 | FHIR artifacts        | The OIDs of the ValueSets MedMijModality and ModalityCombined have been updated. | [DOSINZAGE2-830](https://medmij.atlassian.net/issues/DOSINZAGE2-830) |
 | FHIR artifacts        | The nl-core dependency has been updated to 0.12.0-beta.4. | [DOSINZAGE2-830](https://medmij.atlassian.net/browse/DOSINZAGE2-830) |
 | FHIR artifacts        | For each Logical Model and FHIR profile, the mappings have been added in the IG. Moreover, for each FHIR profile, (links to) the corresponding examples have been added in the IG. | [DOSINZAGE2-830](https://medmij.atlassian.net/browse/DOSINZAGE2-830) |
+| Test material         | The test material has been expanded/updated, as well as relocated to the IG. | [DOSINZAGE2-537](https://medmij.atlassian.net/browse/DOSINZAGE2-537) |
 | Architecture          | Further documentation to the solution design has been added, and the solution architecture overview has been updated. | [DOSINZAGE2-739](https://medmij.atlassian.net/browse/DOSINZAGE2-739) |
 | Architecture          | The reference architecture for backends based on an XDS/XCA infrastructure has been added. | [DOSINZAGE2-670](https://medmij.atlassian.net/browse/DOSINZAGE2-670) |
 

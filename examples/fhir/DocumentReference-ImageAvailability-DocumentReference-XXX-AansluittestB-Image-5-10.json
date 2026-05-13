@@ -1,0 +1,148 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-10",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference"
+    ]
+  },
+  "status": "current",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "IMAGES",
+          "system": "urn:oid:1.3.6.1.4.1.19376.1.2.6.1",
+          "display": "Images"
+        }
+      ]
+    }
+  ],
+  "masterIdentifier": {
+    "system": "urn:dicom:uid",
+    "value": "urn:oid:2.25.95966818745833947741618595219711037190"
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "OTH",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "display": "Other"
+      }
+    ],
+    "text": "MG MAMMOGRAFIE"
+  },
+  "subject": {
+    "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
+    "display": "B. XXX-Aansluittest-B"
+  },
+  "date": "2025-09-02T15:50:00+02:00",
+  "author": [
+    {
+      "reference": "Organization/ImageAvailability-Organization-AUMC",
+      "display": "Amsterdam UMC, Universitair Medisch Centrum"
+    },
+    {
+      "reference": "Practitioner/ImageAvailability-Practitioner-Visser-AUMC",
+      "display": "N. Visser"
+    }
+  ],
+  "securityLabel": [
+    {
+      "coding": [
+        {
+          "code": "N",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "display": "Normal"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/dicom+json",
+        "language": "nl",
+        "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.122947418999141105980865839639187651261/series/2.25.323146501594166118692321542834534350905/instances/2.25.95966818745833947741618595219711037190",
+        "title": "MG MAMMOGRAFIE",
+        "creation": "2025-09-02T15:50:00+02:00"
+      },
+      "format": {
+        "code": "1.2.840.10008.5.1.4.1.1.88.59",
+        "system": "http://dicom.nema.org/resources/ontology/DCMUID"
+      }
+    }
+  ],
+  "context": {
+    "event": [
+      {
+        "coding": [
+          {
+            "code": "MG",
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "display": "Mammography"
+          }
+        ]
+      }
+    ],
+    "period": {
+      "start": "2025-09-02"
+    },
+    "facilityType": {
+      "coding": [
+        {
+          "code": "V5",
+          "system": "http://nictiz.nl/fhir/NamingSystem/organization-type",
+          "display": "Universitair Medisch Centrum"
+        }
+      ]
+    },
+    "practiceSetting": {
+      "coding": [
+        {
+          "code": "394734003",
+          "system": "http://snomed.info/sct",
+          "display": "Radiological specialties"
+        }
+      ]
+    },
+    "sourcePatientInfo": {
+      "reference": "Patient/ImageAvailability-Patient-XXX-Aansluittest-B",
+      "display": "B. XXX-Aansluittest-B"
+    },
+    "related": [
+      {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "urn:ihe:iti:xds:2013:accession",
+                "system": "urn:ietf:rfc:3986"
+              }
+            ]
+          },
+          "system": "urn:oid:2.16.840.1.113883.2.4.3.114",
+          "value": "AGFA00000173698",
+          "assigner": {
+            "reference": "Organization/ImageAvailability-Organization-AUMC",
+            "display": "Amsterdam UMC, Universitair Medisch Centrum"
+          }
+        }
+      },
+      {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "urn:ihe:iti:xds:2016:studyInstanceUID",
+                "system": "urn:ietf:rfc:3986"
+              }
+            ]
+          },
+          "system": "urn:dicom:uid",
+          "value": "urn:oid:1.2.40.0.13.1.122947418999141105980865839639187651261"
+        }
+      }
+    ]
+  }
+}
