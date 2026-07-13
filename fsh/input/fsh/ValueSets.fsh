@@ -22,6 +22,7 @@ Description: "DICOM modalities that need to be supported in the MedMij use case 
 * $DCM#OT "Other Modality"
 * $DCM#PT "Positron emission tomography"
 * $DCM#RF "Radiofluoroscopy"
+* $DCM#SR "Structured Report"
 * $DCM#US "Ultrasound"
 * $DCM#XA "X-Ray Angiography"
 

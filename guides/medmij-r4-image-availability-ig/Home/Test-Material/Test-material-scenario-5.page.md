@@ -570,3 +570,34 @@
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
 | AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Algemeen ziekenhuis (code 'V6' from code system 'Role Code NL Zorgaanbiedertypen') |
 | StudyInstanceUID | 1.2.752.24.7.3059655634.38678 |
+
+| Scenario 5.19 | |
+| --- | --- |
+| ProcedureStartDate | 02-09-2025 |
+| ProcedureEndDate | |
+| ProcedureType | Other (code 'OTH' from code system 'NullFlavor') |
+| ProcedureAnatomicalLocation.Location | |
+| ProcedureAnatomicalLocation.Laterality | |
+| Location.HealthcareProvider.HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
+| Location.HealthcareProvider.OrganizationName | Amsterdam UMC |
+| Location.HealthcareProvider.DepartmentSpecialty | Radiological specialties (code '394734003' from code system 'SNOMED CT') |
+| Location.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
+| Performer.HealthProfessional.HealthProfessionalIdentificationNumber | |
+| Performer.HealthProfessional.NameInformation | |
+| Performer.HealthProfessional.Specialty | |
+| Performer.HealthProfessional.HealthProfessionalRole | |
+| ImageInformation.ImageInformationIdentificationNumber | 2.25.234021917970851461164617206999255728356 |
+| ImageInformation.ImageDateTime | 02-09-2025 08:07:00 |
+| ImageInformation.ImageTitle | REVA BEWEGINGSLAB INSPANNINGSTEST RAPPORT |
+| ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.36321563540218036552979854024549596684/series/2.25.166828643325596231880745342925117718422/instances/2.25.234021917970851461164617206999255728356</span> |
+| ImageInformation.Modality | SR Document  (code 'SR' from code system 'DICOM Controlled Terminology Definitions') |
+| ReportInformation.ReportInformationIdentificationNumber | |
+| ReportInformation.ReportDateTime | |
+| ReportInformation.ReportTitle | |
+| ReportInformation.Report | |
+| AccessionNumberInformation.AccessionNumber | AGFA00000173700 |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider. <br/> HealthcareProviderIdentificationNumber | 06020701 (in identifier system 'AGB-Z') |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationName | Amsterdam UMC |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.DepartmentSpecialty | |
+| AccessionNumberInformation.AssigningAuthority.HealthcareProvider.OrganizationType | Universitair Medisch Centrum (code 'V5' from code system 'Role Code NL Zorgaanbiedertypen') |
+| StudyInstanceUID | 1.2.40.0.13.1.36321563540218036552979854024549596684 |

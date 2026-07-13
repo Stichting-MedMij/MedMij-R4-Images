@@ -1,5 +1,11 @@
 # {{page-title}}
 
+## 1.0.0-rc.3
+
+| Component             | Description  | Ticket    |
+| --------------------- | ------------ | --------- |
+| Test material         | A test case with an encapsulated PDF has been added. | [DOSINZAGE2-1119](https://medmij.atlassian.net/browse/DOSINZAGE2-1119) |
+
 ## 1.0.0-rc.2
 
 | Component             | Description  | Ticket    |
