@@ -59,6 +59,7 @@
         "contentType": "application/dicom+json",
         "language": "nl",
         "url": "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.36321563540218036552979854024549596684/series/2.25.166828643325596231880745342925117718422/instances/2.25.234021917970851461164617206999255728356",
+        "title": "REVA BEWEGINGSLAB INSPANNINGSTEST RAPPORT",
         "creation": "2025-09-02T08:07:00+02:00"
       },
       "format": {
@@ -74,7 +75,7 @@
           {
             "code": "SR",
             "system": "http://dicom.nema.org/resources/ontology/DCM",
-            "display": "Structured Report"
+            "display": "Structured Report Document"
           }
         ]
       }

@@ -590,7 +590,7 @@
 | ImageInformation.ImageDateTime | 02-09-2025 08:07:00 |
 | ImageInformation.ImageTitle | REVA BEWEGINGSLAB INSPANNINGSTEST RAPPORT |
 | ImageInformation.Images | <span>https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.36321563540218036552979854024549596684/series/2.25.166828643325596231880745342925117718422/instances/2.25.234021917970851461164617206999255728356</span> |
-| ImageInformation.Modality | SR Document  (code 'SR' from code system 'DICOM Controlled Terminology Definitions') |
+| ImageInformation.Modality | Structured Report Document  (code 'SR' from code system 'DICOM Controlled Terminology Definitions') |
 | ReportInformation.ReportInformationIdentificationNumber | |
 | ReportInformation.ReportDateTime | |
 | ReportInformation.ReportTitle | |
