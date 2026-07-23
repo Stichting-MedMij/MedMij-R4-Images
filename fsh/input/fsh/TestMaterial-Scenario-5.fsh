@@ -803,6 +803,46 @@ Usage: #example
       * system = $DICOMUniqueId
       * value = "urn:oid:1.2.752.24.7.3059655634.38678" // Onderzoek.StudyInstanceUID
 
+Instance: ImageAvailability-DocumentReference-XXX-AansluittestB-Image-5-19
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/bbs-DocumentReference
+Usage: #example
+* masterIdentifier
+  * system = $DICOMUniqueId
+  * value = "urn:oid:2.25.234021917970851461164617206999255728356" // document uniqueId | Onderzoek.Beeldinformatie.BeeldinformatieIdentificatienummer
+* status = #current // availabilityStatus | geen mapping naar dataset
+* type = $NullFlavor#OTH "Other" // Onderzoek.Verrichting.VerrichtingType
+* category
+  * coding[images] = $XDSClassCode#IMAGES "Images" // classCode
+* subject = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+* date = "2025-09-02T08:07:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+* author = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum"
+* securityLabel = $Confidentiality#N "Normal" // securityLabel | geen mapping naar dataset
+* content
+  * attachment
+    * contentType = #application/dicom+json
+    * language = #nl // languageCode | geen mapping naar dataset
+    * url = "https://examplepacs.example.com/wado/studies/1.2.40.0.13.1.36321563540218036552979854024549596684/series/2.25.166828643325596231880745342925117718422/instances/2.25.234021917970851461164617206999255728356" // [dummy url]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]
+    * title = "REVA BEWEGINGSLAB INSPANNINGSTEST RAPPORT" // title | Onderzoek.Beeldinformatie.BeeldTitel
+    * creation = "2025-09-02T08:07:00+02:00" // creationTime | Onderzoek.Beeldinformatie.DatumTijd
+  * format = $DCMUID#1.2.840.10008.5.1.4.1.1.88.59 // formatCode | geen mapping naar dataset
+* context
+  * event[modality] = $DCM#SR "Structured Report Document" // Onderzoek.Beeldinformatie.Modaliteit
+  * period.start = "2025-09-02" // serviceStartTime | Onderzoek.Verrichting.VerrrichtingStartdatum
+  * facilityType = $OrganizationType#V5 "Universitair Medisch Centrum" // Zorgaanbieder.OrganisatieType
+  * practiceSetting = $SCT#394734003 "Radiological specialties" // Overgenomen uit de Nictiz IG, moet mogelijk specifieker
+  * sourcePatientInfo = Reference(ImageAvailability-Patient-XXX-Aansluittest-B) "B. XXX-Aansluittest-B"
+  * related[0]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2013:accession
+      * system = $OIDAUMC
+      * value = "AGFA00000173700" // Onderzoek.AccessionNumberInformatie.AccessionNumber
+      * assigner = Reference(ImageAvailability-Organization-AUMC) "Amsterdam UMC, Universitair Medisch Centrum" // Onderzoek.AccessionNumberInformatie.UitgevendeInstantie
+  * related[1]
+    * identifier
+      * type = $URI#urn:ihe:iti:xds:2016:studyInstanceUID
+      * system = $DICOMUniqueId
+      * value = "urn:oid:1.2.40.0.13.1.36321563540218036552979854024549596684" // Onderzoek.StudyInstanceUID
+
 Instance: ImageAvailability-Patient-XXX-Aansluittest-B
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example

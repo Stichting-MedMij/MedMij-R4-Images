@@ -77,6 +77,10 @@
             "display": "Radiofluoroscopy"
           },
           {
+            "code": "SR",
+            "display": "Structured Report Document"
+          },
+          {
             "code": "US",
             "display": "Ultrasound"
           },
