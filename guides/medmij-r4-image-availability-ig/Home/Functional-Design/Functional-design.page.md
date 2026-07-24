@@ -53,10 +53,10 @@ Roos Dalstra heeft pijn op de borst en besluit naar de huisartsenpost te gaan. H
 - Het beeld en/of het verslag zijn geregistreerd en beschikbaar voor systemen die tijdlijngegevens kunnen opvragen.
 
 ##### Proces
-- De patiënt raadpleegt de beelden en verslagen in zijn PGO.
-- Het systeem van de patiënt (PGO) vraagt om beschikbare medische gegevens bij de zorgaanbieder.
+- De patiënt raadpleegt de tijdlijn van beelden en verslagen in zijn PGO.
+- Het systeem van de patiënt (PGO) vraagt om beschikbare beelden en verslagen bij de zorgaanbieder.
 - Het systeem van de zorgaanbieder (XIS) levert een lijst met metadata over de gevonden beelden en verslagen op voor de patiënt.
-- De patiënt gebruikt de persoonlijke gezondheidsomgeving om het gewenste beeld en/of verslag te raadplegen of te downloaden.
+- De patiënt gebruikt de PGO om het gewenste beeld en/of verslag uit de tijdlijn te raadplegen of te downloaden.
 - Het systeem van de zorgaanbieder (XIS) levert het gevraagde beeld en/of verslag op voor de patiënt.
 
 ##### Postproces
@@ -71,10 +71,6 @@ Deze usecase onderscheidt twee bedrijfsrollen, namelijk de *Patiënt* en de *Zor
 | Zorgaanbieder | Gebruiker van het XIS | Stelt medische beelden en verslagen beschikbaar |
 
 **Tabel 1: Bedrijfsrollen**
-
-{{render: guides/medmij-r4-image-availability-ig/images/Activiteitendiagram.png}}
-
-**Figuur 1: Activiteitendiagram**
 
 ### Informatieoverdracht
 Zowel de patiënt als de zorgaanbieder maken ieder gebruik van een informatiesysteem:
@@ -92,12 +88,6 @@ Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van 
 
 **Tabel 2: Systeemrollen**
 
-Hieronder zijn de systemen en systeemrollen schematisch weergegeven.
-
-{{render: guides/medmij-r4-image-availability-ig/images/Componentendiagram.png}}
-
-**Figuur 2: Componentendiagram**
-
 ### Transacties en transactiegroepen
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties. Een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden, wordt met behulp van {{pagelink: LogicalModelsIndex, text: Logical Models}} de berichtspecificatie beschreven. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties, zie het {{pagelink: TD, text: technisch ontwerp}}.
 
@@ -109,11 +99,6 @@ Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op ba
 | Verzamelen Beeld en verslag (PULL) | Beschikbaar stellen beeld en verslag | BBS-BB-1.0.0-rc.2 | XIS | Zorgaanbieder |
 
 **Tabel 3: Transactiegroepen**
-
-### Usecasediagram
-{{render: guides/medmij-r4-image-availability-ig/images/Usecasediagram.png}}
-
-**Figuur 3: Usecasediagram**
 
 ### Dataset
 De dataset is uitgewerkt aan de hand van {{pagelink: LogicalModelsIndex, text: Logical Models, anchor: Dataset}}.

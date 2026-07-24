@@ -46,7 +46,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
+| 1. | Elke keer dat het overzichtsscherm wordt geopend, wordt de tijdlijn van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
 | 2. | Voor elk document (i.e. beeld of verslag) wordt basisinformatie getoond, namelijk: <br/> <ul> <li> onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174); <li> type document; <li> naam onderzoek (BeeldTitel, bbs-medmij-dataelement-1; VerslagTitel, bbs-medmij-dataelement-2); <li> zorgaanbieder (OrganisatieNaam, bbs-dataelement-523); <li> uitvoerend zorgverlener (indien beschikbaar) (Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam), bbs-dataelement-385); <li> type beeld (Modaliteit, bbs-medmij-dataelement-5). |
 | 3. | Als de titel van het beeld of verslag ontbreekt, dan wordt dit expliciet vermeld in de betreffende overzichtsregel. |
 
