@@ -34,4 +34,4 @@ Bovenstaande geldt ook voor de duplicaatdetectie van series van beelden.
 **Let op:** Hoewel het Study Instance UID bedoeld is als een wereldwijd uniek identificatienummer van een beeldvormend onderzoek, is het in de praktijk vaak alleen uniek binnen het originele PACS. Bij import in een ander systeem (zoals een ander ziekenhuis) wordt mogelijk een nieuw UID gegenereerd.
 
 ## Weergave duplicaten
-Voor het weergeven van duplicaten is het gewenst om deze te groeperen in het overzicht van beelden en verslagen in de PGO. Hierbij kan worden gedacht aan een uitklapmenu voor elke groep van duplicaten, waar bij het openklappen alle duplicaten zichtbaar worden.
+Voor het weergeven van duplicaten is het gewenst om deze te groeperen in de tijdlijn van beelden en verslagen in de PGO. Hierbij kan worden gedacht aan een uitklapmenu voor elke groep van duplicaten, waar bij het openklappen alle duplicaten zichtbaar worden.

@@ -6,6 +6,10 @@
 | --------------------- | ------------ | --------- |
 | Dataset               | The code *SR* has been added to the value set for Modality. | [DOSINZAGE2-1119](https://medmij.atlassian.net/browse/DOSINZAGE2-1119) |
 | Test material         | A test case with an encapsulated PDF has been added. | [DOSINZAGE2-1119](https://medmij.atlassian.net/browse/DOSINZAGE2-1119) |
+| Functional design     | The functional design has been finetuned/updated. | [DOSINZAGE2-1169](https://medmij.atlassian.net/browse/DOSINZAGE2-1169) |
+| Functional design     | The requirements have been finetuned/updated. | [DOSINZAGE2-1169](https://medmij.atlassian.net/browse/DOSINZAGE2-1169) |
+| Functional design     | The display guideline has been finetuned/updated. | [DOSINZAGE2-1169](https://medmij.atlassian.net/browse/DOSINZAGE2-1169) |
+| Functional design     | The deduplication guideline has been finetuned/updated. | [DOSINZAGE2-1169](https://medmij.atlassian.net/browse/DOSINZAGE2-1169) |
 
 ## 1.0.0-rc.2
 

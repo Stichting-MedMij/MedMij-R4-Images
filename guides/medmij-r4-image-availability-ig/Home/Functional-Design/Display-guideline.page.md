@@ -33,14 +33,14 @@ Het overzichtsscherm bevat de tijdlijn van de beelden en verslagen die door de g
 **Figuur 2: Voorbeeld 2 van een tijdlijnweergave**
 
 ### Detailscherm beeld
-Als de gebruiker een specifiek beeld in het overzichtsscherm selecteert en vanuit daar opent, wordt een detailscherm van het betreffende beeld aan de gebruiker getoond. De beeld-viewer wordt geopend in de browser of als programma/app in de PGO.
+Als de gebruiker een specifiek beeld in de tijdlijn selecteert en vanuit daar opent, wordt een detailscherm van het betreffende beeld aan de gebruiker getoond. De beeld-viewer wordt geopend in de browser of als programma/app in de PGO.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Voorbeeld beeld.png}}
 
 **Figuur 3: Voorbeeld van een beeld**
 
 ### Detailscherm verslag
-Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en vanuit daar opent, wordt een PDF-viewer geopend waarin het betreffende verslag wordt getoond.
+Als de gebruiker een specifiek verslag in de tijdlijn selecteert en vanuit daar opent, wordt een PDF-viewer geopend waarin het betreffende verslag wordt getoond.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Voorbeeld verslag.png}}
 
