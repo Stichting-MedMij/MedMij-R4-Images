@@ -110,6 +110,8 @@ See [ITI-67 Response Message](https://profiles.ihe.net/ITI/MHD/ITI-67.html#23674
 #### <a name="RetrieveImagingReport"></a> Retrieve Imaging Report (MHD ITI-68)
 > Based on [Use case 4: Retrieve Imaging Report (Raadplegen Verslag)](https://informatiestandaarden.nictiz.nl/wiki/Bbs:V1_Alpha2_IG#Use_case_4:_Retrieve_Imaging_Report_.28Raadplegen_Verslag.29_3) in the Nictiz BBS FHIR IG, see [ITI-68](https://profiles.ihe.net/ITI/MHD/ITI-68.html) for further details.
 
+The retrieval of the imaging reports has the following transactions and actors:
+
 | Transaction group | Transaction | Actor | System role |
 | --- | --- | --- | --- | --- |
 | Image and report (PULL) | Retrieve image and report | Patient (using a PHR) | BBS-BR-1.0.0-rc.2 |
