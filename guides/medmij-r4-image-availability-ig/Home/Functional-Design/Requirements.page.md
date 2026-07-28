@@ -115,7 +115,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | Beelden en verslagen van meerdere zorgaanbieders worden in één gecombineerde tijdlijn weergegeven. |
-| 2. | Elk document in de tijdlijn toont duidelijk de naam van de zorgaanbieder waar het onderzoek heeft plaatsgevonden. |
+| 2. | Elk beeld en verslag in de tijdlijn toont duidelijk de naam van de zorgaanbieder waar het onderzoek heeft plaatsgevonden. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -125,7 +125,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | --- | --- |
 | 1. | De gebruiker kan een datumfilter instellen in de tijdlijn van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
 | 2. | Het filter werkt op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174). |
-| 3. | Er is standaard geen filter actief; alle documenten worden getoond tot de gebruiker zelf filtert. |
+| 3. | Er is standaard geen filter actief; alle beelden en verslagen worden getoond tot de gebruiker zelf filtert. |
 | 4. | Na toepassing van een filter wordt de tijdlijn direct bijgewerkt zonder paginaverversing. |
 | 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. |
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
@@ -169,7 +169,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | --- | --- |
 | 1. | De gebruiker ziet een filter waarin de beschikbare zorgaanbieders worden weergegeven. |
 | 2. | Na selectie van een zorgaanbieder worden alleen de bijbehorende beelden en verslagen getoond in de tijdlijn. |
-| 3. | In de lijst van beelden en verslagen is duidelijk aangegeven welke zorgaanbieder het document heeft aangeleverd. |
+| 3. | In de tijdlijn is voor ieder beeld en verslag duidelijk aangegeven welke zorgaanbieder het heeft aangeleverd. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |

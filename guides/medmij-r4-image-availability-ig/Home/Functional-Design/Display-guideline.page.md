@@ -22,7 +22,7 @@ Het inloggen en authenticeren bij de zorgaanbieder is niet opgenomen in deze ric
 Nadat de gebruiker één of meerdere zorgaanbieders heeft gekozen waar de beschikbare beelden en verslagen opgehaald moeten worden, kan de gebruiker vanuit het hoofdmenu navigeren naar het overzichtsscherm waar de beelden en verslagen kunnen worden opgehaald.
 
 ### Overzichtsscherm beelden en verslagen
-Het overzichtsscherm bevat de tijdlijn van de beelden en verslagen die door de gebruiker in de PGO kunnen worden ingezien. De twee figuren hieronder zijn voorbeelden van hoe deze tijdlijn zou kunnen worden weergegeven. Een PGO is vrij om één of beide van deze scenario’s te ondersteunen of zelf een weergave te maken. 
+Het overzichtsscherm bevat de tijdlijn van de beelden en verslagen die door de gebruiker in de PGO kunnen worden ingezien. De twee figuren hieronder zijn voorbeelden van hoe deze tijdlijn zou kunnen worden weergegeven. Een PGO is vrij om één van onderstaande weergaven te ondersteunen of zelf een weergave te maken. 
 
 {{render: guides/medmij-r4-image-availability-ig/images/Tabelweergave.png}}
 
