@@ -46,9 +46,9 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Elke keer dat er wordt ingelogd in de PGO wordt het overzicht van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
+| 1. | Elke keer dat het overzichtsscherm wordt geopend, wordt de tijdlijn van beelden en verslagen (opnieuw) opgehaald bij alle zorgaanbieders waarbij eerder beelden en verslagen zijn opgehaald. |
 | 2. | Voor elk document (i.e. beeld of verslag) wordt basisinformatie getoond, namelijk: <br/> <ul> <li> onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174); <li> type document; <li> naam onderzoek (BeeldTitel, bbs-medmij-dataelement-1; VerslagTitel, bbs-medmij-dataelement-2); <li> zorgaanbieder (OrganisatieNaam, bbs-dataelement-523); <li> uitvoerend zorgverlener (indien beschikbaar) (Uitvoerder.Zorgverlener.Naamgegevens (Voornamen/Initialen/Geslachtsnaam), bbs-dataelement-385); <li> type beeld (Modaliteit, bbs-medmij-dataelement-5). |
-| 3. | Als de titel van het beeld of verslag ontbreekt, dan wordt dit expliciet vermeld in de betreffende overzichtsregel. |
+| 3. | Als de titel van het beeld of verslag ontbreekt, dan wordt dit expliciet vermeld in de betreffende tijdlijnregel. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Er wordt in het overzicht een visueel duidelijke melding getoond met daarin beschreven dat er een aantal dagen vertraging kan zitten op de vrijgave van de beelden en verslagen na onderzoeksdatum met een tijdsduur afhankelijk van betreffende zorgaanbieder(s). |
+| 1. | Er wordt in de tijdlijn een visueel duidelijke melding getoond met daarin beschreven dat er een aantal dagen vertraging kan zitten op de vrijgave van de beelden en verslagen na onderzoeksdatum met een tijdsduur afhankelijk van betreffende zorgaanbieder(s). |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Vanuit het overzicht in de PGO kan de gebruiker met één klik een viewer openen om beelden te bekijken. |
+| 1. | Vanuit de tijdlijn kan de gebruiker met één klik een viewer openen om beelden te bekijken. |
 | 2. | Bij het uitvoeren van de requests aan de DVA wordt rekening gehouden met de door de DVA gespecificeerde rate limiting. |
 | 3. | De gebruiker kan (rendered) DICOM-beelden bekijken zonder extra software te installeren. |
 | 4. | De viewer werkt in gangbare webbrowsers en is bruikbaar op desktop, tablet en mobiel (responsive of mobiele variant). |
@@ -114,8 +114,8 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Beelden en verslagen van meerdere zorgaanbieders worden in één gecombineerd overzicht weergegeven. |
-| 2. | Elk document in het overzicht toont duidelijk de naam van de zorgaanbieder waar het onderzoek heeft plaatsgevonden. |
+| 1. | Beelden en verslagen van meerdere zorgaanbieders worden in één gecombineerde tijdlijn weergegeven. |
+| 2. | Elk beeld en verslag in de tijdlijn toont duidelijk de naam van de zorgaanbieder waar het onderzoek heeft plaatsgevonden. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -123,10 +123,10 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | De gebruiker kan een datumfilter instellen in het overzicht van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
+| 1. | De gebruiker kan een datumfilter instellen in de tijdlijn van beelden en verslagen (bijvoorbeeld via datumselectie, periode of jaar). |
 | 2. | Het filter werkt op onderzoeksdatum (VerrichtingStartDatum, bbs-dataelement-174). |
-| 3. | Er is standaard geen filter actief; alle documenten worden getoond tot de gebruiker zelf filtert. |
-| 4. | Na toepassing van een filter wordt het overzicht direct bijgewerkt zonder paginaverversing. |
+| 3. | Er is standaard geen filter actief; alle beelden en verslagen worden getoond tot de gebruiker zelf filtert. |
+| 4. | Na toepassing van een filter wordt de tijdlijn direct bijgewerkt zonder paginaverversing. |
 | 5. | De filtering blijft behouden na openen en sluiten van een beeld of verslag. |
 | 6. | Beelden en verslagen blijven chronologisch gesorteerd binnen het filterresultaat. |
 
@@ -168,8 +168,8 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
 | 1. | De gebruiker ziet een filter waarin de beschikbare zorgaanbieders worden weergegeven. |
-| 2. | Na selectie van een zorgaanbieder worden alleen de bijbehorende beelden en verslagen getoond in het overzicht. |
-| 3. | In de lijst van beelden en verslagen is duidelijk aangegeven welke zorgaanbieder het document heeft aangeleverd. |
+| 2. | Na selectie van een zorgaanbieder worden alleen de bijbehorende beelden en verslagen getoond in de tijdlijn. |
+| 3. | In de tijdlijn is voor ieder beeld en verslag duidelijk aangegeven welke zorgaanbieder het heeft aangeleverd. |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |
@@ -185,7 +185,7 @@ Naast de requirements is ook de {{pagelink: Weergaverichtlijn, text: weergaveric
 
 | Acceptatiecriteria | Beschrijving |
 | --- | --- |
-| 1. | Er wordt in het overzicht van beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/> *Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
+| 1. | Er wordt in de tijdlijn van beelden en verslagen eenmalig de volgende disclaimer getoond: <br/> <br/> *Uw behandelend specialist heeft de beelden of de uitslag misschien nog niet bekeken of met u besproken.* <br/> *De informatie kan soms moeilijk te begrijpen zijn.* <br/> *Zonder extra uitleg kunt u de informatie verkeerd begrijpen.* <br/> *Bespreek uw vragen met uw behandelend specialist.* |
 
 | ID | Als (rol) | Wil ik (functie) | Zodat ik (doel) | Prioriteit (MoSCoW) |
 | --- | --- | --- | --- | --- |

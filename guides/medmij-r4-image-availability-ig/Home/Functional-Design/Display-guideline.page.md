@@ -22,35 +22,25 @@ Het inloggen en authenticeren bij de zorgaanbieder is niet opgenomen in deze ric
 Nadat de gebruiker één of meerdere zorgaanbieders heeft gekozen waar de beschikbare beelden en verslagen opgehaald moeten worden, kan de gebruiker vanuit het hoofdmenu navigeren naar het overzichtsscherm waar de beelden en verslagen kunnen worden opgehaald.
 
 ### Overzichtsscherm beelden en verslagen
-Er zijn twee weergaven gedefinieerd voor het overzicht van de beelden en verslagen:
-- Weergave 1: Tabelweergave
-- Weergave 2: Tijdlijnweergave
-
-Deze weergaves vormen voorbeelden van hoe een UX-design getoond kan worden. Een PGO is vrij om één of beide van deze scenario’s te ondersteunen of zelf een weergave te maken.
-
-#### Tabelweergave
-De tabelweergave biedt gebruikers een compact overzicht van beelden en verslagen die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave in tabelvorm.
+Het overzichtsscherm bevat de tijdlijn van de beelden en verslagen die door de gebruiker in de PGO kunnen worden ingezien. De twee figuren hieronder zijn voorbeelden van hoe deze tijdlijn zou kunnen worden weergegeven. Een PGO is vrij om één van onderstaande weergaven te ondersteunen of zelf een weergave te maken. 
 
 {{render: guides/medmij-r4-image-availability-ig/images/Tabelweergave.png}}
 
-**Figuur 1: Voorbeeld van de tabelweergave**
-
-#### Tijdlijnweergave
-De tijdlijnweergave biedt gebruikers een tijdlijn van alle beelden en verslagen die zij via hun PGO kunnen inzien. De figuur hieronder bevat een visuele weergave van de tijdlijn.
+**Figuur 1: Voorbeeld 1 van een tijdlijnweergave**
 
 {{render: guides/medmij-r4-image-availability-ig/images/Tijdlijnweergave.png}}
 
-**Figuur 2: Voorbeeld van de tijdlijnweergave**
+**Figuur 2: Voorbeeld 2 van een tijdlijnweergave**
 
 ### Detailscherm beeld
-Als de gebruiker een specifiek beeld in het overzichtsscherm selecteert en vanuit daar opent, wordt een detailscherm van het betreffende beeld aan de gebruiker getoond. De beeld-viewer wordt geopend in de browser of als programma/app in de PGO.
+Als de gebruiker een specifiek beeld in de tijdlijn selecteert en vanuit daar opent, wordt een detailscherm van het betreffende beeld aan de gebruiker getoond. De beeld-viewer wordt geopend in de browser of als programma/app in de PGO.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Voorbeeld beeld.png}}
 
 **Figuur 3: Voorbeeld van een beeld**
 
 ### Detailscherm verslag
-Als de gebruiker een specifiek verslag in het overzichtsscherm selecteert en vanuit daar opent, wordt een PDF-viewer geopend waarin het betreffende verslag wordt getoond.
+Als de gebruiker een specifiek verslag in de tijdlijn selecteert en vanuit daar opent, wordt een PDF-viewer geopend waarin het betreffende verslag wordt getoond.
 
 {{render: guides/medmij-r4-image-availability-ig/images/Voorbeeld verslag.png}}
 
