@@ -220,7 +220,7 @@ where `[FrameIndex]` attains the values 1, 2, 3, ..., consecutively. Since the t
 If the very first request (i.e. the request containing `/frames/1`) fails, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
 
 *Method 2* <br/>
-Whether or not instances contain multiple frames can also be determined from DICOM tag `(0028,0008)` (Number of Frames) in the metadata. The PHR can request this metadata by executing the following HTTP GET request against the WADO-RS endpoint of the XIS:
+Whether or not instances contain multiple frames can also be determined from DICOM tag `(0028,0008)` (Number of Frames) in the metadata. This DICOM tag is mandatory for multi-frame images. The PHR can request this metadata by executing the following HTTP GET request against the WADO-RS endpoint of the XIS:
 
 ```
 GET [WadoRsEndpoint]/studies/[StudyInstanceUID]/series/[SeriesInstanceUID]/instances/[SOPInstanceUID]/metadata
@@ -240,7 +240,7 @@ GET [RetrieveURL]/instances/[SOPInstanceUID]/frames/[FrameIndex]
 
 where `[FrameIndex]` attains the values 1, 2, 3, ..., Number of Frames, consecutively.
 
-If Number of Frames is equal to 1, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
+If Number of Frames is equal to 1 or if Number of Frames is missing, the PHR SHALL treat the instance as a single-frame image and follow the image retrieval approach described in the {{pagelink: TD, text: previous subsection, anchor: RetrieveSingleFrameImage}}.
 
 **Supported SOP classes and WADO-RS requests** <br/>
 The table below indicates the minimal set of SOP classes that SHALL be supported. If, for a certain series in the sequence, a SOP Class UID is present in DICOM tag `(0008,1150)` other than those specified below, the PHR MAY still retrieve the corresponding image, but is not required to do so.
