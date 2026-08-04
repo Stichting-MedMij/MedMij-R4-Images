@@ -5,7 +5,7 @@
 | Component             | Description  | Ticket    |
 | --------------------- | ------------ | --------- |
 | Dataset               | The code *SR* has been added to the value set for Modality. | [DOSINZAGE2-1119](https://medmij.atlassian.net/browse/DOSINZAGE2-1119) |
-| Technical design      | Further clarifcation that paragraph 2.6.1.2 concerns PDF| [DOSINZAGE2-1116](https://medmij.atlassian.net/browse/DOSINZAGE2-1116) |
+| Technical design      | Further clarification about scope has been added to the paragraph about retrieving reports. | [DOSINZAGE2-1116](https://medmij.atlassian.net/browse/DOSINZAGE2-1116) |
 | Test material         | A test case with an encapsulated PDF has been added. | [DOSINZAGE2-1119](https://medmij.atlassian.net/browse/DOSINZAGE2-1119) |
 
 ## 1.0.0-rc.2
