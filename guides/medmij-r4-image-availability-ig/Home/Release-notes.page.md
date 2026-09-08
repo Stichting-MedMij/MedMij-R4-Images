@@ -9,6 +9,7 @@
 | Functional design     | The requirements have been finetuned/updated. In particular, the requirement related to the actual overview of images and reports has been relaxed, as it is only necessary to retrieve images and reports each time the overview is opened (instead of each time a patient logs in to the PHR). | [DOSINZAGE2-1169](https://medmij.atlassian.net/browse/DOSINZAGE2-1169) |
 | Functional design     | The display guideline has been finetuned/updated. In particular, the two display scenarios of the overview (i.e. table view and timeline) have been combined. | [DOSINZAGE2-1169](https://medmij.atlassian.net/browse/DOSINZAGE2-1169) |
 | Test material         | A test case with an encapsulated PDF has been added. | [DOSINZAGE2-1119](https://medmij.atlassian.net/browse/DOSINZAGE2-1119) |
+| Test material         | JSON representations have been added for all KOS (.dcm) objects. | [DOSINZAGE2-1260](https://medmij.atlassian.net/browse/DOSINZAGE2-1260) |
 
 ## 1.0.0-rc.2
 
